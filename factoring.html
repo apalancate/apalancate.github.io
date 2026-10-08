@@ -1,27 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Conoce cómo funciona la inversión en factoring en Perú, sus oportunidades, riesgos y aspectos clave antes de invertir."
+    content="Una guía clara y sencilla para entender cómo funciona invertir en factoring en Perú, qué oportunidades ofrece y qué riesgos considerar."
   >
-  <title>Invertir en factoring | Guía sencilla para Perú</title>
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Invertir en factoring: guía sencilla para Perú</title>
 
   <style>
     :root {
-      --ink: #17332e;
-      --muted: #5d716b;
-      --green: #176b54;
-      --green-dark: #105340;
-      --mint: #e9f5ee;
-      --cream: #f8f7f1;
-      --white: #fff;
-      --line: #dce7df;
-      --amber: #fff3d7;
-      --amber-ink: #735016;
-      --shadow: 0 14px 40px rgba(23, 51, 46, .08);
+      --bg: #f7f8f4;
+      --surface: #ffffff;
+      --ink: #18352e;
+      --muted: #61736d;
+      --green: #176c53;
+      --green-dark: #10523f;
+      --mint: #e8f3ec;
+      --line: #dce6df;
+      --gold: #fff4d9;
+      --gold-ink: #755619;
+      --shadow: 0 14px 40px rgba(24, 53, 46, .08);
       --radius: 22px;
     }
 
@@ -35,10 +36,10 @@
 
     body {
       margin: 0;
-      background: var(--cream);
+      background: var(--bg);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.65;
     }
 
@@ -46,19 +47,23 @@
       color: inherit;
     }
 
-    .wrap {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin-inline: auto;
     }
 
-    .topbar {
-      padding: 18px 0;
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(248, 247, 241, .9);
+      background: rgba(247, 248, 244, .94);
+      backdrop-filter: blur(12px);
     }
 
-    .topbar-inner {
+    .header-inner {
       display: flex;
+      min-height: 68px;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
@@ -66,21 +71,21 @@
 
     .brand {
       color: var(--green-dark);
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: -.03em;
+      font-size: .98rem;
+      font-weight: 850;
+      letter-spacing: -.035em;
       text-decoration: none;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      font-size: .9rem;
+      gap: 18px;
     }
 
     .nav a {
       color: var(--muted);
+      font-size: .88rem;
       text-decoration: none;
     }
 
@@ -89,28 +94,29 @@
     }
 
     .hero {
-      padding: 76px 0 54px;
+      overflow: hidden;
+      padding: 76px 0 66px;
       background:
-        radial-gradient(circle at 90% 10%, rgba(206, 232, 211, .65), transparent 30%),
-        var(--cream);
+        radial-gradient(circle at 85% 14%, rgba(201, 228, 207, .72), transparent 29%),
+        var(--bg);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 48px;
+      grid-template-columns: 1.15fr .85fr;
       align-items: center;
+      gap: 52px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       margin: 0 0 16px;
       color: var(--green);
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .1em;
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .11em;
       text-transform: uppercase;
     }
 
@@ -118,7 +124,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #75b58d;
+      background: #76b891;
       content: "";
     }
 
@@ -127,45 +133,45 @@
     }
 
     h1 {
-      max-width: 720px;
-      margin-bottom: 20px;
+      max-width: 700px;
+      margin-bottom: 18px;
       font-size: clamp(2.6rem, 6vw, 4.7rem);
       line-height: 1.02;
       letter-spacing: -.065em;
     }
 
     .hero-copy {
-      max-width: 660px;
+      max-width: 640px;
       color: var(--muted);
-      font-size: 1.12rem;
+      font-size: 1.1rem;
     }
 
     .hero-copy strong {
       color: var(--ink);
     }
 
-    .hero-actions {
+    .button-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 14px;
-      margin-top: 28px;
+      gap: 16px;
+      margin-top: 26px;
     }
 
     .button {
       display: inline-flex;
+      min-height: 48px;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
       padding: 0 20px;
       border: 1px solid var(--green);
       border-radius: 999px;
       background: var(--green);
-      color: var(--white);
-      font-size: .94rem;
+      color: #fff;
+      font-size: .92rem;
       font-weight: 750;
       text-decoration: none;
-      transition: transform .2s ease, background .2s ease;
+      transition: background .2s ease, transform .2s ease;
     }
 
     .button:hover {
@@ -173,110 +179,117 @@
       background: var(--green-dark);
     }
 
-    .text-link {
+    .plain-link {
       color: var(--green-dark);
-      font-weight: 700;
+      font-weight: 750;
       text-decoration: none;
     }
 
-    .hero-card {
-      padding: 28px;
+    .summary-card {
+      padding: 26px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, .8);
+      background: rgba(255, 255, 255, .86);
       box-shadow: var(--shadow);
     }
 
-    .hero-card-label {
+    .summary-title {
       margin-bottom: 16px;
       color: var(--muted);
-      font-size: .82rem;
-      font-weight: 750;
-      letter-spacing: .07em;
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .09em;
       text-transform: uppercase;
     }
 
     .flow {
       display: grid;
-      gap: 12px;
+      gap: 11px;
     }
 
-    .flow-item {
+    .flow-row {
       display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 13px;
+      grid-template-columns: 40px 1fr;
       align-items: center;
+      gap: 13px;
       padding: 13px;
-      border-radius: 14px;
+      border-radius: 15px;
       background: var(--mint);
     }
 
     .flow-number {
       display: grid;
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       place-items: center;
       border-radius: 50%;
       background: var(--green);
-      color: var(--white);
-      font-size: .88rem;
-      font-weight: 800;
+      color: #fff;
+      font-size: .86rem;
+      font-weight: 850;
     }
 
-    .flow-item strong {
+    .flow-row strong,
+    .flow-row span:last-child {
       display: block;
-      font-size: .94rem;
     }
 
-    .flow-item span:last-child {
-      display: block;
+    .flow-row strong {
+      font-size: .92rem;
+    }
+
+    .flow-row span:last-child {
       color: var(--muted);
-      font-size: .83rem;
+      font-size: .82rem;
     }
 
     section {
-      padding: 66px 0;
+      padding: 68px 0;
+      scroll-margin-top: 82px;
+    }
+
+    .section-white {
+      background: var(--surface);
+    }
+
+    .section-soft {
+      background: #eff4ef;
     }
 
     .section-heading {
-      max-width: 700px;
-      margin-bottom: 32px;
+      max-width: 740px;
+      margin-bottom: 30px;
     }
 
     .section-heading h2 {
       margin-bottom: 12px;
       font-size: clamp(1.9rem, 4vw, 3rem);
       line-height: 1.12;
-      letter-spacing: -.045em;
+      letter-spacing: -.05em;
     }
 
-    .section-heading p {
+    .section-heading > p:last-child {
       color: var(--muted);
-      font-size: 1.03rem;
     }
 
-    .white-section {
-      background: var(--white);
-    }
-
-    .explainer-grid {
+    .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
       align-items: stretch;
+      gap: 18px;
     }
 
     .card {
-      padding: 26px;
+      padding: 25px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: var(--white);
+      background: var(--surface);
     }
 
     .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-      letter-spacing: -.02em;
+      margin-bottom: 9px;
+      font-size: 1.13rem;
+      letter-spacing: -.025em;
     }
 
     .card p {
@@ -284,236 +297,258 @@
       color: var(--muted);
     }
 
-    .example-card {
-      padding: 28px;
+    .example {
+      padding: 27px;
       border-radius: var(--radius);
       background: var(--ink);
-      color: var(--white);
+      color: #fff;
     }
 
-    .example-card h3 {
+    .example h3 {
       margin-bottom: 8px;
-      font-size: 1.2rem;
+      font-size: 1.18rem;
     }
 
-    .example-card p {
+    .example > p {
       color: #d2e1da;
     }
 
-    .math {
+    .numbers {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin: 22px 0 16px;
+      gap: 9px;
+      margin: 20px 0 14px;
     }
 
-    .math div {
-      padding: 15px 12px;
+    .number-box {
+      padding: 13px 11px;
       border: 1px solid rgba(255, 255, 255, .18);
-      border-radius: 14px;
+      border-radius: 13px;
       background: rgba(255, 255, 255, .07);
     }
 
-    .math span {
+    .number-box span {
       display: block;
-      color: #b8ccc2;
-      font-size: .76rem;
+      color: #bdcec5;
+      font-size: .72rem;
     }
 
-    .math strong {
+    .number-box strong {
       display: block;
-      margin-top: 3px;
-      font-size: 1.15rem;
+      margin-top: 4px;
+      font-size: 1.08rem;
     }
 
-    .small-note {
-      font-size: .83rem;
+    .example .fine-print {
+      margin-bottom: 0;
+      font-size: .82rem;
     }
 
-    .features {
+    .tiles {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 15px;
     }
 
-    .feature {
-      padding: 24px;
+    .tile {
+      padding: 23px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: var(--white);
+      background: var(--surface);
     }
 
-    .feature-icon {
+    .tile-icon {
       display: grid;
       width: 42px;
       height: 42px;
-      margin-bottom: 14px;
+      margin-bottom: 13px;
       place-items: center;
       border-radius: 13px;
       background: var(--mint);
       color: var(--green-dark);
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      font-weight: 850;
     }
 
-    .feature h3 {
-      margin-bottom: 7px;
-      font-size: 1.05rem;
+    .tile h3 {
+      margin-bottom: 6px;
+      font-size: 1.03rem;
     }
 
-    .feature p {
+    .tile p {
       margin-bottom: 0;
       color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .risk-section {
-      background: #f1f5ef;
+      font-size: .93rem;
     }
 
     .risk-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+      gap: 14px;
     }
 
-    .risk {
-      padding: 22px;
-      border: 1px solid #dce7df;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, .76);
+    .risk-card {
+      padding: 21px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, .85);
     }
 
-    .risk h3 {
+    .risk-card h3 {
       margin-bottom: 7px;
       font-size: 1rem;
     }
 
-    .risk p {
+    .risk-card p {
       margin-bottom: 0;
       color: var(--muted);
       font-size: .9rem;
     }
 
-    .callout {
-      margin-top: 24px;
-      padding: 20px 22px;
-      border: 1px solid #f0d99e;
-      border-radius: 16px;
-      background: var(--amber);
-      color: var(--amber-ink);
+    .notice {
+      margin-top: 20px;
+      padding: 19px 21px;
+      border: 1px solid #eed99e;
+      border-radius: 15px;
+      background: var(--gold);
+      color: var(--gold-ink);
     }
 
-    .callout strong {
+    .notice strong {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .steps {
       display: grid;
-      gap: 14px;
-      counter-reset: step;
+      gap: 12px;
+      counter-reset: steps;
     }
 
     .step {
       display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 16px;
+      grid-template-columns: 44px 1fr;
       align-items: start;
-      padding: 21px;
+      gap: 15px;
+      padding: 20px;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--white);
-      counter-increment: step;
+      border-radius: 17px;
+      background: var(--surface);
+      counter-increment: steps;
     }
 
     .step::before {
       display: grid;
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       place-items: center;
       border-radius: 50%;
       background: var(--mint);
       color: var(--green-dark);
-      content: counter(step);
+      content: counter(steps);
       font-weight: 850;
     }
 
     .step h3 {
       margin: 1px 0 5px;
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
 
     .step p {
       margin-bottom: 0;
       color: var(--muted);
-      font-size: .94rem;
+      font-size: .93rem;
     }
 
-    .checklist {
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .expect {
+      padding: 21px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--surface);
+    }
+
+    .expect h3 {
+      margin-bottom: 7px;
+      font-size: 1rem;
+    }
+
+    .expect p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .questions {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 11px;
     }
 
-    .check {
+    .question {
       display: flex;
-      gap: 11px;
-      padding: 16px;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 15px;
       border-radius: 14px;
       background: var(--mint);
-      color: var(--ink);
-      font-size: .94rem;
+      font-size: .92rem;
     }
 
-    .check::before {
+    .question::before {
       flex: 0 0 auto;
       color: var(--green);
       content: "✓";
       font-weight: 900;
     }
 
-    .closing {
-      padding: 38px;
-      border-radius: 26px;
+    .final-card {
+      padding: 35px;
+      border-radius: 25px;
       background: var(--green-dark);
-      color: var(--white);
+      color: #fff;
     }
 
-    .closing h2 {
-      max-width: 780px;
-      margin-bottom: 14px;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+    .final-card h2 {
+      max-width: 760px;
+      margin-bottom: 12px;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
       line-height: 1.12;
       letter-spacing: -.045em;
     }
 
-    .closing p {
+    .final-card p {
       max-width: 760px;
       margin-bottom: 0;
-      color: #d6e8df;
+      color: #d7e7df;
     }
 
     .disclaimer {
-      padding: 28px 0 38px;
+      padding: 25px 0 34px;
       color: var(--muted);
       font-size: .82rem;
     }
 
     footer {
-      padding: 20px 0;
+      padding: 18px 0;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: .82rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 780px) {
       .hero-grid,
-      .explainer-grid {
+      .two-column {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding-top: 54px;
+        padding-top: 55px;
       }
 
       .risk-grid {
@@ -522,46 +557,53 @@
     }
 
     @media (max-width: 560px) {
-      .wrap {
-        width: min(100% - 28px, 1120px);
+      .container {
+        width: min(100% - 28px, 1100px);
       }
 
-      .topbar-inner {
+      .header-inner {
         align-items: flex-start;
         flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 11px 0;
       }
 
       .nav {
         gap: 12px;
-        font-size: .82rem;
+      }
+
+      .nav a {
+        font-size: .79rem;
       }
 
       section {
         padding: 48px 0;
       }
 
-      .features,
+      .tiles,
       .risk-grid,
-      .checklist,
-      .math {
+      .expect-grid,
+      .questions,
+      .numbers {
         grid-template-columns: 1fr;
       }
 
-      .hero-card,
-      .example-card,
-      .closing {
+      .summary-card,
+      .example,
+      .final-card {
         padding: 22px;
       }
 
       .step {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 38px 1fr;
         gap: 12px;
         padding: 16px;
       }
 
       .step::before {
-        width: 38px;
-        height: 38px;
+        width: 37px;
+        height: 37px;
       }
     }
 
@@ -580,12 +622,13 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#" aria-label="Inicio">Finanzas claras</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">Finanzas sin vueltas</a>
+
       <nav class="nav" aria-label="Navegación principal">
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#oportunidad">Oportunidad</a>
+        <a href="#que-es">Qué es</a>
+        <a href="#oportunidad">Ventajas</a>
         <a href="#riesgos">Riesgos</a>
         <a href="#empezar">Cómo empezar</a>
       </nav>
@@ -593,45 +636,45 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Guía sencilla · Perú</p>
-          <h1>Factoring: invertir en facturas, con los ojos abiertos.</h1>
+          <p class="eyebrow">Guía para principiantes · Perú</p>
+          <h1>Invierte en facturas, no en promesas.</h1>
           <p class="hero-copy">
-            Una empresa ya vendió, pero todavía espera que le paguen.
-            El factoring convierte esa cuenta por cobrar en liquidez.
-            Como inversionista, puedes participar en ese financiamiento
-            <strong>a cambio de un rendimiento potencial y asumiendo riesgos reales.</strong>
+            El factoring puede conectar tu dinero con empresas que necesitan
+            cobrar antes. A cambio, podrías obtener un rendimiento por financiar
+            esas operaciones, <strong>pero el pago no está asegurado y puedes
+            perder parte o todo el capital invertido.</strong>
           </p>
-          <div class="hero-actions">
-            <a class="button" href="#como-funciona">Entender cómo funciona</a>
-            <a class="text-link" href="#empezar">Ver cómo empezar →</a>
+          <div class="button-row">
+            <a class="button" href="#que-es">Entenderlo en 3 minutos</a>
+            <a class="plain-link" href="#empezar">Ver los primeros pasos →</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Resumen del funcionamiento">
-          <p class="hero-card-label">La operación en tres pasos</p>
+        <aside class="summary-card" aria-label="Resumen de una operación de factoring">
+          <p class="summary-title">La operación, paso a paso</p>
           <div class="flow">
-            <div class="flow-item">
+            <div class="flow-row">
               <span class="flow-number">1</span>
               <div>
                 <strong>Una empresa vende</strong>
-                <span>Emite una factura que se pagará más adelante.</span>
+                <span>Y emite una factura que cobrará después.</span>
               </div>
             </div>
-            <div class="flow-item">
+            <div class="flow-row">
               <span class="flow-number">2</span>
               <div>
-                <strong>Recibe liquidez antes</strong>
-                <span>Transfiere la factura con un descuento.</span>
+                <strong>Alguien adelanta el dinero</strong>
+                <span>La empresa recibe liquidez antes del vencimiento.</span>
               </div>
             </div>
-            <div class="flow-item">
+            <div class="flow-row">
               <span class="flow-number">3</span>
               <div>
-                <strong>El deudor paga al vencimiento</strong>
-                <span>El cobro permite cerrar la operación.</span>
+                <strong>El cliente paga la factura</strong>
+                <span>Si paga según lo previsto, se cierra la operación.</span>
               </div>
             </div>
           </div>
@@ -639,54 +682,56 @@
       </div>
     </section>
 
-    <section class="white-section" id="como-funciona">
-      <div class="wrap">
+    <section class="section-white" id="que-es">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">La idea central</p>
-          <h2>No financias una promesa: participas en el cobro de una factura.</h2>
+          <p class="eyebrow">Primero, lo esencial</p>
+          <h2>¿Qué es el factoring?</h2>
           <p>
-            La factura identifica una venta y un pago pendiente. Pero eso no
-            significa que el cobro esté garantizado: el cliente que debe pagar
-            podría atrasarse, cuestionar la operación o no cumplir.
+            Imagina que una empresa entrega un pedido hoy, pero su cliente le
+            pagará dentro de 60 días. La empresa puede esperar o buscar quien
+            adelante el dinero a cambio de recibir un importe menor que el valor
+            total de la factura.
           </p>
         </div>
 
-        <div class="explainer-grid">
+        <div class="two-column">
           <article class="card">
-            <h3>¿Qué puede hacer el inversionista?</h3>
+            <h3>¿Dónde entra el inversionista?</h3>
             <p>
-              Según el producto, puede elegir facturas individuales en una
-              plataforma, aportar a un fondo que las selecciona o financiar a
-              una empresa de factoring. Estas alternativas no son iguales:
-              cambia qué estás financiando, quién administra el dinero y quién
-              soporta directamente el riesgo.
+              Depende del producto. Podrías financiar una factura específica,
+              aportar a un fondo que selecciona varias operaciones o prestar
+              dinero a una empresa que realiza factoring. Cada alternativa
+              implica derechos, costos y riesgos diferentes. Averigua
+              exactamente qué estás financiando antes de aportar dinero.
             </p>
           </article>
 
-          <article class="example-card">
-            <h3>Un ejemplo ilustrativo</h3>
+          <article class="example">
+            <h3>Un ejemplo con números redondos</h3>
             <p>
-              Una factura de S/100,000 vence en 60 días. Se adquiere por
-              S/98,000. Si el deudor paga íntegramente y a tiempo, la diferencia
-              bruta es S/2,000.
+              Una factura de S/10,000 vence en 60 días. Se financia por S/9,800.
+              Si el pagador entrega los S/10,000 a tiempo, la diferencia bruta
+              de la operación es S/200.
             </p>
-            <div class="math">
-              <div>
-                <span>Valor de factura</span>
-                <strong>S/100,000</strong>
+            <div class="numbers">
+              <div class="number-box">
+                <span>Factura</span>
+                <strong>S/10,000</strong>
               </div>
-              <div>
-                <span>Precio de compra</span>
-                <strong>S/98,000</strong>
+              <div class="number-box">
+                <span>Adelanto</span>
+                <strong>S/9,800</strong>
               </div>
-              <div>
+              <div class="number-box">
                 <span>Diferencia bruta</span>
-                <strong>S/2,000</strong>
+                <strong>S/200</strong>
               </div>
             </div>
-            <p class="small-note">
-              La diferencia no equivale necesariamente a tu ganancia neta.
-              Puede haber comisiones, gastos, impuestos, atrasos o pérdidas.
+            <p class="fine-print">
+              Ejemplo hipotético, no una oferta ni una tasa de mercado. La
+              diferencia no es necesariamente la ganancia del inversionista:
+              pueden descontarse gastos y pueden producirse atrasos o pérdidas.
             </p>
           </article>
         </div>
@@ -694,200 +739,207 @@
     </section>
 
     <section id="oportunidad">
-      <div class="wrap">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Por qué considerarlo</p>
-          <h2>La oportunidad está en financiar actividad real.</h2>
+          <p class="eyebrow">La oportunidad</p>
+          <h2>¿Por qué alguien lo consideraría?</h2>
           <p>
-            El atractivo no es simplemente encontrar la tasa más alta. Es
-            entender qué operación financias, evaluar quién pagará y recibir una
-            compensación razonable por el riesgo que asumes.
+            Porque ofrece una forma distinta de participar en el financiamiento
+            de empresas. La pregunta útil no es solo “¿cuánto rinde?”, sino
+            “¿qué riesgo asumo para obtener ese rendimiento?”.
           </p>
         </div>
 
-        <div class="features">
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">↗</div>
-            <h3>Una fuente de rendimiento distinta</h3>
+        <div class="tiles">
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">↗</div>
+            <h3>Una fuente de retorno diferente</h3>
             <p>
-              El resultado depende de pagos y riesgos de crédito, no únicamente
-              de que suba el precio de una acción o un bono.
+              El resultado depende del cobro de cuentas por cobrar, no solo del
+              precio diario de una acción o un bono.
             </p>
           </article>
 
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">◉</div>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">◎</div>
             <h3>Posible diversificación</h3>
             <p>
-              Puede complementar otras inversiones, aunque no elimina riesgos
-              ni garantiza que se comporte de manera independiente.
+              Puede complementar otros activos. No elimina el riesgo ni garantiza
+              mejores resultados cuando los mercados se complican.
             </p>
           </article>
 
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">⌛</div>
-            <h3>Plazos definidos en la operación</h3>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">⌛</div>
+            <h3>Operaciones con vencimiento</h3>
             <p>
-              Las facturas tienen vencimientos, pero un atraso puede extender
-              el tiempo durante el que tu dinero queda inmovilizado.
+              Las facturas tienen una fecha prevista de pago. Si hay mora, tu
+              inversión puede tardar más en volver.
             </p>
           </article>
 
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">＋</div>
-            <h3>Financiamiento para empresas</h3>
+          <article class="tile">
+            <div class="tile-icon" aria-hidden="true">＋</div>
+            <h3>Financiamiento para la economía real</h3>
             <p>
-              El capital ayuda a dar liquidez a negocios que ya vendieron y
-              esperan cobrar a sus clientes.
+              El capital puede ayudar a una empresa a pagar sus gastos mientras
+              espera que sus clientes cancelen facturas.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="risk-section" id="riesgos">
-      <div class="wrap">
+    <section class="section-soft" id="riesgos">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Lo que debes mirar de frente</p>
-          <h2>Una factura no es efectivo en una cuenta.</h2>
+          <p class="eyebrow">La otra cara</p>
+          <h2>Lo que puede salir mal también importa.</h2>
           <p>
-            El rendimiento potencial existe porque también existe la posibilidad
-            de retrasos, pérdidas y dificultades para recuperar el capital.
+            Una factura documenta un pago pendiente; no convierte ese pago en
+            seguro. Considera estos riesgos antes de decidir.
           </p>
         </div>
 
         <div class="risk-grid">
-          <article class="risk">
-            <h3>Impago</h3>
+          <article class="risk-card">
+            <h3>El pagador no paga</h3>
             <p>
-              El cliente que debe pagar la factura puede no hacerlo. Examina al
-              deudor, no solo a la empresa que emitió el documento.
+              El cliente que debe la factura puede incumplir. Evalúa su capacidad
+              de pago, no solo la reputación de quien emitió la factura.
             </p>
           </article>
 
-          <article class="risk">
-            <h3>Disputas y validez</h3>
+          <article class="risk-card">
+            <h3>La factura se disputa</h3>
             <p>
-              Puede haber desacuerdos comerciales, documentación incompleta,
-              errores o derechos de cobro cedidos anteriormente.
+              Puede surgir un desacuerdo sobre la entrega, el servicio o la
+              documentación que respalda el cobro.
             </p>
           </article>
 
-          <article class="risk">
-            <h3>Concentración</h3>
+          <article class="risk-card">
+            <h3>Demasiado depende de uno</h3>
             <p>
-              Muchas facturas pueden depender del mismo pagador, sector,
-              proveedor o grupo económico.
+              Muchas facturas no diversifican mucho si dependen del mismo pagador
+              o de un solo sector económico.
             </p>
           </article>
 
-          <article class="risk">
-            <h3>Liquidez limitada</h3>
+          <article class="risk-card">
+            <h3>No puedes salir cuando quieras</h3>
             <p>
-              El vencimiento no asegura que cobres ese día ni que puedas retirar
-              antes el dinero invertido.
+              Una plataforma o un fondo puede no ofrecer retiros inmediatos o un
+              mercado donde vender fácilmente tu participación.
             </p>
           </article>
 
-          <article class="risk">
-            <h3>Administración y cobranza</h3>
+          <article class="risk-card">
+            <h3>La gestión puede fallar</h3>
             <p>
-              La selección de facturas, la custodia del dinero y la gestión de
-              cobros son parte esencial del riesgo.
+              La verificación de documentos, la custodia de fondos y la cobranza
+              son parte importante de la operación.
             </p>
           </article>
 
-          <article class="risk">
-            <h3>Costos, impuestos y moneda</h3>
+          <article class="risk-card">
+            <h3>El resultado neto puede ser menor</h3>
             <p>
-              Comisiones, impuestos, inflación y variaciones cambiarias pueden
-              reducir el rendimiento final.
+              Comisiones, gastos, impuestos, inflación y riesgo cambiario pueden
+              reducir lo que finalmente recibes.
             </p>
           </article>
         </div>
 
-        <div class="callout">
-          <strong>“Con recurso” no significa “sin riesgo”.</strong>
-          Puede existir un derecho a reclamar al cedente si el deudor no paga,
-          pero ejercer ese derecho no garantiza recuperar el dinero.
-        </div>
+        <aside class="notice">
+          <strong>Atención: “con recurso” tampoco equivale a “sin riesgo”.</strong>
+          Algunos contratos permiten reclamar también a quien cedió la factura
+          si el pagador no cumple; otros asignan el riesgo de otra manera. El
+          contrato define los derechos, pero reclamar no garantiza recuperar el
+          dinero.
+        </aside>
       </div>
     </section>
 
-    <section id="empezar">
-      <div class="wrap">
+    <section class="section-white" id="empezar">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Una entrada prudente</p>
-          <h2>Cómo empezar sin enamorarte de una tasa.</h2>
+          <p class="eyebrow">De la curiosidad a la evaluación</p>
+          <h2>Cómo empezar con criterio.</h2>
           <p>
-            Un proceso sencillo ayuda a separar una oportunidad bien explicada
-            de una oferta que solo destaca su rentabilidad.
+            No necesitas convertirte en especialista antes de empezar. Sí
+            necesitas entender el producto, leer las condiciones y evitar
+            invertir por impulso.
           </p>
         </div>
 
         <div class="steps">
           <article class="step">
             <div>
-              <h3>Entiende qué estás financiando</h3>
+              <h3>Define qué tipo de inversión estás mirando</h3>
               <p>
-                ¿Una factura concreta, un fondo que compra facturas o un préstamo
-                a una empresa de factoring? Son exposiciones diferentes.
+                ¿Financias una factura específica? ¿Participas en un fondo?
+                ¿Estás prestando a una empresa de factoring? Pide que te expliquen
+                quién te debe y de dónde saldría el pago.
               </p>
             </div>
           </article>
 
           <article class="step">
             <div>
-              <h3>Investiga a la entidad y la estructura</h3>
+              <h3>Investiga a la empresa y a quienes manejan el dinero</h3>
               <p>
-                Revisa quién administra, quién custodia los fondos, a nombre de
-                quién se reciben los pagos y qué ocurre si el operador deja de
-                funcionar. En Perú, comprueba la situación de la entidad en los
-                registros oficiales aplicables. Estar registrado no equivale a
-                tener capital garantizado.
+                Averigua quién selecciona las facturas, quién custodia los
+                aportes, quién realiza la cobranza y qué pasa si el operador deja
+                de funcionar. En Perú puedes consultar los registros oficiales
+                que correspondan al tipo de entidad. Una inscripción registral,
+                por sí sola, no significa que la inversión esté garantizada.
               </p>
             </div>
           </article>
 
           <article class="step">
             <div>
-              <h3>Pide historial que puedas interpretar</h3>
+              <h3>Pide resultados comprensibles</h3>
               <p>
-                Consulta atrasos, recuperaciones, pérdidas, concentración por
-                deudor y cómo se calcula la rentabilidad anunciada. Distingue
-                entre rendimiento proyectado, devengado y cobrado.
+                Pregunta por operaciones atrasadas, recuperaciones y pérdidas.
+                Aclara si la rentabilidad que se muestra es proyectada, ya
+                generada o efectivamente cobrada, y si está expresada antes o
+                después de los costos.
               </p>
             </div>
           </article>
 
           <article class="step">
             <div>
-              <h3>Lee el contrato completo</h3>
+              <h3>Lee el contrato antes de depositar</h3>
               <p>
-                Identifica tus derechos, comisiones, plazo, condiciones de salida,
-                tratamiento de la mora, garantías y mecanismos de cobranza.
+                Revisa plazo, comisiones, condiciones de salida, responsabilidades
+                ante impagos, garantías y mecanismos de reclamación. Si no
+                entiendes una cláusula importante, pide que te la expliquen por
+                escrito.
               </p>
             </div>
           </article>
 
           <article class="step">
             <div>
-              <h3>Empieza pequeño y diversifica</h3>
+              <h3>Comienza con una cantidad prudente</h3>
               <p>
-                Invierte solo capital que puedas mantener inmovilizado y cuya
-                pérdida puedas soportar. Evita concentrarte en una sola factura,
-                pagador o plataforma.
+                Usa solo dinero que no necesites para tus gastos cercanos y cuya
+                pérdida puedas soportar. Si puedes, diversifica entre distintos
+                pagadores y operaciones.
               </p>
             </div>
           </article>
 
           <article class="step">
             <div>
-              <h3>Calcula el rendimiento neto</h3>
+              <h3>Compara el rendimiento después de costos</h3>
               <p>
-                Resta comisiones y gastos; considera impuestos, inflación,
-                posibles pérdidas y el tiempo que el dinero podría permanecer
-                sin poder retirarse.
+                No compares solo tasas anunciadas. Considera comisiones,
+                impuestos, atrasos, posibles pérdidas y cuánto tiempo puede quedar
+                inmovilizado el capital.
               </p>
             </div>
           </article>
@@ -895,50 +947,114 @@
       </div>
     </section>
 
-    <section class="white-section">
-      <div class="wrap">
+    <section id="expectativas">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Antes de invertir</p>
-          <h2>Cinco preguntas que deberías poder responder.</h2>
+          <p class="eyebrow">Expectativas realistas</p>
+          <h2>Qué no deberías pensar ni esperar.</h2>
+          <p>
+            Tener expectativas claras ayuda a no confundir una inversión privada
+            con un depósito o con una promesa de pago seguro.
+          </p>
         </div>
 
-        <div class="checklist">
-          <div class="check">¿Quién es el deudor final y qué evidencia respalda la deuda?</div>
-          <div class="check">¿Qué ocurre si el deudor se atrasa o no paga?</div>
-          <div class="check">¿Cuánto depende mi inversión de un mismo pagador o sector?</div>
-          <div class="check">¿Cuándo y bajo qué condiciones puedo recuperar mi capital?</div>
-          <div class="check">¿Cuál sería mi rendimiento neto después de costos e impuestos?</div>
-          <div class="check">¿Qué parte de la operación puedo verificar en documentos y reportes?</div>
+        <div class="expect-grid">
+          <article class="expect">
+            <h3>No es dinero garantizado</h3>
+            <p>
+              El pagador puede incumplir y las gestiones de recuperación pueden
+              ser lentas o incompletas.
+            </p>
+          </article>
+
+          <article class="expect">
+            <h3>No siempre podrás retirar de inmediato</h3>
+            <p>
+              Aunque una factura tenga vencimiento, eso no significa que puedas
+              vender o retirar tu inversión antes de esa fecha.
+            </p>
+          </article>
+
+          <article class="expect">
+            <h3>Una tasa alta no significa una oportunidad mejor</h3>
+            <p>
+              Puede reflejar mayor riesgo de crédito, menor liquidez, más costos
+              o una combinación de factores.
+            </p>
+          </article>
+
+          <article class="expect">
+            <h3>Una plataforma conocida no elimina el riesgo</h3>
+            <p>
+              La reputación ayuda a evaluar al operador, pero no sustituye el
+              análisis de los deudores, contratos y operaciones.
+            </p>
+          </article>
+
+          <article class="expect">
+            <h3>Un registro no es una garantía de pago</h3>
+            <p>
+              Verifica qué significa la inscripción de cada entidad y qué
+              supervisión corresponde al producto ofrecido.
+            </p>
+          </article>
+
+          <article class="expect">
+            <h3>La rentabilidad anunciada no es necesariamente neta</h3>
+            <p>
+              Pregunta qué gastos e impuestos se descuentan y cómo se tratan los
+              pagos atrasados o las pérdidas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Tu última comprobación</p>
+          <h2>Antes de invertir, responde estas preguntas.</h2>
+        </div>
+
+        <div class="questions">
+          <div class="question">¿Quién debe pagar al final y qué información tengo sobre ese pagador?</div>
+          <div class="question">¿Qué documento acredita la factura y que puede cederse?</div>
+          <div class="question">¿Qué ocurre si el pago se retrasa o no llega?</div>
+          <div class="question">¿Cuánto de mi dinero depende del mismo pagador o sector?</div>
+          <div class="question">¿Cuándo podría recuperar el capital y qué condiciones aplican?</div>
+          <div class="question">¿Cuál sería mi resultado después de gastos e impuestos?</div>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap">
-        <div class="closing">
-          <h2>La clave no es comprar la promesa. Es entender el cobro.</h2>
+      <div class="container">
+        <div class="final-card">
+          <h2>La idea no es perseguir la tasa más alta. Es entender qué estás financiando.</h2>
           <p>
-            El factoring puede ocupar un lugar en una cartera diversificada,
-            pero sigue siendo una inversión de crédito privado. La calidad del
-            pagador, la verificación de la factura, la estructura legal, la
-            cobranza y la liquidez determinan si el rendimiento anunciado llega
-            a convertirse en rendimiento para ti.
+            El factoring puede ser una alternativa para diversificar una cartera
+            y participar en el financiamiento de empresas. Para evaluarlo con
+            sensatez, mira al pagador, la factura, el contrato, quien administra
+            el cobro y la posibilidad de mantener tu dinero invertido más tiempo
+            del previsto.
           </p>
         </div>
 
-        <div class="disclaimer">
-          <strong>Nota educativa:</strong> este contenido es informativo y no
-          constituye una recomendación personalizada de inversión, asesoría
-          legal ni asesoría tributaria. Evalúa los documentos del producto y tu
-          capacidad para asumir pérdidas antes de invertir.
-        </div>
+        <p class="disclaimer">
+          <strong>Contenido educativo:</strong> esta página ofrece información
+          general y no constituye asesoría financiera, legal ni tributaria
+          personalizada, ni una recomendación para invertir en un producto
+          específico. Revisa los documentos del producto y evalúa si el riesgo
+          se ajusta a tu situación.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      © <span id="year">2026</span> Finanzas claras · Contenido educativo sobre inversión.
+    <div class="container">
+      © 2026 Finanzas sin vueltas · Guía educativa sobre factoring.
     </div>
   </footer>
 </body>

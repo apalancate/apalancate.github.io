@@ -3,31 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Por qué invertir en Factoring en Perú | Guía para empezar de cero</title>
-<meta name="description" content="Guía sencilla y honesta sobre invertir en factoring en Perú: qué es, ventajas, riesgos, oportunidades y cómo empezar paso a paso.">
+<title>Invertir en Factoring en Perú — Guía visual para empezar de cero</title>
+<meta name="description" content="Guía visual y honesta sobre invertir en factoring en Perú: qué es, los tres protagonistas, un ejemplo práctico, ventajas, riesgos y cómo empezar.">
 
 <style>
   :root{
-    --bg:#f5f8fc;
-    --card:#ffffff;
-    --ink:#16233a;
-    --muted:#5b6b85;
-    --line:#e3e9f2;
-    --primary:#1d3557;
-    --primary-2:#2a5d8f;
-    --primary-soft:#edf3fb;
-    --accent:#2a9d8f;
-    --accent-soft:#e6f5f2;
-    --warn:#d95f43;
-    --warn-soft:#fdeee9;
-    --amber:#e9a13b;
-    --radius:16px;
-    --shadow:0 1px 2px rgba(16,32,64,.05), 0 10px 28px rgba(16,32,64,.07);
-    --max:840px;
+    --bg:#f6f8fb;
+    --surface:#ffffff;
+    --ink:#0f172a;
+    --muted:#64748b;
+    --line:#e2e8f0;
+    --teal:#0d9488;
+    --teal-dark:#0f766e;
+    --teal-soft:#ccfbf1;
+    --orange:#f97316;
+    --orange-soft:#ffedd5;
+    --amber:#fbbf24;
+    --green:#16a34a;
+    --green-soft:#dcfce7;
+    --red:#dc2626;
+    --red-soft:#fee2e2;
+    --radius:18px;
+    --shadow-sm:0 1px 2px rgba(15,23,42,.06);
+    --shadow:0 10px 30px -12px rgba(15,23,42,.18), 0 2px 6px rgba(15,23,42,.05);
+    --max:880px;
   }
 
   *{box-sizing:border-box;}
-
   html{scroll-behavior:smooth;}
 
   body{
@@ -36,640 +38,773 @@
     color:var(--ink);
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size:17px;
-    line-height:1.75;
+    line-height:1.72;
     -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
   }
 
-  .wrap{
-    width:100%;
-    max-width:var(--max);
-    margin:0 auto;
-    padding:0 20px;
-  }
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px;}
 
-  /* ---------- HERO ---------- */
+  /* ============ HERO ============ */
   .hero{
-    background:
-      radial-gradient(900px 400px at 15% -10%, #2f5f96 0%, transparent 60%),
-      linear-gradient(160deg,#1d3557 0%,#12233c 100%);
-    color:#fff;
-    padding:64px 0 56px;
     position:relative;
+    background:
+      radial-gradient(700px 340px at 85% -10%, #14b8a6 0%, transparent 55%),
+      radial-gradient(600px 300px at 5% 110%, #f97316 0%, transparent 60%),
+      linear-gradient(160deg,#0f172a 0%,#1e293b 100%);
+    color:#fff;
+    padding:60px 0 90px;
     overflow:hidden;
   }
-  .hero::after{
+  .hero::before{
     content:"";
-    position:absolute;
-    right:-80px;bottom:-80px;
-    width:280px;height:280px;
-    border-radius:50%;
-    background:rgba(42,157,143,.22);
-    filter:blur(10px);
+    position:absolute;inset:0;
+    background-image:
+      radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size:22px 22px;
+    opacity:.5;
+    pointer-events:none;
   }
+  .hero .wrap{position:relative;z-index:2;}
+
   .eyebrow{
-    display:inline-block;
-    font-size:.78rem;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    font-weight:700;
-    color:#a9d6cf;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.16);
-    padding:6px 14px;
-    border-radius:999px;
-    margin-bottom:22px;
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:800;color:#5eead4;
+    background:rgba(94,234,212,.1);
+    border:1px solid rgba(94,234,212,.28);
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
   }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#5eead4;}
+
   .hero h1{
-    font-size:clamp(1.85rem,5.2vw,2.9rem);
-    line-height:1.2;
-    margin:0 0 16px;
-    letter-spacing:-.02em;
-    font-weight:800;
+    font-size:clamp(1.9rem,5.6vw,3rem);
+    line-height:1.14;margin:0 0 18px;
+    letter-spacing:-.025em;font-weight:850;
   }
-  .hero h1 em{
-    font-style:normal;
-    color:#7fd6c9;
-  }
-  .lede{
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,#5eead4,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+  .hero p.lede{
     font-size:clamp(1rem,2.6vw,1.15rem);
-    color:#c9d8ec;
-    max-width:600px;
-    margin:0 0 26px;
-  }
-  .hero-note{
-    display:inline-block;
-    font-size:.82rem;
-    color:#9fb3d0;
-    border-left:3px solid var(--accent);
-    padding-left:12px;
-    margin:0;
+    color:#cbd5e1;max-width:600px;margin:0 0 28px;
   }
 
-  /* ---------- TOC ---------- */
+  /* mini flow en el hero */
+  .hero-flow{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:14px;padding:12px 16px;
+    max-width:520px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-flow .step{
+    display:flex;align-items:center;gap:8px;
+    font-size:.82rem;font-weight:700;color:#e2e8f0;
+  }
+  .hero-flow .dot{
+    width:22px;height:22px;border-radius:50%;
+    display:grid;place-items:center;font-size:.7rem;font-weight:800;
+    background:#5eead4;color:#0f172a;
+  }
+  .hero-flow .dot.o{background:#fbbf24;color:#78350f;}
+  .hero-flow .arrow{color:#64748b;font-weight:700;font-size:.9rem;}
+
+  /* ============ TOC ============ */
   .toc{
-    background:var(--card);
+    background:var(--surface);
     border:1px solid var(--line);
     border-radius:var(--radius);
     box-shadow:var(--shadow);
-    padding:22px 22px 18px;
-    margin:-30px auto 40px;
-    position:relative;
-    z-index:2;
+    padding:22px;
+    margin:-56px auto 44px;
+    position:relative;z-index:5;
   }
   .toc h2{
-    font-size:.78rem;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:var(--muted);
-    margin:0 0 14px;
-    font-weight:700;
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--muted);margin:0 0 14px;font-weight:800;
   }
-  .toc ul{
-    list-style:none;
-    margin:0;padding:0;
-    display:grid;
-    gap:8px;
-  }
+  .toc ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
   .toc a{
-    color:var(--primary);
-    text-decoration:none;
-    font-size:.95rem;
-    font-weight:600;
-    display:flex;
-    align-items:baseline;
-    gap:10px;
-    padding:6px 8px;
-    border-radius:8px;
+    display:flex;align-items:center;gap:12px;
+    color:var(--ink);text-decoration:none;
+    font-size:.92rem;font-weight:650;
+    padding:8px 10px;border-radius:10px;
     transition:background .15s ease,color .15s ease;
   }
-  .toc a:hover,.toc a:focus-visible{
-    background:var(--primary-soft);
-    outline:none;
-  }
-  .toc a span{
-    color:var(--accent);
-    font-variant-numeric:tabular-nums;
-    font-weight:800;
-    font-size:.85rem;
+  .toc a:hover,.toc a:focus-visible{background:var(--teal-soft);color:var(--teal-dark);outline:none;}
+  .toc a .n{
+    font-variant-numeric:tabular-nums;font-weight:800;
+    color:var(--teal);font-size:.78rem;
     min-width:18px;
   }
 
-  /* ---------- SECCIONES ---------- */
-  section{
-    margin:0 0 46px;
-    scroll-margin-top:24px;
-  }
+  /* ============ SECCIONES ============ */
+  section{margin:0 0 52px;scroll-margin-top:20px;}
 
   h2.title{
     font-size:clamp(1.35rem,3.8vw,1.75rem);
-    line-height:1.3;
-    letter-spacing:-.015em;
-    margin:0 0 18px;
-    padding-left:16px;
-    border-left:5px solid var(--accent);
-    font-weight:800;
+    line-height:1.25;letter-spacing:-.02em;
+    margin:0 0 8px;font-weight:850;
+    display:flex;align-items:center;gap:12px;
   }
-
-  h3{
-    font-size:1.02rem;
-    margin:26px 0 8px;
-    font-weight:750;
+  h2.title::before{
+    content:"";width:6px;height:26px;border-radius:3px;
+    background:linear-gradient(180deg,var(--teal),var(--orange));
+    flex:0 0 auto;
   }
+  .subtitle{color:var(--muted);font-size:.95rem;margin:0 0 24px;}
 
+  h3{font-size:1.05rem;margin:26px 0 8px;font-weight:800;}
   p{margin:0 0 16px;}
+  strong{font-weight:750;color:var(--ink);}
 
-  strong{font-weight:700;color:var(--primary);}
-
-  /* ---------- CAJA RESUMEN ---------- */
-  .summary{
-    background:linear-gradient(180deg,#ffffff,#f7fbff);
-    border:1px solid var(--line);
-    border-left:5px solid var(--accent);
-    border-radius:var(--radius);
-    padding:24px 24px 18px;
-    box-shadow:var(--shadow);
-  }
-  .summary h2{
-    margin:0 0 14px;
-    font-size:1rem;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    color:var(--accent);
-    font-weight:800;
-  }
-  .summary ul{
-    margin:0;padding:0;list-style:none;
-    display:grid;gap:12px;
-  }
-  .summary li{
-    display:flex;gap:12px;
-    font-size:.97rem;
-  }
-  .summary li::before{
-    content:"";
-    flex:0 0 8px;
-    height:8px;
-    margin-top:10px;
-    border-radius:50%;
-    background:var(--accent);
-  }
-
-  /* ---------- LISTAS CON ICONO ---------- */
-  .list{
-    list-style:none;
-    margin:0;padding:0;
-    display:grid;
-    gap:14px;
-  }
-  .list li{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:16px 18px 16px 52px;
-    position:relative;
-    box-shadow:0 1px 2px rgba(16,32,64,.03);
-    font-size:.97rem;
-  }
-  .list li::before{
-    position:absolute;
-    left:16px;top:15px;
-    width:24px;height:24px;
-    border-radius:50%;
-    display:grid;place-items:center;
-    font-size:.8rem;
-    font-weight:800;
-    line-height:1;
-  }
-  .list.pros li::before{
-    content:"✓";
-    background:var(--accent-soft);
-    color:#1d7a6f;
-  }
-  .list.cons li::before{
-    content:"!";
-    background:var(--warn-soft);
-    color:var(--warn);
-  }
-  .list li b{
-    display:block;
-    color:var(--primary);
-    font-weight:750;
-    margin-bottom:2px;
-    font-size:.98rem;
-  }
-
-  /* ---------- TARJETAS DE OPORTUNIDADES ---------- */
-  .grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-  @media(min-width:700px){
-    .grid{grid-template-columns:1fr 1fr;}
-  }
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 20px;
-    box-shadow:0 1px 2px rgba(16,32,64,.03);
-    font-size:.95rem;
-  }
-  .card h4{
-    margin:0 0 6px;
-    font-size:.98rem;
-    color:var(--primary);
-    font-weight:750;
-  }
-  .card p{margin:0;font-size:.93rem;color:var(--muted);}
-  .card .ico{
-    font-size:1.35rem;
-    display:block;
+  /* ============ LOS 3 PROTAGONISTAS ============ */
+  .cast{
+    display:grid;gap:18px;grid-template-columns:1fr;
     margin-bottom:8px;
   }
+  @media(min-width:720px){ .cast{grid-template-columns:repeat(3,1fr);} }
 
-  /* ---------- PASOS ---------- */
-  .steps{
-    list-style:none;
-    margin:0;padding:0;
-    counter-reset:step;
-  }
-  .steps li{
-    counter-increment:step;
-    position:relative;
-    padding:0 0 0 62px;
-    margin-bottom:26px;
-  }
-  .steps li::before{
-    content:counter(step);
-    position:absolute;
-    left:0;top:-2px;
-    width:42px;height:42px;
-    border-radius:50%;
-    display:grid;place-items:center;
-    background:var(--primary);
-    color:#fff;
-    font-weight:800;
-    font-size:1rem;
-    box-shadow:0 4px 12px rgba(29,53,87,.25);
-  }
-  .steps li:not(:last-child)::after{
-    content:"";
-    position:absolute;
-    left:20px;top:46px;bottom:-26px;
-    width:2px;
-    background:linear-gradient(180deg,var(--line),transparent);
-  }
-  .steps b{
-    display:block;
-    color:var(--primary);
-    font-weight:750;
-    margin-bottom:4px;
-    font-size:1rem;
-  }
-  .steps p{margin:0;font-size:.95rem;}
-
-  /* ---------- CONSIDERACIONES ---------- */
-  .notes{
-    display:grid;
-    gap:14px;
-  }
-  .note{
-    background:var(--card);
+  .cast-card{
+    background:var(--surface);
     border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 20px;
-    font-size:.95rem;
-    box-shadow:0 1px 2px rgba(16,32,64,.03);
-    border-left:4px solid var(--primary-2);
+    border-radius:var(--radius);
+    padding:22px 20px 24px;
+    box-shadow:var(--shadow-sm);
+    display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+    transition:transform .2s ease,box-shadow .2s ease;
   }
-  .note h4{
-    margin:0 0 6px;
-    font-size:.97rem;
-    color:var(--primary);
-    font-weight:750;
+  .cast-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+  .cast-card .badge{
+    position:absolute;top:14px;left:14px;
+    font-size:.68rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:4px 10px;border-radius:999px;
   }
-  .note p{margin:0;color:var(--muted);}
+  .cast-card.p1 .badge{background:var(--orange-soft);color:#9a3412;}
+  .cast-card.p2 .badge{background:var(--teal-soft);color:var(--teal-dark);}
+  .cast-card.p3 .badge{background:#ede9fe;color:#5b21b6;}
 
-  /* ---------- NO ESPERAR ---------- */
-  .avoid{
-    list-style:none;
-    margin:0;padding:0;
-    display:grid;gap:14px;
+  .cast-card .art{
+    display:grid;place-items:center;
+    margin:22px 0 16px;
+    background:linear-gradient(180deg,transparent,#f8fafc);
+    border-radius:12px;
+    padding:6px;
   }
-  .avoid li{
-    background:var(--warn-soft);
-    border:1px solid #f6d9d0;
+  .cast-card svg{width:100%;max-width:200px;height:auto;display:block;}
+
+  .cast-card h4{margin:0 0 6px;font-size:1.05rem;font-weight:800;}
+  .cast-card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
+
+  /* ============ FLOW (cómo funciona) ============ */
+  .flow{
+    background:linear-gradient(180deg,#0f172a,#1e293b);
+    color:#e2e8f0;
+    border-radius:var(--radius);
+    padding:32px 24px;
+    box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .flow::before{
+    content:"";position:absolute;top:-40px;right:-40px;
+    width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle,#14b8a6,transparent 70%);
+    opacity:.35;filter:blur(6px);
+  }
+  .flow h2{
+    color:#fff;font-size:1.2rem;margin:0 0 6px;font-weight:850;
+    position:relative;z-index:1;
+  }
+  .flow .sub{color:#94a3b8;font-size:.9rem;margin:0 0 24px;position:relative;z-index:1;}
+  .flow-steps{
+    display:grid;gap:14px;grid-template-columns:1fr;
+    position:relative;z-index:1;
+  }
+  @media(min-width:720px){
+    .flow-steps{grid-template-columns:repeat(4,1fr);}
+  }
+  .flow-step{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
     border-radius:14px;
-    padding:18px 20px 18px 52px;
-    position:relative;
+    padding:16px 14px;
+    text-align:center;
+  }
+  .flow-step .num{
+    display:inline-grid;place-items:center;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--teal);color:#fff;
+    font-weight:850;font-size:.9rem;
+    margin-bottom:10px;
+  }
+  .flow-step:nth-child(4) .num{background:var(--orange);}
+  .flow-step b{display:block;font-size:.9rem;color:#fff;margin-bottom:4px;}
+  .flow-step span{font-size:.8rem;color:#94a3b8;line-height:1.5;}
+
+  /* ============ EJEMPLO PRÁCTICO ============ */
+  .example{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 24px;
+    box-shadow:var(--shadow-sm);
+  }
+  .example-head{
+    display:flex;align-items:center;gap:12px;margin-bottom:22px;
+    padding-bottom:18px;border-bottom:1px dashed var(--line);
+  }
+  .example-head .tag{
+    background:#fee2e2;color:#991b1b;
+    font-size:.7rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 12px;border-radius:999px;
+  }
+  .example-head h3{margin:0;font-size:1.1rem;}
+
+  .scenario{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:22px;
     font-size:.95rem;
+    border-left:4px solid var(--teal);
+  }
+  .scenario p{margin:0;}
+  .scenario .q{color:var(--teal-dark);font-weight:750;}
+
+  .timeline{
+    display:grid;gap:16px;grid-template-columns:1fr;
+    margin-bottom:22px;
+  }
+  @media(min-width:640px){ .timeline{grid-template-columns:1fr 1fr;} }
+
+  .tl-item{
+    border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;background:#fff;position:relative;
+  }
+  .tl-item .when{
+    display:inline-block;font-size:.72rem;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;margin-bottom:10px;
+  }
+  .tl-item.day0 .when{background:var(--orange-soft);color:#9a3412;}
+  .tl-item.day60 .when{background:var(--teal-soft);color:var(--teal-dark);}
+  .tl-item .what{font-size:.92rem;color:var(--muted);margin:0 0 12px;line-height:1.6;}
+  .tl-item .amount{
+    font-size:1.5rem;font-weight:850;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .tl-item.day0 .amount{color:#c2410c;}
+  .tl-item.day60 .amount{color:var(--teal-dark);}
+
+  .result{
+    background:linear-gradient(135deg,#0d9488,#0f766e);
+    color:#fff;border-radius:14px;
+    padding:20px 22px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  }
+  .result .icon{
+    width:46px;height:46px;border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:grid;place-items:center;font-size:1.4rem;
+    flex:0 0 auto;
+  }
+  .result .txt strong{display:block;font-size:1.15rem;font-weight:850;color:#fff;}
+  .result .txt span{font-size:.85rem;color:#ccfbf1;}
+
+  /* ============ VENTAJAS / RIESGOS ============ */
+  .two-col{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:720px){ .two-col{grid-template-columns:1fr 1fr;} }
+
+  .panel{
+    border-radius:var(--radius);padding:22px 20px;
+    border:1px solid var(--line);background:var(--surface);
+  }
+  .panel h3{
+    margin:0 0 16px;font-size:1rem;font-weight:850;
+    display:flex;align-items:center;gap:8px;
+  }
+  .panel h3 .chip{
+    width:24px;height:24px;border-radius:50%;
+    display:grid;place-items:center;font-size:.8rem;font-weight:800;
+  }
+  .panel.pro h3 .chip{background:var(--green-soft);color:#15803d;}
+  .panel.con h3 .chip{background:var(--red-soft);color:#b91c1c;}
+
+  .panel ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+  .panel li{font-size:.92rem;line-height:1.65;padding-left:16px;position:relative;}
+  .panel li::before{
+    content:"";position:absolute;left:0;top:9px;
+    width:6px;height:6px;border-radius:50%;
+  }
+  .panel.pro li::before{background:var(--green);}
+  .panel.con li::before{background:var(--red);}
+  .panel li b{color:var(--ink);font-weight:750;}
+
+  /* ============ OPORTUNIDADES ============ */
+  .opps{display:grid;gap:14px;grid-template-columns:1fr;}
+  @media(min-width:700px){ .opps{grid-template-columns:1fr 1fr;} }
+  .opp{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:18px 20px;
+    display:flex;gap:14px;
+  }
+  .opp .ico{
+    flex:0 0 40px;height:40px;border-radius:10px;
+    background:var(--teal-soft);color:var(--teal-dark);
+    display:grid;place-items:center;font-size:1.15rem;
+  }
+  .opp h4{margin:0 0 4px;font-size:.95rem;font-weight:800;}
+  .opp p{margin:0;font-size:.87rem;color:var(--muted);line-height:1.6;}
+
+  /* ============ PASOS ============ */
+  .steps{list-style:none;margin:0;padding:0;}
+  .steps li{
+    display:grid;grid-template-columns:44px 1fr;gap:16px;
+    padding:18px 0;border-bottom:1px solid var(--line);
+  }
+  .steps li:last-child{border-bottom:none;}
+  .steps .n{
+    width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+    color:#fff;display:grid;place-items:center;
+    font-weight:850;font-size:1.05rem;
+    box-shadow:0 6px 16px -6px rgba(13,148,136,.5);
+  }
+  .steps b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;}
+  .steps p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.65;}
+
+  /* ============ CONSIDERAR ============ */
+  .consider{display:grid;gap:14px;}
+  .cns{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:18px 20px;
+    border-left:4px solid var(--teal);
+  }
+  .cns h4{margin:0 0 6px;font-size:.97rem;font-weight:800;color:var(--teal-dark);}
+  .cns p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
+
+  /* ============ NO ESPERAR ============ */
+  .avoid{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .avoid li{
+    background:var(--red-soft);
+    border:1px solid #fecaca;
+    border-radius:14px;
+    padding:16px 18px 16px 50px;
+    position:relative;font-size:.92rem;line-height:1.65;
   }
   .avoid li::before{
     content:"✕";
-    position:absolute;
-    left:16px;top:18px;
-    width:24px;height:24px;
-    border-radius:50%;
-    background:#f7c9bc;
-    color:#a83f27;
+    position:absolute;left:14px;top:16px;
+    width:24px;height:24px;border-radius:50%;
+    background:#fca5a5;color:#7f1d1d;
     display:grid;place-items:center;
-    font-size:.78rem;
-    font-weight:800;
+    font-size:.78rem;font-weight:850;
   }
-  .avoid b{
-    display:block;
-    color:#a83f27;
-    font-weight:750;
-    margin-bottom:2px;
-  }
+  .avoid b{display:block;color:#991b1b;font-weight:800;margin-bottom:3px;}
 
-  /* ---------- CALLOUT FINAL ---------- */
+  /* ============ CALLOUT FINAL ============ */
   .callout{
-    background:linear-gradient(160deg,#1d3557,#12233c);
-    color:#e8f1fb;
-    border-radius:var(--radius);
-    padding:30px 26px;
+    background:
+      radial-gradient(400px 200px at 100% 0%, rgba(20,184,166,.35), transparent 70%),
+      linear-gradient(160deg,#0f172a,#1e293b);
+    color:#e2e8f0;border-radius:var(--radius);
+    padding:32px 26px;
     box-shadow:var(--shadow);
   }
-  .callout h2{
-    color:#7fd6c9;
-    margin:0 0 14px;
-    font-size:1.2rem;
-    letter-spacing:-.01em;
-  }
-  .callout p{color:#c9d8ec;font-size:.98rem;margin:0 0 14px;}
+  .callout h2{color:#5eead4;margin:0 0 14px;font-size:1.2rem;font-weight:850;letter-spacing:-.01em;}
+  .callout p{font-size:.95rem;color:#cbd5e1;margin:0 0 14px;}
   .callout p:last-child{margin-bottom:0;}
 
-  /* ---------- FOOTER ---------- */
+  /* ============ FOOTER ============ */
   footer{
-    border-top:1px solid var(--line);
-    margin-top:56px;
-    padding:26px 0 48px;
-    font-size:.84rem;
-    color:var(--muted);
-    line-height:1.65;
+    border-top:1px solid var(--line);margin-top:52px;
+    padding:26px 0 48px;font-size:.82rem;color:var(--muted);line-height:1.7;
   }
-  footer strong{color:var(--primary);}
+  footer strong{color:var(--ink);}
 
-  /* ---------- ACCESIBILIDAD ---------- */
-  a:focus-visible,li:focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:2px;
-  }
+  /* ============ ACCESIBILIDAD ============ */
+  a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px;}
 
   @media(max-width:520px){
     body{font-size:16px;}
-    .hero{padding:48px 0 44px;}
-    .toc{margin-top:-24px;padding:18px;}
-    .list li{padding:15px 16px 15px 48px;}
-    .steps li{padding-left:56px;}
-    .steps li::before{width:38px;height:38px;font-size:.92rem;}
-    .steps li:not(:last-child)::after{left:18px;}
+    .hero{padding:44px 0 76px;}
+    .toc{margin-top:-46px;padding:18px;}
+    .example{padding:22px 18px;}
+    .timeline{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
 
+<!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Guía práctica · Perú</span>
-    <h1>Por qué invertir en <em>Factoring</em> en Perú</h1>
-    <p class="lede">Una guía honesta y sin tecnicismos para quien empieza de cero: qué es, qué esperar y qué no.</p>
-    <p class="hero-note">Contenido educativo. No constituye asesoría financiera personalizada.</p>
+    <span class="eyebrow">Guía visual · Perú 2026</span>
+    <h1>Invertir en <em>Factoring</em>: lo que nadie te cuenta y deberías saber</h1>
+    <p class="lede">Una guía honesta, con ilustraciones y un ejemplo real, para quien nunca ha invertido en factoring y quiere entender cómo funciona de verdad.</p>
+
+    <div class="hero-flow">
+      <span class="step"><span class="dot">1</span> Proveedor</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot o">2</span> Factura</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot">3</span> Inversionista</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot o">4</span> Cobro</span>
+    </div>
   </div>
 </header>
 
 <div class="wrap">
 
+  <!-- ================= TOC ================= -->
   <nav class="toc" aria-label="Índice de contenidos">
-    <h2>Lo que verás aquí</h2>
+    <h2>Lo que encontrarás</h2>
     <ul>
-      <li><a href="#resumen"><span>01</span> Resumen en 30 segundos</a></li>
-      <li><a href="#que-es"><span>02</span> ¿Qué es el factoring, en simple?</a></li>
-      <li><a href="#ventajas"><span>03</span> Ventajas reales</a></li>
-      <li><a href="#riesgos"><span>04</span> Desventajas y riesgos</a></li>
-      <li><a href="#oportunidades"><span>05</span> Oportunidades del momento</a></li>
-      <li><a href="#empezar"><span>06</span> Cómo empezar, paso a paso</a></li>
-      <li><a href="#considerar"><span>07</span> Qué deberías considerar</a></li>
-      <li><a href="#no-esperar"><span>08</span> Qué NO deberías esperar</a></li>
-      <li><a href="#reflexion"><span>09</span> Reflexión final</a></li>
+      <li><a href="#protagonistas"><span class="n">01</span> Los 3 protagonistas del factoring</a></li>
+      <li><a href="#como-funciona"><span class="n">02</span> Cómo funciona, paso a paso</a></li>
+      <li><a href="#ejemplo"><span class="n">03</span> Ejemplo práctico con números</a></li>
+      <li><a href="#ventajas"><span class="n">04</span> Ventajas reales</a></li>
+      <li><a href="#riesgos"><span class="n">05</span> Riesgos que debes conocer</a></li>
+      <li><a href="#oportunidades"><span class="n">06</span> Oportunidades del momento</a></li>
+      <li><a href="#empezar"><span class="n">07</span> Cómo empezar, paso a paso</a></li>
+      <li><a href="#considerar"><span class="n">08</span> Qué considerar antes de invertir</a></li>
+      <li><a href="#no-esperar"><span class="n">09</span> Qué NO deberías esperar</a></li>
+      <li><a href="#reflexion"><span class="n">10</span> Reflexión final</a></li>
     </ul>
   </nav>
 
-  <!-- RESUMEN -->
-  <section id="resumen">
-    <div class="summary">
-      <h2>Resumen en 30 segundos</h2>
-      <ul>
-        <li>El factoring consiste en <strong>comprar facturas por cobrar con descuento</strong>: adelantas el dinero y a los 30, 60 o 90 días recibes el 100%.</li>
-        <li>Puede rendir más que un plazo fijo tradicional, con plazos cortos y entradas desde montos bajos.</li>
-        <li><strong>No es libre de riesgo:</strong> el pagador de la factura puede no pagar o retrasarse.</li>
-        <li>Tu mejor protección no es la suerte, sino <strong>diversificar y elegir bien al pagador</strong>.</li>
-        <li>Nunca inviertas dinero que vayas a necesitar pronto ni el que no puedas permitirte perder.</li>
-      </ul>
+  <!-- ================= PROTAGONISTAS ================= -->
+  <section id="protagonistas">
+    <h2 class="title">Los 3 protagonistas del factoring</h2>
+    <p class="subtitle">Antes de hablar de rendimientos, entiende quién participa y qué gana cada uno. El factoring es, en el fondo, una historia de tres personajes.</p>
+
+    <div class="cast">
+
+      <!-- PROVEEDOR -->
+      <article class="cast-card p1">
+        <span class="badge">Protagonista 1</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del proveedor: una pequeña tienda que vende y factura">
+            <ellipse cx="120" cy="178" rx="86" ry="6" fill="#e2e8f0"/>
+            <rect x="50" y="80" width="140" height="92" rx="6" fill="#0d9488"/>
+            <path d="M40 80 L200 80 L190 56 L50 56 Z" fill="#f97316"/>
+            <circle cx="60" cy="80" r="11" fill="#f97316"/>
+            <circle cx="90" cy="80" r="11" fill="#fb923c"/>
+            <circle cx="120" cy="80" r="11" fill="#f97316"/>
+            <circle cx="150" cy="80" r="11" fill="#fb923c"/>
+            <circle cx="180" cy="80" r="11" fill="#f97316"/>
+            <rect x="110" y="116" width="42" height="56" rx="4" fill="#0f766e"/>
+            <circle cx="144" cy="144" r="3" fill="#fbbf24"/>
+            <rect x="118" y="124" width="26" height="20" rx="2" fill="#99f6e4"/>
+            <rect x="62" y="112" width="36" height="34" rx="3" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+            <line x1="80" y1="112" x2="80" y2="146" stroke="#0f766e" stroke-width="2"/>
+            <line x1="62" y1="129" x2="98" y2="129" stroke="#0f766e" stroke-width="2"/>
+            <ellipse cx="80" cy="121" rx="10" ry="5" fill="#fbbf24"/>
+            <rect x="160" y="112" width="22" height="34" rx="3" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+            <text x="171" y="134" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f766e" font-family="system-ui">S/</text>
+          </svg>
+        </div>
+        <h4>El Proveedor</h4>
+        <p>Una pequeña o mediana empresa que ya vendió y entregó su producto o servicio. Tiene una factura por cobrar, pero el pago le llegará a 30, 60 o 90 días. Necesita liquidez <strong>hoy</strong>, no en dos meses.</p>
+      </article>
+
+      <!-- FACTURA -->
+      <article class="cast-card p2">
+        <span class="badge">Protagonista 2</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de la factura negociable, título valor con mérito ejecutivo">
+            <rect x="56" y="30" width="130" height="150" rx="8" fill="#cbd5e1" opacity="0.45" transform="rotate(5 121 105)"/>
+            <rect x="50" y="25" width="130" height="150" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <path d="M50 33 Q50 25 58 25 L172 25 Q180 25 180 33 L180 55 L50 55 Z" fill="#0d9488"/>
+            <rect x="64" y="36" width="52" height="6" rx="3" fill="#ccfbf1"/>
+            <rect x="64" y="46" width="34" height="4" rx="2" fill="#5eead4" opacity="0.7"/>
+            <rect x="64" y="70" width="100" height="5" rx="2.5" fill="#e2e8f0"/>
+            <rect x="64" y="82" width="80" height="5" rx="2.5" fill="#e2e8f0"/>
+            <rect x="64" y="94" width="90" height="5" rx="2.5" fill="#e2e8f0"/>
+            <rect x="64" y="106" width="70" height="5" rx="2.5" fill="#e2e8f0"/>
+            <line x1="64" y1="124" x2="166" y2="124" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="64" y="134" width="36" height="7" rx="3.5" fill="#0d9488"/>
+            <rect x="126" y="132" width="40" height="10" rx="5" fill="#f97316"/>
+            <circle cx="158" cy="160" r="16" fill="#f97316"/>
+            <path d="M150 160 L156 166 L167 154" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <h4>La Factura</h4>
+        <p>El documento que lo cambia todo. No es un simple papel: es un <strong>título valor con mérito ejecutivo</strong>. Se puede negociar, ceder y reclamar legalmente. Es el activo que se compra y se vende.</p>
+      </article>
+
+      <!-- INVERSIONISTA -->
+      <article class="cast-card p3">
+        <span class="badge">Protagonista 3</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del inversionista con monedas y crecimiento">
+            <ellipse cx="120" cy="182" rx="92" ry="6" fill="#e2e8f0"/>
+            <rect x="26" y="130" width="14" height="42" rx="3" fill="#ccfbf1"/>
+            <rect x="46" y="114" width="14" height="58" rx="3" fill="#5eead4"/>
+            <rect x="66" y="94" width="14" height="78" rx="3" fill="#14b8a6"/>
+            <path d="M26 124 Q60 108 92 88 Q122 70 152 58" stroke="#0d9488" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="6 5"/>
+            <path d="M148 52 L156 58 L150 66" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="162" cy="62" r="22" fill="#f97316"/>
+            <circle cx="155" cy="59" r="2.5" fill="#0f172a"/>
+            <circle cx="169" cy="59" r="2.5" fill="#0f172a"/>
+            <path d="M155 70 Q162 76 169 70" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M140 57 Q142 40 162 40 Q182 40 184 57 Q177 50 162 50 Q147 50 140 57 Z" fill="#78350f"/>
+            <path d="M134 158 Q134 96 162 96 Q190 96 190 158 Z" fill="#0f766e"/>
+            <path d="M150 102 L162 116 L174 102" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M137 122 Q118 132 111 148" stroke="#0f766e" stroke-width="13" stroke-linecap="round" fill="none"/>
+            <path d="M187 122 Q206 132 213 148" stroke="#0f766e" stroke-width="13" stroke-linecap="round" fill="none"/>
+            <circle cx="111" cy="152" r="11" fill="#fbbf24"/>
+            <text x="111" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e" font-family="system-ui">S/</text>
+          </svg>
+        </div>
+        <h4>El Inversionista (tú)</h4>
+        <p>Adelanta el dinero al proveedor, comprando la factura con un descuento. A cambio, asume el riesgo de que el pagador cumpla. Su recompensa: la diferencia entre lo que paga hoy y lo que cobra al vencimiento.</p>
+      </article>
+
     </div>
   </section>
 
-  <!-- QUÉ ES -->
-  <section id="que-es">
-    <h2 class="title">¿Qué es el factoring, en palabras simples?</h2>
+  <!-- ================= CÓMO FUNCIONA ================= -->
+  <section id="como-funciona">
+    <div class="flow">
+      <h2>Cómo funciona, en 4 pasos</h2>
+      <p class="sub">Este es el circuito completo. Si lo entiendes, entiendes el 80% del factoring.</p>
 
-    <p>Imagina que una panadería le vende pan a un supermercado grande. El supermercado no le paga al instante, sino a 60 días. La panadería necesita ese dinero <strong>hoy</strong> para comprar harina, pagar sueldos o crecer. Entonces vende esa factura —ese “derecho a cobrar”— a un inversionista como tú, con un pequeño descuento.</p>
-
-    <p>Tú le pagas hoy, por ejemplo, el 98% del valor de la factura. A los 60 días, el supermercado te paga el 100%. Ese 2% de diferencia es tu ganancia.</p>
-
-    <p>Eso es el factoring: <strong>comprar facturas por cobrar con descuento, a corto plazo, respaldadas por ventas ya realizadas</strong>. No es un préstamo a la empresa; es un adelanto sobre un ingreso que ya existe. La empresa ya vendió y ya entregó, solo está esperando que le paguen. Tú te adelantas y te quedas con una parte de ese pago como recompensa.</p>
-
-    <p>En Perú este mercado ha crecido con fuerza. En 2025 se negociaron más de <strong>S/ 52,000 millones</strong> en facturas, un 20% más que el año anterior. Y hoy puedes participar desde montos muy bajos, incluso desde S/ 100, a través de plataformas digitales.</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <span class="num">1</span>
+          <b>Venta y factura</b>
+          <span>El proveedor vende a crédito y emite una factura por cobrar a 30–90 días.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">2</span>
+          <b>Ces ión de la factura</b>
+          <span>El proveedor cede la factura al inversionista para obtener liquidez inmediata.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">3</span>
+          <b>Adelanto con descuento</b>
+          <span>Tú pagas hoy, por ejemplo, el 98% del valor. El proveedor ya tiene su dinero.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">4</span>
+          <b>Cobro al vencimiento</b>
+          <span>A los 60 días el pagador te transfiere el 100%. Tu ganancia es ese 2%.</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- VENTAJAS -->
+  <!-- ================= EJEMPLO PRÁCTICO ================= -->
+  <section id="ejemplo">
+    <h2 class="title">Ejemplo práctico con números</h2>
+    <p class="subtitle">Olvídate de la teoría por un momento. Aquí tienes una operación real, con montos reales, para que veas cuánto se gana y de dónde sale.</p>
+
+    <div class="example">
+      <div class="example-head">
+        <span class="tag">Caso real</span>
+        <h3>La panadería "El Trigal" y el supermercado</h3>
+      </div>
+
+      <div class="scenario">
+        <p>La panadería <strong>El Trigal</strong> le vende <strong>S/ 10,000</strong> en pan a un supermercado grande. El supermercado pagará en <span class="q">60 días</span>, como siempre. Pero El Trigal necesita comprar harina <strong>esta semana</strong>. Entonces cede su factura a un inversionista.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item day0">
+          <span class="when">Día 0</span>
+          <p class="what">El inversionista compra la factura con un descuento del 2%. Le paga al proveedor:</p>
+          <div class="amount">S/ 9,800</div>
+        </div>
+        <div class="tl-item day60">
+          <span class="when">Día 60</span>
+          <p class="what">El supermercado (pagador) cancela el valor completo de la factura al inversionista:</p>
+          <div class="amount">S/ 10,000</div>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="icon">📈</div>
+        <div class="txt">
+          <strong>Ganancia: S/ 200 en 60 días</strong>
+          <span>Equivale a un 2% en dos meses, aproximadamente 12.4% anualizado. Todo depende del pagador y del plazo.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VENTAJAS / RIESGOS ================= -->
   <section id="ventajas">
-    <h2 class="title">Ventajas reales de invertir en factoring</h2>
+    <h2 class="title">Ventajas y riesgos, sin adornos</h2>
+    <p class="subtitle">No hay inversión perfecta. Aquí te damos las dos caras para que decidas con la información completa.</p>
 
-    <ul class="list pros">
-      <li>
-        <b>Rentabilidad atractiva frente a alternativas tradicionales</b>
-        Mientras un depósito a plazo fijo en soles puede darte entre 3% y 7% anual, los fondos y plataformas de factoring de perfil conservador suelen moverse entre 8% y 13% anual, y algunas operaciones más específicas llegan a rangos de 15% a 22% según el riesgo y el plazo. No es rendimiento garantizado, pero el diferencial es significativo.
-      </li>
-      <li>
-        <b>Plazos cortos</b>
-        La mayoría de facturas se pagan en 30, 60 o 90 días. Tu dinero no queda atrapado por años: puedes rotarlo con relativa frecuencia y reinvertir las ganancias.
-      </li>
-      <li>
-        <b>Respaldo en un documento legal</b>
-        Una factura negociable es un título valor con mérito ejecutivo. Si el pagador no paga, el inversionista puede reclamar legalmente. Además, muchas operaciones se registran ante CAVALI o se respaldan con seguros que cubren un porcentaje del impago.
-      </li>
-      <li>
-        <b>Accesibilidad</b>
-        Ya no necesitas ser un inversionista institucional con millones. Algunas plataformas digitales permiten empezar con S/ 100 o US$ 25. Eso democratiza el acceso a un activo que antes era exclusivo de bancos y fondos.
-      </li>
-      <li>
-        <b>Diversificación</b>
-        Puedes repartir tu inversión entre varias facturas de distintos pagadores y sectores, lo que reduce el impacto de un impago puntual.
-      </li>
-    </ul>
-  </section>
-
-  <!-- RIESGOS -->
-  <section id="riesgos">
-    <h2 class="title">Desventajas y riesgos que debes conocer (sin adornos)</h2>
-
-    <ul class="list cons">
-      <li>
-        <b>Riesgo de impago</b>
-        El pagador de la factura puede no pagar. Aunque el título valor tiene fuerza legal, recuperar el dinero por la vía judicial toma tiempo y puede generar costos. La morosidad en factoring en Perú se ha mantenido en niveles manejables —alrededor del 5% a 30 días y 4.5% a 90 días a diciembre de 2025—, pero existe. No es un riesgo cero.
-      </li>
-      <li>
-        <b>Regulación desigual</b>
-        Las empresas de factoring que forman parte del sistema financiero están supervisadas por la SBS, pero muchas plataformas digitales de <em>crowdfactoring</em> operan bajo un esquema más flexible, sin las mismas obligaciones de provisiones ni supervisión prudencial. Eso no las hace automáticamente inseguras, pero sí exige que investigues bien con quién inviertes.
-      </li>
-      <li>
-        <b>Menor liquidez</b>
-        A diferencia de un depósito a plazo, no puedes retirar tu dinero en cualquier momento. Tu capital está comprometido hasta que la factura se cobre. Si necesitas el efectivo antes, puede que no tengas una salida fácil.
-      </li>
-      <li>
-        <b>Rendimientos no garantizados</b>
-        Las tasas que ves publicitadas son proyecciones o rangos históricos, no promesas. Una factura puede retrasarse, el pagador puede negociar una extensión o, en el peor caso, no pagar. Tu retorno real depende de que todo salga bien.
-      </li>
-      <li>
-        <b>Concentración</b>
-        Si pones todo tu dinero en una sola factura o en facturas de un mismo pagador, un solo incumplimiento puede borrar tus ganancias. La diversificación no es opcional: es tu principal herramienta de protección.
-      </li>
-    </ul>
-  </section>
-
-  <!-- OPORTUNIDADES -->
-  <section id="oportunidades">
-    <h2 class="title">Oportunidades que hacen interesante el momento actual</h2>
-
-    <div class="grid">
-      <div class="card">
-        <span class="ico">📈</span>
-        <h4>El mercado sigue creciendo</h4>
-        <p>Se proyecta que las operaciones de factoring en Perú superen los S/ 53,000 millones y que la tendencia continúe en 2026. Más facturas negociadas significa más opciones para invertir y mayor competencia entre plataformas, lo que puede traducirse en mejores condiciones para el inversionista.</p>
+    <div class="two-col">
+      <div class="panel pro">
+        <h3><span class="chip">✓</span> Ventajas reales</h3>
+        <ul>
+          <li><b>Rentabilidad atractiva.</b> Entre 8% y 13% anual en perfiles conservadores, y hasta 15%–22% en operaciones específicas. Un plazo fijo en soles rinde 3%–7%.</li>
+          <li><b>Plazos cortos.</b> 30, 60 o 90 días. Tu dinero rota y no queda atrapado por años.</li>
+          <li><b>Respaldo legal.</b> La factura negociable tiene mérito ejecutivo. Muchas operaciones se registran en CAVALI o tienen seguro de impago.</li>
+          <li><b>Accesible.</b> Algunas plataformas permiten empezar con S/ 100 o US$ 25.</li>
+          <li><b>Diversificable.</b> Puedes repartir tu capital entre varias facturas y sectores.</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <span class="ico">🏗️</span>
-        <h4>Sectores en expansión</h4>
-        <p>Además de servicios y comercio, que concentran la mayor demanda, hay oportunidades crecientes en construcción, infraestructura y agroexportación, segmentos donde las facturas suelen tener plazos más largos y montos más altos.</p>
-      </div>
-
-      <div class="card">
-        <span class="ico">📱</span>
-        <h4>Digitalización y acceso minorista</h4>
-        <p>La entrada de fintechs ha bajado las barreras. Hoy puedes invertir desde tu celular, revisar el historial del pagador, simular rendimientos y diversificar con pocos soles. Eso antes era impensable.</p>
-      </div>
-
-      <div class="card">
-        <span class="ico">🏪</span>
-        <h4>Demanda insatisfecha de liquidez</h4>
-        <p>Miles de pequeñas empresas siguen necesitando adelantar sus facturas porque los bancos les exigen garantías que no tienen. Ese vacío es el que el factoring llena, y los inversionistas que participan en él obtienen una prima por asumir ese riesgo.</p>
+      <div class="panel con">
+        <h3><span class="chip">!</span> Riesgos que debes conocer</h3>
+        <ul>
+          <li><b>Riesgo de impago.</b> El pagador puede no pagar. La morosidad en Perú ronda el 5% a 30 días y 4.5% a 90 días. No es cero.</li>
+          <li><b>Regulación desigual.</b> Algunas plataformas no están supervisadas por la SBS ni tienen las mismas exigencias de provisiones.</li>
+          <li><b>Menor liquidez.</b> No puedes retirar tu dinero hasta que la factura se cobre. No hay botón de cancelar.</li>
+          <li><b>Rendimientos no garantizados.</b> Las tasas publicitadas son proyecciones, no promesas.</li>
+          <li><b>Concentración.</b> Una sola factura mala puede borrar tus ganancias. Diversificar no es opcional.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- EMPEZAR -->
+  <!-- ================= OPORTUNIDADES ================= -->
+  <section id="oportunidades">
+    <h2 class="title">Oportunidades del momento</h2>
+    <p class="subtitle">Por qué 2026 es un buen año para mirar este mercado con atención.</p>
+
+    <div class="opps">
+      <div class="opp">
+        <div class="ico">📊</div>
+        <div>
+          <h4>Mercado en crecimiento</h4>
+          <p>En 2025 se negociaron más de S/ 52,000 millones en facturas, 20% más que el año anterior. Se proyecta superar los S/ 53,000 millones en 2026.</p>
+        </div>
+      </div>
+
+      <div class="opp">
+        <div class="ico">🏗️</div>
+        <div>
+          <h4>Sectores en expansión</h4>
+          <p>Construcción, infraestructura y agroexportación muestran facturas de mayor monto y plazos más largos, con tasas más atractivas.</p>
+        </div>
+      </div>
+
+      <div class="opp">
+        <div class="ico">📱</div>
+        <div>
+          <h4>Digitalización y acceso minorista</h4>
+          <p>Las fintech bajaron las barreras. Hoy inviertes desde el celular, revisas historial del pagador y diversificas con pocos soles.</p>
+        </div>
+      </div>
+
+      <div class="opp">
+        <div class="ico">🏪</div>
+        <div>
+          <h4>Demanda insatisfecha de MIPYMES</h4>
+          <p>Miles de pequeñas empresas no califican a crédito bancario. Ese vacío lo llena el factoring, y quien asume el riesgo cobra una prima.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CÓMO EMPEZAR ================= -->
   <section id="empezar">
-    <h2 class="title">Cómo deberías empezar (paso a paso)</h2>
+    <h2 class="title">Cómo empezar, paso a paso</h2>
+    <p class="subtitle">Seis pasos concretos para pasar de la curiosidad a la primera operación.</p>
 
     <ol class="steps">
       <li>
-        <b>Define tu perfil y tu horizonte</b>
-        <p>¿Puedes dejar tu dinero quieto 60 o 90 días? ¿Estás dispuesto a asumir la posibilidad de un retraso o un impago? Si la respuesta es no, el factoring no es para ti. Si es sí, sigue adelante.</p>
+        <span class="n">1</span>
+        <div>
+          <b>Define tu perfil y horizonte</b>
+          <p>¿Puedes dejar tu dinero quieto 60 o 90 días? ¿Aceptas la posibilidad de un retraso o impago? Si la respuesta es no, esto no es para ti.</p>
+        </div>
       </li>
       <li>
-        <b>Elige una plataforma con transparencia</b>
-        <p>Busca que muestre el pagador de la factura, su historial de pago, el plazo, la tasa y si la operación tiene seguro o garantía. Verifica si la empresa está inscrita en la SBS o si al menos publica información clara sobre su gestión de riesgos.</p>
+        <span class="n">2</span>
+        <div>
+          <b>Elige una plataforma con transparencia</b>
+          <p>Debe mostrar el pagador, su historial, el plazo, la tasa y si hay seguro. Verifica si está inscrita en la SBS o si publica su gestión de riesgos.</p>
+        </div>
       </li>
       <li>
-        <b>Empieza con poco</b>
-        <p>No pongas tus ahorros completos en la primera operación. Invierte un monto que puedas permitirte perder sin que afecte tu vida. Prueba el proceso, observa cómo se comporta la plataforma y luego decide si aumentas.</p>
+        <span class="n">3</span>
+        <div>
+          <b>Empieza con poco</b>
+          <p>Invierte un monto que puedas permitirte perder sin afectar tu vida. Prueba el proceso y observa el comportamiento de la plataforma.</p>
+        </div>
       </li>
       <li>
-        <b>Diversifica desde el primer sol</b>
-        <p>Reparte tu inversión entre varias facturas de distintos pagadores y sectores. Aunque empieces con S/ 100, puedes dividirlo en dos o tres operaciones pequeñas. La diversificación es tu mejor seguro.</p>
+        <span class="n">4</span>
+        <div>
+          <b>Diversifica desde el primer sol</b>
+          <p>Reparte tu inversión entre varias facturas y pagadores. Aunque empieces con S/ 100, divídelo en dos o tres operaciones pequeñas.</p>
+        </div>
       </li>
       <li>
-        <b>Reinvierte las ganancias (si puedes)</b>
-        <p>Como los plazos son cortos, puedes ir rotando el capital y los intereses. Eso acelera el efecto compuesto sin necesidad de aportar más dinero.</p>
+        <span class="n">5</span>
+        <div>
+          <b>Reinvierte las ganancias</b>
+          <p>Como los plazos son cortos, puedes rotar capital e intereses y acelerar el efecto compuesto sin aportar más dinero.</p>
+        </div>
       </li>
       <li>
-        <b>Lleva un registro simple</b>
-        <p>Anota cuánto invertiste, en qué factura, con qué pagador, a qué plazo y qué retorno obtuviste. Con el tiempo, eso te dará claridad sobre qué tipo de operaciones funcionan mejor para ti.</p>
+        <span class="n">6</span>
+        <div>
+          <b>Lleva un registro simple</b>
+          <p>Anota monto, factura, pagador, plazo y retorno. Con el tiempo verás qué tipo de operaciones funcionan mejor para ti.</p>
+        </div>
       </li>
     </ol>
   </section>
 
-  <!-- CONSIDERAR -->
+  <!-- ================= CONSIDERAR ================= -->
   <section id="considerar">
-    <h2 class="title">Qué deberías considerar antes de dar el paso</h2>
+    <h2 class="title">Qué considerar antes de invertir</h2>
+    <p class="subtitle">Cinco puntos que marcan la diferencia entre una buena y una mala operación.</p>
 
-    <div class="notes">
-      <div class="note">
+    <div class="consider">
+      <div class="cns">
         <h4>El pagador es la clave</h4>
-        <p>No importa tanto quién emite la factura (el proveedor) como quién la paga (el deudor). Una factura de una empresa grande, con historial limpio y buena calificación crediticia, es mucho más segura que la de un pagador pequeño o desconocido.</p>
+        <p>Importa más quién paga que quién emite. Una factura de una empresa grande, con historial limpio y buena calificación, es mucho más segura que la de un pagador pequeño o desconocido.</p>
       </div>
-
-      <div class="note">
-        <h4>El plazo y la tasa van de la mano</h4>
-        <p>A mayor plazo, normalmente mayor tasa, pero también mayor incertidumbre. A veces una factura a 30 días con una tasa moderada es mejor negocio que una a 90 días con una tasa alta pero un pagador dudoso.</p>
+      <div class="cns">
+        <h4>Plazo y tasa van de la mano</h4>
+        <p>A mayor plazo, mayor tasa pero también mayor incertidumbre. A veces una factura a 30 días con tasa moderada supera a una a 90 días con pagador dudoso.</p>
       </div>
-
-      <div class="note">
+      <div class="cns">
         <h4>Los seguros no cubren todo</h4>
-        <p>Algunas plataformas ofrecen seguros de impago que cubren hasta el 90% en caso de default. Eso reduce tu riesgo, pero no lo elimina. Pregunta siempre qué porcentaje cubre, qué exclusiones tiene y quién es el asegurador.</p>
+        <p>Algunos seguros de impago cubren hasta el 90% en caso de default. Pregunta qué porcentaje cubre, exclusiones y quién es el asegurador.</p>
       </div>
-
-      <div class="note">
+      <div class="cns">
         <h4>La plataforma no es tu socio</h4>
-        <p>Tú asumes el riesgo de crédito. La plataforma suele cobrar una comisión por conectar a las partes, pero no responde por el impago. Lee bien los términos y condiciones.</p>
+        <p>Tú asumes el riesgo de crédito. La plataforma cobra una comisión por conectar las partes, pero no responde por el impago. Lee siempre los términos.</p>
       </div>
-
-      <div class="note">
+      <div class="cns">
         <h4>El contexto macroeconómico importa</h4>
-        <p>Si la economía se enfría, algunas empresas pagan más tarde o dejan de pagar. El factoring no es inmune a los ciclos. En 2025 los títulos valores impagos cayeron 18.2%, pero eso no significa que la tendencia se mantenga siempre.</p>
+        <p>Si la economía se enfría, algunas empresas pagan más tarde o dejan de pagar. En 2025 los títulos impagos cayeron 18.2%, pero eso no garantiza que la tendencia se mantenga.</p>
       </div>
     </div>
   </section>
 
-  <!-- NO ESPERAR -->
+  <!-- ================= NO ESPERAR ================= -->
   <section id="no-esperar">
-    <h2 class="title">Qué NO deberías pensar ni esperar</h2>
+    <h2 class="title">Qué NO deberías esperar</h2>
+    <p class="subtitle">Cinco creencias que arruinan a los inversionistas novatos. Léelas dos veces.</p>
 
     <ul class="avoid">
-      <li>
-        <b>No esperes rendimientos garantizados</b>
-        Cualquier plataforma que te prometa un 20% “seguro” o un retorno fijo sin riesgo debería hacerte desconfiar. Los retornos altos existen, pero siempre vienen acompañados de un riesgo real de pérdida.
-      </li>
-      <li>
-        <b>No pienses que es lo mismo que un plazo fijo</b>
-        En un plazo fijo, tu capital está protegido por el seguro de depósitos hasta cierto monto. En factoring no hay red de seguridad estatal. Si el pagador no paga, el proceso de cobro puede ser largo y no siempre recuperas el 100%.
-      </li>
-      <li>
-        <b>No creas que puedes retirar tu dinero cuando quieras</b>
-        Una vez que compras una factura, tu capital queda comprometido hasta el vencimiento. No hay un botón de “cancelar y devolverme mi plata”.
-      </li>
-      <li>
-        <b>No te dejes deslumbrar por la primera tasa que veas</b>
-        Compara varias operaciones, revisa el historial del pagador, pregunta por el seguro y calcula el retorno neto después de comisiones. A veces una tasa del 18% se reduce al 14% después de costos.
-      </li>
-      <li>
-        <b>No inviertas dinero que necesitarás pronto</b>
-        Si vas a necesitar ese capital en los próximos tres meses para gastos esenciales, no lo pongas en factoring. El factoring es para dinero que puedes dejar trabajando sin necesidad inmediata.
-      </li>
+      <li><b>Rendimientos garantizados.</b> Cualquier plataforma que prometa un 20% "seguro" o retorno fijo sin riesgo debe hacerte desconfiar. Los retornos altos siempre vienen con riesgo real.</li>
+      <li><b>Que sea igual a un plazo fijo.</b> En un depósito, tu capital está protegido por el seguro estatal hasta cierto monto. En factoring no hay red de seguridad.</li>
+      <li><b>Liquidez instantánea.</b> Una vez que compras la factura, tu capital queda comprometido hasta el vencimiento. No hay salida anticipada fácil.</li>
+      <li><b>Quedarte con la primera tasa.</b> Compara varias operaciones, revisa el historial del pagador y calcula el retorno neto tras comisiones. Un 18% puede volverse 14%.</li>
+      <li><b>Invertir dinero que necesitarás pronto.</b> Si vas a requerir ese capital en los próximos tres meses, no lo pongas aquí. El factoring es para dinero que puedes dejar trabajando.</li>
     </ul>
   </section>
 
-  <!-- REFLEXIÓN -->
+  <!-- ================= REFLEXIÓN ================= -->
   <section id="reflexion">
     <div class="callout">
       <h2>Una última reflexión</h2>
       <p>El factoring peruano no es una moda: es una industria consolidada, con marco legal, crecimiento sostenido y una demanda real de liquidez por parte de miles de empresas.</p>
-      <p>Para un inversionista minorista ofrece algo poco común: <strong style="color:#7fd6c9">retornos por encima del promedio, plazos cortos y la posibilidad de empezar con montos bajos</strong>. Pero como todo en inversiones, no hay almuerzo gratis. El riesgo de impago existe, la regulación no es homogénea y la liquidez no es instantánea.</p>
+      <p>Para un inversionista minorista ofrece algo poco común: <strong style="color:#5eead4">retornos por encima del promedio, plazos cortos y la posibilidad de empezar con montos bajos</strong>. Pero no hay almuerzo gratis. El riesgo de impago existe, la regulación no es homogénea y la liquidez no es instantánea.</p>
       <p>Si decides entrar, hazlo con los ojos abiertos: investiga la plataforma, diversifica, empieza pequeño y nunca inviertas lo que no puedas permitirte perder. Con esa mentalidad, el factoring puede ser una pieza valiosa en tu portafolio, no una apuesta.</p>
     </div>
   </section>

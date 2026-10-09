@@ -1,164 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar cuenta - Apalancate</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f5f7f6;
-            color: #222;
-        }
-
-        header {
-            background: #046327;
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 8px 0 0;
-            font-size: 16px;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px 40px;
-        }
-
-        section {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        h2 {
-            color: #046327;
-            margin-top: 0;
-        }
-
-        .button {
-            display: inline-block;
-            background: #046327;
-            color: white;
-            text-decoration: none;
-            padding: 13px 22px;
-            border-radius: 6px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información para solicitar la eliminación de una cuenta de Apalancate y los datos personales asociados.">
+  <title>Eliminación de cuenta - Apalancate</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-2: #0f1a2e;
+      --surface: #111e35;
+      --surface-2: #16263f;
+      --ink: #e8eef8;
+      --ink-soft: #c2d0e4;
+      --muted: #8ea2bf;
+      --line: rgba(148,180,224,.14);
+      --line-strong: rgba(148,180,224,.26);
+      --teal: #2dd4bf;
+      --teal-soft: #5eead4;
+      --amber: #fbbf24;
+      --radius: 18px;
+      --shadow: 0 18px 40px -20px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.3);
+      --max: 880px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(45,212,191,.08), transparent 60%),
+        radial-gradient(1000px 500px at 100% 5%, rgba(251,191,36,.05), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 88px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(700px 340px at 85% -10%, rgba(45,212,191,.28) 0%, transparent 60%),
+        radial-gradient(600px 300px at 5% 110%, rgba(251,146,60,.18) 0%, transparent 62%),
+        linear-gradient(160deg, #0a1120 0%, #132038 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(148,180,224,.10) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .5;
+    }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; position: relative; }
+    .hero .wrap { z-index: 1; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 7px 14px;
+      border: 1px solid rgba(45,212,191,.28);
+      border-radius: 999px;
+      background: rgba(45,212,191,.10);
+      color: var(--teal-soft);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal-soft);
+      box-shadow: 0 0 10px var(--teal-soft);
+    }
+    h1 {
+      margin: 0 0 18px;
+      color: #f4f8ff;
+      font-size: clamp(2rem, 5.6vw, 3rem);
+      line-height: 1.14;
+      letter-spacing: -.025em;
+      font-weight: 850;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--teal-soft), var(--amber));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lede { max-width: 650px; margin: 0; color: #b9c9df; font-size: clamp(1rem, 2.6vw, 1.15rem); }
+    main { padding-top: 1px; padding-bottom: 48px; }
+    .intro {
+      position: relative;
+      z-index: 2;
+      margin: -42px auto 44px;
+      padding: 24px 26px;
+      border: 1px solid var(--line-strong);
+      border-left: 5px solid var(--teal);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(500px 240px at 100% 0%, rgba(45,212,191,.20), transparent 70%),
+        linear-gradient(160deg, rgba(22,38,63,.98), rgba(17,30,53,.98));
+      box-shadow: var(--shadow);
+    }
+    .intro p { margin: 0; color: var(--ink-soft); }
+    section.content-card {
+      margin: 0 0 22px;
+      padding: 26px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(22,38,63,.88), rgba(17,30,53,.9));
+      box-shadow: 0 1px 2px rgba(0,0,0,.35);
+    }
+    h2.title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      color: #f2f7ff;
+      font-size: clamp(1.25rem, 3.8vw, 1.6rem);
+      line-height: 1.25;
+      letter-spacing: -.02em;
+      font-weight: 850;
+    }
+    h2.title::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 6px;
+      height: 26px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--teal), var(--amber));
+      box-shadow: 0 0 14px rgba(45,212,191,.35);
+    }
+    p { margin: 0 0 16px; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 0 0 18px; padding-left: 24px; color: var(--ink-soft); }
+    li { padding-left: 3px; margin: 7px 0; }
+    li::marker { color: var(--teal); }
+    strong { color: #fff; font-weight: 750; }
+    a { color: var(--teal-soft); text-underline-offset: 3px; }
+    a:hover { color: var(--amber); }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      align-items: start;
+      gap: 12px;
+      margin: 0;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(8,17,32,.28);
+    }
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(45,212,191,.12);
+      color: var(--teal-soft);
+      font-size: .78rem;
+      font-weight: 850;
+    }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1px solid rgba(45,212,191,.30);
+      border-radius: 12px;
+      background: rgba(45,212,191,.08);
+      font-weight: 750;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .contact-link:hover { background: rgba(45,212,191,.14); }
+    .note {
+      padding: 16px 18px;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0;
+      background: rgba(251,191,36,.07);
+    }
+    .note p { margin: 0; }
+    .updated { color: var(--muted); font-size: .92rem; }
+    footer { padding: 24px 20px 34px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .85rem; }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .hero { padding: 48px 0 72px; }
+      .intro { padding: 21px; margin-bottom: 32px; }
+      section.content-card { padding: 21px; margin-bottom: 16px; }
+      .steps li { grid-template-columns: 32px 1fr; gap: 10px; padding: 12px; }
+      .steps li::before { width: 30px; height: 30px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Apalancate · Privacidad y control</div>
+      <h1>Eliminación de <em>cuenta</em></h1>
+      <p class="lede">Aquí encontrarás cómo solicitar la eliminación de tu cuenta de Apalancate y de los datos personales asociados.</p>
+    </div>
+  </header>
 
-<header>
-    <h1>Eliminar cuenta</h1>
-    <p>Apalancate</p>
-</header>
+  <main class="wrap">
+    <div class="intro">
+      <p>Puedes eliminar tu cuenta desde la aplicación. Si ya no tienes acceso a ella o la has desinstalado, también puedes solicitar la eliminación mediante el correo de contacto indicado en esta página.</p>
+    </div>
 
-<main>
-
-    <section>
-        <h2>Solicitud de eliminación de cuenta</h2>
-
-        <p>
-            Si deseas eliminar tu cuenta de Apalancate y los datos personales
-            asociados a ella, puedes solicitarlo mediante el correo electrónico
-            de contacto indicado en esta página.
-        </p>
-
-        <p>
-            Envía tu solicitud desde la dirección de correo electrónico asociada
-            a tu cuenta de Apalancate e indica que deseas eliminar tu cuenta.
-        </p>
-
-        <p>
-            Para iniciar la solicitud de eliminación, utiliza el siguiente
-            correo:
-        </p>
-
-        <p>
-            <a class="button"
-               href="mailto:contactanos_aca@proton.me?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta%20Apalancate">
-                Solicitar eliminación de cuenta
-            </a>
-        </p>
-
-        <h2>¿Qué se eliminará?</h2>
-
-        <p>
-            Al procesar una solicitud válida de eliminación de cuenta,
-            Apalancate eliminará la cuenta del usuario y los datos personales
-            asociados a ella que se encuentren bajo su control.
-        </p>
-
-        <p>
-            En particular, se eliminarán los datos asociados al perfil de
-            usuario almacenados para el funcionamiento de la aplicación.
-        </p>
-
-        <h2>Verificación de la solicitud</h2>
-
-        <p>
-            Para proteger las cuentas de los usuarios, la solicitud podrá
-            requerir una verificación de que quien la realiza es el titular
-            de la cuenta.
-        </p>
-
-        <h2>Conservación de información</h2>
-
-        <p>
-            Si alguna información debiera conservarse por una obligación legal,
-            de seguridad o de cumplimiento normativo, dicha información podrá
-            mantenerse durante el periodo que resulte necesario.
-        </p>
-
-        <h2>Contacto</h2>
-
-        <p>
-            Si tienes alguna consulta relacionada con la eliminación de tu
-            cuenta o de tus datos personales, puedes escribir a:
-        </p>
-
-        <p>
-            <strong>contactanos_aca@proton.me</strong>
-        </p>
-
-        <p>
-            <strong>Aplicación:</strong> Apalancate
-        </p>
+    <section class="content-card" id="desde-app">
+      <h2 class="title">1. Eliminar la cuenta desde la aplicación</h2>
+      <ol class="steps">
+        <li>Abre Apalancate e inicia sesión con la cuenta que deseas eliminar.</li>
+        <li>Ingresa a la sección <strong>Ajustes</strong>.</li>
+        <li>Selecciona <strong>Eliminar mi cuenta</strong> y sigue las instrucciones que aparecen en pantalla.</li>
+        <li>Confirma la solicitud cuando se te pida. La aplicación puede solicitar que vuelvas a introducir tu contraseña para verificar que eres el titular de la cuenta.</li>
+      </ol>
     </section>
 
-</main>
+    <section class="content-card" id="sin-acceso">
+      <h2 class="title">2. Solicitar la eliminación sin acceso a la aplicación</h2>
+      <p>Si no puedes iniciar sesión o ya no tienes la aplicación instalada, envía una solicitud desde el correo electrónico asociado a tu cuenta a la siguiente dirección:</p>
+      <p><a class="contact-link" href="mailto:contactanos_aca@proton.me?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta">✉ contactanos_aca@proton.me</a></p>
+      <p>Incluye en el mensaje que deseas eliminar tu cuenta de Apalancate. Por seguridad, es posible que solicitemos información adicional para comprobar que eres el titular de la cuenta. No envíes tu contraseña.</p>
+    </section>
 
-<footer>
-    © 2026 Apalancate. Todos los derechos reservados.
-</footer>
+    <section class="content-card" id="datos">
+      <h2 class="title">3. ¿Qué datos se eliminan?</h2>
+      <p>Al procesar la eliminación de la cuenta, se eliminan el perfil de usuario y los datos personales asociados que Apalancate almacena para administrar la cuenta, de acuerdo con sus procedimientos y las obligaciones legales aplicables.</p>
+      <p>Los datos de perfil pueden incluir:</p>
+      <ul>
+        <li>Nombres y apellidos.</li>
+        <li>Año de nacimiento.</li>
+        <li>Dirección de correo electrónico asociada a la cuenta.</li>
+        <li>Identificador de usuario utilizado para administrar la cuenta.</li>
+      </ul>
+      <div class="note">
+        <p>Determinada información podría conservarse durante el tiempo necesario cuando exista una obligación legal o una razón legítima de seguridad. Los datos que no permitan identificar directamente al usuario pueden estar sujetos a tratamientos distintos.</p>
+      </div>
+    </section>
 
+    <section class="content-card" id="plazo">
+      <h2 class="title">4. Plazo de procesamiento</h2>
+      <p>Las solicitudes se revisarán y procesarán en un plazo razonable. Si la solicitud requiere verificar la titularidad de la cuenta o aclarar algún dato, el proceso podría tardar más tiempo.</p>
+    </section>
+
+    <section class="content-card" id="contacto">
+      <h2 class="title">5. Contacto</h2>
+      <p>Si tienes preguntas sobre la eliminación de tu cuenta o el tratamiento de tus datos personales, puedes escribirnos a:</p>
+      <p><a class="contact-link" href="mailto:contactanos_aca@proton.me">✉ contactanos_aca@proton.me</a></p>
+    </section>
+
+    <section class="content-card">
+      <p class="updated"><strong>Última actualización:</strong> 9 de octubre de 2026</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Apalancate. Todos los derechos reservados.</footer>
 </body>
 </html>

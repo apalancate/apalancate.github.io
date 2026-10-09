@@ -1,348 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Apalancate</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f5f7f6;
-            color: #222;
-        }
-
-        header {
-            background: #046327;
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 8px 0 0;
-            font-size: 16px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px 40px;
-        }
-
-        section {
-            background: white;
-            margin-bottom: 20px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        h2 {
-            color: #046327;
-            margin-top: 0;
-        }
-
-        h3 {
-            color: #333;
-        }
-
-        a {
-            color: #046327;
-        }
-
-        footer {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidad de Apalancate.">
+  <title>Política de Privacidad - Apalancate</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-2: #0f1a2e;
+      --surface: #111e35;
+      --surface-2: #16263f;
+      --ink: #e8eef8;
+      --ink-soft: #c2d0e4;
+      --muted: #8ea2bf;
+      --line: rgba(148,180,224,.14);
+      --line-strong: rgba(148,180,224,.26);
+      --teal: #2dd4bf;
+      --teal-soft: #5eead4;
+      --amber: #fbbf24;
+      --radius: 18px;
+      --shadow: 0 18px 40px -20px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.3);
+      --max: 880px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(45,212,191,.08), transparent 60%),
+        radial-gradient(1000px 500px at 100% 5%, rgba(251,191,36,.05), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 88px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(700px 340px at 85% -10%, rgba(45,212,191,.28) 0%, transparent 60%),
+        radial-gradient(600px 300px at 5% 110%, rgba(251,146,60,.18) 0%, transparent 62%),
+        linear-gradient(160deg, #0a1120 0%, #132038 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(148,180,224,.10) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .5;
+    }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; position: relative; }
+    .hero .wrap { z-index: 1; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 7px 14px;
+      border: 1px solid rgba(45,212,191,.28);
+      border-radius: 999px;
+      background: rgba(45,212,191,.10);
+      color: var(--teal-soft);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--teal-soft);
+      box-shadow: 0 0 10px var(--teal-soft);
+    }
+    h1 {
+      margin: 0 0 18px;
+      color: #f4f8ff;
+      font-size: clamp(2rem, 5.6vw, 3rem);
+      line-height: 1.14;
+      letter-spacing: -.025em;
+      font-weight: 850;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--teal-soft), var(--amber));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lede { max-width: 650px; margin: 0; color: #b9c9df; font-size: clamp(1rem, 2.6vw, 1.15rem); }
+    main { padding-top: 1px; padding-bottom: 48px; }
+    .intro {
+      position: relative;
+      z-index: 2;
+      margin: -42px auto 44px;
+      padding: 24px 26px;
+      border: 1px solid var(--line-strong);
+      border-left: 5px solid var(--teal);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(500px 240px at 100% 0%, rgba(45,212,191,.20), transparent 70%),
+        linear-gradient(160deg, rgba(22,38,63,.98), rgba(17,30,53,.98));
+      box-shadow: var(--shadow);
+    }
+    .intro p { margin: 0; color: var(--ink-soft); }
+    .toc {
+      margin: 0 auto 52px;
+      padding: 22px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(17,30,53,.92), rgba(17,30,53,.72));
+      box-shadow: var(--shadow);
+    }
+    .toc h2 {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .toc ol {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .toc a {
+      display: flex;
+      gap: 10px;
+      padding: 7px 9px;
+      border-radius: 9px;
+      color: var(--ink-soft);
+      font-size: .9rem;
+      text-decoration: none;
+      transition: background .18s ease, color .18s ease;
+    }
+    .toc a:hover, .toc a:focus-visible { background: rgba(45,212,191,.10); color: var(--teal-soft); outline: none; }
+    .toc .n { min-width: 20px; color: var(--teal); font-size: .78rem; font-weight: 800; }
+    section.policy-section { margin: 0 0 22px; padding: 26px; scroll-margin-top: 20px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: linear-gradient(180deg, rgba(22,38,63,.88), rgba(17,30,53,.9)); box-shadow: 0 1px 2px rgba(0,0,0,.35); }
+    h2.title { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; color: #f2f7ff; font-size: clamp(1.25rem, 3.8vw, 1.6rem); line-height: 1.25; letter-spacing: -.02em; font-weight: 850; }
+    h2.title::before { content: ""; flex: 0 0 auto; width: 6px; height: 26px; border-radius: 3px; background: linear-gradient(180deg, var(--teal), var(--amber)); box-shadow: 0 0 14px rgba(45,212,191,.35); }
+    h3 { margin: 24px 0 8px; color: #eaf2ff; font-size: 1.05rem; font-weight: 800; }
+    p { margin: 0 0 16px; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 0 0 18px; padding-left: 24px; color: var(--ink-soft); }
+    li { padding-left: 3px; margin: 5px 0; }
+    li::marker { color: var(--teal); }
+    strong { color: #fff; font-weight: 750; }
+    a { color: var(--teal-soft); text-underline-offset: 3px; }
+    a:hover { color: var(--amber); }
+    .updated { color: var(--muted); font-size: .92rem; }
+    footer { padding: 24px 20px 34px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .85rem; }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .hero { padding: 48px 0 72px; }
+      .intro { padding: 21px; margin-bottom: 32px; }
+      .toc { padding: 18px; margin-bottom: 36px; }
+      .toc ol { grid-template-columns: 1fr; }
+      section.policy-section { padding: 21px; margin-bottom: 16px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Apalancate · Información y transparencia</div>
+      <h1>Política de <em>Privacidad</em></h1>
+      <p class="lede">Conoce cómo Apalancate recopila, utiliza, almacena y protege la información personal vinculada al uso de la aplicación.</p>
+    </div>
+  </header>
 
-<header>
-    <h1>Política de Privacidad</h1>
-    <p>Apalancate</p>
-</header>
+  <main class="wrap">
+    <div class="intro">
+      <p>Esta política explica el tratamiento de la información relacionada con tu cuenta y el uso de Apalancate. Te recomendamos leerla completa para conocer las prácticas descritas y las opciones disponibles para gestionar tus datos.</p>
+    </div>
 
-<main>
+    <nav class="toc" aria-label="Contenido de la política">
+      <h2>Contenido de esta política</h2>
+      <ol>
+        <li><a href="#general"><span class="n">01</span>Información general</a></li>
+        <li><a href="#recopilacion"><span class="n">02</span>Información que recopilamos</a></li>
+        <li><a href="#uso"><span class="n">03</span>Uso de la información</a></li>
+        <li><a href="#terceros"><span class="n">04</span>Servicios de terceros</a></li>
+        <li><a href="#seguridad"><span class="n">05</span>Seguridad</a></li>
+        <li><a href="#conservacion"><span class="n">06</span>Conservación</a></li>
+        <li><a href="#eliminacion"><span class="n">07</span>Eliminación de cuenta y datos</a></li>
+        <li><a href="#notificaciones"><span class="n">08</span>Notificaciones</a></li>
+        <li><a href="#enlaces"><span class="n">09</span>Enlaces externos</a></li>
+        <li><a href="#menores"><span class="n">10</span>Menores de edad</a></li>
+        <li><a href="#cambios"><span class="n">11</span>Cambios en la política</a></li>
+        <li><a href="#contacto"><span class="n">12</span>Contacto</a></li>
+        <li><a href="#identificacion"><span class="n">13</span>Identificación de la aplicación</a></li>
+      </ol>
+    </nav>
 
-    <section>
-        <h2>1. Información general</h2>
-
-        <p>
-            La presente Política de Privacidad describe cómo Apalancate
-            recopila, utiliza, almacena y protege la información de los
-            usuarios de la aplicación móvil Apalancate.
-        </p>
-
-        <p>
-            Apalancate es una aplicación informativa que permite a los usuarios
-            consultar y comparar información sobre productos financieros,
-            incluyendo opciones de ahorro e inversión.
-        </p>
-
-        <p>
-            Al utilizar Apalancate, el usuario acepta las prácticas descritas
-            en esta Política de Privacidad.
-        </p>
+    <section class="policy-section" id="general">
+      <h2 class="title">1. Información general</h2>
+      <p>La presente Política de Privacidad describe cómo Apalancate recopila, utiliza, almacena y protege la información de los usuarios de la aplicación móvil Apalancate.</p>
+      <p>Apalancate es una aplicación informativa que permite a los usuarios consultar y comparar información sobre productos financieros, incluyendo opciones de ahorro e inversión.</p>
+      <p>Al utilizar Apalancate, el usuario acepta las prácticas descritas en esta Política de Privacidad.</p>
     </section>
 
-    <section>
-        <h2>2. Información que recopilamos</h2>
-
-        <p>
-            Para permitir el registro y funcionamiento de las cuentas de
-            usuario, Apalancate puede recopilar los siguientes datos:
-        </p>
-
-        <ul>
-            <li>Nombres.</li>
-            <li>Apellidos.</li>
-            <li>Año de nacimiento.</li>
-            <li>Dirección de correo electrónico.</li>
-            <li>Información necesaria para la autenticación de la cuenta.</li>
-        </ul>
-
-        <p>
-            Apalancate no solicita datos de tarjetas de crédito, cuentas
-            bancarias ni contraseñas bancarias para utilizar sus funciones
-            principales.
-        </p>
+    <section class="policy-section" id="recopilacion">
+      <h2 class="title">2. Información que recopilamos</h2>
+      <p>Para permitir el registro y funcionamiento de las cuentas de usuario, Apalancate puede recopilar los siguientes datos:</p>
+      <ul>
+        <li>Nombres.</li>
+        <li>Apellidos.</li>
+        <li>Año de nacimiento.</li>
+        <li>Dirección de correo electrónico.</li>
+        <li>Información necesaria para la autenticación de la cuenta.</li>
+      </ul>
+      <p>Apalancate no solicita datos de tarjetas de crédito, cuentas bancarias ni contraseñas bancarias para utilizar sus funciones principales.</p>
     </section>
 
-    <section>
-        <h2>3. Cómo utilizamos la información</h2>
-
-        <p>La información recopilada se utiliza para:</p>
-
-        <ul>
-            <li>Crear y administrar la cuenta del usuario.</li>
-            <li>Permitir el inicio de sesión y la autenticación.</li>
-            <li>Identificar la cuenta del usuario dentro de la aplicación.</li>
-            <li>Guardar las preferencias necesarias para el funcionamiento de determinadas funciones.</li>
-            <li>Proporcionar y mantener las funcionalidades de Apalancate.</li>
-            <li>Enviar comunicaciones relacionadas con la seguridad o funcionamiento de la cuenta cuando sean necesarias.</li>
-        </ul>
-
-        <p>
-            Apalancate no vende los datos personales de sus usuarios.
-        </p>
+    <section class="policy-section" id="uso">
+      <h2 class="title">3. Cómo utilizamos la información</h2>
+      <p>La información recopilada se utiliza para:</p>
+      <ul>
+        <li>Crear y administrar la cuenta del usuario.</li>
+        <li>Permitir el inicio de sesión y la autenticación.</li>
+        <li>Identificar la cuenta del usuario dentro de la aplicación.</li>
+        <li>Guardar las preferencias necesarias para el funcionamiento de determinadas funciones.</li>
+        <li>Proporcionar y mantener las funcionalidades de Apalancate.</li>
+        <li>Enviar comunicaciones relacionadas con la seguridad o funcionamiento de la cuenta cuando sean necesarias.</li>
+      </ul>
+      <p>Apalancate no vende los datos personales de sus usuarios.</p>
     </section>
 
-    <section>
-        <h2>4. Servicios de terceros</h2>
-
-        <p>
-            Apalancate utiliza servicios proporcionados por Google Firebase
-            para determinadas funciones de la aplicación, incluyendo la
-            autenticación de usuarios y el almacenamiento de información.
-        </p>
-
-        <p>
-            Estos servicios pueden procesar información necesaria para
-            proporcionar las funciones correspondientes, de acuerdo con sus
-            propios términos y políticas de privacidad.
-        </p>
-
-        <p>
-            Entre los servicios utilizados se encuentran Firebase
-            Authentication y Cloud Firestore.
-        </p>
+    <section class="policy-section" id="terceros">
+      <h2 class="title">4. Servicios de terceros</h2>
+      <p>Apalancate utiliza servicios proporcionados por Google Firebase para determinadas funciones de la aplicación, incluyendo la autenticación de usuarios y el almacenamiento de información.</p>
+      <p>Estos servicios pueden procesar información necesaria para proporcionar las funciones correspondientes, de acuerdo con sus propios términos y políticas de privacidad.</p>
+      <p>Entre los servicios utilizados se encuentran Firebase Authentication y Cloud Firestore.</p>
     </section>
 
-    <section>
-        <h2>5. Seguridad de la información</h2>
-
-        <p>
-            Apalancate aplica medidas técnicas y organizativas razonables para
-            proteger la información de los usuarios frente a accesos no
-            autorizados, pérdida, alteración o divulgación indebida.
-        </p>
-
-        <p>
-            Los servicios de Firebase utilizados por Apalancate emplean
-            mecanismos de seguridad y cifrado para proteger los datos durante
-            su transmisión y, cuando corresponde, durante su almacenamiento.
-        </p>
+    <section class="policy-section" id="seguridad">
+      <h2 class="title">5. Seguridad de la información</h2>
+      <p>Apalancate aplica medidas técnicas y organizativas razonables para proteger la información de los usuarios frente a accesos no autorizados, pérdida, alteración o divulgación indebida.</p>
+      <p>Los servicios de Firebase utilizados por Apalancate emplean mecanismos de seguridad y cifrado para proteger los datos durante su transmisión y, cuando corresponde, durante su almacenamiento.</p>
     </section>
 
-    <section>
-        <h2>6. Conservación de la información</h2>
-
-        <p>
-            La información asociada a una cuenta se conserva mientras sea
-            necesaria para proporcionar las funcionalidades de Apalancate y
-            administrar la cuenta del usuario.
-        </p>
-
-        <p>
-            Cuando corresponda, la información será eliminada de acuerdo con
-            las solicitudes del usuario y con las obligaciones legales
-            aplicables.
-        </p>
+    <section class="policy-section" id="conservacion">
+      <h2 class="title">6. Conservación de la información</h2>
+      <p>La información asociada a una cuenta se conserva mientras sea necesaria para proporcionar las funcionalidades de Apalancate y administrar la cuenta del usuario.</p>
+      <p>Cuando corresponda, la información será eliminada de acuerdo con las solicitudes del usuario y con las obligaciones legales aplicables.</p>
     </section>
 
-    <section>
-        <h2>7. Eliminación de la cuenta y de los datos</h2>
-
-        <p>
-            Los usuarios pueden eliminar su cuenta directamente desde la
-            aplicación, ingresando a Ajustes y seleccionando
-            <strong>Eliminar mi cuenta</strong>.
-        </p>
-
-        <p>
-            Al confirmar la eliminación desde la aplicación, se elimina la
-            cuenta del usuario y los datos personales asociados a su perfil
-            almacenados en los servicios utilizados por Apalancate.
-        </p>
-
-        <p>
-            Si el usuario ya no tiene acceso a la aplicación o la ha
-            desinstalado, también puede solicitar la eliminación de su cuenta
-            y de los datos personales asociados mediante la siguiente página:
-        </p>
-
-        <p>
-            <a href="https://apalancate.github.io/eliminar-cuenta.html">
-                Solicitar eliminación de cuenta
-            </a>
-        </p>
-
-        <p>
-            También puede comunicarse directamente con Apalancate mediante:
-        </p>
-
-        <p>
-            <strong>contactanos_aca@proton.me</strong>
-        </p>
-
-        <p>
-            Para proteger las cuentas de los usuarios, las solicitudes
-            realizadas por medios externos podrán requerir una verificación
-            de identidad o de titularidad de la cuenta.
-        </p>
-
-        <p>
-            La información que deba conservarse por razones legales, de
-            seguridad o cumplimiento normativo podrá mantenerse durante el
-            periodo que resulte necesario.
-        </p>
+    <section class="policy-section" id="eliminacion">
+      <h2 class="title">7. Eliminación de la cuenta y de los datos</h2>
+      <p>Los usuarios pueden eliminar su cuenta directamente desde la aplicación, ingresando a Ajustes y seleccionando <strong>Eliminar mi cuenta</strong>.</p>
+      <p>Al confirmar la eliminación desde la aplicación, se elimina la cuenta del usuario y los datos personales asociados a su perfil almacenados en los servicios utilizados por Apalancate.</p>
+      <p>Si el usuario ya no tiene acceso a la aplicación o la ha desinstalado, también puede solicitar la eliminación de su cuenta y de los datos personales asociados mediante la siguiente página:</p>
+      <p><a href="https://apalancate.github.io/eliminar-cuenta.html">Solicitar eliminación de cuenta</a></p>
+      <p>También puede comunicarse directamente con Apalancate mediante:</p>
+      <p><a href="mailto:contactanos_aca@proton.me">contactanos_aca@proton.me</a></p>
+      <p>Para proteger las cuentas de los usuarios, las solicitudes realizadas por medios externos podrán requerir una verificación de identidad o de titularidad de la cuenta.</p>
+      <p>La información que deba conservarse por razones legales, de seguridad o cumplimiento normativo podrá mantenerse durante el periodo que resulte necesario.</p>
     </section>
 
-    <section>
-        <h2>8. Notificaciones</h2>
-
-        <p>
-            Apalancate puede utilizar notificaciones locales en el dispositivo
-            para informar al usuario sobre determinados eventos relacionados
-            con productos financieros mostrados en la aplicación, como fechas
-            próximas de vencimiento.
-        </p>
-
-        <p>
-            Las preferencias relacionadas con estas notificaciones pueden
-            administrarse desde la configuración de la aplicación.
-        </p>
+    <section class="policy-section" id="notificaciones">
+      <h2 class="title">8. Notificaciones</h2>
+      <p>Apalancate puede utilizar notificaciones locales en el dispositivo para informar al usuario sobre determinados eventos relacionados con productos financieros mostrados en la aplicación, como fechas próximas de vencimiento.</p>
+      <p>Las preferencias relacionadas con estas notificaciones pueden administrarse desde la configuración de la aplicación.</p>
     </section>
 
-    <section>
-        <h2>9. Enlaces a sitios externos</h2>
-
-        <p>
-            Apalancate puede proporcionar enlaces a sitios web oficiales de
-            entidades financieras u otras organizaciones con el propósito de
-            que el usuario pueda consultar información adicional.
-        </p>
-
-        <p>
-            Apalancate no controla las políticas de privacidad, prácticas,
-            contenidos ni condiciones de dichos sitios externos. El usuario
-            debe revisar las políticas de privacidad correspondientes cuando
-            acceda a ellos.
-        </p>
+    <section class="policy-section" id="enlaces">
+      <h2 class="title">9. Enlaces a sitios externos</h2>
+      <p>Apalancate puede proporcionar enlaces a sitios web oficiales de entidades financieras u otras organizaciones con el propósito de que el usuario pueda consultar información adicional.</p>
+      <p>Apalancate no controla las políticas de privacidad, prácticas, contenidos ni condiciones de dichos sitios externos. El usuario debe revisar las políticas de privacidad correspondientes cuando acceda a ellos.</p>
     </section>
 
-    <section>
-        <h2>10. Menores de edad</h2>
-
-        <p>
-            Apalancate no está diseñada específicamente para recopilar
-            información personal de niños.
-        </p>
-
-        <p>
-            Si se determina que se ha recopilado información personal de un
-            menor de forma contraria a las disposiciones legales aplicables,
-            se adoptarán las medidas correspondientes para eliminar dicha
-            información.
-        </p>
+    <section class="policy-section" id="menores">
+      <h2 class="title">10. Menores de edad</h2>
+      <p>Apalancate no está diseñada específicamente para recopilar información personal de niños.</p>
+      <p>Si se determina que se ha recopilado información personal de un menor de forma contraria a las disposiciones legales aplicables, se adoptarán las medidas correspondientes para eliminar dicha información.</p>
     </section>
 
-    <section>
-        <h2>11. Cambios en esta Política de Privacidad</h2>
-
-        <p>
-            Esta Política de Privacidad puede actualizarse periódicamente para
-            reflejar cambios en las funcionalidades de Apalancate, en los
-            servicios utilizados o en los requisitos legales aplicables.
-        </p>
-
-        <p>
-            Cuando se realicen cambios, se actualizará la fecha de última
-            modificación indicada en esta página.
-        </p>
+    <section class="policy-section" id="cambios">
+      <h2 class="title">11. Cambios en esta Política de Privacidad</h2>
+      <p>Esta Política de Privacidad puede actualizarse periódicamente para reflejar cambios en las funcionalidades de Apalancate, en los servicios utilizados o en los requisitos legales aplicables.</p>
+      <p>Cuando se realicen cambios, se actualizará la fecha de última modificación indicada en esta página.</p>
     </section>
 
-    <section>
-        <h2>12. Contacto</h2>
-
-        <p>
-            Para consultas relacionadas con esta Política de Privacidad,
-            el tratamiento de datos personales o solicitudes relacionadas con
-            la privacidad, puedes comunicarte con Apalancate mediante:
-        </p>
-
-        <p>
-            <strong>contactanos_aca@proton.me</strong>
-        </p>
+    <section class="policy-section" id="contacto">
+      <h2 class="title">12. Contacto</h2>
+      <p>Para consultas relacionadas con esta Política de Privacidad, el tratamiento de datos personales o solicitudes relacionadas con la privacidad, puedes comunicarte con Apalancate mediante:</p>
+      <p><a href="mailto:contactanos_aca@proton.me">contactanos_aca@proton.me</a></p>
     </section>
 
-    <section>
-        <h2>13. Identificación de la aplicación</h2>
-
-        <p>
-            Nombre de la aplicación: <strong>Apalancate</strong>
-        </p>
-
-        <p>
-            Identificador de aplicación Android:
-            <strong>com.apalancate.app</strong>
-        </p>
+    <section class="policy-section" id="identificacion">
+      <h2 class="title">13. Identificación de la aplicación</h2>
+      <p>Nombre de la aplicación: <strong>Apalancate</strong></p>
+      <p>Identificador de aplicación Android: <strong>com.apalancate.app</strong></p>
     </section>
 
-    <section>
-        <p>
-            <strong>Última actualización:</strong> 25 de septiembre de 2026
-        </p>
+    <section class="policy-section">
+      <p class="updated"><strong>Última actualización:</strong> 25 de septiembre de 2026</p>
     </section>
+  </main>
 
-</main>
-
-<footer>
-    © 2026 Apalancate. Todos los derechos reservados.
-</footer>
-
+  <footer>© 2026 Apalancate. Todos los derechos reservados.</footer>
 </body>
 </html>

@@ -8,24 +8,29 @@
 
 <style>
   :root{
-    --bg:#f6f8fb;
-    --surface:#ffffff;
-    --ink:#0f172a;
-    --muted:#64748b;
-    --line:#e2e8f0;
-    --teal:#0d9488;
-    --teal-dark:#0f766e;
-    --teal-soft:#ccfbf1;
-    --orange:#f97316;
-    --orange-soft:#ffedd5;
+    --bg:#0b1220;
+    --bg-2:#0f1a2e;
+    --surface:#111e35;
+    --surface-2:#16263f;
+    --surface-hi:#1b2f4d;
+    --ink:#e8eef8;
+    --ink-soft:#c2d0e4;
+    --muted:#8ea2bf;
+    --line:rgba(148,180,224,.14);
+    --line-strong:rgba(148,180,224,.26);
+    --teal:#2dd4bf;
+    --teal-soft:#5eead4;
+    --teal-deep:#0f766e;
     --amber:#fbbf24;
-    --green:#16a34a;
-    --green-soft:#dcfce7;
-    --red:#dc2626;
-    --red-soft:#fee2e2;
+    --amber-soft:#fcd34d;
+    --orange:#fb923c;
+    --green:#4ade80;
+    --red:#f87171;
+    --violet:#a78bfa;
     --radius:18px;
-    --shadow-sm:0 1px 2px rgba(15,23,42,.06);
-    --shadow:0 10px 30px -12px rgba(15,23,42,.18), 0 2px 6px rgba(15,23,42,.05);
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 18px 40px -20px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.3);
+    --glow-teal:0 0 0 1px rgba(45,212,191,.14), 0 12px 40px -14px rgba(45,212,191,.22);
     --max:880px;
   }
 
@@ -34,33 +39,38 @@
 
   body{
     margin:0;
-    background:var(--bg);
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(45,212,191,.08), transparent 60%),
+      radial-gradient(1000px 500px at 100% 5%, rgba(251,191,36,.05), transparent 55%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    background-attachment:fixed;
     color:var(--ink);
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size:17px;
     line-height:1.72;
     -webkit-font-smoothing:antialiased;
+    min-height:100vh;
   }
 
-  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px;position:relative;}
 
   /* ============ HERO ============ */
   .hero{
     position:relative;
     background:
-      radial-gradient(700px 340px at 85% -10%, #14b8a6 0%, transparent 55%),
-      radial-gradient(600px 300px at 5% 110%, #f97316 0%, transparent 60%),
-      linear-gradient(160deg,#0f172a 0%,#1e293b 100%);
+      radial-gradient(700px 340px at 85% -10%, rgba(45,212,191,.28) 0%, transparent 60%),
+      radial-gradient(600px 300px at 5% 110%, rgba(251,146,60,.18) 0%, transparent 62%),
+      linear-gradient(160deg,#0a1120 0%,#132038 100%);
     color:#fff;
-    padding:60px 0 90px;
+    padding:64px 0 100px;
     overflow:hidden;
+    border-bottom:1px solid var(--line);
   }
   .hero::before{
     content:"";
     position:absolute;inset:0;
-    background-image:
-      radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
-    background-size:22px 22px;
+    background-image:radial-gradient(rgba(148,180,224,.10) 1px, transparent 1px);
+    background-size:24px 24px;
     opacity:.5;
     pointer-events:none;
   }
@@ -69,54 +79,61 @@
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
-    font-weight:800;color:#5eead4;
-    background:rgba(94,234,212,.1);
-    border:1px solid rgba(94,234,212,.28);
+    font-weight:800;color:var(--teal-soft);
+    background:rgba(45,212,191,.10);
+    border:1px solid rgba(45,212,191,.28);
     padding:7px 14px;border-radius:999px;margin-bottom:22px;
+    backdrop-filter:blur(6px);
   }
-  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#5eead4;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal-soft);box-shadow:0 0 10px var(--teal-soft);}
 
   .hero h1{
     font-size:clamp(1.9rem,5.6vw,3rem);
     line-height:1.14;margin:0 0 18px;
-    letter-spacing:-.025em;font-weight:850;
+    letter-spacing:-.025em;font-weight:850;color:#f4f8ff;
   }
-  .hero h1 em{font-style:normal;background:linear-gradient(90deg,#5eead4,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,var(--teal-soft),var(--amber));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
 
   .hero p.lede{
     font-size:clamp(1rem,2.6vw,1.15rem);
-    color:#cbd5e1;max-width:600px;margin:0 0 28px;
+    color:#b9c9df;max-width:600px;margin:0 0 28px;
   }
 
   .hero-flow{
     display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);
+    background:rgba(148,180,224,.06);
+    border:1px solid var(--line-strong);
     border-radius:14px;padding:12px 16px;
     max-width:520px;
-    backdrop-filter:blur(6px);
+    backdrop-filter:blur(8px);
   }
   .hero-flow .step{
     display:flex;align-items:center;gap:8px;
-    font-size:.82rem;font-weight:700;color:#e2e8f0;
+    font-size:.82rem;font-weight:700;color:#dbe6f5;
   }
   .hero-flow .dot{
     width:22px;height:22px;border-radius:50%;
     display:grid;place-items:center;font-size:.7rem;font-weight:800;
-    background:#5eead4;color:#0f172a;
+    background:var(--teal-soft);color:#06251f;
+    box-shadow:0 0 12px rgba(94,234,212,.5);
   }
-  .hero-flow .dot.o{background:#fbbf24;color:#78350f;}
-  .hero-flow .arrow{color:#64748b;font-weight:700;font-size:.9rem;}
+  .hero-flow .dot.o{background:var(--amber);color:#3b2506;box-shadow:0 0 12px rgba(251,191,36,.5);}
+  .hero-flow .arrow{color:#5d7595;font-weight:700;font-size:.9rem;}
 
   /* ============ TOC ============ */
   .toc{
-    background:var(--surface);
-    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(17,30,53,.92), rgba(17,30,53,.72));
+    border:1px solid var(--line-strong);
     border-radius:var(--radius);
     box-shadow:var(--shadow);
     padding:22px;
-    margin:-56px auto 44px;
+    margin:-58px auto 48px;
     position:relative;z-index:5;
+    backdrop-filter:blur(10px);
   }
   .toc h2{
     font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
@@ -125,12 +142,17 @@
   .toc ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
   .toc a{
     display:flex;align-items:center;gap:12px;
-    color:var(--ink);text-decoration:none;
-    font-size:.92rem;font-weight:650;
+    color:var(--ink-soft);text-decoration:none;
+    font-size:.92rem;font-weight:600;
     padding:8px 10px;border-radius:10px;
-    transition:background .15s ease,color .15s ease;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
   }
-  .toc a:hover,.toc a:focus-visible{background:var(--teal-soft);color:var(--teal-dark);outline:none;}
+  .toc a:hover,.toc a:focus-visible{
+    background:rgba(45,212,191,.10);
+    color:var(--teal-soft);
+    outline:none;
+    transform:translateX(2px);
+  }
   .toc a .n{
     font-variant-numeric:tabular-nums;font-weight:800;
     color:var(--teal);font-size:.78rem;
@@ -138,26 +160,67 @@
   }
 
   /* ============ SECCIONES ============ */
-  section{margin:0 0 52px;scroll-margin-top:20px;}
+  section{margin:0 0 56px;scroll-margin-top:20px;}
 
   h2.title{
     font-size:clamp(1.35rem,3.8vw,1.75rem);
     line-height:1.25;letter-spacing:-.02em;
-    margin:0 0 8px;font-weight:850;
+    margin:0 0 8px;font-weight:850;color:#f2f7ff;
     display:flex;align-items:center;gap:12px;
   }
   h2.title::before{
     content:"";width:6px;height:26px;border-radius:3px;
-    background:linear-gradient(180deg,var(--teal),var(--orange));
+    background:linear-gradient(180deg,var(--teal),var(--amber));
     flex:0 0 auto;
+    box-shadow:0 0 14px rgba(45,212,191,.5);
   }
   .subtitle{color:var(--muted);font-size:.95rem;margin:0 0 24px;}
 
-  h3{font-size:1.05rem;margin:26px 0 8px;font-weight:800;}
-  p{margin:0 0 16px;}
-  strong{font-weight:750;color:var(--ink);}
+  h3{font-size:1.05rem;margin:26px 0 8px;font-weight:800;color:#eaf2ff;}
+  p{margin:0 0 16px;color:var(--ink-soft);}
+  strong{font-weight:750;color:#ffffff;}
 
-  /* ============ LOS 3 PROTAGONISTAS ============ */
+  .divider{
+    display:flex;align-items:center;gap:12px;
+    margin:0 0 48px;
+    color:var(--muted);
+  }
+  .divider::before,.divider::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(90deg,transparent,var(--line-strong),transparent);
+  }
+  .divider span{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--teal-soft);opacity:.7;font-weight:700;
+  }
+
+  /* ============ LEAD CALLOUT ============ */
+  .lead-callout{
+    background:
+      radial-gradient(500px 240px at 100% 0%, rgba(45,212,191,.20), transparent 70%),
+      linear-gradient(160deg, rgba(22,38,63,.95), rgba(17,30,53,.95));
+    border:1px solid var(--line-strong);
+    border-left:5px solid var(--teal);
+    border-radius:var(--radius);
+    padding:26px 26px 22px;
+    box-shadow:var(--shadow);
+    margin-bottom:32px;
+  }
+  .lead-callout .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:800;color:var(--teal-soft);
+    margin-bottom:12px;
+  }
+  .lead-callout .kicker::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--teal-soft);box-shadow:0 0 10px var(--teal-soft);
+  }
+  .lead-callout p{
+    font-size:1.05rem;line-height:1.7;color:#e8eef8;margin:0;
+  }
+
+  /* ============ CAST ============ */
   .cast{
     display:grid;gap:18px;grid-template-columns:1fr;
     margin-bottom:8px;
@@ -165,57 +228,88 @@
   @media(min-width:720px){ .cast{grid-template-columns:repeat(3,1fr);} }
 
   .cast-card{
-    background:var(--surface);
-    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
     border-radius:var(--radius);
     padding:22px 20px 24px;
     box-shadow:var(--shadow-sm);
     display:flex;flex-direction:column;
     position:relative;overflow:hidden;
-    transition:transform .2s ease,box-shadow .2s ease;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    backdrop-filter:blur(6px);
   }
-  .cast-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+  .cast-card::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(300px 140px at 50% 0%, rgba(45,212,191,.10), transparent 70%);
+    opacity:0;transition:opacity .3s ease;
+  }
+  .cast-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--glow-teal);
+    border-color:rgba(45,212,191,.35);
+  }
+  .cast-card:hover::after{opacity:1;}
+
   .cast-card .badge{
     position:absolute;top:14px;left:14px;
     font-size:.68rem;font-weight:800;letter-spacing:.1em;
     text-transform:uppercase;padding:4px 10px;border-radius:999px;
+    backdrop-filter:blur(6px);
   }
-  .cast-card.p1 .badge{background:var(--orange-soft);color:#9a3412;}
-  .cast-card.p2 .badge{background:var(--teal-soft);color:var(--teal-dark);}
-  .cast-card.p3 .badge{background:#ede9fe;color:#5b21b6;}
+  .cast-card.p1 .badge{background:rgba(251,146,60,.15);color:#fdba74;border:1px solid rgba(251,146,60,.3);}
+  .cast-card.p2 .badge{background:rgba(45,212,191,.14);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
+  .cast-card.p3 .badge{background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.3);}
 
   .cast-card .art{
     display:grid;place-items:center;
-    margin:22px 0 16px;
-    background:linear-gradient(180deg,transparent,#f8fafc);
-    border-radius:12px;
+    margin:26px 0 16px;
     padding:6px;
+    position:relative;
+    z-index:1;
   }
+  .cast-card .art::before{
+    content:"";position:absolute;inset:14% 18%;
+    background:radial-gradient(closest-side, rgba(45,212,191,.18), transparent 70%);
+    filter:blur(14px);
+    z-index:-1;
+    border-radius:50%;
+  }
+  .cast-card.p1 .art::before{background:radial-gradient(closest-side, rgba(251,146,60,.20), transparent 70%);}
+  .cast-card.p2 .art::before{background:radial-gradient(closest-side, rgba(45,212,191,.20), transparent 70%);}
+  .cast-card.p3 .art::before{background:radial-gradient(closest-side, rgba(167,139,250,.20), transparent 70%);}
+
   .cast-card svg{width:100%;max-width:200px;height:auto;display:block;}
 
-  .cast-card h4{margin:0 0 6px;font-size:1.05rem;font-weight:800;}
-  .cast-card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
+  .cast-card h4{margin:0 0 6px;font-size:1.05rem;font-weight:800;color:#f4f8ff;position:relative;z-index:1;}
+  .cast-card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;position:relative;z-index:1;}
 
-  /* ============ FLOW (cómo funciona) ============ */
+  /* ============ FLOW ============ */
   .flow{
-    background:linear-gradient(180deg,#0f172a,#1e293b);
-    color:#e2e8f0;
+    background:linear-gradient(180deg, rgba(10,17,32,.9), rgba(19,32,56,.9));
+    color:#dbe6f5;
     border-radius:var(--radius);
     padding:32px 24px;
     box-shadow:var(--shadow);
     position:relative;overflow:hidden;
+    border:1px solid var(--line-strong);
   }
   .flow::before{
     content:"";position:absolute;top:-40px;right:-40px;
+    width:200px;height:200px;border-radius:50%;
+    background:radial-gradient(circle, rgba(45,212,191,.35), transparent 70%);
+    opacity:.5;filter:blur(10px);
+  }
+  .flow::after{
+    content:"";position:absolute;bottom:-60px;left:-40px;
     width:180px;height:180px;border-radius:50%;
-    background:radial-gradient(circle,#14b8a6,transparent 70%);
-    opacity:.35;filter:blur(6px);
+    background:radial-gradient(circle, rgba(251,191,36,.18), transparent 70%);
+    opacity:.5;filter:blur(10px);
   }
   .flow h2{
-    color:#fff;font-size:1.2rem;margin:0 0 6px;font-weight:850;
+    color:#f4f8ff;font-size:1.2rem;margin:0 0 6px;font-weight:850;
     position:relative;z-index:1;
   }
-  .flow .sub{color:#94a3b8;font-size:.9rem;margin:0 0 24px;position:relative;z-index:1;}
+  .flow .sub{color:var(--muted);font-size:.9rem;margin:0 0 24px;position:relative;z-index:1;}
   .flow-steps{
     display:grid;gap:14px;grid-template-columns:1fr;
     position:relative;z-index:1;
@@ -224,53 +318,62 @@
     .flow-steps{grid-template-columns:repeat(4,1fr);}
   }
   .flow-step{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.1);
+    background:rgba(148,180,224,.05);
+    border:1px solid var(--line-strong);
     border-radius:14px;
     padding:16px 14px;
     text-align:center;
+    transition:background .2s ease,border-color .2s ease;
+  }
+  .flow-step:hover{
+    background:rgba(45,212,191,.08);
+    border-color:rgba(45,212,191,.3);
   }
   .flow-step .num{
     display:inline-grid;place-items:center;
     width:34px;height:34px;border-radius:50%;
-    background:var(--teal);color:#fff;
+    background:var(--teal);color:#04211c;
     font-weight:850;font-size:.9rem;
     margin-bottom:10px;
+    box-shadow:0 0 16px rgba(45,212,191,.5);
   }
-  .flow-step:nth-child(4) .num{background:var(--orange);}
-  .flow-step b{display:block;font-size:.9rem;color:#fff;margin-bottom:4px;}
-  .flow-step span{font-size:.8rem;color:#94a3b8;line-height:1.5;}
+  .flow-step:nth-child(4) .num{background:var(--amber);color:#3b2506;box-shadow:0 0 16px rgba(251,191,36,.5);}
+  .flow-step b{display:block;font-size:.9rem;color:#f4f8ff;margin-bottom:4px;}
+  .flow-step span{font-size:.8rem;color:var(--muted);line-height:1.5;}
 
-  /* ============ EJEMPLO PRÁCTICO ============ */
+  /* ============ EJEMPLO ============ */
   .example{
-    background:var(--surface);
-    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
     border-radius:var(--radius);
     padding:28px 24px;
     box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(6px);
   }
   .example-head{
     display:flex;align-items:center;gap:12px;margin-bottom:22px;
-    padding-bottom:18px;border-bottom:1px dashed var(--line);
+    padding-bottom:18px;border-bottom:1px dashed var(--line-strong);
     flex-wrap:wrap;
   }
   .example-head .tag{
-    background:#fee2e2;color:#991b1b;
+    background:rgba(248,113,113,.15);color:#fca5a5;
+    border:1px solid rgba(248,113,113,.3);
     font-size:.7rem;font-weight:800;letter-spacing:.1em;
     text-transform:uppercase;padding:5px 12px;border-radius:999px;
   }
-  .example-head h3{margin:0;font-size:1.1rem;}
+  .example-head h3{margin:0;font-size:1.1rem;color:#f4f8ff;}
 
   .scenario{
-    background:#f8fafc;
+    background:rgba(148,180,224,.05);
     border-radius:12px;
     padding:18px;
     margin-bottom:22px;
     font-size:.95rem;
     border-left:4px solid var(--teal);
+    color:var(--ink-soft);
   }
-  .scenario p{margin:0;}
-  .scenario .q{color:var(--teal-dark);font-weight:750;}
+  .scenario p{margin:0;color:var(--ink-soft);}
+  .scenario .q{color:var(--teal-soft);font-weight:750;}
 
   .timeline{
     display:grid;gap:16px;grid-template-columns:1fr;
@@ -279,38 +382,45 @@
   @media(min-width:640px){ .timeline{grid-template-columns:1fr 1fr;} }
 
   .tl-item{
-    border:1px solid var(--line);border-radius:14px;
-    padding:16px 18px;background:#fff;position:relative;
+    border:1px solid var(--line-strong);border-radius:14px;
+    padding:16px 18px;
+    background:rgba(11,18,32,.6);
+    position:relative;
+    transition:border-color .2s ease,transform .2s ease;
   }
+  .tl-item:hover{transform:translateY(-2px);border-color:rgba(45,212,191,.35);}
   .tl-item .when{
     display:inline-block;font-size:.72rem;font-weight:800;
     letter-spacing:.1em;text-transform:uppercase;
     padding:4px 10px;border-radius:999px;margin-bottom:10px;
   }
-  .tl-item.day0 .when{background:var(--orange-soft);color:#9a3412;}
-  .tl-item.day60 .when{background:var(--teal-soft);color:var(--teal-dark);}
+  .tl-item.day0 .when{background:rgba(251,146,60,.18);color:#fdba74;border:1px solid rgba(251,146,60,.3);}
+  .tl-item.day60 .when{background:rgba(45,212,191,.16);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
   .tl-item .what{font-size:.92rem;color:var(--muted);margin:0 0 12px;line-height:1.6;}
   .tl-item .amount{
     font-size:1.5rem;font-weight:850;letter-spacing:-.02em;
     font-variant-numeric:tabular-nums;
   }
-  .tl-item.day0 .amount{color:#c2410c;}
-  .tl-item.day60 .amount{color:var(--teal-dark);}
+  .tl-item.day0 .amount{color:#fdba74;}
+  .tl-item.day60 .amount{color:var(--teal-soft);}
 
   .result{
-    background:linear-gradient(135deg,#0d9488,#0f766e);
-    color:#fff;border-radius:14px;
+    background:linear-gradient(135deg, rgba(15,118,110,.55), rgba(13,148,136,.35));
+    border:1px solid rgba(45,212,191,.35);
+    color:#eafff9;border-radius:14px;
     padding:20px 22px;
     display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    box-shadow:0 10px 30px -14px rgba(45,212,191,.4);
   }
   .result .icon{
     width:46px;height:46px;border-radius:50%;
-    background:rgba(255,255,255,.18);
+    background:rgba(94,234,212,.15);
+    border:1px solid rgba(94,234,212,.35);
     display:grid;place-items:center;font-size:1.4rem;
     flex:0 0 auto;
   }
-  .result .txt strong{display:block;font-size:1.1rem;font-weight:850;color:#fff;}
-  .result .txt span{font-size:.85rem;color:#ccfbf1;line-height:1.5;}
+  .result .txt strong{display:block;font-size:1.1rem;font-weight:850;color:#ffffff;}
+  .result .txt span{font-size:.85rem;color:#c9f4ea;line-height:1.5;}
 
   .illustrative-note{
     display:block;
@@ -321,49 +431,106 @@
     line-height:1.55;
   }
 
+  /* ============ TABLAS ============ */
+  .table-wrap{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:6px;
+    box-shadow:var(--shadow-sm);
+    overflow-x:auto;
+    backdrop-filter:blur(6px);
+    margin-bottom:20px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.9rem;
+    min-width:520px;
+  }
+  thead th{
+    text-align:left;
+    padding:13px 14px;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-weight:800;
+    color:var(--teal-soft);
+    border-bottom:1px solid var(--line-strong);
+    background:rgba(45,212,191,.05);
+  }
+  tbody td{
+    padding:13px 14px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:top;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:rgba(45,212,191,.04);}
+  td strong{color:#ffffff;}
+  td .pill{
+    display:inline-block;
+    font-size:.7rem;
+    font-weight:800;
+    padding:3px 9px;
+    border-radius:999px;
+    letter-spacing:.04em;
+  }
+  .pill.low{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
+  .pill.mid{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.3);}
+  .pill.high{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
+
   /* ============ VENTAJAS / RIESGOS ============ */
   .two-col{display:grid;gap:18px;grid-template-columns:1fr;}
   @media(min-width:720px){ .two-col{grid-template-columns:1fr 1fr;} }
 
   .panel{
     border-radius:var(--radius);padding:22px 20px;
-    border:1px solid var(--line);background:var(--surface);
+    border:1px solid var(--line-strong);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    backdrop-filter:blur(6px);
   }
   .panel h3{
     margin:0 0 16px;font-size:1rem;font-weight:850;
     display:flex;align-items:center;gap:8px;
+    color:#f4f8ff;
   }
   .panel h3 .chip{
     width:24px;height:24px;border-radius:50%;
     display:grid;place-items:center;font-size:.8rem;font-weight:800;
   }
-  .panel.pro h3 .chip{background:var(--green-soft);color:#15803d;}
-  .panel.con h3 .chip{background:var(--red-soft);color:#b91c1c;}
+  .panel.pro h3 .chip{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
+  .panel.con h3 .chip{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
 
   .panel ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
-  .panel li{font-size:.92rem;line-height:1.65;padding-left:16px;position:relative;}
+  .panel li{font-size:.92rem;line-height:1.65;padding-left:16px;position:relative;color:var(--ink-soft);}
   .panel li::before{
     content:"";position:absolute;left:0;top:9px;
     width:6px;height:6px;border-radius:50%;
   }
-  .panel.pro li::before{background:var(--green);}
-  .panel.con li::before{background:var(--red);}
-  .panel li b{color:var(--ink);font-weight:750;}
+  .panel.pro li::before{background:var(--green);box-shadow:0 0 8px rgba(74,222,128,.6);}
+  .panel.con li::before{background:var(--red);box-shadow:0 0 8px rgba(248,113,113,.6);}
+  .panel li b{color:#ffffff;font-weight:750;}
 
   /* ============ OPORTUNIDADES ============ */
   .opps{display:grid;gap:14px;grid-template-columns:1fr;}
   @media(min-width:700px){ .opps{grid-template-columns:1fr 1fr;} }
   .opp{
-    background:var(--surface);border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
     border-radius:14px;padding:18px 20px;
     display:flex;gap:14px;
+    transition:border-color .2s ease,transform .2s ease;
   }
+  .opp:hover{border-color:rgba(45,212,191,.35);transform:translateY(-2px);}
   .opp .ico{
     flex:0 0 40px;height:40px;border-radius:10px;
-    background:var(--teal-soft);color:var(--teal-dark);
+    background:rgba(45,212,191,.12);
+    border:1px solid rgba(45,212,191,.3);
+    color:var(--teal-soft);
     display:grid;place-items:center;font-size:1.15rem;
   }
-  .opp h4{margin:0 0 4px;font-size:.95rem;font-weight:800;}
+  .opp h4{margin:0 0 4px;font-size:.95rem;font-weight:800;color:#f4f8ff;}
   .opp p{margin:0;font-size:.87rem;color:var(--muted);line-height:1.6;}
 
   /* ============ PASOS ============ */
@@ -375,72 +542,170 @@
   .steps li:last-child{border-bottom:none;}
   .steps .n{
     width:44px;height:44px;border-radius:12px;
-    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
-    color:#fff;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--teal),var(--teal-deep));
+    color:#04211c;display:grid;place-items:center;
     font-weight:850;font-size:1.05rem;
-    box-shadow:0 6px 16px -6px rgba(13,148,136,.5);
+    box-shadow:0 8px 22px -8px rgba(45,212,191,.6);
   }
-  .steps b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;}
+  .steps b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;color:#f4f8ff;}
   .steps p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.65;}
 
   /* ============ CONSIDERAR ============ */
   .consider{display:grid;gap:14px;}
   .cns{
-    background:var(--surface);border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
     border-radius:14px;padding:18px 20px;
     border-left:4px solid var(--teal);
+    backdrop-filter:blur(6px);
   }
-  .cns h4{margin:0 0 6px;font-size:.97rem;font-weight:800;color:var(--teal-dark);}
+  .cns h4{margin:0 0 6px;font-size:.97rem;font-weight:800;color:var(--teal-soft);}
   .cns p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
 
   /* ============ NO ESPERAR ============ */
   .avoid{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
   .avoid li{
-    background:var(--red-soft);
-    border:1px solid #fecaca;
+    background:linear-gradient(180deg, rgba(58,23,30,.55), rgba(45,18,25,.55));
+    border:1px solid rgba(248,113,113,.28);
     border-radius:14px;
     padding:16px 18px 16px 50px;
     position:relative;font-size:.92rem;line-height:1.65;
+    color:#fbd5d5;
   }
   .avoid li::before{
     content:"✕";
     position:absolute;left:14px;top:16px;
     width:24px;height:24px;border-radius:50%;
-    background:#fca5a5;color:#7f1d1d;
+    background:rgba(248,113,113,.22);
+    color:#fca5a5;
     display:grid;place-items:center;
     font-size:.78rem;font-weight:850;
+    border:1px solid rgba(248,113,113,.35);
   }
-  .avoid b{display:block;color:#991b1b;font-weight:800;margin-bottom:3px;}
+  .avoid b{display:block;color:#fecaca;font-weight:800;margin-bottom:3px;}
 
-  /* ============ CALLOUT FINAL ============ */
+  /* ============ CALLOUT ============ */
   .callout{
     background:
-      radial-gradient(400px 200px at 100% 0%, rgba(20,184,166,.35), transparent 70%),
-      linear-gradient(160deg,#0f172a,#1e293b);
-    color:#e2e8f0;border-radius:var(--radius);
-    padding:32px 26px;
+      radial-gradient(400px 200px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
+      radial-gradient(400px 220px at 0% 100%, rgba(251,191,36,.12), transparent 70%),
+      linear-gradient(160deg,#0a1120,#132038);
+    color:#dbe6f5;
+    border-radius:var(--radius);
+    padding:34px 28px;
     box-shadow:var(--shadow);
+    border:1px solid var(--line-strong);
+    position:relative;overflow:hidden;
   }
-  .callout h2{color:#5eead4;margin:0 0 14px;font-size:1.2rem;font-weight:850;letter-spacing:-.01em;}
-  .callout p{font-size:.95rem;color:#cbd5e1;margin:0 0 14px;}
+  .callout h2{color:var(--teal-soft);margin:0 0 14px;font-size:1.2rem;font-weight:850;letter-spacing:-.01em;}
+  .callout p{font-size:.95rem;color:var(--ink-soft);margin:0 0 14px;}
   .callout p:last-child{margin-bottom:0;}
+
+  /* ============ CONTACTO ============ */
+  .contact{
+    background:linear-gradient(180deg, rgba(22,38,63,.9), rgba(17,30,53,.9));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:-2px;
+    background:radial-gradient(400px 200px at 50% 0%, rgba(45,212,191,.15), transparent 70%);
+    pointer-events:none;
+  }
+  .contact h3{
+    margin:0 0 8px;font-size:1.2rem;font-weight:850;color:#f4f8ff;
+    position:relative;z-index:1;
+  }
+  .contact p{
+    margin:0 0 22px;color:var(--muted);font-size:.95rem;
+    position:relative;z-index:1;
+    max-width:520px;margin-left:auto;margin-right:auto;
+  }
+  .contact a.mail{
+    display:inline-flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg, rgba(45,212,191,.18), rgba(20,184,166,.10));
+    border:1px solid rgba(45,212,191,.45);
+    color:var(--teal-soft);
+    text-decoration:none;
+    font-weight:750;
+    font-size:1rem;
+    padding:14px 24px;
+    border-radius:999px;
+    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    position:relative;z-index:1;
+    word-break:break-all;
+    max-width:100%;
+  }
+  .contact a.mail:hover,.contact a.mail:focus-visible{
+    transform:translateY(-2px);
+    background:linear-gradient(135deg, rgba(45,212,191,.28), rgba(20,184,166,.18));
+    box-shadow:0 12px 30px -10px rgba(45,212,191,.55);
+    outline:none;
+  }
+  .contact a.mail svg{width:18px;height:18px;flex:0 0 auto;}
+  .contact .note{
+    margin:16px 0 0;font-size:.8rem;color:var(--muted);
+    position:relative;z-index:1;
+  }
 
   /* ============ FOOTER ============ */
   footer{
-    border-top:1px solid var(--line);margin-top:52px;
+    border-top:1px solid var(--line);
+    margin-top:56px;
     padding:26px 0 48px;font-size:.82rem;color:var(--muted);line-height:1.7;
   }
   footer strong{color:var(--ink);}
+  footer p{color:var(--muted);}
+  footer .update{
+    display:inline-block;
+    margin-top:14px;
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(45,212,191,.08);
+    border:1px solid rgba(45,212,191,.2);
+    color:var(--teal-soft);
+    font-size:.75rem;
+    font-weight:700;
+  }
 
-  /* ============ ACCESIBILIDAD ============ */
+  /* ============ ANIMACIÓN ============ */
+  @keyframes rise{
+    from{opacity:0;transform:translateY(14px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  section{animation:rise .6s ease both;}
+  section:nth-of-type(1){animation-delay:.05s;}
+  section:nth-of-type(2){animation-delay:.10s;}
+  section:nth-of-type(3){animation-delay:.15s;}
+  section:nth-of-type(4){animation-delay:.20s;}
+  section:nth-of-type(5){animation-delay:.25s;}
+  section:nth-of-type(6){animation-delay:.30s;}
+  section:nth-of-type(7){animation-delay:.35s;}
+  section:nth-of-type(8){animation-delay:.40s;}
+  section:nth-of-type(9){animation-delay:.45s;}
+  section:nth-of-type(10){animation-delay:.50s;}
+
+  @media (prefers-reduced-motion: reduce){
+    section{animation:none;}
+    *{transition:none !important;}
+    html{scroll-behavior:auto;}
+  }
+
   a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px;}
 
   @media(max-width:520px){
     body{font-size:16px;}
-    .hero{padding:44px 0 76px;}
-    .toc{margin-top:-46px;padding:18px;}
+    .hero{padding:48px 0 86px;}
+    .toc{margin-top:-50px;padding:18px;}
     .example{padding:22px 18px;}
     .timeline{grid-template-columns:1fr;}
+    .contact{padding:26px 20px;}
+    .contact a.mail{font-size:.9rem;padding:12px 18px;}
+    .lead-callout{padding:22px 20px 18px;}
   }
 </style>
 </head>
@@ -449,9 +714,9 @@
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Apalancate · Perú</span>
+    <span class="eyebrow">Guía visual · Perú · Actualizado 2026</span>
     <h1>Invertir en <em>Factoring</em>: lo que nadie te cuenta y deberías saber</h1>
-    <p class="lede">Una guía honesta, con ilustraciones y un ejemplo ilustrativo, para quien nunca ha invertido en factoring y quiere entender cómo funciona de verdad.</p>
+    <p class="lede">Una guía honesta, con ilustraciones, estadísticas actualizadas y un ejemplo ilustrativo, para quien nunca ha invertido en factoring y quiere entender cómo funciona de verdad.</p>
 
     <div class="hero-flow">
       <span class="step"><span class="dot">1</span> Proveedor</span>
@@ -474,13 +739,15 @@
       <li><a href="#protagonistas"><span class="n">01</span> Los 3 protagonistas del factoring</a></li>
       <li><a href="#como-funciona"><span class="n">02</span> Cómo funciona, paso a paso</a></li>
       <li><a href="#ejemplo"><span class="n">03</span> Ejemplo ilustrativo con números</a></li>
-      <li><a href="#ventajas"><span class="n">04</span> Ventajas reales</a></li>
-      <li><a href="#riesgos"><span class="n">05</span> Riesgos que debes conocer</a></li>
-      <li><a href="#oportunidades"><span class="n">06</span> Oportunidades del momento</a></li>
-      <li><a href="#empezar"><span class="n">07</span> Cómo empezar, paso a paso</a></li>
-      <li><a href="#considerar"><span class="n">08</span> Qué considerar antes de invertir</a></li>
-      <li><a href="#no-esperar"><span class="n">09</span> Qué NO deberías esperar</a></li>
-      <li><a href="#reflexion"><span class="n">10</span> Reflexión final</a></li>
+      <li><a href="#estadisticas"><span class="n">04</span> El mercado en cifras (2025)</a></li>
+      <li><a href="#rentabilidad"><span class="n">05</span> Rentabilidad por tamaño de empresa</a></li>
+      <li><a href="#ventajas"><span class="n">06</span> Ventajas reales</a></li>
+      <li><a href="#riesgos"><span class="n">07</span> Riesgos que debes conocer</a></li>
+      <li><a href="#oportunidades"><span class="n">08</span> Oportunidades del momento</a></li>
+      <li><a href="#empezar"><span class="n">09</span> Cómo empezar, paso a paso</a></li>
+      <li><a href="#considerar"><span class="n">10</span> Qué considerar antes de invertir</a></li>
+      <li><a href="#no-esperar"><span class="n">11</span> Qué NO deberías esperar</a></li>
+      <li><a href="#reflexion"><span class="n">12</span> Reflexión final</a></li>
     </ul>
   </nav>
 
@@ -496,23 +763,23 @@
         <span class="badge">Protagonista 1</span>
         <div class="art">
           <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del proveedor: una pequeña tienda que vende y factura">
-            <ellipse cx="120" cy="178" rx="86" ry="6" fill="#e2e8f0"/>
+            <ellipse cx="120" cy="178" rx="86" ry="6" fill="rgba(148,180,224,.10)"/>
             <rect x="50" y="80" width="140" height="92" rx="6" fill="#0d9488"/>
-            <path d="M40 80 L200 80 L190 56 L50 56 Z" fill="#f97316"/>
-            <circle cx="60" cy="80" r="11" fill="#f97316"/>
-            <circle cx="90" cy="80" r="11" fill="#fb923c"/>
-            <circle cx="120" cy="80" r="11" fill="#f97316"/>
-            <circle cx="150" cy="80" r="11" fill="#fb923c"/>
-            <circle cx="180" cy="80" r="11" fill="#f97316"/>
+            <path d="M40 80 L200 80 L190 56 L50 56 Z" fill="#fb923c"/>
+            <circle cx="60" cy="80" r="11" fill="#fb923c"/>
+            <circle cx="90" cy="80" r="11" fill="#fdba74"/>
+            <circle cx="120" cy="80" r="11" fill="#fb923c"/>
+            <circle cx="150" cy="80" r="11" fill="#fdba74"/>
+            <circle cx="180" cy="80" r="11" fill="#fb923c"/>
             <rect x="110" y="116" width="42" height="56" rx="4" fill="#0f766e"/>
             <circle cx="144" cy="144" r="3" fill="#fbbf24"/>
-            <rect x="118" y="124" width="26" height="20" rx="2" fill="#99f6e4"/>
-            <rect x="62" y="112" width="36" height="34" rx="3" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
-            <line x1="80" y1="112" x2="80" y2="146" stroke="#0f766e" stroke-width="2"/>
-            <line x1="62" y1="129" x2="98" y2="129" stroke="#0f766e" stroke-width="2"/>
+            <rect x="118" y="124" width="26" height="20" rx="2" fill="#5eead4" opacity=".85"/>
+            <rect x="62" y="112" width="36" height="34" rx="3" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+            <line x1="80" y1="112" x2="80" y2="146" stroke="#5eead4" stroke-width="2"/>
+            <line x1="62" y1="129" x2="98" y2="129" stroke="#5eead4" stroke-width="2"/>
             <ellipse cx="80" cy="121" rx="10" ry="5" fill="#fbbf24"/>
-            <rect x="160" y="112" width="22" height="34" rx="3" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
-            <text x="171" y="134" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f766e" font-family="system-ui">S/</text>
+            <rect x="160" y="112" width="22" height="34" rx="3" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+            <text x="171" y="134" text-anchor="middle" font-size="12" font-weight="bold" fill="#5eead4" font-family="system-ui">S/</text>
           </svg>
         </div>
         <h4>El Proveedor</h4>
@@ -524,19 +791,19 @@
         <span class="badge">Protagonista 2</span>
         <div class="art">
           <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de la factura negociable, título valor con mérito ejecutivo">
-            <rect x="56" y="30" width="130" height="150" rx="8" fill="#cbd5e1" opacity="0.45" transform="rotate(5 121 105)"/>
-            <rect x="50" y="25" width="130" height="150" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <rect x="56" y="30" width="130" height="150" rx="8" fill="rgba(148,180,224,.10)" transform="rotate(5 121 105)"/>
+            <rect x="50" y="25" width="130" height="150" rx="8" fill="#0f1a2e" stroke="rgba(45,212,191,.35)" stroke-width="1.5"/>
             <path d="M50 33 Q50 25 58 25 L172 25 Q180 25 180 33 L180 55 L50 55 Z" fill="#0d9488"/>
-            <rect x="64" y="36" width="52" height="6" rx="3" fill="#ccfbf1"/>
-            <rect x="64" y="46" width="34" height="4" rx="2" fill="#5eead4" opacity="0.7"/>
-            <rect x="64" y="70" width="100" height="5" rx="2.5" fill="#e2e8f0"/>
-            <rect x="64" y="82" width="80" height="5" rx="2.5" fill="#e2e8f0"/>
-            <rect x="64" y="94" width="90" height="5" rx="2.5" fill="#e2e8f0"/>
-            <rect x="64" y="106" width="70" height="5" rx="2.5" fill="#e2e8f0"/>
-            <line x1="64" y1="124" x2="166" y2="124" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 3"/>
-            <rect x="64" y="134" width="36" height="7" rx="3.5" fill="#0d9488"/>
-            <rect x="126" y="132" width="40" height="10" rx="5" fill="#f97316"/>
-            <circle cx="158" cy="160" r="16" fill="#f97316"/>
+            <rect x="64" y="36" width="52" height="6" rx="3" fill="#5eead4"/>
+            <rect x="64" y="46" width="34" height="4" rx="2" fill="#99f6e4" opacity="0.7"/>
+            <rect x="64" y="70" width="100" height="5" rx="2.5" fill="rgba(148,180,224,.22)"/>
+            <rect x="64" y="82" width="80" height="5" rx="2.5" fill="rgba(148,180,224,.22)"/>
+            <rect x="64" y="94" width="90" height="5" rx="2.5" fill="rgba(148,180,224,.22)"/>
+            <rect x="64" y="106" width="70" height="5" rx="2.5" fill="rgba(148,180,224,.22)"/>
+            <line x1="64" y1="124" x2="166" y2="124" stroke="rgba(148,180,224,.25)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="64" y="134" width="36" height="7" rx="3.5" fill="#2dd4bf"/>
+            <rect x="126" y="132" width="40" height="10" rx="5" fill="#fb923c"/>
+            <circle cx="158" cy="160" r="16" fill="#fb923c"/>
             <path d="M150 160 L156 166 L167 154" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
         </div>
@@ -549,23 +816,23 @@
         <span class="badge">Protagonista 3</span>
         <div class="art">
           <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del inversionista con monedas y crecimiento">
-            <ellipse cx="120" cy="182" rx="92" ry="6" fill="#e2e8f0"/>
-            <rect x="26" y="130" width="14" height="42" rx="3" fill="#ccfbf1"/>
-            <rect x="46" y="114" width="14" height="58" rx="3" fill="#5eead4"/>
+            <ellipse cx="120" cy="182" rx="92" ry="6" fill="rgba(148,180,224,.10)"/>
+            <rect x="26" y="130" width="14" height="42" rx="3" fill="#134e4a"/>
+            <rect x="46" y="114" width="14" height="58" rx="3" fill="#0f766e"/>
             <rect x="66" y="94" width="14" height="78" rx="3" fill="#14b8a6"/>
-            <path d="M26 124 Q60 108 92 88 Q122 70 152 58" stroke="#0d9488" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="6 5"/>
-            <path d="M148 52 L156 58 L150 66" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="162" cy="62" r="22" fill="#f97316"/>
+            <path d="M26 124 Q60 108 92 88 Q122 70 152 58" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="6 5"/>
+            <path d="M148 52 L156 58 L150 66" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="162" cy="62" r="22" fill="#fb923c"/>
             <circle cx="155" cy="59" r="2.5" fill="#0f172a"/>
             <circle cx="169" cy="59" r="2.5" fill="#0f172a"/>
             <path d="M155 70 Q162 76 169 70" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <path d="M140 57 Q142 40 162 40 Q182 40 184 57 Q177 50 162 50 Q147 50 140 57 Z" fill="#78350f"/>
+            <path d="M140 57 Q142 40 162 40 Q182 40 184 57 Q177 50 162 50 Q147 50 140 57 Z" fill="#7c2d12"/>
             <path d="M134 158 Q134 96 162 96 Q190 96 190 158 Z" fill="#0f766e"/>
-            <path d="M150 102 L162 116 L174 102" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M150 102 L162 116 L174 102" stroke="#5eead4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M137 122 Q118 132 111 148" stroke="#0f766e" stroke-width="13" stroke-linecap="round" fill="none"/>
             <path d="M187 122 Q206 132 213 148" stroke="#0f766e" stroke-width="13" stroke-linecap="round" fill="none"/>
             <circle cx="111" cy="152" r="11" fill="#fbbf24"/>
-            <text x="111" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e" font-family="system-ui">S/</text>
+            <text x="111" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f" font-family="system-ui">S/</text>
           </svg>
         </div>
         <h4>El Inversionista (tú)</h4>
@@ -574,6 +841,8 @@
 
     </div>
   </section>
+
+  <div class="divider"><span>· · ·</span></div>
 
   <!-- ================= CÓMO FUNCIONA ================= -->
   <section id="como-funciona">
@@ -606,7 +875,7 @@
     </div>
   </section>
 
-  <!-- ================= EJEMPLO PRÁCTICO ================= -->
+  <!-- ================= EJEMPLO ================= -->
   <section id="ejemplo">
     <h2 class="title">Ejemplo ilustrativo con números</h2>
     <p class="subtitle">Olvídate de la teoría por un momento. Aquí tienes una operación simplificada, con montos redondos, para que veas de dónde sale la ganancia del inversionista.</p>
@@ -638,7 +907,7 @@
         <div class="icon">📈</div>
         <div class="txt">
           <strong>Ganancia: S/ 200 en 60 días</strong>
-          <span>Equivale a un 2% en dos meses. El rendimiento real siempre depende del pagador, del plazo y de las condiciones de cada operación.</span>
+          <span>Equivale a un 2% en dos meses, aproximadamente 12% anualizado. El rendimiento real depende del pagador, del plazo y del riesgo de cada operación.</span>
         </div>
       </div>
 
@@ -647,6 +916,145 @@
       </span>
     </div>
   </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= ESTADÍSTICAS ================= -->
+  <section id="estadisticas">
+    <h2 class="title">El mercado en cifras (2025)</h2>
+    <p class="subtitle">Datos oficiales del cierre del ejercicio 2025. Estas son las cifras que reflejan la dimensión real del factoring en Perú.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Indicador</th>
+            <th>Valor 2025</th>
+            <th>Variación vs. 2024</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Monto negociado</strong></td>
+            <td>S/ 52,057 millones</td>
+            <td>+20.6%</td>
+          </tr>
+          <tr>
+            <td><strong>Facturas negociadas</strong></td>
+            <td>2,070,879</td>
+            <td>+17.1%</td>
+          </tr>
+          <tr>
+            <td><strong>Empresas usuarias</strong></td>
+            <td>30,038</td>
+            <td>84.9% son MYPE</td>
+          </tr>
+          <tr>
+            <td><strong>Monto MYPE</strong></td>
+            <td>S/ 12,347 millones</td>
+            <td>23.7% del total</td>
+          </tr>
+          <tr>
+            <td><strong>Participación en crédito empresarial</strong></td>
+            <td>23.9%</td>
+            <td>vs. 0.2% en 2015</td>
+          </tr>
+          <tr>
+            <td><strong>Participación en PBI</strong></td>
+            <td>4.4%</td>
+            <td>vs. 0.05% en 2015</td>
+          </tr>
+          <tr>
+            <td><strong>Morosidad a 30 días</strong></td>
+            <td>5.1%</td>
+            <td>vs. 5.3% en 2024</td>
+          </tr>
+          <tr>
+            <td><strong>Morosidad a 90 días</strong></td>
+            <td>4.5%</td>
+            <td>vs. 3.8% en 2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--muted);font-style:italic;">
+      Fuentes: CAVALI, Ministerio de la Producción (PRODUCE), SBS. Datos al cierre de diciembre de 2025.
+    </p>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= RENTABILIDAD POR TAMAÑO ================= -->
+  <section id="rentabilidad">
+    <h2 class="title">Rentabilidad por tamaño de empresa</h2>
+    <p class="subtitle">No todas las operaciones de factoring rinden igual. El tamaño del pagador (y su perfil de riesgo) determina la tasa de descuento y, por tanto, el retorno potencial para el inversionista.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Segmento</th>
+            <th>Participación en monto</th>
+            <th>Tasa de descuento referencial</th>
+            <th>Perfil de riesgo</th>
+            <th>Retorno potencial anual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Gran empresa</strong></td>
+            <td>~73%</td>
+            <td>1.0% – 1.2% mensual</td>
+            <td><span class="pill low">Bajo</span></td>
+            <td>8% – 10%</td>
+          </tr>
+          <tr>
+            <td><strong>Mediana empresa</strong></td>
+            <td>~4%</td>
+            <td>1.2% – 1.5% mensual</td>
+            <td><span class="pill mid">Moderado</span></td>
+            <td>10% – 13%</td>
+          </tr>
+          <tr>
+            <td><strong>Pequeña empresa</strong></td>
+            <td>~18%</td>
+            <td>1.5% – 2.0% mensual</td>
+            <td><span class="pill mid">Moderado-alto</span></td>
+            <td>13% – 16%</td>
+          </tr>
+          <tr>
+            <td><strong>Microempresa</strong></td>
+            <td>~6%</td>
+            <td>1.8% – 2.5% mensual</td>
+            <td><span class="pill high">Alto</span></td>
+            <td>15% – 22%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--muted);font-style:italic;">
+      Fuentes: Moody's Local (participación por segmento, octubre 2025), Infobae (tasa promedio 1%–1.5% mensual), APEFAC (retorno 8%–12% anual). Las tasas y retornos son referenciales y varían según el pagador, el plazo, la plataforma y las condiciones de cada operación.
+    </p>
+
+    <div class="consider" style="margin-top:24px;">
+      <div class="cns">
+        <h4>¿Por qué la gran empresa concentra el mayor monto?</h4>
+        <p>Porque sus facturas tienen montos más altos y su perfil de riesgo es más bajo. Los bancos compiten por estas operaciones, lo que reduce la tasa de descuento. El retorno para el inversionista es menor, pero el riesgo también.</p>
+      </div>
+      <div class="cns">
+        <h4>¿Por qué las MYPE ofrecen tasas más altas?</h4>
+        <p>Porque su perfil de riesgo es mayor. Muchas no tienen historial crediticio extenso ni garantías. El inversionista que asume ese riesgo recibe una prima. La contraparte: la morosidad en este segmento es más alta.</p>
+      </div>
+      <div class="cns">
+        <h4>¿Dónde está el punto óptimo?</h4>
+        <p>Depende de tu tolerancia al riesgo. Si buscas estabilidad, la gran empresa. Si buscas mayor retorno y puedes asumir más riesgo, la pequeña empresa ofrece un equilibrio interesante. La microempresa es para perfiles agresivos.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
 
   <!-- ================= VENTAJAS / RIESGOS ================= -->
   <section id="ventajas">
@@ -657,9 +1065,9 @@
       <div class="panel pro">
         <h3><span class="chip">✓</span> Ventajas reales</h3>
         <ul>
-          <li><b>Rentabilidad atractiva.</b> En términos generales, el factoring suele ofrecer rendimientos por encima de un depósito a plazo fijo tradicional, aunque varían mucho según el perfil de riesgo y la operación.</li>
+          <li><b>Rentabilidad atractiva.</b> Entre 8% y 12% anual en operaciones con pagadores grandes, y hasta 15%–22% en segmentos MYPE, según APEFAC y datos de mercado.</li>
           <li><b>Plazos cortos.</b> 30, 60 o 90 días. Tu dinero rota y no queda atrapado por años.</li>
-          <li><b>Respaldo legal.</b> La factura negociable tiene mérito ejecutivo. Muchas operaciones se registran en CAVALI o cuentan con seguros de impago.</li>
+          <li><b>Respaldo legal.</b> La factura negociable tiene mérito ejecutivo. Muchas operaciones se registran en CAVALI o tienen seguro de impago.</li>
           <li><b>Accesible.</b> Algunas plataformas digitales permiten empezar con montos muy bajos.</li>
           <li><b>Diversificable.</b> Puedes repartir tu capital entre varias facturas y sectores.</li>
         </ul>
@@ -668,7 +1076,7 @@
       <div class="panel con">
         <h3><span class="chip">!</span> Riesgos que debes conocer</h3>
         <ul>
-          <li><b>Riesgo de impago.</b> El pagador puede no pagar o retrasarse. La morosidad del sector existe, aunque se ha mantenido en niveles manejables. No es un riesgo cero.</li>
+          <li><b>Riesgo de impago.</b> La morosidad a 30 días fue 5.1% y a 90 días 4.5% a diciembre de 2025, según SBS. No es un riesgo cero.</li>
           <li><b>Regulación desigual.</b> Algunas plataformas no están supervisadas por la SBS ni tienen las mismas exigencias de provisiones.</li>
           <li><b>Menor liquidez.</b> No puedes retirar tu dinero hasta que la factura se cobre. No hay botón de cancelar.</li>
           <li><b>Rendimientos no garantizados.</b> Las tasas publicitadas son proyecciones, no promesas.</li>
@@ -688,7 +1096,7 @@
         <div class="ico">📊</div>
         <div>
           <h4>Mercado en crecimiento</h4>
-          <p>El factoring en Perú mueve miles de millones de soles al año y ha mostrado un crecimiento sostenido en los últimos ejercicios, impulsado por la digitalización y la demanda de liquidez de las MIPYMES.</p>
+          <p>El factoring cerró 2025 con S/ 52,057 millones negociados, un 20.6% más que 2024. Moody's proyecta que el crecimiento superior al 20% continuará en 2026.</p>
         </div>
       </div>
 
@@ -696,7 +1104,7 @@
         <div class="ico">🏗️</div>
         <div>
           <h4>Sectores en expansión</h4>
-          <p>Construcción, infraestructura y agroexportación suelen generar facturas de mayor monto y plazos más largos, con condiciones potencialmente más atractivas.</p>
+          <p>Construcción, infraestructura y agroexportación generan facturas de mayor monto y plazos más largos, con condiciones potencialmente más atractivas.</p>
         </div>
       </div>
 
@@ -712,11 +1120,13 @@
         <div class="ico">🏪</div>
         <div>
           <h4>Demanda insatisfecha de MIPYMES</h4>
-          <p>Muchas pequeñas empresas no califican al crédito bancario tradicional. Ese vacío lo llena el factoring, y quien asume el riesgo cobra una prima por ello.</p>
+          <p>25,494 MYPE usaron factoring en 2025, representando el 84.9% de las empresas usuarias. Ese vacío lo llena el factoring, y quien asume el riesgo cobra una prima.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="divider"><span>· · ·</span></div>
 
   <!-- ================= CÓMO EMPEZAR ================= -->
   <section id="empezar">
@@ -805,7 +1215,7 @@
 
     <ul class="avoid">
       <li><b>Rendimientos garantizados.</b> Cualquier plataforma que prometa un retorno fijo alto sin riesgo debe hacerte desconfiar. Los retornos altos siempre vienen con riesgo real.</li>
-      <li><b>Que sea igual a un depósito a plazo fijo.</b> En un depósito, tu capital está protegido por FDS (Fondo de Seguro de Depósitos) hasta cierto monto. En factoring no existe esta protección.</li>
+      <li><b>Que sea igual a un "depósito a plazo fijo".</b> En un depósito, tu capital está protegido por el FSD (Fondo de Seguro de Depósitos) hasta cierto monto. En factoring no existe está protección.</li>
       <li><b>Liquidez instantánea.</b> Una vez que compras la factura, tu capital queda comprometido hasta el vencimiento. No hay salida anticipada fácil.</li>
       <li><b>Quedarte con la primera tasa.</b> Compara varias operaciones, revisa el historial del pagador y calcula el retorno neto tras comisiones.</li>
       <li><b>Invertir dinero que necesitarás pronto.</b> Si vas a requerir ese capital en los próximos meses, no lo pongas aquí. El factoring es para dinero que puedes dejar trabajando.</li>
@@ -816,14 +1226,33 @@
   <section id="reflexion">
     <div class="callout">
       <h2>Una última reflexión</h2>
-      <p>El factoring peruano no es una moda: es una industria consolidada, con marco legal, crecimiento sostenido y una demanda real de liquidez por parte de miles de empresas.</p>
+      <p>El factoring peruano no es una moda: es una industria consolidada, con marco legal, crecimiento sostenido y una demanda real de liquidez por parte de miles de empresas. En 2025 movió más de S/ 52,000 millones, equivalente al 4.4% del PBI.</p>
       <p>Para un inversionista minorista ofrece algo poco común: <strong style="color:#5eead4">retornos potencialmente atractivos, plazos cortos y la posibilidad de empezar con montos bajos</strong>. Pero no hay almuerzo gratis. El riesgo de impago existe, la regulación no es homogénea y la liquidez no es instantánea.</p>
       <p>Si decides entrar, hazlo con los ojos abiertos: investiga la plataforma, diversifica, empieza pequeño y nunca inviertas lo que no puedas permitirte perder. Con esa mentalidad, el factoring puede ser una pieza valiosa en tu portafolio, no una apuesta.</p>
     </div>
   </section>
 
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto">
+    <div class="contact">
+      <h3>¿Te quedó alguna duda?</h3>
+      <p>Si después de leer esta guía tienes preguntas sobre factoring, plataformas o cómo evaluar una operación, escríbeme. Con gusto te ayudo a resolverlo.</p>
+
+      <a class="mail" href="mailto:contactanos_aca@proton.me">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="3"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+        contactanos_aca@proton.me
+      </a>
+
+      <p class="note">Respondo personalmente a cada mensaje. Si tu consulta es sobre una operación concreta, incluye el contexto para poder ayudarte mejor.</p>
+    </div>
+  </section>
+
   <footer>
-    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Los rendimientos mencionados son referenciales y no representan una promesa ni garantía de resultados. Toda inversión conlleva riesgo, incluida la posible pérdida del capital. Antes de invertir, evalúa tu situación personal y, de ser necesario, consulta con un asesor certificado.</p>
+    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Los rendimientos mencionados son referenciales y no representan una promesa ni garantía de resultados. Las tasas y estadísticas citadas provienen de fuentes públicas (CAVALI, PRODUCE, SBS, Moody's Local) y pueden variar. Toda inversión conlleva riesgo, incluida la posible pérdida del capital. Antes de invertir, evalúa tu situación personal y, de ser necesario, consulta con un asesor certificado.</p>
+    <span class="update">Última actualización: octubre 2026</span>
   </footer>
 
 </div>

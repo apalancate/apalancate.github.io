@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aportes Voluntarios sin Fin Previsional — Tu ahorro flexible en AFP</title>
+<meta name="description" content="Guía clara sobre los aportes voluntarios sin fin previsional en la AFP peruana: qué son, ventajas, riesgos, comisiones, rentabilidad por AFP, fondos y cómo empezar.">
+
+<style>
+  :root{
+    --bg:#0b1220;
+    --bg-2:#0f1a2e;
+    --surface:#111e35;
+    --surface-2:#16263f;
+    --surface-hi:#1b2f4d;
+    --ink:#e8eef8;
+    --ink-soft:#c2d0e4;
+    --muted:#8ea2bf;
+    --line:rgba(148,180,224,.14);
+    --line-strong:rgba(148,180,224,.26);
+    --teal:#2dd4bf;
+    --teal-soft:#5eead4;
+    --teal-deep:#0f766e;
+    --amber:#fbbf24;
+    --amber-soft:#fcd34d;
+    --orange:#fb923c;
+    --green:#4ade80;
+    --red:#f87171;
+    --violet:#a78bfa;
+    --radius:18px;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+    --shadow:0 18px 40px -20px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.3);
+    --glow-teal:0 0 0 1px rgba(45,212,191,.14), 0 12px 40px -14px rgba(45,212,191,.22);
+    --max:880px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(45,212,191,.08), transparent 60%),
+      radial-gradient(1000px 500px at 100% 5%, rgba(251,191,36,.05), transparent 55%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px;position:relative;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(700px 340px at 85% -10%, rgba(45,212,191,.28) 0%, transparent 60%),
+      radial-gradient(600px 300px at 5% 110%, rgba(167,139,250,.18) 0%, transparent 62%),
+      linear-gradient(160deg,#0a1120 0%,#132038 100%);
+    color:#fff;
+    padding:64px 0 100px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(rgba(148,180,224,.10) 1px, transparent 1px);
+    background-size:24px 24px;
+    opacity:.5;
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:800;color:var(--teal-soft);
+    background:rgba(45,212,191,.10);
+    border:1px solid rgba(45,212,191,.28);
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+    backdrop-filter:blur(6px);
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal-soft);box-shadow:0 0 10px var(--teal-soft);}
+
+  .hero h1{
+    font-size:clamp(1.9rem,5.6vw,3rem);
+    line-height:1.14;margin:0 0 18px;
+    letter-spacing:-.025em;font-weight:850;color:#f4f8ff;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,var(--teal-soft),var(--amber));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+
+  .hero p.lede{
+    font-size:clamp(1rem,2.6vw,1.15rem);
+    color:#b9c9df;max-width:620px;margin:0 0 28px;
+  }
+
+  .hero-flow{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:rgba(148,180,224,.06);
+    border:1px solid var(--line-strong);
+    border-radius:14px;padding:12px 16px;
+    max-width:560px;
+    backdrop-filter:blur(8px);
+  }
+  .hero-flow .step{
+    display:flex;align-items:center;gap:8px;
+    font-size:.82rem;font-weight:700;color:#dbe6f5;
+  }
+  .hero-flow .dot{
+    width:22px;height:22px;border-radius:50%;
+    display:grid;place-items:center;font-size:.7rem;font-weight:800;
+    background:var(--teal-soft);color:#06251f;
+    box-shadow:0 0 12px rgba(94,234,212,.5);
+  }
+  .hero-flow .dot.o{background:var(--amber);color:#3b2506;box-shadow:0 0 12px rgba(251,191,36,.5);}
+  .hero-flow .dot.v{background:var(--violet);color:#1e1b4b;box-shadow:0 0 12px rgba(167,139,250,.5);}
+  .hero-flow .arrow{color:#5d7595;font-weight:700;font-size:.9rem;}
+
+  /* ============ TOC ============ */
+  .toc{
+    background:linear-gradient(180deg, rgba(17,30,53,.92), rgba(17,30,53,.72));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    margin:-58px auto 48px;
+    position:relative;z-index:5;
+    backdrop-filter:blur(10px);
+  }
+  .toc h2{
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--muted);margin:0 0 14px;font-weight:800;
+  }
+  .toc ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
+  .toc a{
+    display:flex;align-items:center;gap:12px;
+    color:var(--ink-soft);text-decoration:none;
+    font-size:.92rem;font-weight:600;
+    padding:8px 10px;border-radius:10px;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+  .toc a:hover,.toc a:focus-visible{
+    background:rgba(45,212,191,.10);
+    color:var(--teal-soft);
+    outline:none;
+    transform:translateX(2px);
+  }
+  .toc a .n{
+    font-variant-numeric:tabular-nums;font-weight:800;
+    color:var(--teal);font-size:.78rem;
+    min-width:18px;
+  }
+
+  /* ============ SECCIONES ============ */
+  section{margin:0 0 56px;scroll-margin-top:20px;}
+
+  h2.title{
+    font-size:clamp(1.35rem,3.8vw,1.75rem);
+    line-height:1.25;letter-spacing:-.02em;
+    margin:0 0 8px;font-weight:850;color:#f2f7ff;
+    display:flex;align-items:center;gap:12px;
+  }
+  h2.title::before{
+    content:"";width:6px;height:26px;border-radius:3px;
+    background:linear-gradient(180deg,var(--teal),var(--amber));
+    flex:0 0 auto;
+    box-shadow:0 0 14px rgba(45,212,191,.5);
+  }
+  .subtitle{color:var(--muted);font-size:.95rem;margin:0 0 24px;}
+
+  h3{font-size:1.05rem;margin:26px 0 8px;font-weight:800;color:#eaf2ff;}
+  p{margin:0 0 16px;color:var(--ink-soft);}
+  strong{font-weight:750;color:#ffffff;}
+
+  .divider{
+    display:flex;align-items:center;gap:12px;
+    margin:0 0 48px;
+    color:var(--muted);
+  }
+  .divider::before,.divider::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(90deg,transparent,var(--line-strong),transparent);
+  }
+  .divider span{
+    font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--teal-soft);opacity:.7;font-weight:700;
+  }
+
+  /* ============ LEAD CALLOUT ============ */
+  .lead-callout{
+    background:
+      radial-gradient(500px 240px at 100% 0%, rgba(45,212,191,.20), transparent 70%),
+      linear-gradient(160deg, rgba(22,38,63,.95), rgba(17,30,53,.95));
+    border:1px solid var(--line-strong);
+    border-left:5px solid var(--teal);
+    border-radius:var(--radius);
+    padding:26px 26px 22px;
+    box-shadow:var(--shadow);
+    margin-bottom:32px;
+  }
+  .lead-callout .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:800;color:var(--teal-soft);
+    margin-bottom:12px;
+  }
+  .lead-callout .kicker::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--teal-soft);box-shadow:0 0 10px var(--teal-soft);
+  }
+  .lead-callout p{
+    font-size:1.05rem;line-height:1.7;color:#e8eef8;margin:0;
+  }
+
+  /* ============ CAST ============ */
+  .cast{
+    display:grid;gap:18px;grid-template-columns:1fr;
+    margin-bottom:8px;
+  }
+  @media(min-width:720px){ .cast{grid-template-columns:repeat(3,1fr);} }
+
+  .cast-card{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:22px 20px 24px;
+    box-shadow:var(--shadow-sm);
+    display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    backdrop-filter:blur(6px);
+  }
+  .cast-card::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(300px 140px at 50% 0%, rgba(45,212,191,.10), transparent 70%);
+    opacity:0;transition:opacity .3s ease;
+  }
+  .cast-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--glow-teal);
+    border-color:rgba(45,212,191,.35);
+  }
+  .cast-card:hover::after{opacity:1;}
+
+  .cast-card .badge{
+    position:absolute;top:14px;left:14px;
+    font-size:.68rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:4px 10px;border-radius:999px;
+    backdrop-filter:blur(6px);
+  }
+  .cast-card.p1 .badge{background:rgba(251,146,60,.15);color:#fdba74;border:1px solid rgba(251,146,60,.3);}
+  .cast-card.p2 .badge{background:rgba(45,212,191,.14);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
+  .cast-card.p3 .badge{background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.3);}
+
+  .cast-card .art{
+    display:grid;place-items:center;
+    margin:26px 0 16px;
+    padding:6px;
+    position:relative;
+    z-index:1;
+  }
+  .cast-card .art::before{
+    content:"";position:absolute;inset:14% 18%;
+    background:radial-gradient(closest-side, rgba(45,212,191,.18), transparent 70%);
+    filter:blur(14px);
+    z-index:-1;
+    border-radius:50%;
+  }
+  .cast-card.p1 .art::before{background:radial-gradient(closest-side, rgba(251,146,60,.20), transparent 70%);}
+  .cast-card.p2 .art::before{background:radial-gradient(closest-side, rgba(45,212,191,.20), transparent 70%);}
+  .cast-card.p3 .art::before{background:radial-gradient(closest-side, rgba(167,139,250,.20), transparent 70%);}
+
+  .cast-card svg{width:100%;max-width:200px;height:auto;display:block;}
+
+  .cast-card h4{margin:0 0 6px;font-size:1.05rem;font-weight:800;color:#f4f8ff;position:relative;z-index:1;}
+  .cast-card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;position:relative;z-index:1;}
+
+  /* ============ FLOW ============ */
+  .flow{
+    background:linear-gradient(180deg, rgba(10,17,32,.9), rgba(19,32,56,.9));
+    color:#dbe6f5;
+    border-radius:var(--radius);
+    padding:32px 24px;
+    box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+    border:1px solid var(--line-strong);
+  }
+  .flow::before{
+    content:"";position:absolute;top:-40px;right:-40px;
+    width:200px;height:200px;border-radius:50%;
+    background:radial-gradient(circle, rgba(45,212,191,.35), transparent 70%);
+    opacity:.5;filter:blur(10px);
+  }
+  .flow::after{
+    content:"";position:absolute;bottom:-60px;left:-40px;
+    width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle, rgba(167,139,250,.20), transparent 70%);
+    opacity:.5;filter:blur(10px);
+  }
+  .flow h2{
+    color:#f4f8ff;font-size:1.2rem;margin:0 0 6px;font-weight:850;
+    position:relative;z-index:1;
+  }
+  .flow .sub{color:var(--muted);font-size:.9rem;margin:0 0 24px;position:relative;z-index:1;}
+  .flow-steps{
+    display:grid;gap:14px;grid-template-columns:1fr;
+    position:relative;z-index:1;
+  }
+  @media(min-width:720px){
+    .flow-steps{grid-template-columns:repeat(4,1fr);}
+  }
+  .flow-step{
+    background:rgba(148,180,224,.05);
+    border:1px solid var(--line-strong);
+    border-radius:14px;
+    padding:16px 14px;
+    text-align:center;
+    transition:background .2s ease,border-color .2s ease;
+  }
+  .flow-step:hover{
+    background:rgba(45,212,191,.08);
+    border-color:rgba(45,212,191,.3);
+  }
+  .flow-step .num{
+    display:inline-grid;place-items:center;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--teal);color:#04211c;
+    font-weight:850;font-size:.9rem;
+    margin-bottom:10px;
+    box-shadow:0 0 16px rgba(45,212,191,.5);
+  }
+  .flow-step:nth-child(4) .num{background:var(--amber);color:#3b2506;box-shadow:0 0 16px rgba(251,191,36,.5);}
+  .flow-step b{display:block;font-size:.9rem;color:#f4f8ff;margin-bottom:4px;}
+  .flow-step span{font-size:.8rem;color:var(--muted);line-height:1.5;}
+
+  /* ============ TABLAS ============ */
+  .table-wrap{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:6px;
+    box-shadow:var(--shadow-sm);
+    overflow-x:auto;
+    backdrop-filter:blur(6px);
+    margin-bottom:20px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.9rem;
+    min-width:520px;
+  }
+  thead th{
+    text-align:left;
+    padding:13px 14px;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-weight:800;
+    color:var(--teal-soft);
+    border-bottom:1px solid var(--line-strong);
+    background:rgba(45,212,191,.05);
+  }
+  thead th:not(:first-child){text-align:right;}
+  tbody td{
+    padding:13px 14px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:middle;
+    font-variant-numeric:tabular-nums;
+  }
+  tbody td:not(:first-child){text-align:right;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:rgba(45,212,191,.04);}
+  td strong{color:#ffffff;}
+
+  td .best{
+    display:inline-block;
+    padding:2px 10px;
+    border-radius:999px;
+    background:rgba(45,212,191,.16);
+    color:var(--teal-soft);
+    font-weight:850;
+    border:1px solid rgba(45,212,191,.4);
+    font-variant-numeric:tabular-nums;
+  }
+
+  td .pill{
+    display:inline-block;
+    font-size:.7rem;
+    font-weight:800;
+    padding:3px 9px;
+    border-radius:999px;
+    letter-spacing:.04em;
+  }
+  .pill.low{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
+  .pill.mid{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.3);}
+  .pill.high{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
+
+  /* ============ PARTICIPACIÓN DE MERCADO ============ */
+  .market-share{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(6px);
+    margin-bottom:20px;
+  }
+  .ms-total{
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .ms-total strong{
+    color:var(--teal-soft);
+    font-size:.9rem;
+    letter-spacing:0;
+    text-transform:none;
+  }
+  .ms-item{margin-bottom:16px;}
+  .ms-item:last-child{margin-bottom:0;}
+  .ms-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:8px;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .ms-name{
+    font-size:.95rem;
+    font-weight:800;
+    color:#f4f8ff;
+  }
+  .ms-value{
+    font-size:.82rem;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+    font-weight:600;
+  }
+  .ms-value strong{
+    color:var(--teal-soft);
+    font-weight:850;
+    font-size:.92rem;
+  }
+  .ms-bar{
+    height:12px;
+    border-radius:999px;
+    background:rgba(148,180,224,.08);
+    overflow:hidden;
+    position:relative;
+  }
+  .ms-fill{
+    height:100%;
+    border-radius:999px;
+    transition:width 1s ease;
+    box-shadow:0 0 14px -2px currentColor;
+  }
+  .ms-fill.prima{background:linear-gradient(90deg, #2dd4bf, #0f766e);color:#2dd4bf;}
+  .ms-fill.integra{background:linear-gradient(90deg, #5eead4, #14b8a6);color:#5eead4;}
+  .ms-fill.habitat{background:linear-gradient(90deg, #a78bfa, #5b21b6);color:#a78bfa;}
+  .ms-fill.profuturo{background:linear-gradient(90deg, #fbbf24, #d97706);color:#fbbf24;}
+
+  /* ============ FONDOS VISUALES ============ */
+  .funds-visual{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:720px){
+    .funds-visual{grid-template-columns:1fr 1fr;}
+  }
+
+  .fund-card{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    backdrop-filter:blur(6px);
+    display:flex;
+    flex-direction:column;
+  }
+  .fund-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(45,212,191,.35);
+    box-shadow:var(--glow-teal);
+  }
+
+  .fund-head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+  }
+  .fund-num{
+    width:48px;height:48px;
+    border-radius:12px;
+    display:grid;place-items:center;
+    font-weight:850;font-size:.95rem;
+    border:1px solid var(--line-strong);
+    flex:0 0 auto;
+    letter-spacing:.02em;
+  }
+  .fund-f0 .fund-num{background:rgba(74,222,128,.12);color:#4ade80;border-color:rgba(74,222,128,.35);}
+  .fund-f1 .fund-num{background:rgba(45,212,191,.12);color:var(--teal-soft);border-color:rgba(45,212,191,.35);}
+  .fund-f2 .fund-num{background:rgba(251,191,36,.12);color:var(--amber);border-color:rgba(251,191,36,.35);}
+  .fund-f3 .fund-num{background:rgba(248,113,113,.12);color:var(--red);border-color:rgba(248,113,113,.35);}
+
+  .fund-head h4{
+    margin:0 0 2px;
+    font-size:1rem;
+    font-weight:800;
+    color:#f4f8ff;
+    line-height:1.3;
+  }
+  .fund-risk-pill{
+    display:inline-block;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .fund-f0 .fund-risk-pill{color:#4ade80;}
+  .fund-f1 .fund-risk-pill{color:var(--teal-soft);}
+  .fund-f2 .fund-risk-pill{color:var(--amber);}
+  .fund-f3 .fund-risk-pill{color:var(--red);}
+
+  .fund-viz{
+    margin-bottom:16px;
+    background:rgba(11,18,32,.5);
+    border-radius:12px;
+    padding:14px 14px 12px;
+    border:1px solid var(--line);
+  }
+
+  .risk-meter{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:12px;
+  }
+
+  .risk-label{
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:8px;
+    display:block;
+  }
+
+  .composition{
+    margin-top:4px;
+  }
+  .comp-bar{
+    height:10px;
+    border-radius:999px;
+    overflow:hidden;
+    display:flex;
+    background:rgba(148,180,224,.08);
+    margin-bottom:10px;
+  }
+  .comp-rf{
+    background:linear-gradient(90deg, #0f766e, #2dd4bf);
+    transition:width .8s ease;
+  }
+  .comp-rv{
+    background:linear-gradient(90deg, #f59e0b, #fbbf24);
+    transition:width .8s ease;
+  }
+  .comp-legend{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    flex-wrap:wrap;
+    font-size:.72rem;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .comp-legend span{
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .comp-legend i.dot{
+    width:8px;height:8px;
+    border-radius:50%;
+    display:inline-block;
+    font-style:normal;
+    flex:0 0 auto;
+  }
+  .dot.rf{background:#2dd4bf;box-shadow:0 0 8px rgba(45,212,191,.6);}
+  .dot.rv{background:#fbbf24;box-shadow:0 0 8px rgba(251,191,36,.6);}
+
+  .fund-desc{
+    font-size:.86rem;
+    color:var(--muted);
+    line-height:1.6;
+    margin:0;
+  }
+
+  /* ============ VENTAJAS / RIESGOS ============ */
+  .two-col{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:720px){ .two-col{grid-template-columns:1fr 1fr;} }
+
+  .panel{
+    border-radius:var(--radius);padding:22px 20px;
+    border:1px solid var(--line-strong);
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    backdrop-filter:blur(6px);
+  }
+  .panel h3{
+    margin:0 0 16px;font-size:1rem;font-weight:850;
+    display:flex;align-items:center;gap:8px;
+    color:#f4f8ff;
+  }
+  .panel h3 .chip{
+    width:24px;height:24px;border-radius:50%;
+    display:grid;place-items:center;font-size:.8rem;font-weight:800;
+  }
+  .panel.pro h3 .chip{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
+  .panel.con h3 .chip{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
+
+  .panel ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+  .panel li{font-size:.92rem;line-height:1.65;padding-left:16px;position:relative;color:var(--ink-soft);}
+  .panel li::before{
+    content:"";position:absolute;left:0;top:9px;
+    width:6px;height:6px;border-radius:50%;
+  }
+  .panel.pro li::before{background:var(--green);box-shadow:0 0 8px rgba(74,222,128,.6);}
+  .panel.con li::before{background:var(--red);box-shadow:0 0 8px rgba(248,113,113,.6);}
+  .panel li b{color:#ffffff;font-weight:750;}
+
+  /* ============ CONSIDERAR ============ */
+  .consider{display:grid;gap:14px;}
+  .cns{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:14px;padding:18px 20px;
+    border-left:4px solid var(--teal);
+    backdrop-filter:blur(6px);
+  }
+  .cns h4{margin:0 0 6px;font-size:.97rem;font-weight:800;color:var(--teal-soft);}
+  .cns p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
+  .cns p + p{margin-top:10px;}
+
+  /* ============ PASOS ============ */
+  .steps{list-style:none;margin:0;padding:0;}
+  .steps li{
+    display:grid;grid-template-columns:44px 1fr;gap:16px;
+    padding:18px 0;border-bottom:1px solid var(--line);
+  }
+  .steps li:last-child{border-bottom:none;}
+  .steps .n{
+    width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(135deg,var(--teal),var(--teal-deep));
+    color:#04211c;display:grid;place-items:center;
+    font-weight:850;font-size:1.05rem;
+    box-shadow:0 8px 22px -8px rgba(45,212,191,.6);
+  }
+  .steps b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;color:#f4f8ff;}
+  .steps p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.65;}
+
+  /* ============ NO ESPERAR ============ */
+  .avoid{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .avoid li{
+    background:linear-gradient(180deg, rgba(58,23,30,.55), rgba(45,18,25,.55));
+    border:1px solid rgba(248,113,113,.28);
+    border-radius:14px;
+    padding:16px 18px 16px 50px;
+    position:relative;font-size:.92rem;line-height:1.65;
+    color:#fbd5d5;
+  }
+  .avoid li::before{
+    content:"✕";
+    position:absolute;left:14px;top:16px;
+    width:24px;height:24px;border-radius:50%;
+    background:rgba(248,113,113,.22);
+    color:#fca5a5;
+    display:grid;place-items:center;
+    font-size:.78rem;font-weight:850;
+    border:1px solid rgba(248,113,113,.35);
+  }
+  .avoid b{display:block;color:#fecaca;font-weight:800;margin-bottom:3px;}
+
+  /* ============ CALLOUT ============ */
+  .callout{
+    background:
+      radial-gradient(400px 200px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
+      radial-gradient(400px 220px at 0% 100%, rgba(251,191,36,.12), transparent 70%),
+      linear-gradient(160deg,#0a1120,#132038);
+    color:#dbe6f5;
+    border-radius:var(--radius);
+    padding:34px 28px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--line-strong);
+    position:relative;overflow:hidden;
+  }
+  .callout h2{color:var(--teal-soft);margin:0 0 14px;font-size:1.2rem;font-weight:850;letter-spacing:-.01em;}
+  .callout p{font-size:.95rem;color:var(--ink-soft);margin:0 0 14px;}
+  .callout p:last-child{margin-bottom:0;}
+
+  /* ============ EJEMPLO GRÁFICO ============ */
+  .example{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:28px 24px;
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(6px);
+  }
+  .example-head{
+    display:flex;align-items:center;gap:12px;margin-bottom:22px;
+    padding-bottom:18px;border-bottom:1px dashed var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .example-head .tag{
+    background:rgba(248,113,113,.15);color:#fca5a5;
+    border:1px solid rgba(248,113,113,.3);
+    font-size:.7rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 12px;border-radius:999px;
+  }
+  .example-head h3{margin:0;font-size:1.1rem;color:#f4f8ff;}
+
+  .scenario{
+    background:rgba(148,180,224,.05);
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:22px;
+    font-size:.95rem;
+    border-left:4px solid var(--teal);
+    color:var(--ink-soft);
+  }
+  .scenario p{margin:0;color:var(--ink-soft);}
+  .scenario .q{color:var(--teal-soft);font-weight:750;}
+
+  .chart{
+    background:rgba(11,18,32,.55);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 18px 14px;
+    margin-bottom:22px;
+    position:relative;
+  }
+  .chart-title{
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .chart-title::before{
+    content:"";
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--teal);
+    box-shadow:0 0 10px var(--teal);
+  }
+  .chart-bars{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    height:220px;
+    align-items:end;
+    padding:0 4px;
+    position:relative;
+  }
+  .chart-bars::before{
+    content:"";
+    position:absolute;
+    left:0;right:0;
+    bottom:32px;
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  }
+  .chart-col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100%;
+    justify-content:flex-end;
+    position:relative;
+    z-index:1;
+  }
+  .chart-value{
+    font-size:.72rem;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:6px;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+    letter-spacing:-.01em;
+  }
+  .chart-bar{
+    width:100%;
+    max-width:58px;
+    border-radius:10px 10px 3px 3px;
+    transition:height .8s ease, box-shadow .3s ease;
+    box-shadow:0 0 20px -6px currentColor;
+    animation:barGrow 1s ease-out both;
+  }
+  .chart-col:nth-child(1) .chart-bar{animation-delay:.1s;}
+  .chart-col:nth-child(2) .chart-bar{animation-delay:.2s;}
+  .chart-col:nth-child(3) .chart-bar{animation-delay:.3s;}
+  .chart-col:nth-child(4) .chart-bar{animation-delay:.4s;}
+
+  @keyframes barGrow{
+    from{transform:scaleY(0);transform-origin:bottom;}
+    to{transform:scaleY(1);transform-origin:bottom;}
+  }
+
+  .chart-label{
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:10px;
+    text-align:center;
+  }
+
+  .chart-bar.orange{background:linear-gradient(180deg, #fb923c, #c2410c);color:#fb923c;}
+  .chart-bar.amber{background:linear-gradient(180deg, #fbbf24, #d97706);color:#fbbf24;}
+  .chart-bar.teal-light{background:linear-gradient(180deg, #5eead4, #14b8a6);color:#5eead4;}
+  .chart-bar.teal-deep{background:linear-gradient(180deg, #2dd4bf, #0f766e);color:#2dd4bf;}
+
+  .chart-legend{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:16px;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    flex-wrap:wrap;
+    font-size:.72rem;
+    color:var(--muted);
+  }
+  .chart-legend .item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .chart-legend .gain{
+    color:var(--teal-soft);
+    font-weight:800;
+    margin-left:auto;
+  }
+
+  .result{
+    background:linear-gradient(135deg, rgba(15,118,110,.55), rgba(13,148,136,.35));
+    border:1px solid rgba(45,212,191,.35);
+    color:#eafff9;border-radius:14px;
+    padding:20px 22px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    box-shadow:0 10px 30px -14px rgba(45,212,191,.4);
+  }
+  .result .icon{
+    width:46px;height:46px;border-radius:50%;
+    background:rgba(94,234,212,.15);
+    border:1px solid rgba(94,234,212,.35);
+    display:grid;place-items:center;font-size:1.4rem;
+    flex:0 0 auto;
+  }
+  .result .txt strong{display:block;font-size:1.1rem;font-weight:850;color:#ffffff;}
+  .result .txt span{font-size:.85rem;color:#c9f4ea;line-height:1.5;}
+
+  .illustrative-note{
+    display:block;
+    margin-top:16px;
+    font-size:.78rem;
+    color:var(--muted);
+    font-style:italic;
+    line-height:1.55;
+  }
+
+  /* ============ CONTACTO ============ */
+  .contact{
+    background:linear-gradient(180deg, rgba(22,38,63,.9), rgba(17,30,53,.9));
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:-2px;
+    background:radial-gradient(400px 200px at 50% 0%, rgba(45,212,191,.15), transparent 70%);
+    pointer-events:none;
+  }
+  .contact h3{
+    margin:0 0 8px;font-size:1.2rem;font-weight:850;color:#f4f8ff;
+    position:relative;z-index:1;
+  }
+  .contact p{
+    margin:0 0 22px;color:var(--muted);font-size:.95rem;
+    position:relative;z-index:1;
+    max-width:520px;margin-left:auto;margin-right:auto;
+  }
+  .contact a.mail{
+    display:inline-flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg, rgba(45,212,191,.18), rgba(20,184,166,.10));
+    border:1px solid rgba(45,212,191,.45);
+    color:var(--teal-soft);
+    text-decoration:none;
+    font-weight:750;
+    font-size:1rem;
+    padding:14px 24px;
+    border-radius:999px;
+    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    position:relative;z-index:1;
+    word-break:break-all;
+    max-width:100%;
+  }
+  .contact a.mail:hover,.contact a.mail:focus-visible{
+    transform:translateY(-2px);
+    background:linear-gradient(135deg, rgba(45,212,191,.28), rgba(20,184,166,.18));
+    box-shadow:0 12px 30px -10px rgba(45,212,191,.55);
+    outline:none;
+  }
+  .contact a.mail svg{width:18px;height:18px;flex:0 0 auto;}
+  .contact .note{
+    margin:16px 0 0;font-size:.8rem;color:var(--muted);
+    position:relative;z-index:1;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    border-top:1px solid var(--line);
+    margin-top:56px;
+    padding:26px 0 48px;font-size:.82rem;color:var(--muted);line-height:1.7;
+  }
+  footer strong{color:var(--ink);}
+  footer p{color:var(--muted);}
+  footer .update{
+    display:inline-block;
+    margin-top:14px;
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(45,212,191,.08);
+    border:1px solid rgba(45,212,191,.2);
+    color:var(--teal-soft);
+    font-size:.75rem;
+    font-weight:700;
+  }
+
+  /* ============ ANIMACIÓN ============ */
+  @keyframes rise{
+    from{opacity:0;transform:translateY(14px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  section{animation:rise .6s ease both;}
+  section:nth-of-type(1){animation-delay:.05s;}
+  section:nth-of-type(2){animation-delay:.10s;}
+  section:nth-of-type(3){animation-delay:.15s;}
+  section:nth-of-type(4){animation-delay:.20s;}
+  section:nth-of-type(5){animation-delay:.25s;}
+  section:nth-of-type(6){animation-delay:.30s;}
+  section:nth-of-type(7){animation-delay:.35s;}
+  section:nth-of-type(8){animation-delay:.40s;}
+  section:nth-of-type(9){animation-delay:.45s;}
+  section:nth-of-type(10){animation-delay:.50s;}
+
+  @media (prefers-reduced-motion: reduce){
+    section{animation:none;}
+    .chart-bar{animation:none;}
+    .ms-fill{transition:none;}
+    *{transition:none !important;}
+    html{scroll-behavior:auto;}
+  }
+
+  a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px;}
+
+  @media(max-width:520px){
+    body{font-size:16px;}
+    .hero{padding:48px 0 86px;}
+    .toc{margin-top:-50px;padding:18px;}
+    .contact{padding:26px 20px;}
+    .contact a.mail{font-size:.9rem;padding:12px 18px;}
+    .lead-callout{padding:22px 20px 18px;}
+    .chart-bars{gap:6px;height:190px;}
+    .chart-value{font-size:.66rem;}
+    .chart-label{font-size:.66rem;}
+    .market-share{padding:18px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Apalancate · Perú</span>
+    <h1>Aportes Voluntarios <em>sin Fin Previsional</em>: tu dinero, tus reglas</h1>
+    <p class="lede">Una guía clara y honesta sobre el instrumento más subestimado del sistema AFP peruano. Ahorra con respaldo profesional, sin quedar atado hasta la jubilación.</p>
+
+    <div class="hero-flow">
+      <span class="step"><span class="dot">1</span> Depósitas</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot o">2</span> Eliges fondo</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot v">3</span> Tu AFP invierte</span>
+      <span class="arrow">→</span>
+      <span class="step"><span class="dot">4</span> Retiras cuando quieras</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ================= TOC ================= -->
+  <nav class="toc" aria-label="Índice de contenidos">
+    <h2>Lo que encontrarás</h2>
+    <ul>
+      <li><a href="#resumen"><span class="n">00</span> Lo esencial en 30 segundos</a></li>
+      <li><a href="#que-es"><span class="n">01</span> ¿Qué es exactamente?</a></li>
+      <li><a href="#fondos"><span class="n">02</span> Los 4 fondos: cuál elegir</a></li>
+      <li><a href="#comparativa-afp"><span class="n">03</span> Comisiones y rentabilidad por AFP</a></li>
+      <li><a href="#comparativa"><span class="n">04</span> Comparativa frente a otras opciones</a></li>
+      <li><a href="#ejemplo"><span class="n">05</span> Ejemplo ilustrativo con números</a></li>
+      <li><a href="#ventajas"><span class="n">06</span> Ventajas y riesgos, sin adornos</a></li>
+      <li><a href="#empezar"><span class="n">07</span> Cómo empezar, paso a paso</a></li>
+      <li><a href="#considerar"><span class="n">08</span> Qué considerar antes de entrar</a></li>
+      <li><a href="#no-esperar"><span class="n">09</span> Qué NO deberías esperar</a></li>
+      <li><a href="#reflexion"><span class="n">10</span> Reflexión final</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= RESUMEN ================= -->
+  <section id="resumen">
+    <div class="lead-callout">
+      <span class="kicker">Lo esencial en 30 segundos</span>
+      <p>Los <strong>"Aportes voluntarios sin fin previsional"</strong> son un subproducto dentro de tu AFP que funciona como una cuenta de ahorro flexible, pero con el respaldo de un equipo profesional de inversiones. Depositas cuando quieres, eliges el fondo según tu tolerancia al riesgo, y <strong>puedes retirar tu dinero cuando lo necesites</strong>. No está atado a la jubilación. Es el punto intermedio entre dejar el dinero quieto en el banco y arriesgarlo todo por tu cuenta. Eso sí: es <strong>embargable</strong> y no equivale a un depósito bancario.</p>
+    </div>
+  </section>
+
+  <!-- ================= QUÉ ES ================= -->
+  <section id="que-es">
+    <h2 class="title">¿Qué es exactamente?</h2>
+    <p class="subtitle">Dentro de tu AFP conviven dos grandes bolsillos. Conocer la diferencia es el punto de partida.</p>
+
+    <div class="cast">
+
+      <!-- BOLSILLO 1 -->
+      <article class="cast-card p1">
+        <span class="badge">Bolsillo 1</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del ahorro obligatorio bloqueado">
+            <ellipse cx="120" cy="180" rx="86" ry="6" fill="rgba(148,180,224,.10)"/>
+            <rect x="68" y="80" width="104" height="92" rx="10" fill="#0f172a" stroke="rgba(251,146,60,.5)" stroke-width="2"/>
+            <rect x="68" y="80" width="104" height="30" rx="10" fill="#fb923c"/>
+            <rect x="68" y="100" width="104" height="10" fill="#fb923c"/>
+            <circle cx="120" cy="95" r="6" fill="#3b2506"/>
+            <path d="M120 95 L120 102" stroke="#3b2506" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="120" cy="95" r="18" fill="none" stroke="rgba(251,146,60,.4)" stroke-width="2" stroke-dasharray="3 4"/>
+            <rect x="84" y="126" width="72" height="8" rx="4" fill="rgba(148,180,224,.20)"/>
+            <rect x="84" y="142" width="52" height="8" rx="4" fill="rgba(148,180,224,.14)"/>
+            <text x="120" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#fdba74" font-family="system-ui">Solo retiro al jubilarse</text>
+          </svg>
+        </div>
+        <h4>Aporte Obligatorio</h4>
+        <p>El 10% de tu remuneración asegurable que va cada mes a tu cuenta de capitalización individual. Es tu pensión futura. Solo puedes retirarlo en casos excepcionales previstos por ley.</p>
+      </article>
+
+      <!-- BOLSILLO 2 -->
+      <article class="cast-card p2">
+        <span class="badge">Bolsillo 2</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del ahorro voluntario flexible">
+            <ellipse cx="120" cy="180" rx="86" ry="6" fill="rgba(148,180,224,.10)"/>
+            <rect x="68" y="70" width="104" height="102" rx="10" fill="#0f172a" stroke="rgba(45,212,191,.55)" stroke-width="2"/>
+            <rect x="68" y="70" width="104" height="28" rx="10" fill="#0d9488"/>
+            <rect x="68" y="88" width="104" height="10" fill="#0d9488"/>
+            <circle cx="120" cy="84" r="9" fill="#04211c"/>
+            <path d="M116 84 L124 84" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M120 80 L120 88" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="84" y="116" width="72" height="8" rx="4" fill="rgba(94,234,212,.35)"/>
+            <rect x="84" y="132" width="52" height="8" rx="4" fill="rgba(94,234,212,.22)"/>
+            <rect x="84" y="148" width="60" height="8" rx="4" fill="rgba(94,234,212,.22)"/>
+            <text x="120" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#5eead4" font-family="system-ui">Retiras cuando quieras</text>
+          </svg>
+        </div>
+        <h4>Aporte Voluntario sin Fin Previsional</h4>
+        <p>Una cuenta de aportes voluntarios dentro de tu AFP que funciona como una cuenta de ahorro libre. Depositas lo que quieras, cuando quieras, y lo retiras sin tener que esperar a la jubilación. Eso sí: es <strong>embargable</strong> en caso de sentencia judicial.</p>
+      </article>
+
+      <!-- QUIÉN GANA -->
+      <article class="cast-card p3">
+        <span class="badge">Tu ventaja</span>
+        <div class="art">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración del inversionista con crecimiento y flexibilidad">
+            <ellipse cx="120" cy="184" rx="92" ry="6" fill="rgba(148,180,224,.10)"/>
+            <rect x="26" y="130" width="14" height="44" rx="3" fill="#134e4a"/>
+            <rect x="46" y="112" width="14" height="62" rx="3" fill="#0f766e"/>
+            <rect x="66" y="90" width="14" height="84" rx="3" fill="#14b8a6"/>
+            <path d="M26 124 Q60 106 92 84 Q122 66 152 54" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="6 5"/>
+            <path d="M148 48 L156 54 L150 62" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="164" cy="58" r="22" fill="#a78bfa"/>
+            <circle cx="157" cy="55" r="2.5" fill="#1e1b4b"/>
+            <circle cx="171" cy="55" r="2.5" fill="#1e1b4b"/>
+            <path d="M157 66 Q164 72 171 66" stroke="#1e1b4b" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M142 53 Q144 36 164 36 Q184 36 186 53 Q179 46 164 46 Q149 46 142 53 Z" fill="#4c1d95"/>
+            <path d="M136 158 Q136 96 164 96 Q192 96 192 158 Z" fill="#5b21b6"/>
+            <path d="M152 102 L164 116 L176 102" stroke="#e9d5ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M139 122 Q120 132 113 148" stroke="#5b21b6" stroke-width="13" stroke-linecap="round" fill="none"/>
+            <path d="M189 122 Q208 132 215 148" stroke="#5b21b6" stroke-width="13" stroke-linecap="round" fill="none"/>
+            <circle cx="113" cy="152" r="11" fill="#fbbf24"/>
+            <text x="113" y="156" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f" font-family="system-ui">S/</text>
+          </svg>
+        </div>
+        <h4>Lo que ganas tú</h4>
+        <p>Acceso a la misma gestión profesional de tu AFP, con <strong>libre disponibilidad de retiro</strong> y sin renunciar al respaldo de un regulador. Los rendimientos están inafectos del Impuesto a la Renta según la SUNAT.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= FLOW ================= -->
+  <section id="como-funciona">
+    <div class="flow">
+      <h2>Cómo funciona, en 4 pasos</h2>
+      <p class="sub">El circuito completo, del depósito al retiro.</p>
+
+      <div class="flow-steps">
+        <div class="flow-step">
+          <span class="num">1</span>
+          <b>Abres la cuenta</b>
+          <span>Si tienes más de 5 años en el SPP o 50 años de edad, solicitas la apertura en tu AFP.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">2</span>
+          <b>Eliges el fondo</b>
+          <span>Del 0 (más conservador) al 3 (más agresivo), según tu horizonte y tolerancia al riesgo.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">3</span>
+          <b>Depositas con libertad</b>
+          <span>Por descuento de planilla, transferencia o cargo automático. Según condiciones de cada AFP.</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">4</span>
+          <b>Retiras cuando quieras</b>
+          <span>El pago del monto solicitado se realiza hasta el quinto día hábil siguiente de remitida la solicitud.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FONDOS VISUALES ================= -->
+  <section id="fondos">
+    <h2 class="title">Los 4 fondos: cuál elegir</h2>
+    <p class="subtitle">Tu AFP administra tu dinero según el fondo que elijas. Aquí ves de un vistazo el nivel de riesgo y la composición aproximada de cada uno.</p>
+
+    <div class="funds-visual">
+
+      <!-- FONDO 0 -->
+      <article class="fund-card fund-f0">
+        <div class="fund-head">
+          <span class="fund-num">F0</span>
+          <div>
+            <h4>Fondo 0 — Preservación</h4>
+            <span class="fund-risk-pill">Riesgo muy bajo</span>
+          </div>
+        </div>
+
+        <div class="fund-viz">
+          <span class="risk-label">Nivel de riesgo</span>
+          <svg class="risk-meter" viewBox="0 0 280 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medidor de riesgo: nivel 1 de 4, muy bajo">
+            <rect x="0" y="6" width="66" height="12" rx="6" fill="#4ade80"/>
+            <rect x="72" y="6" width="66" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+            <rect x="144" y="6" width="66" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+            <rect x="216" y="6" width="64" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+          </svg>
+
+          <div class="composition">
+            <div class="comp-bar">
+              <div class="comp-rf" style="width:100%"></div>
+              <div class="comp-rv" style="width:0%"></div>
+            </div>
+            <div class="comp-legend">
+              <span><i class="dot rf"></i> Renta fija 100%</span>
+              <span><i class="dot rv"></i> Renta variable 0%</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fund-desc">Orientado a preservar el capital. Inversión casi exclusiva en instrumentos de bajo riesgo. Adecuado si podrías necesitar el dinero en el corto plazo o si prefieres evitar fluctuaciones. No es una garantía absoluta de capital.</p>
+      </article>
+
+      <!-- FONDO 1 -->
+      <article class="fund-card fund-f1">
+        <div class="fund-head">
+          <span class="fund-num">F1</span>
+          <div>
+            <h4>Fondo 1 — Conservador</h4>
+            <span class="fund-risk-pill">Riesgo bajo</span>
+          </div>
+        </div>
+
+        <div class="fund-viz">
+          <span class="risk-label">Nivel de riesgo</span>
+          <svg class="risk-meter" viewBox="0 0 280 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medidor de riesgo: nivel 2 de 4, bajo">
+            <rect x="0" y="6" width="66" height="12" rx="6" fill="#2dd4bf"/>
+            <rect x="72" y="6" width="66" height="12" rx="6" fill="#2dd4bf"/>
+            <rect x="144" y="6" width="66" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+            <rect x="216" y="6" width="64" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+          </svg>
+
+          <div class="composition">
+            <div class="comp-bar">
+              <div class="comp-rf" style="width:80%"></div>
+              <div class="comp-rv" style="width:20%"></div>
+            </div>
+            <div class="comp-legend">
+              <span><i class="dot rf"></i> Renta fija 80%</span>
+              <span><i class="dot rv"></i> Renta variable 20%</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fund-desc">Mayoría en renta fija, con una porción menor en renta variable. Busca estabilidad con rendimientos moderados. Buen punto de partida si estás comenzando.</p>
+      </article>
+
+      <!-- FONDO 2 -->
+      <article class="fund-card fund-f2">
+        <div class="fund-head">
+          <span class="fund-num">F2</span>
+          <div>
+            <h4>Fondo 2 — Balanceado</h4>
+            <span class="fund-risk-pill">Riesgo moderado</span>
+          </div>
+        </div>
+
+        <div class="fund-viz">
+          <span class="risk-label">Nivel de riesgo</span>
+          <svg class="risk-meter" viewBox="0 0 280 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medidor de riesgo: nivel 3 de 4, moderado">
+            <rect x="0" y="6" width="66" height="12" rx="6" fill="#fbbf24"/>
+            <rect x="72" y="6" width="66" height="12" rx="6" fill="#fbbf24"/>
+            <rect x="144" y="6" width="66" height="12" rx="6" fill="#fbbf24"/>
+            <rect x="216" y="6" width="64" height="12" rx="6" fill="rgba(148,180,224,.12)"/>
+          </svg>
+
+          <div class="composition">
+            <div class="comp-bar">
+              <div class="comp-rf" style="width:55%"></div>
+              <div class="comp-rv" style="width:45%"></div>
+            </div>
+            <div class="comp-legend">
+              <span><i class="dot rf"></i> Renta fija 55%</span>
+              <span><i class="dot rv"></i> Renta variable 45%</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fund-desc">Combinación equilibrada de renta fija y variable, tanto local como internacional. Orientado a quienes pueden dejar el dinero quieto al menos 2 o 3 años, según su objetivo.</p>
+      </article>
+
+      <!-- FONDO 3 -->
+      <article class="fund-card fund-f3">
+        <div class="fund-head">
+          <span class="fund-num">F3</span>
+          <div>
+            <h4>Fondo 3 — Crecimiento</h4>
+            <span class="fund-risk-pill">Riesgo alto</span>
+          </div>
+        </div>
+
+        <div class="fund-viz">
+          <span class="risk-label">Nivel de riesgo</span>
+          <svg class="risk-meter" viewBox="0 0 280 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medidor de riesgo: nivel 4 de 4, alto">
+            <rect x="0" y="6" width="66" height="12" rx="6" fill="#f87171"/>
+            <rect x="72" y="6" width="66" height="12" rx="6" fill="#f87171"/>
+            <rect x="144" y="6" width="66" height="12" rx="6" fill="#f87171"/>
+            <rect x="216" y="6" width="64" height="12" rx="6" fill="#f87171"/>
+          </svg>
+
+          <div class="composition">
+            <div class="comp-bar">
+              <div class="comp-rf" style="width:25%"></div>
+              <div class="comp-rv" style="width:75%"></div>
+            </div>
+            <div class="comp-legend">
+              <span><i class="dot rf"></i> Renta fija 25%</span>
+              <span><i class="dot rv"></i> Renta variable 75%</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fund-desc">Alta exposición a renta variable y activos internacionales. Mayor potencial de retorno a cambio de mayor volatilidad. Es un fondo de mayor riesgo, no un requisito legal para horizontes largos.</p>
+      </article>
+
+    </div>
+
+    <p style="margin-top:20px;font-size:.88rem;color:var(--muted);">
+      Regla simple: cuanto más pronto vayas a necesitar el dinero, más conservador debe ser tu fondo. Las composiciones mostradas son referenciales; consulta la política de inversión vigente de cada fondo en tu AFP.
+    </p>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= COMPARATIVA AFP ================= -->
+  <section id="comparativa-afp">
+    <h2 class="title">Comisiones y rentabilidad por AFP</h2>
+    <p class="subtitle">Comparamos las comisiones que cobra cada AFP, la rentabilidad neta que ofrecieron sus fondos y la participación real de cada administradora en este producto específico.</p>
+
+    <!-- ============ 1. COMISIONES ============ -->
+    <h3>1. Comisiones anuales sobre el saldo</h3>
+    <p>Las AFP cobran las mismas comisiones a afiliados y no afiliados. El cuadro muestra la comisión anual que cada AFP cobra por la gestión de tus <strong>aportes voluntarios</strong>, según el fondo que elijas. En cada columna, la celda resaltada en turquesa indica <strong>la comisión más económica</strong>.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>AFP</th>
+            <th>Fondo 0</th>
+            <th>Fondo 1</th>
+            <th>Fondo 2</th>
+            <th>Fondo 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Habitat</strong></td>
+            <td>0.698%</td>
+            <td><span class="best">1.097%</span></td>
+            <td>1.498%</td>
+            <td><span class="best">1.900%</span></td>
+          </tr>
+          <tr>
+            <td><strong>Integra</strong></td>
+            <td><span class="best">0.493%</span></td>
+            <td>1.149%</td>
+            <td>1.753%</td>
+            <td>1.998%</td>
+          </tr>
+          <tr>
+            <td><strong>Prima</strong></td>
+            <td>0.600%</td>
+            <td>1.206%</td>
+            <td><span class="best">1.450%</span></td>
+            <td>1.936%</td>
+          </tr>
+          <tr>
+            <td><strong>Profuturo</strong></td>
+            <td>0.806%</td>
+            <td>1.206%</td>
+            <td>2.120%</td>
+            <td>2.303%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.82rem;color:var(--muted);font-style:italic;">
+      Fuente: SBS — <em>Comisiones por la Gestión de Aportes Voluntarios por AFP y Tipo de Fondo de Pensiones</em>, al 31 de agosto de 2026. Las comisiones anuales se calculan sobre un año de 360 días. En Prima, las comisiones de aportes sin fin previsional aplican para saldos mayores a S/ 250.
+    </p>
+
+    <div class="consider" style="margin-top:24px;">
+      <div class="cns">
+        <h4>Lectura rápida de las comisiones</h4>
+        <p>En el <strong>Fondo 0</strong>, Integra es la más económica (0.493%). En el <strong>Fondo 1</strong>, Habitat lidera (1.097%). En el <strong>Fondo 2</strong>, Prima es la más barata (1.450%). En el <strong>Fondo 3</strong>, Habitat vuelve a destacar (1.900%).</p>
+        <p>Profuturo es la AFP más cara (o empatada como la más cara, en el caso del Fondo 1 con Prima) en los cuatro fondos. La diferencia máxima entre la más económica y la más cara de cada fondo llega a <strong>0.67 puntos porcentuales anuales</strong> en el Fondo 2, a <strong>0.40 puntos</strong> en el Fondo 3 y a <strong>0.31 puntos</strong> en el Fondo 0. Sobre un saldo grande y a varios años, la diferencia se vuelve significativa.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:36px 0;"><span>· · ·</span></div>
+
+    <!-- ============ 2. RENTABILIDAD ============ -->
+    <h3>2. ¿Cúanto podría ganar? Rentabilidad neta de comisiones</h3>
+    <p>Rentabilidad neta de comisiones para afiliados con <strong>aportes voluntarios</strong> y obligatorios en la misma AFP. Los valores corresponden al período <strong>agosto 2026 / agosto 2025</strong> y son <strong>nominales anuales</strong>, expresados en porcentaje. La celda resaltada indica el mejor rendimiento de cada fondo.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>AFP</th>
+            <th>Fondo 0</th>
+            <th>Fondo 1</th>
+            <th>Fondo 2</th>
+            <th>Fondo 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Habitat</strong></td>
+            <td><span class="best">4.05%</span></td>
+            <td><span class="best">10.83%</span></td>
+            <td>19.53%</td>
+            <td><span class="best">37.37%</span></td>
+          </tr>
+          <tr>
+            <td><strong>Integra</strong></td>
+            <td>3.97%</td>
+            <td>9.35%</td>
+            <td>18.22%</td>
+            <td>31.85%</td>
+          </tr>
+          <tr>
+            <td><strong>Prima</strong></td>
+            <td>3.97%</td>
+            <td>9.04%</td>
+            <td><span class="best">19.83%</span></td>
+            <td>33.98%</td>
+          </tr>
+          <tr>
+            <td><strong>Profuturo</strong></td>
+            <td>3.41%</td>
+            <td>7.01%</td>
+            <td>13.64%</td>
+            <td>26.15%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.82rem;color:var(--muted);font-style:italic;">
+      Fuente: SBS — <em>Rentabilidad Neta de Comisiones de los Aportes Voluntarios Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>, agosto 2026 / agosto 2025. Calculada según la metodología de la Directiva N.º SBS-DIR-EEC-362-03. Rentabilidad pasada no garantiza resultados futuros.
+    </p>
+
+    <div class="consider" style="margin-top:24px;">
+      <div class="cns">
+        <h4>Lectura rápida de la rentabilidad</h4>
+        <p><strong>Habitat lidera en tres de los cuatro fondos</strong>: F0 (4.05%), F1 (10.83%) y F3 (37.37%). <strong>Prima lidera en el Fondo 2</strong> (19.83%), apenas por encima de Habitat (19.53%).</p>
+        <p><strong>Profuturo presenta los valores más bajos en los cuatro fondos</strong>, con un rango que va de 3.41% (F0) a 26.15% (F3). Antes de decidir por una AFP, mira también la columna "Real" que descuenta la inflación y las comisiones. En el Fondo 0, la rentabilidad real de todas las AFP es <strong>negativa</strong>.</p>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:36px 0;"><span>· · ·</span></div>
+
+    <!-- ============ 3. PARTICIPACIÓN ============ -->
+    <h3>3. Participación de mercado en aportes sin fin previsional</h3>
+    <p>Este cuadro mide el <strong>saldo específico del producto</strong>, no el total de fondos de pensiones. El total administrado en <strong>aportes voluntarios sin fin previsional</strong> asciende a <strong>S/ 3,409 millones</strong> al 31 de agosto de 2026.</p>
+
+    <div class="market-share">
+      <div class="ms-total">
+        <span>Saldo total administrado</span>
+        <strong>S/ 3,409 millones</strong>
+      </div>
+
+      <div class="ms-item">
+        <div class="ms-head">
+          <span class="ms-name">Prima</span>
+          <span class="ms-value">S/ 1,564 M · <strong>45.9%</strong></span>
+        </div>
+        <div class="ms-bar"><div class="ms-fill prima" style="width:45.9%"></div></div>
+      </div>
+
+      <div class="ms-item">
+        <div class="ms-head">
+          <span class="ms-name">Integra</span>
+          <span class="ms-value">S/ 1,003 M · <strong>29.4%</strong></span>
+        </div>
+        <div class="ms-bar"><div class="ms-fill integra" style="width:29.4%"></div></div>
+      </div>
+
+      <div class="ms-item">
+        <div class="ms-head">
+          <span class="ms-name">Habitat</span>
+          <span class="ms-value">S/ 458 M · <strong>13.4%</strong></span>
+        </div>
+        <div class="ms-bar"><div class="ms-fill habitat" style="width:13.4%"></div></div>
+      </div>
+
+      <div class="ms-item">
+        <div class="ms-head">
+          <span class="ms-name">Profuturo</span>
+          <span class="ms-value">S/ 384 M · <strong>11.3%</strong></span>
+        </div>
+        <div class="ms-bar"><div class="ms-fill profuturo" style="width:11.3%"></div></div>
+      </div>
+    </div>
+
+    <p style="font-size:.82rem;color:var(--muted);font-style:italic;">
+      Fuente: SBS — <em>Aportes Voluntarios Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>, al 31 de agosto de 2026. Cifras en miles de soles convertidas a millones.
+    </p>
+
+    <div class="consider" style="margin-top:24px;">
+      <div class="cns">
+        <h4>Lectura rápida de la participación</h4>
+        <p><strong>Prima concentra el 45.9% del mercado</strong> de aportes voluntarios sin fin previsional, seguida por Integra con 29.4%. Juntas, ambas AFP administran más del <strong>75% del saldo total</strong>.</p>
+        <p>Ten en cuenta que estos porcentajes son de agosto de 2026 y varían mes a mes. También conviene distinguir este indicador del "market share de fondos de pensiones" del sistema completo, que suma los aportes obligatorios y da porcentajes distintos.</p>
+      </div>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--muted);font-style:italic;margin-top:20px;">
+      Fuentes oficiales: SBS — <em>Comisiones por la administración de aportes voluntarios sin fin previsional</em> (FP-1337) y <em>Rentabilidad neta de aportes voluntarios sin fin previsional</em> (FP-1341). Consulta la sección de estadísticas del SBS para los valores actualizados al período que te interese.
+    </p>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= COMPARATIVA GENERAL ================= -->
+  <section id="comparativa">
+    <h2 class="title">Comparativa frente a otras opciones</h2>
+    <p class="subtitle">¿Cómo se comporta producto (aportes voluntarios) frente a las alternativas más comunes del mercado peruano?</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Aporte voluntario sin fin previsional</th>
+            <th>Depósito a plazo</th>
+            <th>Fondo mutuo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Flexibilidad de retiro</strong></td>
+            <td><span class="pill low">Libre disponibilidad</span></td>
+            <td><span class="pill mid">Media</span></td>
+            <td><span class="pill low">Alta</span></td>
+          </tr>
+          <tr>
+            <td><strong>Gestión profesional</strong></td>
+            <td><span class="pill low">Sí</span></td>
+            <td><span class="pill high">No aplica</span></td>
+            <td><span class="pill low">Sí</span></td>
+          </tr>
+          <tr>
+            <td><strong>Regulador</strong></td>
+            <td>SBS</td>
+            <td>SBS</td>
+            <td>SMV</td>
+          </tr>
+          <tr>
+            <td><strong>Rentabilidad potencial</strong></td>
+            <td>Variable según fondo</td>
+            <td>Baja</td>
+            <td>Variable según fondo</td>
+          </tr>
+          <tr>
+            <td><strong>Volatilidad</strong></td>
+            <td>Según fondo elegido</td>
+            <td>Valor nominal previsible si se mantiene hasta el vencimiento</td>
+            <td>Según fondo elegido</td>
+          </tr>
+          <tr>
+            <td><strong>Requisito de elegibilidad</strong></td>
+            <td>+5 años SPP o 50 años</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><strong>Comisión de gestión</strong></td>
+            <td>Sí, sobre saldo (según AFP y fondo)</td>
+            <td>No</td>
+            <td>Sí</td>
+          </tr>
+          <tr>
+            <td><strong>Embargable</strong></td>
+            <td><span class="pill high">Sí</span></td>
+            <td><span class="pill high">Sí</span></td>
+            <td><span class="pill high">Sí</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--muted);font-style:italic;">
+      Los depósitos a plazo están cubiertos por el Fondo de Seguro de Depósitos (FSD) hasta el límite vigente, siempre que la entidad participe. Los aportes voluntarios sin fin previsional no cuentan con esa cobertura.
+    </p>
+  </section>
+
+  <!-- ================= EJEMPLO GRÁFICO ================= -->
+  <section id="ejemplo">
+    <h2 class="title">Ejemplo ilustrativo con números</h2>
+    <p class="subtitle">Una operación simplificada, con montos redondos, para que veas cómo crecería un ahorro a lo largo del tiempo.</p>
+
+    <div class="example">
+      <div class="example-head">
+        <span class="tag">Ejemplo didáctico</span>
+        <h3>María ahorra para la educación de su hijo</h3>
+      </div>
+
+      <div class="scenario">
+        <p>María tiene un ingreso extra de <strong>S/ 10,000</strong> y quiere usarlo para la educación universitaria de su hijo en <span class="q">unos 3 años</span>. No quiere congelar el dinero hasta su jubilación, pero tampoco quiere tenerlo quieto en una cuenta de ahorros. Decide abrir una cuenta de <strong>aportes voluntarios</strong> sin fin previsional en el <strong>Fondo 2 (Balanceado)</strong>.</p>
+      </div>
+
+      <!-- GRÁFICO DE BARRAS -->
+      <div class="chart">
+        <div class="chart-title">Evolución del ahorro · hipotético 6% anual neto</div>
+
+        <div class="chart-bars">
+          <div class="chart-col">
+            <span class="chart-value">S/ 10,000</span>
+            <div class="chart-bar orange" style="height:84%"></div>
+            <span class="chart-label">Hoy</span>
+          </div>
+          <div class="chart-col">
+            <span class="chart-value">S/ 10,600</span>
+            <div class="chart-bar amber" style="height:89%"></div>
+            <span class="chart-label">Año 1</span>
+          </div>
+          <div class="chart-col">
+            <span class="chart-value">S/ 11,236</span>
+            <div class="chart-bar teal-light" style="height:94%"></div>
+            <span class="chart-label">Año 2</span>
+          </div>
+          <div class="chart-col">
+            <span class="chart-value">S/ 11,910</span>
+            <div class="chart-bar teal-deep" style="height:100%"></div>
+            <span class="chart-label">Año 3</span>
+          </div>
+        </div>
+
+        <div class="chart-legend">
+          <span class="item"><i class="dot rf"></i> Capital inicial</span>
+          <span class="item"><i class="dot rv"></i> Rendimiento acumulado</span>
+          <span class="gain">Ganancia: S/ 1,910</span>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="icon">📈</div>
+        <div class="txt">
+          <strong>Ganancia estimada: S/ 1,910 en 3 años</strong>
+          <span>Es un ejemplo con una tasa hipotética. El rendimiento real depende del fondo elegido, del mercado y de las comisiones. Puede ser mayor, menor o incluso negativo en el corto plazo. La rentabilidad neta exacta depende de la AFP y del fondo.</span>
+        </div>
+      </div>
+
+      <span class="illustrative-note">
+        Ejemplo didáctico con fines explicativos. Se usa una tasa conservadora de 6% anual para no inducir a expectativas basadas en rentabilidades pasadas; los fondos pueden rendir más o menos en el futuro. La rentabilidad no está garantizada. Los montos, plazos y comisiones reales varían según la AFP y el fondo seleccionado.
+      </span>
+    </div>
+  </section>
+
+  <div class="divider"><span>· · ·</span></div>
+
+  <!-- ================= VENTAJAS / RIESGOS ================= -->
+  <section id="ventajas">
+    <h2 class="title">Ventajas y riesgos, sin adornos</h2>
+    <p class="subtitle">No hay instrumento perfecto. Aquí te damos las dos caras para que decidas con la información completa.</p>
+
+    <div class="two-col">
+      <div class="panel pro">
+        <h3><span class="chip">✓</span> Ventajas reales</h3>
+        <ul>
+          <li><b>Flexibilidad de retiro.</b> La SBS establece libre disponibilidad de retiros. No es un producto bloqueado hasta la jubilación.</li>
+          <li><b>Gestión profesional.</b> Un equipo especializado administra tu dinero conforme a la política de inversión del fondo que elijas.</li>
+          <li><b>Regulación SBS.</b> Estás bajo el paraguas de un regulador del sistema financiero, no en un esquema sin supervisión.</li>
+          <li><b>Depósitos flexibles.</b> Puedes aportar lo que quieras, cuando quieras, según las condiciones operativas de cada AFP.</li>
+          <li><b>Diversificación a través de la cartera del fondo.</b> Tu dinero queda repartido en múltiples instrumentos según la política de inversión del fondo elegido.</li>
+          <li><b>Rendimientos inafectos del Impuesto a la Renta.</b> Según el Informe N.º 000054-2025-SUNAT/7T0000, los dividendos, intereses, comisiones y demás rendimientos derivados de estos aportes están inafectos del IR.</li>
+        </ul>
+      </div>
+
+      <div class="panel con">
+        <h3><span class="chip">!</span> Riesgos que debes conocer</h3>
+        <ul>
+          <li><b>Rentabilidad variable.</b> El valor de tu cuenta sube y baja con el mercado. En el corto plazo puede haber pérdidas temporales.</li>
+          <li><b>Comisiones de gestión.</b> Cada AFP cobra una comisión anual sobre el saldo administrado. Verifica la tarifa vigente en la serie estadística de la SBS.</li>
+          <li><b>Requisito de elegibilidad.</b> Necesitas más de 5 años de incorporación al SPP o tener 50 años de edad.</li>
+          <li><b>Proceso de retiro no instantáneo.</b> La AFP tiene hasta el quinto día hábil siguiente de remitida tu solicitud de retiro para efectuar el pago del monto solicitado. Además, el retiro se paga al valor cuota vigente el día del pago, por lo que el importe puede diferir de una consulta previa del saldo.</li>
+          <li><b>Embargable.</b> A diferencia de los aportes con fin previsional, estos aportes son embargables en caso de sentencia judicial.</li>
+          <li><b>No tiene seguro de depósito.</b> El Fondo de Seguro de Depósitos (FSD) no cubre inversiones en fondos de pensiones.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EMPEZAR ================= -->
+  <section id="empezar">
+    <h2 class="title">Cómo empezar, paso a paso</h2>
+    <p class="subtitle">Cinco pasos concretos para pasar de la curiosidad a tu primera operación.</p>
+
+    <ol class="steps">
+      <li>
+        <span class="n">1</span>
+        <div>
+          <b>Confirma tu elegibilidad</b>
+          <p>Verifica con tu AFP que cumples alguno de estos requisitos: más de 5 años de incorporación al SPP o tener 50 años de edad. No se exigen ambos simultáneamente.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <div>
+          <b>Define tu objetivo y horizonte</b>
+          <p>¿Para qué es este dinero? ¿Cuándo lo vas a necesitar? ¿Cuánta volatilidad toleras? Esto determina qué fondo elegir.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <div>
+          <b>Elige el fondo adecuado</b>
+          <p>Fondo 0 o 1 si necesitas el dinero pronto. Fondo 2 si puedes esperar 2 o 3 años. Fondo 3 solo si tu horizonte es largo y toleras caídas fuertes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">4</span>
+        <div>
+          <b>Abre la cuenta y deposita</b>
+          <p>El trámite se hace en tu AFP o por su plataforma digital. Empieza con un monto cómodo, sin comprometer tu fondo de emergencia.</p>
+        </div>
+      </li>
+      <li>
+        <span class="n">5</span>
+        <div>
+          <b>Revisa tu estrategia cada 6 o 12 meses</b>
+          <p>Verifica si tu fondo sigue siendo el adecuado. Si tu horizonte cambia, ajusta el fondo. Si vas a necesitar el dinero pronto, migra a uno más conservador.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= CONSIDERAR ================= -->
+  <section id="considerar">
+    <h2 class="title">Qué considerar antes de entrar</h2>
+    <p class="subtitle">Cinco puntos que marcan la diferencia entre una buena y una mala experiencia.</p>
+
+    <div class="consider">
+      <div class="cns">
+        <h4>El horizonte manda</h4>
+        <p>Cuanto más largo el horizonte, más agresivo puede ser el fondo. Si vas a necesitar el dinero en meses, el fondo conservador es la única opción razonable.</p>
+      </div>
+      <div class="cns">
+        <h4>Las comisiones importan más de lo que parecen</h4>
+        <p>Una diferencia de hasta 0.67 puntos porcentuales anuales en comisiones, sostenida durante años, se come buena parte del rendimiento. Compara las comisiones entre AFP y entre fondos usando los cuadros de esta sección o la serie estadística de la SBS.</p>
+      </div>
+      <div class="cns">
+        <h4>El retiro se paga al valor cuota del día</h4>
+        <p>El monto que retires se calcula al valor cuota vigente el día del pago, no al valor que viste cuando consultaste tu saldo. Si el mercado se movió, el importe puede ser distinto.</p>
+      </div>
+      <div class="cns">
+        <h4>No es tu fondo de emergencia</h4>
+        <p>Este no es un instrumento de liquidez inmediata. Para imprevistos del día a día, mantén un fondo de emergencia en un depósito a la vista.</p>
+      </div>
+      <div class="cns">
+        <h4>Tu AFP es una sola pieza de tu portafolio</h4>
+        <p>No concentres todos tus ahorros en un solo instrumento. Los aportes voluntarios complementan, no reemplazan, otros vehículos de inversión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NO ESPERAR ================= -->
+  <section id="no-esperar">
+    <h2 class="title">Qué NO deberías esperar</h2>
+    <p class="subtitle">Cinco creencias que arruinan la experiencia de quien recién comienza. Léelas dos veces.</p>
+
+    <ul class="avoid">
+      <li><b>Rentabilidad garantizada.</b> Los fondos de AFP invierten en mercados y sus valores fluctúan. Nadie puede prometerte un porcentaje fijo.</li>
+      <li><b>Que el dinero esté disponible al instante.</b> El retiro requiere una solicitud y la AFP tiene hasta el quinto día hábil siguiente para efectuar el pago. No es como retirar de un cajero.</li>
+      <li><b>Que sea idéntico a un depósito a plazo fijo.</b> Aquí NO hay un fondo de seguro de depósito (FSD) ni tasa fija. Hay potencial de mayor retorno, pero también volatilidad. Y es embargable.</li>
+      <li><b>Que la cuenta reemplace a tu fondo de emergencia.</b> El fondo de emergencia vive en un producto líquido. Este instrumento es para objetivos con horizonte.</li>
+      <li><b>Que puedas entrar y salir sin costo.</b> Las comisiones de gestión se cobran igual durante el tiempo que tengas el dinero invertido. Considera el costo de oportunidad antes de moverlo.</li>
+    </ul>
+  </section>
+
+  <!-- ================= REFLEXIÓN ================= -->
+  <section id="reflexion">
+    <div class="callout">
+      <h2>Una última reflexión</h2>
+      <p>Los <strong>aportes voluntarios sin fin previsional</strong> son, probablemente, el instrumento más subestimado del sistema AFP peruano. Combinan algo poco común: <strong style="color:#5eead4">acceso a gestión profesional, respaldo regulatorio y flexibilidad de retiro</strong>, con rendimientos inafectos del Impuesto a la Renta según la SUNAT.</p>
+      <p>No son para todo el mundo. Requieren una mínima disciplina de ahorro, un horizonte claro y tolerancia a la volatilidad según el fondo elegido. Tampoco son un depósito bancario: son embargables y su valor fluctúa. Pero para quien tiene un objetivo concreto —una maestría, la inicial de una casa, un fondo para emprender— representan una alternativa sensata frente a dejar el dinero quieto perdiendo poder adquisitivo.</p>
+      <p>Como siempre: entiende el producto, elige el fondo correcto, no comprometas lo que no puedes permitirte y consulta a un profesional antes de mover montos importantes. Con esa base, este instrumento puede convertirse en una pieza valiosa de tu estrategia financiera.</p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto">
+    <div class="contact">
+      <h3>¿Te quedó alguna duda?</h3>
+      <p>Si después de leer esta guía tienes preguntas sobre aportes voluntarios, elección de fondos o cómo integrarlos en tu estrategia, escríbeme. Con gusto te ayudo.</p>
+
+      <a class="mail" href="mailto:tucorreo@tudominio.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="3"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+        tucorreo@tudominio.com
+      </a>
+
+      <p class="note">Respondo personalmente a cada mensaje. Si tu consulta es sobre tu situación particular, incluye el contexto para poder orientarte mejor.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Las rentabilidades mencionadas son referenciales y no representan una promesa ni garantía de resultados. El valor de las inversiones puede subir o bajar. Las comisiones y rentabilidades específicas de los aportes voluntarios sin fin previsional están tomadas de las series estadísticas oficiales de la SBS al cierre de agosto de 2026 (FP-1337 y FP-1341). Para decisiones tributarias, consulta el Informe N.º 000054-2025-SUNAT/7T0000 y a un asesor calificado. Antes de tomar decisiones, evalúa tu situación personal y consulta con un asesor certificado o con tu AFP.</p>
+    <span class="update">Última actualización: octubre 2026 · Datos SBS al 31 de agosto de 2026</span>
+  </footer>
+
+</div>
+
+</body>
+</html>

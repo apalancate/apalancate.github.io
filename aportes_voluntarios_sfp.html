@@ -178,6 +178,32 @@
   .subtitle{color:var(--muted);font-size:.95rem;margin:0 0 24px;}
 
   h3{font-size:1.05rem;margin:26px 0 8px;font-weight:800;color:#eaf2ff;}
+  h4.fund-title{
+    font-size:.95rem;
+    font-weight:850;
+    margin:28px 0 12px;
+    color:#f4f8ff;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h4.fund-title .tag{
+    display:inline-block;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border-radius:999px;
+    border:1px solid var(--line-strong);
+    background:rgba(148,180,224,.06);
+    color:var(--muted);
+  }
+  h4.fund-title .tag.f0{background:rgba(74,222,128,.12);color:#4ade80;border-color:rgba(74,222,128,.35);}
+  h4.fund-title .tag.f1{background:rgba(45,212,191,.12);color:var(--teal-soft);border-color:rgba(45,212,191,.35);}
+  h4.fund-title .tag.f2{background:rgba(251,191,36,.12);color:var(--amber);border-color:rgba(251,191,36,.35);}
+  h4.fund-title .tag.f3{background:rgba(248,113,113,.12);color:var(--red);border-color:rgba(248,113,113,.35);}
+
   p{margin:0 0 16px;color:var(--ink-soft);}
   strong{font-weight:750;color:#ffffff;}
 
@@ -393,6 +419,8 @@
     border:1px solid rgba(45,212,191,.4);
     font-variant-numeric:tabular-nums;
   }
+  td .neg{color:#fca5a5;font-weight:700;}
+  td .pos-strong{color:var(--teal-soft);font-weight:700;}
 
   td .pill{
     display:inline-block;
@@ -898,55 +926,156 @@
     line-height:1.55;
   }
 
-  /* ============ CONTACTO ============ */
-  .contact{
-    background:linear-gradient(180deg, rgba(22,38,63,.9), rgba(17,30,53,.9));
-    border:1px solid var(--line-strong);
+  /* ============ APP APALANCATE ============ */
+  .app-invite{
+    background:
+      radial-gradient(500px 260px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
+      radial-gradient(500px 260px at 0% 100%, rgba(251,191,36,.14), transparent 70%),
+      linear-gradient(160deg,#0a1120,#132038);
+    color:#dbe6f5;
     border-radius:var(--radius);
-    padding:32px 28px;
+    padding:36px 30px;
     box-shadow:var(--shadow);
-    text-align:center;
+    border:1px solid var(--line-strong);
     position:relative;overflow:hidden;
+    text-align:center;
   }
-  .contact::before{
-    content:"";position:absolute;inset:-2px;
-    background:radial-gradient(400px 200px at 50% 0%, rgba(45,212,191,.15), transparent 70%);
+  .app-invite::before{
+    content:"";
+    position:absolute;top:-80px;right:-80px;
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, rgba(45,212,191,.30), transparent 70%);
+    filter:blur(20px);
     pointer-events:none;
   }
-  .contact h3{
-    margin:0 0 8px;font-size:1.2rem;font-weight:850;color:#f4f8ff;
-    position:relative;z-index:1;
+  .app-invite::after{
+    content:"";
+    position:absolute;bottom:-80px;left:-80px;
+    width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle, rgba(251,191,36,.20), transparent 70%);
+    filter:blur(20px);
+    pointer-events:none;
   }
-  .contact p{
-    margin:0 0 22px;color:var(--muted);font-size:.95rem;
-    position:relative;z-index:1;
-    max-width:520px;margin-left:auto;margin-right:auto;
-  }
-  .contact a.mail{
-    display:inline-flex;align-items:center;gap:10px;
-    background:linear-gradient(135deg, rgba(45,212,191,.18), rgba(20,184,166,.10));
+
+  .app-invite .app-icon{
+    width:76px;height:76px;
+    border-radius:20px;
+    background:linear-gradient(135deg, rgba(45,212,191,.22), rgba(20,184,166,.12));
     border:1px solid rgba(45,212,191,.45);
+    display:grid;place-items:center;
+    margin:0 auto 20px;
+    position:relative;z-index:1;
+    box-shadow:0 12px 30px -12px rgba(45,212,191,.6);
+  }
+  .app-invite .app-icon svg{
+    width:38px;height:38px;
     color:var(--teal-soft);
+  }
+
+  .app-invite h3{
+    margin:0 0 10px;
+    font-size:clamp(1.25rem,3.4vw,1.55rem);
+    font-weight:850;
+    color:#f4f8ff;
+    letter-spacing:-.015em;
+    position:relative;z-index:1;
+  }
+  .app-invite .lead{
+    margin:0 auto 26px;
+    max-width:520px;
+    font-size:.98rem;
+    color:#b9c9df;
+    line-height:1.7;
+    position:relative;z-index:1;
+  }
+  .app-invite .lead strong{color:#5eead4;font-weight:800;}
+
+  .app-features{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    max-width:420px;
+    margin:0 auto 28px;
+    text-align:left;
+    position:relative;z-index:1;
+  }
+  @media(min-width:520px){ .app-features{grid-template-columns:1fr 1fr;} }
+
+  .app-feature{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(148,180,224,.06);
+    border:1px solid var(--line-strong);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .app-feature .dot{
+    width:22px;height:22px;
+    border-radius:50%;
+    display:grid;place-items:center;
+    background:rgba(45,212,191,.18);
+    color:var(--teal-soft);
+    font-weight:850;
+    font-size:.72rem;
+    flex:0 0 auto;
+    border:1px solid rgba(45,212,191,.35);
+  }
+
+  .play-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    background:#ffffff;
+    color:#0b1220;
     text-decoration:none;
     font-weight:750;
-    font-size:1rem;
-    padding:14px 24px;
-    border-radius:999px;
-    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-    position:relative;z-index:1;
-    word-break:break-all;
-    max-width:100%;
+    padding:14px 26px 14px 20px;
+    border-radius:14px;
+    transition:transform .2s ease,box-shadow .2s ease;
+    position:relative;
+    z-index:1;
+    box-shadow:0 12px 30px -12px rgba(255,255,255,.35);
+    border:1px solid #ffffff;
   }
-  .contact a.mail:hover,.contact a.mail:focus-visible{
-    transform:translateY(-2px);
-    background:linear-gradient(135deg, rgba(45,212,191,.28), rgba(20,184,166,.18));
-    box-shadow:0 12px 30px -10px rgba(45,212,191,.55);
+  .play-btn:hover,.play-btn:focus-visible{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px -16px rgba(255,255,255,.45);
     outline:none;
   }
-  .contact a.mail svg{width:18px;height:18px;flex:0 0 auto;}
-  .contact .note{
-    margin:16px 0 0;font-size:.8rem;color:var(--muted);
+  .play-btn svg{
+    width:32px;height:32px;
+    flex:0 0 auto;
+  }
+  .play-btn .txt{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height:1.15;
+  }
+  .play-btn .txt small{
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    opacity:.72;
+  }
+  .play-btn .txt span{
+    font-size:1.02rem;
+    font-weight:850;
+  }
+
+  .app-invite .note{
+    margin:22px 0 0;
+    font-size:.8rem;
+    color:var(--muted);
     position:relative;z-index:1;
+    max-width:520px;
+    margin-left:auto;margin-right:auto;
+    line-height:1.6;
   }
 
   /* ============ FOOTER ============ */
@@ -1000,8 +1129,10 @@
     body{font-size:16px;}
     .hero{padding:48px 0 86px;}
     .toc{margin-top:-50px;padding:18px;}
-    .contact{padding:26px 20px;}
-    .contact a.mail{font-size:.9rem;padding:12px 18px;}
+    .app-invite{padding:28px 20px;}
+    .play-btn{padding:12px 20px 12px 16px;gap:12px;}
+    .play-btn svg{width:28px;height:28px;}
+    .play-btn .txt span{font-size:.95rem;}
     .lead-callout{padding:22px 20px 18px;}
     .chart-bars{gap:6px;height:190px;}
     .chart-value{font-size:.66rem;}
@@ -1015,7 +1146,7 @@
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Apalancate · Perú</span>
+    <span class="eyebrow">AFP · Ahorro flexible · Perú</span>
     <h1>Aportes Voluntarios <em>sin Fin Previsional</em>: tu dinero, tus reglas</h1>
     <p class="lede">Una guía clara y honesta sobre el instrumento más subestimado del sistema AFP peruano. Ahorra con respaldo profesional, sin quedar atado hasta la jubilación.</p>
 
@@ -1055,7 +1186,7 @@
   <section id="resumen">
     <div class="lead-callout">
       <span class="kicker">Lo esencial en 30 segundos</span>
-      <p>Los <strong>"Aportes voluntarios sin fin previsional"</strong> son un subproducto dentro de tu AFP que funciona como una cuenta de ahorro flexible, pero con el respaldo de un equipo profesional de inversiones. Depositas cuando quieres, eliges el fondo según tu tolerancia al riesgo, y <strong>puedes retirar tu dinero cuando lo necesites</strong>. No está atado a la jubilación. Es el punto intermedio entre dejar el dinero quieto en el banco y arriesgarlo todo por tu cuenta. Eso sí: es <strong>embargable</strong> y no equivale a un depósito bancario.</p>
+      <p>Los aportes voluntarios sin fin previsional son un <strong>subproducto dentro de tu AFP</strong> que funciona como una cuenta de ahorro flexible, pero con el respaldo de un equipo profesional de inversiones. Depositas cuando quieres, eliges el fondo según tu tolerancia al riesgo, y <strong>puedes retirar tu dinero cuando lo necesites</strong>. No está atado a la jubilación. Es el punto intermedio entre dejar el dinero quieto en el banco y arriesgarlo todo por tu cuenta. Eso sí: es <strong>embargable</strong> y no equivale a un depósito bancario.</p>
     </div>
   </section>
 
@@ -1328,11 +1459,11 @@
   <!-- ================= COMPARATIVA AFP ================= -->
   <section id="comparativa-afp">
     <h2 class="title">Comisiones y rentabilidad por AFP</h2>
-    <p class="subtitle">Comparamos las comisiones que cobra cada AFP, la rentabilidad neta que ofrecieron sus fondos y la participación real de cada administradora en este producto específico.</p>
+    <p class="subtitle">Datos oficiales de la SBS. Comparamos las comisiones que cobra cada AFP, la rentabilidad neta que ofrecieron sus fondos en los últimos cinco períodos y la participación real de cada administradora en este producto específico.</p>
 
     <!-- ============ 1. COMISIONES ============ -->
     <h3>1. Comisiones anuales sobre el saldo</h3>
-    <p>Las AFP cobran las mismas comisiones a afiliados y no afiliados. El cuadro muestra la comisión anual que cada AFP cobra por la gestión de tus <strong>aportes voluntarios</strong>, según el fondo que elijas. En cada columna, la celda resaltada en turquesa indica <strong>la comisión más económica</strong>.</p>
+    <p>Las AFP cobran las mismas comisiones a afiliados y no afiliados. El cuadro muestra la comisión anual que cada AFP cobra por la gestión de tus aportes voluntarios, según el fondo que elijas. En cada columna, la celda resaltada en turquesa indica <strong>la comisión más económica</strong>.</p>
 
     <div class="table-wrap">
       <table>
@@ -1392,48 +1523,208 @@
 
     <div class="divider" style="margin:36px 0;"><span>· · ·</span></div>
 
-    <!-- ============ 2. RENTABILIDAD ============ -->
-    <h3>2. ¿Cúanto podría ganar? Rentabilidad neta de comisiones</h3>
-    <p>Rentabilidad neta de comisiones para afiliados con <strong>aportes voluntarios</strong> y obligatorios en la misma AFP. Los valores corresponden al período <strong>agosto 2026 / agosto 2025</strong> y son <strong>nominales anuales</strong>, expresados en porcentaje. La celda resaltada indica el mejor rendimiento de cada fondo.</p>
+    <!-- ============ 2. RENTABILIDAD MULTI-AÑO ============ -->
+    <h3>2. Rentabilidad neta de comisiones (2022 – 2026)</h3>
+    <p>Rentabilidad neta de comisiones para afiliados con aportes voluntarios y obligatorios en la misma AFP. Valores <strong>nominales anuales</strong>, expresados en porcentaje. La celda resaltada indica <strong>el mejor rendimiento de cada período</strong>. Los primeros cuatro corresponden a períodos diciembre–diciembre; el último es un período móvil agosto–agosto.</p>
 
+    <!-- FONDO 0 -->
+    <h4 class="fund-title"><span class="tag f0">Fondo 0</span> Preservación del capital</h4>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>AFP</th>
-            <th>Fondo 0</th>
-            <th>Fondo 1</th>
-            <th>Fondo 2</th>
-            <th>Fondo 3</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>Ago 2026*</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Habitat</strong></td>
+            <td><span class="best">4.04%</span></td>
+            <td><span class="best">8.07%</span></td>
+            <td>5.83%</td>
+            <td>4.12%</td>
             <td><span class="best">4.05%</span></td>
+          </tr>
+          <tr>
+            <td><strong>Integra</strong></td>
+            <td>3.91%</td>
+            <td>7.80%</td>
+            <td><span class="best">5.84%</span></td>
+            <td><span class="best">4.17%</span></td>
+            <td>3.97%</td>
+          </tr>
+          <tr>
+            <td><strong>Prima</strong></td>
+            <td>3.93%</td>
+            <td>7.74%</td>
+            <td>5.77%</td>
+            <td>4.15%</td>
+            <td>3.97%</td>
+          </tr>
+          <tr>
+            <td><strong>Profuturo</strong></td>
+            <td>3.73%</td>
+            <td>7.78%</td>
+            <td>5.59%</td>
+            <td>3.78%</td>
+            <td>3.41%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FONDO 1 -->
+    <h4 class="fund-title"><span class="tag f1">Fondo 1</span> Conservador</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>AFP</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>Ago 2026*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Habitat</strong></td>
+            <td><span class="best">-5.24%</span></td>
+            <td><span class="best">16.81%</span></td>
+            <td>0.07%</td>
+            <td><span class="best">10.26%</span></td>
             <td><span class="best">10.83%</span></td>
+          </tr>
+          <tr>
+            <td><strong>Integra</strong></td>
+            <td>-5.63%</td>
+            <td>14.15%</td>
+            <td>-0.76%</td>
+            <td>8.52%</td>
+            <td>9.35%</td>
+          </tr>
+          <tr>
+            <td><strong>Prima</strong></td>
+            <td>-6.44%</td>
+            <td>14.97%</td>
+            <td>0.66%</td>
+            <td>8.52%</td>
+            <td>9.04%</td>
+          </tr>
+          <tr>
+            <td><strong>Profuturo</strong></td>
+            <td>-7.78%</td>
+            <td>14.74%</td>
+            <td><span class="best">0.94%</span></td>
+            <td>8.79%</td>
+            <td>7.01%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FONDO 2 -->
+    <h4 class="fund-title"><span class="tag f2">Fondo 2</span> Balanceado</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>AFP</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>Ago 2026*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Habitat</strong></td>
+            <td><span class="best">-7.04%</span></td>
+            <td><span class="best">9.62%</span></td>
+            <td><span class="best">3.72%</span></td>
+            <td><span class="best">10.62%</span></td>
             <td>19.53%</td>
+          </tr>
+          <tr>
+            <td><strong>Integra</strong></td>
+            <td>-7.85%</td>
+            <td>7.09%</td>
+            <td>3.16%</td>
+            <td>8.65%</td>
+            <td>18.22%</td>
+          </tr>
+          <tr>
+            <td><strong>Prima</strong></td>
+            <td>-8.48%</td>
+            <td>8.60%</td>
+            <td>2.41%</td>
+            <td>8.15%</td>
+            <td><span class="best">19.83%</span></td>
+          </tr>
+          <tr>
+            <td><strong>Profuturo</strong></td>
+            <td>-11.25%</td>
+            <td>7.70%</td>
+            <td>0.38%</td>
+            <td>10.29%</td>
+            <td>13.64%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FONDO 3 -->
+    <h4 class="fund-title"><span class="tag f3">Fondo 3</span> Crecimiento</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>AFP</th>
+            <th>2022</th>
+            <th>2023</th>
+            <th>2024</th>
+            <th>2025</th>
+            <th>Ago 2026*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Habitat</strong></td>
+            <td><span class="best">-5.03%</span></td>
+            <td><span class="best">6.25%</span></td>
+            <td><span class="best">2.86%</span></td>
+            <td><span class="best">18.59%</span></td>
             <td><span class="best">37.37%</span></td>
           </tr>
           <tr>
             <td><strong>Integra</strong></td>
-            <td>3.97%</td>
-            <td>9.35%</td>
-            <td>18.22%</td>
+            <td>-9.63%</td>
+            <td>-0.43%</td>
+            <td>-1.68%</td>
+            <td>13.98%</td>
             <td>31.85%</td>
           </tr>
           <tr>
             <td><strong>Prima</strong></td>
-            <td>3.97%</td>
-            <td>9.04%</td>
-            <td><span class="best">19.83%</span></td>
+            <td>-9.96%</td>
+            <td>2.97%</td>
+            <td>-3.07%</td>
+            <td>11.26%</td>
             <td>33.98%</td>
           </tr>
           <tr>
             <td><strong>Profuturo</strong></td>
-            <td>3.41%</td>
-            <td>7.01%</td>
-            <td>13.64%</td>
+            <td>-11.75%</td>
+            <td>4.27%</td>
+            <td>-1.16%</td>
+            <td>18.58%</td>
             <td>26.15%</td>
           </tr>
         </tbody>
@@ -1441,14 +1732,24 @@
     </div>
 
     <p style="font-size:.82rem;color:var(--muted);font-style:italic;">
-      Fuente: SBS — <em>Rentabilidad Neta de Comisiones de los Aportes Voluntarios Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>, agosto 2026 / agosto 2025. Calculada según la metodología de la Directiva N.º SBS-DIR-EEC-362-03. Rentabilidad pasada no garantiza resultados futuros.
+      Fuente: SBS — <em>Rentabilidad Neta de Comisiones de los Aportes Voluntarios Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>. Los valores 2022–2025 corresponden a los períodos diciembre/diciembre publicados cada año. El valor "Ago 2026" corresponde al período móvil agosto 2026 / agosto 2025. Calculados según la metodología de la Directiva N.º SBS-DIR-EEC-362-03. Los fondos en etapa de formación pueden mostrar variaciones significativas. Rentabilidad pasada no garantiza resultados futuros.
     </p>
 
     <div class="consider" style="margin-top:24px;">
       <div class="cns">
-        <h4>Lectura rápida de la rentabilidad</h4>
-        <p><strong>Habitat lidera en tres de los cuatro fondos</strong>: F0 (4.05%), F1 (10.83%) y F3 (37.37%). <strong>Prima lidera en el Fondo 2</strong> (19.83%), apenas por encima de Habitat (19.53%).</p>
-        <p><strong>Profuturo presenta los valores más bajos en los cuatro fondos</strong>, con un rango que va de 3.41% (F0) a 26.15% (F3). Antes de decidir por una AFP, mira también la columna "Real" que descuenta la inflación y las comisiones. En el Fondo 0, la rentabilidad real de todas las AFP es <strong>negativa</strong>.</p>
+        <h4>Lectura rápida de la rentabilidad histórica</h4>
+        <p><strong>Habitat domina ampliamente.</strong> De los 20 casilleros (5 períodos × 4 fondos) en los que se marca el mejor rendimiento, Habitat gana en 14. En el Fondo 3 (crecimiento), es el mejor en los 5 períodos consecutivos. En el Fondo 2, lidera en 4 de 5.</p>
+        <p><strong>Profuturo queda sistemáticamente rezagado.</strong> En el Fondo 3, ocupa el último lugar en 4 de 5 períodos. En el Fondo 2 y el Fondo 0, también registra los valores más bajos en la mayoría de años. En el Fondo 1, empata con Prima en el último lugar en 2022 y vuelve a quedar último en Ago 2026.</p>
+      </div>
+      <div class="cns">
+        <h4>Qué dicen los números</h4>
+        <p><strong>2022 fue un año negativo</strong> en los Fondos 1, 2 y 3 para todas las AFP (salvo el Fondo 0, que preservó capital). Fue el año de la corrección global tras el rebote post-pandemia. <strong>2023 fue un año de recuperación fuerte</strong>, con el Fondo 1 liderando con retornos entre 14% y 17%.</p>
+        <p><strong>2024 fue flojo</strong>: rentabilidades entre -3% y +6% según el fondo. <strong>2025 volvió al terreno positivo</strong>, y el período móvil 2025–2026 hasta agosto muestra los mejores retornos desde 2023, con el Fondo 3 acercándose al 37% anual en el caso de Habitat. Esto refleja el buen momento de los mercados internacionales.</p>
+      </div>
+      <div class="cns">
+        <h4>Cómo leer estas cifras sin caer en trampas</h4>
+        <p>Estos retornos son <strong>netos de comisiones</strong>, pero <strong>nominales</strong>: no descuentan la inflación. En 2022, por ejemplo, la inflación peruana fue alta y los retornos "reales" fueron más negativos de lo que parecen. En 2026, en cambio, con inflación baja, los retornos reales están bastante cerca de los nominales.</p>
+        <p>Elegir una AFP pensando solo en el último año es peligroso. Mira la trayectoria completa: una AFP que gana un año puede quedar última al siguiente. Lo importante es la consistencia y el fondo que más se ajusta a tu horizonte.</p>
       </div>
     </div>
 
@@ -1456,7 +1757,7 @@
 
     <!-- ============ 3. PARTICIPACIÓN ============ -->
     <h3>3. Participación de mercado en aportes sin fin previsional</h3>
-    <p>Este cuadro mide el <strong>saldo específico del producto</strong>, no el total de fondos de pensiones. El total administrado en <strong>aportes voluntarios sin fin previsional</strong> asciende a <strong>S/ 3,409 millones</strong> al 31 de agosto de 2026.</p>
+    <p>Este cuadro mide el <strong>saldo específico del producto</strong>, no el total de fondos de pensiones. El total administrado en aportes voluntarios sin fin previsional asciende a <strong>S/ 3,409 millones</strong> al 31 de agosto de 2026.</p>
 
     <div class="market-share">
       <div class="ms-total">
@@ -1519,14 +1820,14 @@
   <!-- ================= COMPARATIVA GENERAL ================= -->
   <section id="comparativa">
     <h2 class="title">Comparativa frente a otras opciones</h2>
-    <p class="subtitle">¿Cómo se comportan los <strong>aportes voluntarios</strong> frente a las alternativas más comunes del mercado peruano?</p>
+    <p class="subtitle">¿Cómo se para este producto frente a las alternativas más comunes del mercado peruano?</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>Característica</th>
-            <th>Aporte voluntario sin fin previsional</th>
+            <th>AFP sin fin previsional</th>
             <th>Depósito a plazo</th>
             <th>Fondo mutuo</th>
           </tr>
@@ -1601,10 +1902,9 @@
       </div>
 
       <div class="scenario">
-        <p>María tiene un ingreso extra de <strong>S/ 10,000</strong> y quiere usarlo para la educación universitaria de su hijo en <span class="q">unos 3 años</span>. No quiere congelar el dinero hasta su jubilación, pero tampoco quiere tenerlo quieto en una cuenta de ahorros. Decide abrir una cuenta de <strong>aportes voluntarios</strong> sin fin previsional en el <strong>Fondo 2 (Balanceado)</strong>.</p>
+        <p>María tiene un ingreso extra de <strong>S/ 10,000</strong> y quiere usarlo para la educación universitaria de su hijo en <span class="q">unos 3 años</span>. No quiere congelar el dinero hasta su jubilación, pero tampoco quiere tenerlo quieto en una cuenta de ahorros. Decide abrir una cuenta de aportes voluntarios sin fin previsional en el <strong>Fondo 2 (Balanceado)</strong>.</p>
       </div>
 
-      <!-- GRÁFICO DE BARRAS -->
       <div class="chart">
         <div class="chart-title">Evolución del ahorro · hipotético 6% anual neto</div>
 
@@ -1680,7 +1980,7 @@
           <li><b>Requisito de elegibilidad.</b> Necesitas más de 5 años de incorporación al SPP o tener 50 años de edad.</li>
           <li><b>Proceso de retiro no instantáneo.</b> La AFP tiene hasta el quinto día hábil siguiente de remitida tu solicitud de retiro para efectuar el pago del monto solicitado. Además, el retiro se paga al valor cuota vigente el día del pago, por lo que el importe puede diferir de una consulta previa del saldo.</li>
           <li><b>Embargable.</b> A diferencia de los aportes con fin previsional, estos aportes son embargables en caso de sentencia judicial.</li>
-          <li><b>No tiene seguro de depósito.</b> El Fondo de Seguro de Depósitos (FSD) no cubre inversiones en fondos de pensiones.</li>
+          <li><b>No tiene seguro de depósito.</b> El Fondo de Seguro de Depósitos no cubre inversiones en fondos de pensiones.</li>
         </ul>
       </div>
     </div>
@@ -1767,7 +2067,7 @@
     <ul class="avoid">
       <li><b>Rentabilidad garantizada.</b> Los fondos de AFP invierten en mercados y sus valores fluctúan. Nadie puede prometerte un porcentaje fijo.</li>
       <li><b>Que el dinero esté disponible al instante.</b> El retiro requiere una solicitud y la AFP tiene hasta el quinto día hábil siguiente para efectuar el pago. No es como retirar de un cajero.</li>
-      <li><b>Que sea idéntico a un depósito a plazo fijo.</b> Aquí NO hay un fondo de seguro de depósito (FSD) ni tasa fija. Hay potencial de mayor retorno, pero también volatilidad. Y es embargable.</li>
+      <li><b>Que sea idéntico a un depósito a plazo.</b> Aquí no hay seguro de depósito ni tasa fija. Hay potencial de mayor retorno, pero también volatilidad. Y es embargable.</li>
       <li><b>Que la cuenta reemplace a tu fondo de emergencia.</b> El fondo de emergencia vive en un producto líquido. Este instrumento es para objetivos con horizonte.</li>
       <li><b>Que puedas entrar y salir sin costo.</b> Las comisiones de gestión se cobran igual durante el tiempo que tengas el dinero invertido. Considera el costo de oportunidad antes de moverlo.</li>
     </ul>
@@ -1777,33 +2077,56 @@
   <section id="reflexion">
     <div class="callout">
       <h2>Una última reflexión</h2>
-      <p>Los <strong>aportes voluntarios sin fin previsional</strong> son, probablemente, el instrumento más subestimado del sistema AFP peruano. Combinan algo poco común: <strong style="color:#5eead4">acceso a gestión profesional, respaldo regulatorio y flexibilidad de retiro</strong>, con rendimientos inafectos del Impuesto a la Renta según la SUNAT.</p>
+      <p>Los aportes voluntarios sin fin previsional son, probablemente, el instrumento más subestimado del sistema AFP peruano. Combinan algo poco común: <strong style="color:#5eead4">acceso a gestión profesional, respaldo regulatorio y flexibilidad de retiro</strong>, con rendimientos inafectos del Impuesto a la Renta según la SUNAT.</p>
       <p>No son para todo el mundo. Requieren una mínima disciplina de ahorro, un horizonte claro y tolerancia a la volatilidad según el fondo elegido. Tampoco son un depósito bancario: son embargables y su valor fluctúa. Pero para quien tiene un objetivo concreto —una maestría, la inicial de una casa, un fondo para emprender— representan una alternativa sensata frente a dejar el dinero quieto perdiendo poder adquisitivo.</p>
       <p>Como siempre: entiende el producto, elige el fondo correcto, no comprometas lo que no puedes permitirte y consulta a un profesional antes de mover montos importantes. Con esa base, este instrumento puede convertirse en una pieza valiosa de tu estrategia financiera.</p>
     </div>
   </section>
 
-  <!-- ================= CONTACTO ================= -->
-  <section id="contacto">
-    <div class="contact">
-      <h3>¿Te quedó alguna duda?</h3>
-      <p>Si después de leer esta guía tienes preguntas sobre aportes voluntarios, elección de fondos o cómo integrarlos en tu estrategia, escríbeme. Con gusto te ayudo.</p>
+  <!-- ================= APP APALANCATE ================= -->
+  <section id="app-apalancate">
+    <div class="app-invite">
 
-      <a class="mail" href="mailto:contactanos_aca@proton.me">
+      <div class="app-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="4" width="20" height="16" rx="3"/>
-          <path d="M2 7l10 7 10-7"/>
+          <rect x="6" y="2" width="12" height="20" rx="3"/>
+          <path d="M11 18h2"/>
+          <path d="M9 7h6"/>
+          <path d="M9 11h6"/>
+          <path d="M9 15h4"/>
         </svg>
-        contactanos_aca@proton.me
+      </div>
+
+      <h3>Lleva tus inversiones en el bolsillo</h3>
+      <p class="lead">Descarga la app <strong>Apalancate</strong> y explora desde tu celular las opciones de ahorro e inversión que se adaptan a tu perfil. Toda la información que necesitas para decidir con criterio, sin tecnicismos.</p>
+
+      <div class="app-features">
+        <div class="app-feature"><span class="dot">✓</span> Factoring y alternativas de inversión</div>
+        <div class="app-feature"><span class="dot">✓</span> Contenido educativo y guías claras</div>
+        <div class="app-feature"><span class="dot">✓</span> Comparativas por plazo y riesgo</div>
+        <div class="app-feature"><span class="dot">✓</span> Actualizaciones del mercado peruano</div>
+      </div>
+
+      <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.apalancate.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar Apalancate en Google Play">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M47 24.9c-3.4 2.6-5.6 6.9-5.6 12.3v437.6c0 5.4 2.2 9.7 5.6 12.3l.9.7L291.5 247.9v-3.8L47.9 24.2l-.9.7z" fill="#00A0FF"/>
+          <path d="M366.9 323.3l-75.4-75.4v-3.8l75.4-75.4 1.6.9 89.3 50.7c25.5 14.5 25.5 38.2 0 52.7l-89.3 50.7-1.6.9z" fill="#FFCE00"/>
+          <path d="M368.5 322.4L291.5 245.9 47 487.1c8.4 8.9 22.3 10 37.9 1.2l283.6-160.9" fill="#FF3A44"/>
+          <path d="M368.5 169.5L84.9 8.6C69.3-.2 55.4.9 47 9.8l244.5 241.2 77-81.5z" fill="#00F076"/>
+        </svg>
+        <span class="txt">
+          <small>Disponible en</small>
+          <span>Google Play</span>
+        </span>
       </a>
 
-      <p class="note">Respondo personalmente a cada mensaje. Si tu consulta es sobre tu situación particular, incluye el contexto para poder orientarte mejor.</p>
+      <p class="note">Descarga gratuita. Disponible para dispositivos Android. Busca "Apalancate" en Google Play o usa el botón de arriba.</p>
     </div>
   </section>
 
   <footer>
-    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Las rentabilidades mencionadas son referenciales y no representan una promesa ni garantía de resultados. El valor de las inversiones puede subir o bajar. Las comisiones y rentabilidades específicas de los aportes voluntarios sin fin previsional están tomadas de las series estadísticas oficiales de la SBS al cierre de agosto de 2026 (FP-1337 y FP-1341). Para decisiones tributarias, consulta el Informe N.º 000054-2025-SUNAT/7T0000 y a un asesor calificado. Antes de tomar decisiones, evalúa tu situación personal y consulta con un asesor certificado o con tu AFP.</p>
-    <span class="update">Última actualización: octubre 2026</span>
+    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Las rentabilidades mencionadas son referenciales y no representan una promesa ni garantía de resultados. El valor de las inversiones puede subir o bajar. Las comisiones y rentabilidades específicas de los aportes voluntarios sin fin previsional están tomadas de las series estadísticas oficiales de la SBS (FP-1337 y FP-1341). Para decisiones tributarias, consulta el Informe N.º 000054-2025-SUNAT/7T0000 y a un asesor calificado. Antes de tomar decisiones, evalúa tu situación personal y consulta con un asesor certificado o con tu AFP.</p>
+    <span class="update">Última actualización: octubre 2026 · Datos SBS al 31 de agosto de 2026</span>
   </footer>
 
 </div>

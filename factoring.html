@@ -601,55 +601,156 @@
   .callout p{font-size:.95rem;color:var(--ink-soft);margin:0 0 14px;}
   .callout p:last-child{margin-bottom:0;}
 
-  /* ============ CONTACTO ============ */
-  .contact{
-    background:linear-gradient(180deg, rgba(22,38,63,.9), rgba(17,30,53,.9));
-    border:1px solid var(--line-strong);
+  /* ============ APP APALANCATE ============ */
+  .app-invite{
+    background:
+      radial-gradient(500px 260px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
+      radial-gradient(500px 260px at 0% 100%, rgba(251,191,36,.14), transparent 70%),
+      linear-gradient(160deg,#0a1120,#132038);
+    color:#dbe6f5;
     border-radius:var(--radius);
-    padding:32px 28px;
+    padding:36px 30px;
     box-shadow:var(--shadow);
-    text-align:center;
+    border:1px solid var(--line-strong);
     position:relative;overflow:hidden;
+    text-align:center;
   }
-  .contact::before{
-    content:"";position:absolute;inset:-2px;
-    background:radial-gradient(400px 200px at 50% 0%, rgba(45,212,191,.15), transparent 70%);
+  .app-invite::before{
+    content:"";
+    position:absolute;top:-80px;right:-80px;
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, rgba(45,212,191,.30), transparent 70%);
+    filter:blur(20px);
     pointer-events:none;
   }
-  .contact h3{
-    margin:0 0 8px;font-size:1.2rem;font-weight:850;color:#f4f8ff;
-    position:relative;z-index:1;
+  .app-invite::after{
+    content:"";
+    position:absolute;bottom:-80px;left:-80px;
+    width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle, rgba(251,191,36,.20), transparent 70%);
+    filter:blur(20px);
+    pointer-events:none;
   }
-  .contact p{
-    margin:0 0 22px;color:var(--muted);font-size:.95rem;
-    position:relative;z-index:1;
-    max-width:520px;margin-left:auto;margin-right:auto;
-  }
-  .contact a.mail{
-    display:inline-flex;align-items:center;gap:10px;
-    background:linear-gradient(135deg, rgba(45,212,191,.18), rgba(20,184,166,.10));
+
+  .app-invite .app-icon{
+    width:76px;height:76px;
+    border-radius:20px;
+    background:linear-gradient(135deg, rgba(45,212,191,.22), rgba(20,184,166,.12));
     border:1px solid rgba(45,212,191,.45);
+    display:grid;place-items:center;
+    margin:0 auto 20px;
+    position:relative;z-index:1;
+    box-shadow:0 12px 30px -12px rgba(45,212,191,.6);
+  }
+  .app-invite .app-icon svg{
+    width:38px;height:38px;
     color:var(--teal-soft);
+  }
+
+  .app-invite h3{
+    margin:0 0 10px;
+    font-size:clamp(1.25rem,3.4vw,1.55rem);
+    font-weight:850;
+    color:#f4f8ff;
+    letter-spacing:-.015em;
+    position:relative;z-index:1;
+  }
+  .app-invite .lead{
+    margin:0 auto 26px;
+    max-width:520px;
+    font-size:.98rem;
+    color:#b9c9df;
+    line-height:1.7;
+    position:relative;z-index:1;
+  }
+  .app-invite .lead strong{color:#5eead4;font-weight:800;}
+
+  .app-features{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    max-width:420px;
+    margin:0 auto 28px;
+    text-align:left;
+    position:relative;z-index:1;
+  }
+  @media(min-width:520px){ .app-features{grid-template-columns:1fr 1fr;} }
+
+  .app-feature{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(148,180,224,.06);
+    border:1px solid var(--line-strong);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .app-feature .dot{
+    width:22px;height:22px;
+    border-radius:50%;
+    display:grid;place-items:center;
+    background:rgba(45,212,191,.18);
+    color:var(--teal-soft);
+    font-weight:850;
+    font-size:.72rem;
+    flex:0 0 auto;
+    border:1px solid rgba(45,212,191,.35);
+  }
+
+  .play-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    background:#ffffff;
+    color:#0b1220;
     text-decoration:none;
     font-weight:750;
-    font-size:1rem;
-    padding:14px 24px;
-    border-radius:999px;
-    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-    position:relative;z-index:1;
-    word-break:break-all;
-    max-width:100%;
+    padding:14px 26px 14px 20px;
+    border-radius:14px;
+    transition:transform .2s ease,box-shadow .2s ease;
+    position:relative;
+    z-index:1;
+    box-shadow:0 12px 30px -12px rgba(255,255,255,.35);
+    border:1px solid #ffffff;
   }
-  .contact a.mail:hover,.contact a.mail:focus-visible{
-    transform:translateY(-2px);
-    background:linear-gradient(135deg, rgba(45,212,191,.28), rgba(20,184,166,.18));
-    box-shadow:0 12px 30px -10px rgba(45,212,191,.55);
+  .play-btn:hover,.play-btn:focus-visible{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px -16px rgba(255,255,255,.45);
     outline:none;
   }
-  .contact a.mail svg{width:18px;height:18px;flex:0 0 auto;}
-  .contact .note{
-    margin:16px 0 0;font-size:.8rem;color:var(--muted);
+  .play-btn svg{
+    width:32px;height:32px;
+    flex:0 0 auto;
+  }
+  .play-btn .txt{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height:1.15;
+  }
+  .play-btn .txt small{
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    opacity:.72;
+  }
+  .play-btn .txt span{
+    font-size:1.02rem;
+    font-weight:850;
+  }
+
+  .app-invite .note{
+    margin:22px 0 0;
+    font-size:.8rem;
+    color:var(--muted);
     position:relative;z-index:1;
+    max-width:520px;
+    margin-left:auto;margin-right:auto;
+    line-height:1.6;
   }
 
   /* ============ FOOTER ============ */
@@ -703,9 +804,10 @@
     .toc{margin-top:-50px;padding:18px;}
     .example{padding:22px 18px;}
     .timeline{grid-template-columns:1fr;}
-    .contact{padding:26px 20px;}
-    .contact a.mail{font-size:.9rem;padding:12px 18px;}
-    .lead-callout{padding:22px 20px 18px;}
+    .app-invite{padding:28px 20px;}
+    .play-btn{padding:12px 20px 12px 16px;gap:12px;}
+    .play-btn svg{width:28px;height:28px;}
+    .play-btn .txt span{font-size:.95rem;}
   }
 </style>
 </head>
@@ -714,7 +816,7 @@
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Apalancate · Perú</span>
+    <span class="eyebrow">Guía visual · Perú · Actualizado 2026</span>
     <h1>Invertir en <em>Factoring</em>: lo que nadie te cuenta y deberías saber</h1>
     <p class="lede">Una guía honesta, con ilustraciones, estadísticas actualizadas y un ejemplo ilustrativo, para quien nunca ha invertido en factoring y quiere entender cómo funciona de verdad.</p>
 
@@ -783,7 +885,7 @@
           </svg>
         </div>
         <h4>El Proveedor</h4>
-        <p>Una pequeña o mediana empresa que ya vendió y entregó su producto o servicio. Tiene una factura por cobrar, pero el pago le llegará a 30, 60 o 90 días. Necesita liquidez <strong>hoy</strong>, no en dos o más meses.</p>
+        <p>Una pequeña o mediana empresa que ya vendió y entregó su producto o servicio. Tiene una factura por cobrar, pero el pago le llegará a 30, 60 o 90 días. Necesita liquidez <strong>hoy</strong>, no en dos meses.</p>
       </article>
 
       <!-- FACTURA -->
@@ -987,8 +1089,8 @@
 
   <!-- ================= RENTABILIDAD POR TAMAÑO ================= -->
   <section id="rentabilidad">
-    <h2 class="title">¿Cúanto podría ganar? (Rentabilidad por tamaño de empresa)</h2>
-    <p class="subtitle">No todas las operaciones de factoring rinden igual. El tamaño del pagador/empresa (y su perfil de riesgo) determina la tasa de descuento y, por tanto, el "retorno potencial para el inversionista".</p>
+    <h2 class="title">Rentabilidad por tamaño de empresa</h2>
+    <p class="subtitle">No todas las operaciones de factoring rinden igual. El tamaño del pagador (y su perfil de riesgo) determina la tasa de descuento y, por tanto, el retorno potencial para el inversionista.</p>
 
     <div class="table-wrap">
       <table>
@@ -998,7 +1100,7 @@
             <th>Participación en monto</th>
             <th>Tasa de descuento referencial</th>
             <th>Perfil de riesgo</th>
-            <th>Retorno potencial anual (Inversionista)</th>
+            <th>Retorno potencial anual</th>
           </tr>
         </thead>
         <tbody>
@@ -1058,7 +1160,7 @@
 
   <!-- ================= VENTAJAS / RIESGOS ================= -->
   <section id="ventajas">
-    <h2 class="title">Ventajas y riesgos</h2>
+    <h2 class="title">Ventajas y riesgos, sin adornos</h2>
     <p class="subtitle">No hay inversión perfecta. Aquí te damos las dos caras para que decidas con la información completa.</p>
 
     <div class="two-col">
@@ -1215,7 +1317,7 @@
 
     <ul class="avoid">
       <li><b>Rendimientos garantizados.</b> Cualquier plataforma que prometa un retorno fijo alto sin riesgo debe hacerte desconfiar. Los retornos altos siempre vienen con riesgo real.</li>
-      <li><b>Que sea igual a un "depósito a plazo fijo".</b> En un depósito, tu capital está protegido por el FSD (Fondo de Seguro de Depósitos) hasta cierto monto. En factoring no existe está protección.</li>
+      <li><b>Que sea igual a un plazo fijo.</b> En un depósito, tu capital está protegido por el seguro estatal hasta cierto monto. En factoring no hay red de seguridad.</li>
       <li><b>Liquidez instantánea.</b> Una vez que compras la factura, tu capital queda comprometido hasta el vencimiento. No hay salida anticipada fácil.</li>
       <li><b>Quedarte con la primera tasa.</b> Compara varias operaciones, revisa el historial del pagador y calcula el retorno neto tras comisiones.</li>
       <li><b>Invertir dinero que necesitarás pronto.</b> Si vas a requerir ese capital en los próximos meses, no lo pongas aquí. El factoring es para dinero que puedes dejar trabajando.</li>
@@ -1232,21 +1334,44 @@
     </div>
   </section>
 
-  <!-- ================= CONTACTO ================= -->
-  <section id="contacto">
-    <div class="contact">
-      <h3>¿Te quedó alguna duda?</h3>
-      <p>Si después de leer esta guía tienes alguna otra pregunta, escríbeme. Con gusto te ayudo a resolverlo.</p>
+  <!-- ================= APP APALANCATE ================= -->
+  <section id="app-apalancate">
+    <div class="app-invite">
 
-      <a class="mail" href="mailto:contactanos_aca@proton.me">
+      <div class="app-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="4" width="20" height="16" rx="3"/>
-          <path d="M2 7l10 7 10-7"/>
+          <rect x="6" y="2" width="12" height="20" rx="3"/>
+          <path d="M11 18h2"/>
+          <path d="M9 7h6"/>
+          <path d="M9 11h6"/>
+          <path d="M9 15h4"/>
         </svg>
-        contactanos_aca@proton.me
+      </div>
+
+      <h3>Lleva tus inversiones en el bolsillo</h3>
+      <p class="lead">Descarga la app <strong>Apalancate</strong> y explora desde tu celular las opciones de ahorro e inversión que se adaptan a tu perfil. Toda la información que necesitas para decidir con criterio, sin tecnicismos.</p>
+
+      <div class="app-features">
+        <div class="app-feature"><span class="dot">✓</span> Factoring y alternativas de inversión</div>
+        <div class="app-feature"><span class="dot">✓</span> Contenido educativo y guías claras</div>
+        <div class="app-feature"><span class="dot">✓</span> Comparativas por plazo y riesgo</div>
+        <div class="app-feature"><span class="dot">✓</span> Actualizaciones del mercado peruano</div>
+      </div>
+
+      <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.apalancate.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar Apalancate en Google Play">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M47 24.9c-3.4 2.6-5.6 6.9-5.6 12.3v437.6c0 5.4 2.2 9.7 5.6 12.3l.9.7L291.5 247.9v-3.8L47.9 24.2l-.9.7z" fill="#00A0FF"/>
+          <path d="M366.9 323.3l-75.4-75.4v-3.8l75.4-75.4 1.6.9 89.3 50.7c25.5 14.5 25.5 38.2 0 52.7l-89.3 50.7-1.6.9z" fill="#FFCE00"/>
+          <path d="M368.5 322.4L291.5 245.9 47 487.1c8.4 8.9 22.3 10 37.9 1.2l283.6-160.9" fill="#FF3A44"/>
+          <path d="M368.5 169.5L84.9 8.6C69.3-.2 55.4.9 47 9.8l244.5 241.2 77-81.5z" fill="#00F076"/>
+        </svg>
+        <span class="txt">
+          <small>Disponible en</small>
+          <span>Google Play</span>
+        </span>
       </a>
 
-      <p class="note">Respondo personalmente a cada mensaje. Incluye el contexto para poder ayudarte mejor.</p>
+      <p class="note">Descarga gratuita. Disponible para dispositivos Android. Busca "Apalancate" en Google Play o usa el botón de arriba.</p>
     </div>
   </section>
 

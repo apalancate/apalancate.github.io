@@ -440,7 +440,7 @@
     box-shadow:var(--shadow-sm);
     overflow-x:auto;
     backdrop-filter:blur(6px);
-    margin-bottom:20px;
+    margin-bottom:12px;
   }
   table{
     width:100%;
@@ -479,6 +479,158 @@
   .pill.low{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
   .pill.mid{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.3);}
   .pill.high{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
+
+  /* Nota de fuente debajo de tabla */
+  .src-note{
+    display:block;
+    font-size:.82rem;
+    color:var(--muted);
+    font-style:italic;
+    line-height:1.6;
+    margin:0 0 24px;
+    padding-left:14px;
+    border-left:3px solid rgba(45,212,191,.25);
+  }
+  .src-note strong{color:var(--ink-soft);font-style:normal;font-weight:750;}
+
+  /* ============ DEFINICIONES ============ */
+  .defs{
+    display:grid;
+    gap:12px;
+    grid-template-columns:1fr;
+    margin-bottom:28px;
+  }
+  @media(min-width:600px){ .defs{grid-template-columns:1fr 1fr;} }
+  .def{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-radius:14px;
+    padding:16px 18px;
+    transition:border-color .2s ease,transform .2s ease;
+    backdrop-filter:blur(6px);
+  }
+  .def:hover{border-color:rgba(45,212,191,.35);transform:translateY(-2px);}
+  .def h4{
+    margin:0 0 6px;
+    font-size:.92rem;
+    font-weight:800;
+    color:var(--teal-soft);
+    display:flex;align-items:center;gap:8px;
+  }
+  .def h4::before{
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:var(--teal-soft);
+    box-shadow:0 0 8px var(--teal-soft);
+    flex:0 0 auto;
+  }
+  .def p{margin:0;font-size:.86rem;color:var(--muted);line-height:1.6;}
+  .def p + p{margin-top:8px;}
+
+  /* ============ CASO PRÁCTICO ============ */
+  .case{
+    background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
+    border:1px solid var(--line-strong);
+    border-left:5px solid var(--amber);
+    border-radius:var(--radius);
+    padding:24px 22px;
+    box-shadow:var(--shadow-sm);
+    margin-bottom:22px;
+    backdrop-filter:blur(6px);
+  }
+  .case-head{
+    display:flex;align-items:center;gap:12px;margin-bottom:18px;
+    padding-bottom:14px;border-bottom:1px dashed var(--line-strong);
+    flex-wrap:wrap;
+  }
+  .case-head .tag{
+    background:rgba(251,191,36,.15);color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+    font-size:.7rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 12px;border-radius:999px;
+  }
+  .case-head h4{margin:0;font-size:1.05rem;color:#f4f8ff;}
+
+  .case-inputs{
+    display:grid;gap:10px;grid-template-columns:1fr;
+    margin-bottom:20px;
+  }
+  @media(min-width:520px){ .case-inputs{grid-template-columns:1fr 1fr;} }
+  .case-input{
+    background:rgba(11,18,32,.5);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:10px 14px;
+    font-size:.88rem;
+    color:var(--ink-soft);
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+  }
+  .case-input span:first-child{color:var(--muted);}
+  .case-input span:last-child{color:#f4f8ff;font-weight:750;font-variant-numeric:tabular-nums;}
+
+  .case-calc{
+    list-style:none;margin:0;padding:0;
+    display:grid;gap:10px;
+    margin-bottom:18px;
+  }
+  .case-calc li{
+    display:flex;justify-content:space-between;
+    align-items:center;
+    gap:14px;
+    padding:12px 16px;
+    background:rgba(11,18,32,.5);
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-size:.9rem;
+    color:var(--ink-soft);
+  }
+  .case-calc li.sub{background:rgba(94,234,212,.05);border-color:rgba(94,234,212,.25);}
+  .case-calc li.total{
+    background:linear-gradient(135deg, rgba(15,118,110,.55), rgba(13,148,136,.35));
+    border:1px solid rgba(45,212,191,.45);
+    color:#eafff9;
+    font-weight:800;
+  }
+  .case-calc li .op{
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    color:var(--muted);
+    font-weight:800;
+    min-width:14px;
+  }
+  .case-calc li .desc{flex:1;}
+  .case-calc li .val{font-variant-numeric:tabular-nums;font-weight:750;}
+  .case-calc li.total .val{color:#ffffff;font-size:1.05rem;}
+
+  .case-result{
+    background:linear-gradient(135deg, rgba(15,118,110,.55), rgba(13,148,136,.35));
+    border:1px solid rgba(45,212,191,.45);
+    border-radius:12px;
+    padding:18px 20px;
+    color:#eafff9;
+    font-size:.95rem;
+  }
+  .case-result strong{color:#ffffff;}
+  .case-result .big{
+    display:block;
+    font-size:1.4rem;
+    font-weight:850;
+    color:#ffffff;
+    margin:6px 0 8px;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ============ TRANSPARENCIA ============ */
+  .transparency{
+    background:rgba(251,191,36,.06);
+    border:1px solid rgba(251,191,36,.22);
+    border-left:4px solid var(--amber);
+    border-radius:12px;
+    padding:16px 18px;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    line-height:1.65;
+  }
+  .transparency strong{color:var(--amber);}
 
   /* ============ VENTAJAS / RIESGOS ============ */
   .two-col{display:grid;gap:18px;grid-template-columns:1fr;}
@@ -842,7 +994,7 @@
       <li><a href="#como-funciona"><span class="n">02</span> Cómo funciona, paso a paso</a></li>
       <li><a href="#ejemplo"><span class="n">03</span> Ejemplo ilustrativo con números</a></li>
       <li><a href="#estadisticas"><span class="n">04</span> El mercado en cifras (2025)</a></li>
-      <li><a href="#rentabilidad"><span class="n">05</span> Rentabilidad por tamaño de empresa</a></li>
+      <li><a href="#rentabilidad"><span class="n">05</span> ¿Cuánto podría ganar?</a></li>
       <li><a href="#ventajas"><span class="n">06</span> Ventajas reales</a></li>
       <li><a href="#riesgos"><span class="n">07</span> Riesgos que debes conocer</a></li>
       <li><a href="#oportunidades"><span class="n">08</span> Oportunidades del momento</a></li>
@@ -885,7 +1037,7 @@
           </svg>
         </div>
         <h4>El Proveedor</h4>
-        <p>Una pequeña o mediana empresa que ya vendió y entregó su producto o servicio. Tiene una factura por cobrar, pero el pago le llegará a 30, 60 o 90 días. Necesita liquidez <strong>hoy</strong>, no en dos meses.</p>
+        <p>Una pequeña o mediana empresa que ya vendió y entregó su producto o servicio. Tiene una factura por cobrar, pero el pago le llegará a 30, 60 o 90 días. Necesita liquidez <strong>hoy</strong>, no en dos o más meses.</p>
       </article>
 
       <!-- FACTURA -->
@@ -1052,6 +1204,11 @@
             <td>84.9% son MYPE</td>
           </tr>
           <tr>
+            <td><strong>MYPE usuarias</strong></td>
+            <td>25,494</td>
+            <td>84.9% del total de empresas usuarias</td>
+          </tr>
+          <tr>
             <td><strong>Monto MYPE</strong></td>
             <td>S/ 12,347 millones</td>
             <td>23.7% del total</td>
@@ -1080,8 +1237,8 @@
       </table>
     </div>
 
-    <p style="font-size:.85rem;color:var(--muted);font-style:italic;">
-      Fuentes: CAVALI, Ministerio de la Producción (PRODUCE), SBS. Datos al cierre de diciembre de 2025.
+    <p class="src-note">
+      Fuentes: CAVALI, Ministerio de la Producción (PRODUCE) y SBS. Datos al cierre de diciembre de 2025.
     </p>
   </section>
 
@@ -1089,71 +1246,210 @@
 
   <!-- ================= RENTABILIDAD POR TAMAÑO ================= -->
   <section id="rentabilidad">
-    <h2 class="title">¿Cuánto podría ganar? (Por tamaño de empresa)</h2>
-    <p class="subtitle">No todas las operaciones de factoring rinden igual. El tamaño del pagador (y su perfil de riesgo) determina la tasa de descuento y, por tanto, el retorno potencial para el inversionista.</p>
+    <h2 class="title">¿Cuánto podría ganar?</h2>
+    <p class="subtitle">La rentabilidad de una operación de factoring no es fija: depende del tamaño del pagador, del plazo y de los costos operativos. Aquí tienes las definiciones clave, las tasas por segmento y un caso práctico con números.</p>
+
+    <!-- DEFINICIONES -->
+    <h3>Definiciones clave</h3>
+    <p>Antes de mirar las cifras, conviene dominar estos conceptos. Son los que aparecen en cualquier operación y los que determinan cuánto ganas y cuánto se descuenta.</p>
+
+    <div class="defs">
+      <div class="def">
+        <h4>Factura negociable</h4>
+        <p>Título valor que representa una venta a crédito. Es el activo que se cede al inversionista.</p>
+      </div>
+      <div class="def">
+        <h4>Pagador</h4>
+        <p>Empresa que debe pagar la factura. Su solvencia determina el riesgo y la tasa.</p>
+      </div>
+      <div class="def">
+        <h4>Tasa de descuento</h4>
+        <p>Porcentaje que retiene el inversionista del valor nominal. Es su ganancia bruta.</p>
+      </div>
+      <div class="def">
+        <h4>Plazo</h4>
+        <p>Días hasta el vencimiento. En Perú: 30, 60 y 90 días típicamente.</p>
+      </div>
+      <div class="def">
+        <h4>Adelanto</h4>
+        <p>Monto que recibe el proveedor hoy. Suele ser 90%–98% del valor nominal.</p>
+      </div>
+      <div class="def">
+        <h4>Provisión de riesgo</h4>
+        <p>Reserva para cubrir impagos o retrasos. Varía según la calidad del pagador. En las plataformas (a menudo), este "costo de riesgo" ya está incorporado dentro de la "tasa de descuento" que te ofrecen.</p>
+      </div>
+      <div class="def">
+        <h4>Comisión plataforma</h4>
+        <p>Costo por intermediación, gestión de cobro y administración.</p>
+      </div>
+      <div class="def">
+        <h4>Costo de Fondeo</h4>
+        <p>Algunas plataformas operan 100% con capital de sus socios o inversionistas. Si la plataforma pidió dinero prestado a un banco para financiar tu operación, este le cobra intereses.</p>
+      </div>
+      <div class="def">
+        <h4>Impuesto a la Renta</h4>
+        <p>Personas naturales pagan 5% sobre ganancias netas de capital (LIR Perú).</p>
+      </div>
+    </div>
+
+    <!-- TABLA DE RENTABILIDAD -->
+    <h3>Rentabilidad según tamaño de empresa</h3>
+    <p>Tasas promedio reportadas en el mercado peruano. La tasa de descuento depende en gran medida de la solvencia del deudor.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Segmento</th>
-            <th>Participación en monto</th>
-            <th>Tasa de descuento referencial</th>
-            <th>Perfil de riesgo</th>
-            <th>Retorno potencial anual (al inversionista)</th>
+            <th>Tipo de empresa</th>
+            <th>Tasa anual</th>
+            <th>Tasa mensual</th>
+            <th>Riesgo</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Gran empresa</strong></td>
-            <td>~73%</td>
-            <td>1.0% – 1.2% mensual</td>
-            <td><span class="pill low">Bajo</span></td>
-            <td>8% – 10%</td>
-          </tr>
-          <tr>
-            <td><strong>Mediana empresa</strong></td>
-            <td>~4%</td>
-            <td>1.2% – 1.5% mensual</td>
-            <td><span class="pill mid">Moderado</span></td>
-            <td>10% – 13%</td>
+            <td><strong>Microempresa</strong></td>
+            <td>61.7%</td>
+            <td>≈ 5.1%</td>
+            <td><span class="pill high">Muy alto</span></td>
           </tr>
           <tr>
             <td><strong>Pequeña empresa</strong></td>
-            <td>~18%</td>
-            <td>1.5% – 2.0% mensual</td>
-            <td><span class="pill mid">Moderado-alto</span></td>
-            <td>13% – 16%</td>
+            <td>12.6%</td>
+            <td>≈ 1.05%</td>
+            <td><span class="pill mid">Medio</span></td>
           </tr>
           <tr>
-            <td><strong>Microempresa</strong></td>
-            <td>~6%</td>
-            <td>1.8% – 2.5% mensual</td>
-            <td><span class="pill high">Alto</span></td>
-            <td>15% – 22%</td>
+            <td><strong>Mediana empresa</strong></td>
+            <td>10.3%</td>
+            <td>≈ 0.86%</td>
+            <td><span class="pill low">Bajo</span></td>
+          </tr>
+          <tr>
+            <td><strong>Gran empresa</strong></td>
+            <td>7% – 12%</td>
+            <td>≈ 0.6% – 1.0%</td>
+            <td><span class="pill low">Muy bajo</span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <p style="font-size:.85rem;color:var(--muted);font-style:italic;">
-      Fuentes: Moody's Local (participación por segmento, octubre 2025), Infobae (tasa promedio 1%–1.5% mensual), APEFAC (retorno 8%–12% anual). Las tasas y retornos son referenciales y varían según el pagador, el plazo, la plataforma y las condiciones de cada operación.
+    <p class="src-note">
+      <strong>Fuentes:</strong> Prestamype (tasas por tamaño de empresa, 2025) y Produce Empresarial (tasas del sistema bancario, 2024). El promedio general del factoring MYPE en Perú fue de 37.2% anual en 2025. Las tasas anuales se convierten a mensuales dividiendo entre 12, en régimen de tasa simple.
     </p>
 
-    <div class="consider" style="margin-top:24px;">
-      <div class="cns">
-        <h4>¿Por qué la gran empresa concentra el mayor monto?</h4>
-        <p>Porque sus facturas tienen montos más altos y su perfil de riesgo es más bajo. Los bancos compiten por estas operaciones, lo que reduce la tasa de descuento. El retorno para el inversionista es menor, pero el riesgo también.</p>
+    <!-- COSTOS ASOCIADOS -->
+    <h3>Costos asociados a cada operación</h3>
+    <p>Lo que se descuenta de tu ganancia bruta. Los costos de libre negociación varían por plataforma.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th>Rango típico</th>
+            <th>Base de cálculo</th>
+            <th>¿Quién lo cobra?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Comisión de plataforma</strong> <em>(Estimación)</em></td>
+            <td>0.10% – 0.25% mensual</td>
+            <td>Valor nominal de la factura</td>
+            <td>Plataforma de factoring</td>
+          </tr>
+          <tr>
+            <td><strong>Provisión de riesgo</strong> <em>(Estimación)</em></td>
+            <td>0.05% – 0.15% mensual</td>
+            <td>Valor nominal de la factura</td>
+            <td>Plataforma de factoring</td>
+          </tr>
+          <tr>
+            <td><strong>Impuesto a la Renta</strong></td>
+            <td>5.0% fijo</td>
+            <td>Ganancia neta (persona natural)</td>
+            <td>SUNAT</td>
+          </tr>
+          <tr>
+            <td><strong>Costo de fondeo</strong> <em>(Estimación)</em></td>
+            <td>0.05% – 0.10% mensual</td>
+            <td>Monto adelantado</td>
+            <td>Entidad financiera (en caso aplique)</td>
+          </tr>
+          <tr>
+            <td><strong>Gastos de cobranza</strong></td>
+            <td>Variables</td>
+            <td>Solo en caso de retraso/impago</td>
+            <td>Plataforma / abogado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="src-note">
+      <strong>Fuentes:</strong> SUNAT (tasa del 5% del Impuesto a la Renta para personas naturales sobre ganancias de capital de segunda categoría). Los rangos marcados como <em>"Estimación"</em> son referenciales: las plataformas no publican tarifas estandarizadas porque son de libre negociación.
+    </p>
+
+    <!-- CASO PRÁCTICO -->
+    <h3>Caso práctico: Mediana empresa</h3>
+    <p>Ejemplo basado en la tasa promedio reportada para la mediana empresa (10.3% anual).</p>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="tag">Caso práctico</span>
+        <h4>¿Cuánto queda realmente después de todos los costos?</h4>
       </div>
-      <div class="cns">
-        <h4>¿Por qué las MYPE ofrecen tasas más altas?</h4>
-        <p>Porque su perfil de riesgo es mayor. Muchas no tienen historial crediticio extenso ni garantías. El inversionista que asume ese riesgo recibe una prima. La contraparte: la morosidad en este segmento es más alta.</p>
+
+      <div class="case-inputs">
+        <div class="case-input"><span>Capital invertido</span><span>S/ 10,000</span></div>
+        <div class="case-input"><span>Plazo</span><span>60 días</span></div>
+        <div class="case-input"><span>Tasa bruta mensual</span><span>0.86%</span></div>
+        <div class="case-input"><span>Comisión plataforma</span><span>0.15%</span></div>
+        <div class="case-input"><span>Provisión riesgo</span><span>0.10%</span></div>
       </div>
-      <div class="cns">
-        <h4>¿Dónde está el punto óptimo?</h4>
-        <p>Depende de tu tolerancia al riesgo. Si buscas estabilidad, la gran empresa. Si buscas mayor retorno y puedes asumir más riesgo, la pequeña empresa ofrece un equilibrio interesante. La microempresa es para perfiles agresivos.</p>
+
+      <ul class="case-calc">
+        <li>
+          <span class="op">+</span>
+          <span class="desc">Ganancia bruta <em>(0.86% × 2 meses)</em></span>
+          <span class="val">S/ 172.00</span>
+        </li>
+        <li>
+          <span class="op">−</span>
+          <span class="desc">Comisión plataforma <em>(0.15% × 2)</em></span>
+          <span class="val">S/ 30.00</span>
+        </li>
+        <li>
+          <span class="op">−</span>
+          <span class="desc">Provisión de riesgo <em>(0.10% × 2)</em></span>
+          <span class="val">S/ 20.00</span>
+        </li>
+        <li class="sub">
+          <span class="op">=</span>
+          <span class="desc">Ganancia antes de impuestos</span>
+          <span class="val">S/ 122.00</span>
+        </li>
+        <li>
+          <span class="op">−</span>
+          <span class="desc">Impuesto a la Renta <em>(5%)</em></span>
+          <span class="val">S/ 6.10</span>
+        </li>
+        <li class="total">
+          <span class="op">=</span>
+          <span class="desc">Ganancia neta final</span>
+          <span class="val">S/ 115.90</span>
+        </li>
+      </ul>
+
+      <div class="case-result">
+        <strong>Rentabilidad neta real</strong>
+        <span class="big">1.16% en 2 meses ≈ 6.95% anual</span>
+        S/ 115.90 sobre S/ 10,000 en 60 días. La diferencia entre la tasa bruta (10.3%) y la rentabilidad neta (6.95%) refleja el impacto de las comisiones operativas e impuestos sobre el retorno final del inversionista.
       </div>
     </div>
+
   </section>
 
   <div class="divider"><span>· · ·</span></div>
@@ -1167,7 +1463,7 @@
       <div class="panel pro">
         <h3><span class="chip">✓</span> Ventajas reales</h3>
         <ul>
-          <li><b>Rentabilidad atractiva.</b> Entre 8% y 12% anual en operaciones con pagadores grandes, y hasta 15%–22% en segmentos MYPE, según APEFAC y datos de mercado.</li>
+          <li><b>Rentabilidad atractiva.</b> Las tasas brutas por tamaño de empresa son 7%–12% anual en gran empresa, 10.3% en mediana, 12.6% en pequeña y hasta 61.7% en microempresa. El retorno neto final depende de las comisiones operativas y del Impuesto a la Renta, que reducen la tasa bruta.</li>
           <li><b>Plazos cortos.</b> 30, 60 o 90 días. Tu dinero rota y no queda atrapado por años.</li>
           <li><b>Respaldo legal.</b> La factura negociable tiene mérito ejecutivo. Muchas operaciones se registran en CAVALI o tienen seguro de impago.</li>
           <li><b>Accesible.</b> Algunas plataformas digitales permiten empezar con montos muy bajos.</li>
@@ -1179,19 +1475,19 @@
         <h3><span class="chip">!</span> Riesgos que debes conocer</h3>
         <ul>
           <li><b>Riesgo de impago.</b> La morosidad a 30 días fue 5.1% y a 90 días 4.5% a diciembre de 2025, según SBS. No es un riesgo cero.</li>
+          <li><b>Comisiones que reducen el retorno.</b> La tasa bruta que ves no es tu rentabilidad. La comisión de plataforma, la provisión de riesgo y el Impuesto a la Renta se descuentan antes de llegar a tu bolsillo.</li>
           <li><b>Regulación desigual.</b> Algunas plataformas no están supervisadas por la SBS ni tienen las mismas exigencias de provisiones.</li>
           <li><b>Menor liquidez.</b> No puedes retirar tu dinero hasta que la factura se cobre. No hay botón de cancelar.</li>
-          <li><b>Rendimientos no garantizados.</b> Las tasas publicitadas son proyecciones, no promesas.</li>
           <li><b>Concentración.</b> Una sola factura mala puede borrar tus ganancias. Diversificar no es opcional.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ================= Otros detalles sobre el Factoring ================= -->
+  <!-- ================= OPORTUNIDADES ================= -->
   <section id="oportunidades">
     <h2 class="title">Otros detalles sobre el Factoring</h2>
-    <p class="subtitle">Sigamos este mercado con atención.</p>
+    <p class="subtitle">Contexto adicional y factores que mueven el mercado del factoring peruano.</p>
 
     <div class="opps">
       <div class="opp">
@@ -1317,9 +1613,9 @@
 
     <ul class="avoid">
       <li><b>Rendimientos garantizados.</b> Cualquier plataforma que prometa un retorno fijo alto sin riesgo debe hacerte desconfiar. Los retornos altos siempre vienen con riesgo real.</li>
+      <li><b>Que la tasa bruta sea tu ganancia.</b> La tasa de descuento que ves no es lo que llega a tu bolsillo. La comisión de plataforma, la provisión de riesgo y el Impuesto a la Renta se descuentan antes.</li>
       <li><b>Que sea igual a un depósito a plazo fijo.</b> En un depósito, tu capital está protegido por el Fondo seguro de depósito (FSD) hasta cierto monto. En factoring esa protección no existe.</li>
       <li><b>Liquidez instantánea.</b> Una vez que compras la factura, tu capital queda comprometido hasta el vencimiento. No hay salida anticipada fácil.</li>
-      <li><b>Quedarte con la primera tasa.</b> Compara varias operaciones, revisa el historial del pagador y calcula el retorno neto tras comisiones.</li>
       <li><b>Invertir dinero que necesitarás pronto.</b> Si vas a requerir ese capital en los próximos meses, no lo pongas aquí. El factoring es para dinero que puedes dejar trabajando.</li>
     </ul>
   </section>
@@ -1328,8 +1624,8 @@
   <section id="reflexion">
     <div class="callout">
       <h2>Una última reflexión</h2>
-      <p>El factoring peruano no es una moda: es una industria consolidada, con marco legal, crecimiento sostenido y una demanda real de liquidez por parte de miles de empresas. En 2025 movió más de S/ 52,000 millones, equivalente al 4.4% del PBI.</p>
-      <p>Para un inversionista minorista ofrece algo poco común: <strong style="color:#5eead4">retornos potencialmente atractivos, plazos cortos y la posibilidad de empezar con montos bajos</strong>. Pero no hay almuerzo gratis. El riesgo de impago existe, la regulación no es homogénea y la liquidez no es instantánea.</p>
+      <p>El factoring peruano no es una moda: es una industria consolidada, con marco legal, crecimiento sostenido y una demanda real de liquidez por parte de miles de empresas. En 2025 movió S/ 52,057 millones, equivalente al 4.4% del PBI.</p>
+      <p>Para un inversionista minorista ofrece algo poco común: <strong style="color:#5eead4">retornos potencialmente atractivos, plazos cortos y la posibilidad de empezar con montos bajos</strong>. Pero no hay almuerzo gratis. El riesgo de impago existe, las comisiones operativas e impuestos se descuentan del retorno y la liquidez no es instantánea.</p>
       <p>Si decides entrar, hazlo con los ojos abiertos: investiga la plataforma, diversifica, empieza pequeño y nunca inviertas lo que no puedas permitirte perder. Con esa mentalidad, el factoring puede ser una pieza valiosa en tu portafolio, no una apuesta.</p>
     </div>
   </section>
@@ -1376,7 +1672,7 @@
   </section>
 
   <footer>
-    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Los rendimientos mencionados son referenciales y no representan una promesa ni garantía de resultados. Las tasas y estadísticas citadas provienen de fuentes públicas (CAVALI, PRODUCE, SBS, Moody's Local) y pueden variar. Toda inversión conlleva riesgo, incluida la posible pérdida del capital. Antes de invertir, evalúa tu situación personal y, de ser necesario, consulta con un asesor certificado.</p>
+    <p><strong>Aviso importante:</strong> este contenido tiene fines educativos e informativos y no constituye asesoría financiera, legal ni tributaria personalizada. Los rendimientos mencionados son referenciales y no representan una promesa ni garantía de resultados. Las tasas y estadísticas citadas provienen de fuentes públicas (CAVALI, PRODUCE, SBS, Moody's Local) y pueden variar. Toda inversión conlleva riesgo, incluida la posible pérdida de capital. Antes de invertir, evalúa tu situación personal y, de ser necesario, consulta con un asesor certificado.</p>
     <span class="update">Última actualización: octubre 2026</span>
   </footer>
 

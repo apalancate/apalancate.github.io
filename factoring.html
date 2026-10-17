@@ -972,6 +972,23 @@
     .play-btn .txt span{font-size:.95rem;}
   }
 </style>
+
+<!-- Ajustes de lectura en pantallas pequeñas (añadidos en esta edición) -->
+<style>
+  @media (max-width: 560px){
+    table{min-width:0;}
+    thead th{padding:11px 9px;font-size:.68rem;letter-spacing:.05em;}
+    tbody td{padding:11px 9px;font-size:.84rem;}
+    .case-calc li{gap:6px 10px;flex-wrap:wrap;}
+    .case-calc li .desc{flex:1 1 58%;}
+    .steps li{grid-template-columns:38px 1fr;gap:12px;}
+    .steps .n{width:38px;height:38px;font-size:.95rem;}
+    .src-note{font-size:.8rem;}
+    .table-wrap{padding:10px;}
+    .table-wrap[style]{padding:10px !important;}
+    .footer__grid, footer p{font-size:.9rem;}
+  }
+</style>
 </head>
 
 <body>
@@ -1233,14 +1250,14 @@
     <p>En 2025 el monto negociado creció con fuerza. En 2026 el ritmo bajó: entre enero y agosto se negociaron <strong>S/ 37,447 millones</strong> (14.8% más que en el mismo periodo de 2025) y el número de facturas subió <strong>9.4%</strong>. El mercado crece, pero más despacio.</p>
 
     <div class="table-wrap" style="padding:20px">
-      <svg viewBox="0 0 440 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: crecimiento del monto negociado de 20.6% en 2025 y 14.8% entre enero y agosto de 2026" style="width:100%;height:auto">
-        <line x1="50" y1="175" x2="420" y2="175" stroke="rgba(148,180,224,.28)" stroke-width="1"/>
-        <rect x="110" y="45" width="90" height="130" rx="6" fill="#2dd4bf"/>
-        <text x="155" y="34" text-anchor="middle" fill="#5eead4" font-size="19" font-weight="800" font-family="system-ui">+20.6%</text>
-        <text x="155" y="196" text-anchor="middle" fill="#8ea2bf" font-size="12" font-family="system-ui">2025 · año completo</text>
-        <rect x="260" y="82" width="90" height="93" rx="6" fill="#fbbf24"/>
-        <text x="305" y="71" text-anchor="middle" fill="#fbbf24" font-size="19" font-weight="800" font-family="system-ui">+14.8%</text>
-        <text x="305" y="196" text-anchor="middle" fill="#8ea2bf" font-size="12" font-family="system-ui">2026 · enero a agosto</text>
+      <svg viewBox="0 0 440 215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: el monto negociado creció 20.6% en 2025 y 14.8% entre enero y agosto de 2026" style="width:100%;height:auto">
+        <line x1="40" y1="175" x2="425" y2="175" stroke="rgba(148,180,224,.28)" stroke-width="1"/>
+        <rect x="105" y="45" width="95" height="130" rx="6" fill="#2dd4bf"/>
+        <text x="152" y="33" text-anchor="middle" fill="#5eead4" font-size="21" font-weight="800" font-family="system-ui">+20.6%</text>
+        <text x="152" y="200" text-anchor="middle" fill="#8ea2bf" font-size="15" font-family="system-ui">2025 · año completo</text>
+        <rect x="255" y="82" width="95" height="93" rx="6" fill="#fbbf24"/>
+        <text x="302" y="70" text-anchor="middle" fill="#fbbf24" font-size="21" font-weight="800" font-family="system-ui">+14.8%</text>
+        <text x="302" y="200" text-anchor="middle" fill="#8ea2bf" font-size="15" font-family="system-ui">2026 · enero a agosto</text>
       </svg>
     </div>
     <p class="src-note">Ambos son crecimientos interanuales comparables (año completo vs. mismo periodo del año anterior). Fuente: PRODUCE, <a href="https://www.producempresarial.pe/wp-content/uploads/2026/09/Reporte-Factoring-Agosto-2026.pdf" target="_blank" rel="noopener">reporte de agosto 2026</a>.</p>
@@ -1249,16 +1266,16 @@
     <p>Ojo con esta diferencia: las MYPE son la enorme mayoría de las <strong>empresas</strong>, pero mueven una parte minoritaria del <strong>dinero</strong>.</p>
 
     <div class="table-wrap" style="padding:20px">
-      <svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: el 84.9% de las empresas usuarias son MYPE, pero solo aportan el 23.7% del monto negociado" style="width:100%;height:auto">
-        <text x="0" y="16" fill="#8ea2bf" font-size="11" font-weight="700" font-family="system-ui">EMPRESAS USUARIAS</text>
-        <text x="440" y="16" text-anchor="end" fill="#5eead4" font-size="12" font-weight="800" font-family="system-ui">84.9% MYPE</text>
-        <rect x="0" y="24" width="440" height="30" rx="5" fill="#1b2f4d"/>
-        <rect x="0" y="24" width="373" height="30" rx="5" fill="#2dd4bf"/>
-        <text x="0" y="90" fill="#8ea2bf" font-size="11" font-weight="700" font-family="system-ui">MONTO NEGOCIADO</text>
-        <text x="440" y="90" text-anchor="end" fill="#fbbf24" font-size="12" font-weight="800" font-family="system-ui">23.7% MYPE</text>
-        <rect x="0" y="98" width="440" height="30" rx="5" fill="#1b2f4d"/>
-        <rect x="0" y="98" width="104" height="30" rx="5" fill="#fbbf24"/>
-        <text x="0" y="150" fill="#8ea2bf" font-size="11" font-family="system-ui">Las grandes empresas concentran el 76.3% del monto negociado.</text>
+      <svg viewBox="0 0 440 172" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: el 84.9% de las empresas usuarias son MYPE, pero solo aportan el 23.7% del monto negociado" style="width:100%;height:auto">
+        <text x="0" y="18" fill="#8ea2bf" font-size="14" font-weight="700" font-family="system-ui">EMPRESAS USUARIAS</text>
+        <text x="440" y="18" text-anchor="end" fill="#5eead4" font-size="15" font-weight="800" font-family="system-ui">84.9% MYPE</text>
+        <rect x="0" y="28" width="440" height="32" rx="5" fill="#1b2f4d"/>
+        <rect x="0" y="28" width="373" height="32" rx="5" fill="#2dd4bf"/>
+        <text x="0" y="102" fill="#8ea2bf" font-size="14" font-weight="700" font-family="system-ui">MONTO NEGOCIADO</text>
+        <text x="440" y="102" text-anchor="end" fill="#fbbf24" font-size="15" font-weight="800" font-family="system-ui">23.7% MYPE</text>
+        <rect x="0" y="112" width="440" height="32" rx="5" fill="#1b2f4d"/>
+        <rect x="0" y="112" width="104" height="32" rx="5" fill="#fbbf24"/>
+        <text x="0" y="167" fill="#8ea2bf" font-size="14" font-family="system-ui">Las grandes empresas concentran el 76.3% del monto negociado.</text>
       </svg>
     </div>
     <p class="src-note">Fuente: PRODUCE, <em>Facturas Negociables — Año 2025</em>. Datos al 31-12-2025. El gráfico compara unidades (empresas) con monto (soles): son dos medidas distintas del mismo mercado.</p>
@@ -1267,21 +1284,23 @@
     <p>La mayoría son pequeñas: dos de cada tres no llegan a S/ 10,000.</p>
 
     <div class="table-wrap" style="padding:20px">
-      <svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: 66% de las facturas son menores a 10,000 soles, 16% entre 10,000 y 25,000, y 18% mayores a 25,000" style="width:100%;height:auto">
-        <text x="0" y="14" fill="#8ea2bf" font-size="11" font-weight="700" font-family="system-ui">DISTRIBUCIÓN DE FACTURAS POR TAMAÑO (2025)</text>
-        <rect x="0" y="24" width="289" height="34" rx="5" fill="#2dd4bf"/>
-        <rect x="289" y="24" width="70" height="34" fill="#fbbf24"/>
-        <rect x="359" y="24" width="81" height="34" rx="5" fill="#fb923c"/>
-        <text x="144" y="46" text-anchor="middle" fill="#04211c" font-size="14" font-weight="800" font-family="system-ui">66%</text>
-        <text x="324" y="46" text-anchor="middle" fill="#3b2506" font-size="13" font-weight="800" font-family="system-ui">16%</text>
-        <text x="399" y="46" text-anchor="middle" fill="#3b2506" font-size="13" font-weight="800" font-family="system-ui">18%</text>
-        <text x="0" y="82" fill="#c2d0e4" font-size="11" font-family="system-ui">Hasta S/ 10,000</text>
-        <text x="200" y="82" fill="#c2d0e4" font-size="11" font-family="system-ui">Entre S/ 10,000 y 25,000</text>
-        <text x="0" y="102" fill="#c2d0e4" font-size="11" font-family="system-ui">Más de S/ 25,000</text>
-        <text x="440" y="102" text-anchor="end" fill="#5eead4" font-size="12" font-weight="800" font-family="system-ui">Ticket promedio: S/ 23,193</text>
+      <svg viewBox="0 0 440 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: 66% de las facturas son de hasta 10,000 soles, 16% están entre 10,000 y 25,000, y 18% superan los 25,000" style="width:100%;height:auto">
+        <text x="0" y="16" fill="#8ea2bf" font-size="14" font-weight="700" font-family="system-ui">DISTRIBUCIÓN DE FACTURAS POR TAMAÑO (2025)</text>
+        <rect x="0" y="26" width="289" height="34" rx="5" fill="#2dd4bf"/>
+        <rect x="289" y="26" width="70" height="34" fill="#fbbf24"/>
+        <rect x="359" y="26" width="81" height="34" rx="5" fill="#fb923c"/>
+        <text x="144" y="49" text-anchor="middle" fill="#04211c" font-size="16" font-weight="800" font-family="system-ui">66%</text>
+        <text x="324" y="49" text-anchor="middle" fill="#3b2506" font-size="15" font-weight="800" font-family="system-ui">16%</text>
+        <text x="399" y="49" text-anchor="middle" fill="#3b2506" font-size="15" font-weight="800" font-family="system-ui">18%</text>
+        <rect x="0" y="84" width="14" height="14" rx="3" fill="#2dd4bf"/>
+        <text x="24" y="96" fill="#c2d0e4" font-size="14" font-family="system-ui">Facturas de hasta S/ 10,000</text>
+        <rect x="0" y="110" width="14" height="14" rx="3" fill="#fbbf24"/>
+        <text x="24" y="122" fill="#c2d0e4" font-size="14" font-family="system-ui">Entre S/ 10,000 y S/ 25,000</text>
+        <rect x="0" y="136" width="14" height="14" rx="3" fill="#fb923c"/>
+        <text x="24" y="148" fill="#c2d0e4" font-size="14" font-family="system-ui">Más de S/ 25,000</text>
       </svg>
     </div>
-    <p class="src-note">Fuente: CAVALI, <em>Reporte de Desempeño — Facturas Negociables 2025</em>: <a href="https://www.cavali.com.pe/factrack/uploads/shares/home/Reporte_anual_de_facturas_2025.pdf" target="_blank" rel="noopener">enlace</a>. CAVALI registra 2,271,853 facturas y S/ 52,699 millones; PRODUCE reporta cifras algo menores porque usa otro universo. Por eso cada dato de esta guía indica su fuente.</p>
+    <p class="src-note">Colores del gráfico, en orden: <strong>66% hasta S/ 10,000</strong> · <strong>16% entre S/ 10,000 y S/ 25,000</strong> · <strong>18% más de S/ 25,000</strong>. El <strong>ticket promedio</strong> fue de <strong>S/ 23,193</strong>. Fuente: CAVALI, <em>Reporte de Desempeño — Facturas Negociables 2025</em>: <a href="https://www.cavali.com.pe/factrack/uploads/shares/home/Reporte_anual_de_facturas_2025.pdf" target="_blank" rel="noopener">enlace</a>. CAVALI registra 2,271,853 facturas y S/ 52,699 millones; PRODUCE reporta cifras algo menores porque usa otro universo. Por eso cada dato de esta guía indica su fuente.</p>
   </section>
 
   <div class="divider"><span>· · ·</span></div>
@@ -1382,7 +1401,7 @@
           <tr>
             <td><strong>Impuesto a la Renta</strong></td>
             <td>5% de retención a cuenta</td>
-            <td>Sí: SUNAT. Se calcula sobre tu ganancia (lo que cobras menos lo que pagaste) y luego se ajusta en tu declaración anual</td>
+            <td>Sí: SUNAT. La plataforma retiene el 5% cada vez que cobras tu ganancia.</td>
           </tr>
           <tr>
             <td><strong>Tarifas de CAVALI</strong></td>
@@ -1413,7 +1432,7 @@
       </table>
     </div>
 
-    <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>Retención</strong> = un adelanto de impuesto que te descuentan en el momento del cobro y que después se ajusta. <strong>IGV</strong> = impuesto de 18% que se suma a las comisiones. <strong>CAVALI</strong> = la entidad que registra las facturas y cobra una tarifa por anotarlas. <strong>Comisión de plataforma</strong> = lo que te cobra la plataforma por conectarte con el proveedor y gestionar el cobro.</p>
+    <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>Retención</strong> = el impuesto que la plataforma te descuenta en el momento en que cobras tu ganancia. <strong>IGV</strong> = impuesto de 18% que se suma a las comisiones. <strong>CAVALI</strong> = la entidad que registra las facturas y cobra una tarifa por anotarlas. <strong>Comisión de plataforma</strong> = lo que te cobra la plataforma por conectarte con el proveedor y gestionar el cobro.</p>
 
     <h3>Un ejemplo de cómo se come la ganancia</h3>
     <p>Con la referencia del <strong>20% anual</strong> que anuncian las plataformas, una comisión supuesta de 0.15% mensual y 60 días de plazo. La comisión es un supuesto: no hay tarifas públicas, así que pregúntala tú.</p>
@@ -1446,7 +1465,7 @@
       </div>
 
       <span class="illustrative-note">
-        <strong>Un detalle que casi nadie explica:</strong> el impuesto se calcula sobre tu ganancia <strong>antes</strong> de restar la comisión. En el ejemplo, sobre S/ 333.33 y no sobre S/ 303.33. Dicho simple: <strong>la comisión no te rebaja el impuesto</strong>. La aplicación exacta a tu caso depende de tu situación tributaria: confírmala con un contador.
+        <strong>Un detalle que casi nadie explica:</strong> el impuesto se calcula sobre tu ganancia <strong>antes</strong> de restar la comisión. En el ejemplo, sobre S/ 333.33 y no sobre S/ 303.33. Dicho simple: <strong>la comisión no te rebaja el impuesto</strong>. Y la retención la hace la plataforma en el momento del cobro.
       </span>
     </div>
   </section>
@@ -1530,15 +1549,15 @@
     <p>Suponiendo que no logras recuperar nada (el peor caso). Fíjate en la diferencia que hace repartir tu dinero:</p>
 
     <div class="table-wrap" style="padding:20px">
-      <svg viewBox="0 0 440 155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: si una de diez facturas no se paga pierdes el 10% del capital; si tu única factura no se paga, pierdes el 100%" style="width:100%;height:auto">
-        <text x="0" y="14" fill="#8ea2bf" font-size="11" font-weight="700" font-family="system-ui">SI UNA FACTURA NO SE PAGA (SIN RECUPERAR NADA)</text>
-        <text x="0" y="42" fill="#c2d0e4" font-size="12" font-family="system-ui">10 facturas de S/ 1,000 · una falla</text>
-        <rect x="0" y="50" width="440" height="26" rx="5" fill="#1b2f4d"/>
-        <rect x="0" y="50" width="44" height="26" rx="5" fill="#f87171"/>
-        <text x="54" y="68" fill="#fca5a5" font-size="13" font-weight="800" font-family="system-ui">pierdes 10% de tu capital</text>
-        <text x="0" y="106" fill="#c2d0e4" font-size="12" font-family="system-ui">1 sola factura de S/ 10,000 · falla</text>
-        <rect x="0" y="114" width="440" height="26" rx="5" fill="#f87171"/>
-        <text x="220" y="132" text-anchor="middle" fill="#450a0a" font-size="13" font-weight="800" font-family="system-ui">pierdes 100% de tu capital</text>
+      <svg viewBox="0 0 440 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: si una de cada diez facturas no se paga pierdes el 10% del capital; si tu única factura no se paga, pierdes el 100%" style="width:100%;height:auto">
+        <text x="0" y="16" fill="#8ea2bf" font-size="13" font-weight="700" font-family="system-ui">SI UNA FACTURA NO SE PAGA (SIN RECUPERAR NADA)</text>
+        <text x="0" y="48" fill="#c2d0e4" font-size="14" font-family="system-ui">10 facturas de S/ 1,000 · una falla</text>
+        <rect x="0" y="56" width="440" height="30" rx="5" fill="#1b2f4d"/>
+        <rect x="0" y="56" width="44" height="30" rx="5" fill="#f87171"/>
+        <text x="58" y="77" fill="#fca5a5" font-size="15" font-weight="800" font-family="system-ui">pierdes 10% de tu capital</text>
+        <text x="0" y="118" fill="#c2d0e4" font-size="14" font-family="system-ui">1 sola factura de S/ 10,000 · falla</text>
+        <rect x="0" y="126" width="440" height="30" rx="5" fill="#f87171"/>
+        <text x="220" y="147" text-anchor="middle" fill="#450a0a" font-size="15" font-weight="800" font-family="system-ui">pierdes 100% de tu capital</text>
       </svg>
     </div>
     <p class="src-note">Cálculo propio sobre el ejemplo de esta guía, no un dato de mercado. La pérdida real depende de cuánto logres recuperar: si el pagador paga tarde o de forma parcial, pierdes menos.</p>
@@ -1551,14 +1570,14 @@
     <p>El retraso también cuesta, aunque el pagador acabe pagando. Estas son las cuentas del mismo ejemplo, suponiendo que <strong>no</strong> se generen intereses a tu favor (el caso más conservador):</p>
 
     <div class="table-wrap" style="padding:20px">
-      <svg viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: el retorno anualizado baja de 17.2% si cobras a los 60 días a 11.5% si cobras a los 90 días" style="width:100%;height:auto">
-        <line x1="50" y1="168" x2="420" y2="168" stroke="rgba(148,180,224,.28)" stroke-width="1"/>
-        <rect x="110" y="48" width="90" height="120" rx="6" fill="#2dd4bf"/>
-        <text x="155" y="37" text-anchor="middle" fill="#5eead4" font-size="19" font-weight="800" font-family="system-ui">17.2%</text>
-        <text x="155" y="189" text-anchor="middle" fill="#8ea2bf" font-size="12" font-family="system-ui">Cobras a los 60 días</text>
-        <rect x="260" y="88" width="90" height="80" rx="6" fill="#f87171"/>
-        <text x="305" y="77" text-anchor="middle" fill="#fca5a5" font-size="19" font-weight="800" font-family="system-ui">11.5%</text>
-        <text x="305" y="189" text-anchor="middle" fill="#8ea2bf" font-size="12" font-family="system-ui">Cobras a los 90 días</text>
+      <svg viewBox="0 0 440 208" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: el retorno anualizado baja de 17.2% si cobras a los 60 días a 11.5% si cobras a los 90 días" style="width:100%;height:auto">
+        <line x1="40" y1="168" x2="425" y2="168" stroke="rgba(148,180,224,.28)" stroke-width="1"/>
+        <rect x="105" y="48" width="95" height="120" rx="6" fill="#2dd4bf"/>
+        <text x="152" y="36" text-anchor="middle" fill="#5eead4" font-size="21" font-weight="800" font-family="system-ui">17.2%</text>
+        <text x="152" y="194" text-anchor="middle" fill="#8ea2bf" font-size="15" font-family="system-ui">Cobras a los 60 días</text>
+        <rect x="255" y="88" width="95" height="80" rx="6" fill="#f87171"/>
+        <text x="302" y="76" text-anchor="middle" fill="#fca5a5" font-size="21" font-weight="800" font-family="system-ui">11.5%</text>
+        <text x="302" y="194" text-anchor="middle" fill="#8ea2bf" font-size="15" font-family="system-ui">Cobras a los 90 días</text>
       </svg>
     </div>
     <p class="src-note">Retorno anualizado del mismo ejemplo (S/ 10,000 al 20% anual, comisión de 0.15% mensual e impuesto). Si tu dinero tarda 30 días más en volver, el rendimiento anual cae casi un tercio: <strong>el plazo es riesgo, no solo rendimiento</strong>.</p>

@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aportes Voluntarios sin Fin Previsional — Guía honesta para empezar de cero</title>
+<title>Aportes Voluntarios sin Fin Previsional — Guía para empezar de cero</title>
 <meta name="description" content="Qué son los aportes voluntarios sin fin previsional en la AFP peruana, cuánto cuestan, cuánto han rendido, cómo se retiran y qué NO se sabe. Con datos oficiales de la SBS citados.">
 <meta name="author" content="Apalancate · Perú">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://apalancate.github.io/aportes-voluntarios.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_PE">
-<meta property="og:title" content="Aportes Voluntarios sin Fin Previsional — Guía honesta para empezar de cero">
+<meta property="og:title" content="Aportes Voluntarios sin Fin Previsional — Guía para empezar de cero">
 <meta property="og:description" content="Qué son, cuánto cuestan, cuánto han rendido, cómo se retiran y qué NO se sabe. Con datos oficiales de la SBS citados.">
 <meta property="og:url" content="https://apalancate.github.io/aportes-voluntarios.html">
 <meta name="twitter:card" content="summary">
+<!-- PENDIENTE DE ASSET: añadir og:image (1200×630) y twitter:image cuando exista la imagen social -->
 
 <style>
   :root{
@@ -44,7 +45,7 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;}
 
   body{
     margin:0;
@@ -59,10 +60,13 @@
     line-height:1.72;
     -webkit-font-smoothing:antialiased;
     min-height:100vh;
+    overflow-x:hidden;
+    overflow-wrap:break-word;
   }
 
   .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px;position:relative;}
 
+  /* ============ HERO ============ */
   .hero{
     position:relative;
     background:
@@ -132,6 +136,7 @@
   .hero-flow .dot.o{background:var(--violet);color:#1e1b4b;box-shadow:0 0 12px rgba(167,139,250,.5);}
   .hero-flow .arrow{color:#5d7595;font-weight:700;font-size:.9rem;}
 
+  /* ============ TOC ============ */
   .toc{
     background:linear-gradient(180deg, rgba(17,30,53,.92), rgba(17,30,53,.72));
     border:1px solid var(--line-strong);
@@ -166,6 +171,7 @@
     min-width:18px;
   }
 
+  /* ============ SECCIONES ============ */
   section{margin:0 0 56px;scroll-margin-top:20px;}
 
   h2.title{
@@ -201,6 +207,7 @@
     color:var(--teal-soft);opacity:.7;font-weight:700;
   }
 
+  /* ============ LEAD CALLOUT ============ */
   .lead-callout{
     background:
       radial-gradient(500px 240px at 100% 0%, rgba(45,212,191,.20), transparent 70%),
@@ -226,6 +233,7 @@
     font-size:1.05rem;line-height:1.7;color:#e8eef8;margin:0;
   }
 
+  /* ============ CAST ============ */
   .cast{
     display:grid;gap:18px;grid-template-columns:1fr;
     margin-bottom:8px;
@@ -265,6 +273,7 @@
   .cast-card.p2 .badge{background:rgba(45,212,191,.14);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
   .cast-card.p3 .badge{background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.3);}
 
+  /* ---- Tarjeta destacada: el bolsillo del que trata toda la guía ---- */
   .cast-card.featured{
     border:2px solid var(--teal);
     background:
@@ -326,6 +335,7 @@
   .cast-card h4{margin:0 0 6px;font-size:1.05rem;font-weight:800;color:#f4f8ff;position:relative;z-index:1;}
   .cast-card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;position:relative;z-index:1;}
 
+  /* ============ FLOW ============ */
   .flow{
     background:linear-gradient(180deg, rgba(10,17,32,.9), rgba(19,32,56,.9));
     color:#dbe6f5;
@@ -383,6 +393,7 @@
   .flow-step b{display:block;font-size:.9rem;color:#f4f8ff;margin-bottom:4px;}
   .flow-step span{font-size:.8rem;color:var(--muted);line-height:1.5;}
 
+  /* ============ EJEMPLO ============ */
   .example{
     background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
     border:1px solid var(--line-strong);
@@ -416,6 +427,35 @@
   .scenario p{margin:0;color:var(--ink-soft);}
   .scenario .q{color:var(--teal-soft);font-weight:750;}
 
+  .timeline{
+    display:grid;gap:16px;grid-template-columns:1fr;
+    margin-bottom:22px;
+  }
+  @media(min-width:640px){ .timeline{grid-template-columns:1fr 1fr;} }
+
+  .tl-item{
+    border:1px solid var(--line-strong);border-radius:14px;
+    padding:16px 18px;
+    background:rgba(11,18,32,.6);
+    position:relative;
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .tl-item:hover{transform:translateY(-2px);border-color:rgba(45,212,191,.35);}
+  .tl-item .when{
+    display:inline-block;font-size:.72rem;font-weight:800;
+    letter-spacing:.1em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;margin-bottom:10px;
+  }
+  .tl-item.day0 .when{background:rgba(251,146,60,.18);color:#fdba74;border:1px solid rgba(251,146,60,.3);}
+  .tl-item.day60 .when{background:rgba(45,212,191,.16);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
+  .tl-item .what{font-size:.92rem;color:var(--muted);margin:0 0 12px;line-height:1.6;}
+  .tl-item .amount{
+    font-size:1.5rem;font-weight:850;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .tl-item.day0 .amount{color:#fdba74;}
+  .tl-item.day60 .amount{color:var(--teal-soft);}
+
   .result{
     background:linear-gradient(135deg, rgba(15,118,110,.55), rgba(13,148,136,.35));
     border:1px solid rgba(45,212,191,.35);
@@ -446,6 +486,7 @@
     line-height:1.55;
   }
 
+  /* ============ TABLAS ============ */
   .table-wrap{
     background:linear-gradient(180deg, rgba(22,38,63,.78), rgba(17,30,53,.78));
     border:1px solid var(--line-strong);
@@ -453,8 +494,11 @@
     padding:0;
     box-shadow:var(--shadow-sm);
     overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
     backdrop-filter:blur(6px);
     margin-bottom:14px;
+    max-width:100%;
   }
   table{
     width:100%;
@@ -487,7 +531,7 @@
   tbody tr:hover td{background:rgba(45,212,191,.03);}
   td strong{color:#ffffff;font-weight:750;}
 
-  /* Badge "best": sí marca el mejor resultado (turquesa) */
+  /* Celda "best": sí marca el mejor resultado (turquesa) */
   td .best{
     display:inline-block;
     padding:3px 11px;
@@ -497,9 +541,10 @@
     font-weight:850;
     border:1px solid rgba(45,212,191,.35);
     font-variant-numeric:tabular-nums;
+    white-space:nowrap;
   }
 
-  /* Badge "max": solo marca el tope más alto de una fila, sin connotación de "mejor" (gris neutro) */
+  /* Celda "max": solo marca el tope más alto de una fila, sin connotación de "mejor" (gris neutro) */
   td .max{
     display:inline-block;
     padding:3px 11px;
@@ -509,6 +554,7 @@
     font-weight:850;
     border:1px solid var(--line-strong);
     font-variant-numeric:tabular-nums;
+    white-space:nowrap;
   }
 
   tr.best td{background:rgba(45,212,191,.10);}
@@ -517,19 +563,21 @@
   .neg{color:#fca5a5;font-weight:700;}
   .pos{color:var(--teal-soft);font-weight:700;}
 
+  /* Nota de fuente debajo de tabla */
   .src-note{
     display:block;
     font-size:.82rem;
     color:var(--muted);
     font-style:italic;
-    line-height:1.65;
-    margin:0 0 28px;
+    line-height:1.6;
+    margin:0 0 24px;
     padding-left:14px;
     border-left:3px solid rgba(45,212,191,.25);
   }
   .src-note strong{color:var(--ink-soft);font-style:normal;font-weight:750;}
   .src-note a{color:var(--teal-soft);}
 
+  /* ============ DEFINICIONES ============ */
   .defs{
     display:grid;
     gap:12px;
@@ -564,6 +612,7 @@
   .def p + p{margin-top:8px;}
   .def.wide{grid-column:1 / -1;}
 
+  /* ============ FONDOS ============ */
   .funds{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:24px;}
   @media(min-width:640px){ .funds{grid-template-columns:1fr 1fr;} }
   .fund-card{
@@ -616,6 +665,7 @@
   .fund-card .who .k.ob{background:rgba(148,180,224,.10);color:var(--muted);border:1px solid var(--line-strong);}
   .fund-card .who .k.vo{background:rgba(45,212,191,.16);color:var(--teal-soft);border:1px solid rgba(45,212,191,.38);}
 
+  /* ============ CASO PRÁCTICO ============ */
   .case{
     background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
     border:1px solid var(--line-strong);
@@ -707,6 +757,7 @@
     font-variant-numeric:tabular-nums;
   }
 
+  /* ============ TRANSPARENCIA ============ */
   .transparency{
     background:rgba(251,191,36,.06);
     border:1px solid rgba(251,191,36,.22);
@@ -722,6 +773,7 @@
   .transparency.ok{background:rgba(45,212,191,.06);border-color:rgba(45,212,191,.22);border-left-color:var(--teal);}
   .transparency.ok strong{color:var(--teal-soft);}
 
+  /* ============ VENTAJAS / RIESGOS ============ */
   .two-col{display:grid;gap:18px;grid-template-columns:1fr;}
   @media(min-width:720px){ .two-col{grid-template-columns:1fr 1fr;} }
 
@@ -743,6 +795,7 @@
   }
   .panel.pro h3 .chip{background:rgba(74,222,128,.15);color:var(--green);border:1px solid rgba(74,222,128,.3);}
   .panel.con h3 .chip{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3);}
+  .panel.neutral h3 .chip{background:rgba(45,212,191,.15);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
 
   .panel ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
   .panel li{font-size:.92rem;line-height:1.65;padding-left:16px;position:relative;color:var(--ink-soft);}
@@ -752,8 +805,10 @@
   }
   .panel.pro li::before{background:var(--green);box-shadow:0 0 8px rgba(74,222,128,.6);}
   .panel.con li::before{background:var(--red);box-shadow:0 0 8px rgba(248,113,113,.6);}
+  .panel.neutral li::before{background:var(--teal-soft);box-shadow:0 0 8px rgba(94,234,212,.6);}
   .panel li b{color:#ffffff;font-weight:750;}
 
+  /* ============ CONSIDERAR ============ */
   .consider{display:grid;gap:14px;}
   .cns{
     background:linear-gradient(180deg, rgba(22,38,63,.85), rgba(17,30,53,.85));
@@ -766,6 +821,7 @@
   .cns p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.65;}
   .cns p + p{margin-top:8px;}
 
+  /* ============ NO ESPERAR ============ */
   .avoid{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
   .avoid li{
     background:linear-gradient(180deg, rgba(58,23,30,.55), rgba(45,18,25,.55));
@@ -787,6 +843,7 @@
   }
   .avoid b{display:block;color:#fecaca;font-weight:800;margin-bottom:3px;}
 
+  /* ============ CALLOUT ============ */
   .callout{
     background:
       radial-gradient(400px 200px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
@@ -803,6 +860,7 @@
   .callout p{font-size:.95rem;color:var(--ink-soft);margin:0 0 14px;}
   .callout p:last-child{margin-bottom:0;}
 
+  /* ============ PASOS ============ */
   .steps{list-style:none;margin:0;padding:0;}
   .steps li{
     display:grid;grid-template-columns:44px 1fr;gap:16px;
@@ -819,6 +877,7 @@
   .steps b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;color:#f4f8ff;}
   .steps p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.65;}
 
+  /* ============ APP APALANCATE ============ */
   .app-invite{
     background:
       radial-gradient(500px 260px at 100% 0%, rgba(45,212,191,.28), transparent 70%),
@@ -949,6 +1008,7 @@
     line-height:1.6;
   }
 
+  /* ============ FOOTER ============ */
   footer{
     border-top:1px solid var(--line);
     margin-top:56px;
@@ -969,6 +1029,7 @@
     font-weight:700;
   }
 
+  /* ============ ANIMACIÓN ============ */
   @keyframes rise{
     from{opacity:0;transform:translateY(14px);}
     to{opacity:1;transform:translateY(0);}
@@ -993,6 +1054,10 @@
 
   a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px;}
 
+  /* ===================== MOVIL =====================
+     Un solo juego de breakpoints, en orden descendente:
+     720 -> 560 -> 520 -> 400. Solo estilo; no altera el contenido. */
+
   @media (max-width: 720px){
     table{min-width:0;}
     thead th{padding:13px 12px;font-size:.66rem;letter-spacing:.06em;}
@@ -1003,7 +1068,7 @@
     body{font-size:16px;}
     .wrap{padding:0 16px;}
     .hero{padding:48px 0 86px;}
-    .hero-flow{padding:10px 12px;gap:8px;}
+    .hero-flow{padding:10px 12px;gap:8px;flex-wrap:wrap;}
     .hero-flow .step{font-size:.75rem;}
     .hero-flow .dot{width:20px;height:20px;font-size:.65rem;}
     .toc{margin-top:-50px;padding:16px;}
@@ -1032,6 +1097,8 @@
     td .best{padding:2px 8px;font-size:.85em;}
     td .max{padding:2px 8px;font-size:.85em;}
     .src-note{font-size:.78rem;padding-left:10px;}
+    .table-wrap{padding:10px;}
+    .table-wrap[style]{padding:10px !important;}
     .fund-card{padding:16px;}
     .fund-card h4{font-size:.95rem;}
     .fund-card .who{font-size:.76rem;}
@@ -1066,6 +1133,53 @@
     footer p{font-size:.88rem;}
   }
 
+  @media (max-width: 520px){
+    body{font-size:15px;}
+    .wrap{padding:0 14px;}
+    .hero{padding:42px 0 72px;}
+    .hero-flow{padding:9px 11px;gap:6px;}
+    .hero-flow .step{font-size:.7rem;gap:6px;}
+    .hero-flow .dot{width:18px;height:18px;font-size:.6rem;}
+    .toc{margin-top:-44px;padding:12px;}
+    .toc a{font-size:.82rem;padding:5px 6px;gap:9px;}
+    .toc a .n{font-size:.68rem;}
+    section{margin:0 0 36px;}
+    h2.title{font-size:1.18rem;gap:9px;}
+    h2.title::before{height:20px;width:4px;}
+    h3{font-size:.96rem;margin:18px 0 6px;}
+    .lead-callout{padding:16px 15px 14px;}
+    .lead-callout p{font-size:.92rem;}
+    .flow{padding:18px 14px;}
+    .flow-step{padding:12px 10px;}
+    .example{padding:16px 14px;}
+    .result{padding:13px;gap:10px;}
+    .result .icon{width:36px;height:36px;font-size:1.1rem;}
+    .table-wrap{padding:6px;}
+    .table-wrap[style]{padding:6px !important;}
+    thead th{padding:9px 8px;font-size:.6rem;letter-spacing:.04em;}
+    tbody td{padding:9px 8px;font-size:.79rem;line-height:1.45;}
+    .src-note{font-size:.76rem;padding-left:9px;margin-bottom:20px;}
+    .fund-card{padding:15px;}
+    .def{padding:13px 14px;}
+    .panel{padding:16px 14px;}
+    .cns{padding:14px 14px;}
+    .avoid li{padding:13px 14px 13px 44px;font-size:.86rem;}
+    .avoid li::before{width:21px;height:21px;left:12px;top:13px;}
+    .steps li{grid-template-columns:36px 1fr;gap:11px;padding:14px 0;}
+    .steps .n{width:36px;height:36px;font-size:.92rem;}
+    .case{padding:18px 15px;}
+    .case-calc li{gap:6px 9px;padding:10px 12px;font-size:.85rem;}
+    .case-calc li .desc{flex:1 1 62%;}
+    .callout{padding:24px 18px;}
+    .app-invite{padding:26px 18px;}
+    .play-btn{padding:12px 20px 12px 16px;gap:12px;}
+    .play-btn svg{width:28px;height:28px;}
+    .app-feature{padding:10px 12px;font-size:.8rem;}
+    footer{padding:20px 0 40px;}
+    .table-wrap[style]{border-radius:14px;}
+    .table-wrap svg{max-width:100%;height:auto;}
+  }
+
   @media (max-width: 400px){
     .wrap{padding:0 14px;}
     body{font-size:15px;}
@@ -1077,15 +1191,17 @@
     .hero h1{font-size:1.75rem;}
   }
 </style>
+
 </head>
 
 <body>
 
+<!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
     <span class="eyebrow">Apalancate · Perú</span>
-    <h1><strong>Aportes voluntarios</strong> <em>sin fin previsional</em>: la guía honesta para empezar de cero</h1>
-    <p class="lede">Qué son, cuánto cuestan, cuánto han rendido y cómo se retiran. Con los datos oficiales de la SBS citados y, sobre todo, diciéndote con claridad qué <strong>no</strong> se sabe todavía.</p>
+    <h1><strong>Aportes voluntarios</strong> <em>sin fin previsional</em>: la guía para empezar de cero</h1>
+    <p class="lede">¿Qué son?, ¿cuánto cuestan?, ¿cuánto han rendido? y ¿cómo se retiran?. Con datos oficiales de la SBS citados y, sobre todo, diciéndote con claridad qué <strong>no</strong> se sabe todavía.</p>
 
     <div class="hero-flow">
       <span class="step"><span class="dot">1</span> Cumples el requisito</span>
@@ -1101,12 +1217,13 @@
 
 <div class="wrap">
 
+  <!-- ================= INDICE ================= -->
   <nav class="toc" aria-label="Índice de contenidos">
     <h2>Lo que encontrarás</h2>
     <ul>
       <li><a href="#esencial"><span class="n">00</span> Lo esencial en 30 segundos</a></li>
-      <li><a href="#que-es"><span class="n">01</span> Qué es exactamente</a></li>
-      <li><a href="#como-funciona"><span class="n">02</span> Cómo funciona, en 4 pasos</a></li>
+      <li><a href="#que-es"><span class="n">01</span> ¿Qué es exactamente?</a></li>
+      <li><a href="#como-funciona"><span class="n">02</span> ¿Cómo funciona, en 4 pasos?</a></li>
       <li><a href="#fondos"><span class="n">03</span> Los cuatro fondos</a></li>
       <li><a href="#ejemplo"><span class="n">04</span> Un ejemplo con números</a></li>
       <li><a href="#mercado"><span class="n">05</span> El mercado en cifras</a></li>
@@ -1116,12 +1233,13 @@
       <li><a href="#impuestos"><span class="n">09</span> Impuestos</a></li>
       <li><a href="#ventajas"><span class="n">10</span> Ventajas y riesgos</a></li>
       <li><a href="#comparativa"><span class="n">11</span> Comparado con otras opciones</a></li>
-      <li><a href="#no-esperar"><span class="n">12</span> Qué NO deberías esperar</a></li>
-      <li><a href="#empezar"><span class="n">13</span> Cómo empezar, paso a paso</a></li>
-      <li><a href="#reflexion"><span class="n">14</span> Reflexión final</a></li>
+      <li><a href="#no-esperar"><span class="n">12</span> ¿Qué NO deberías esperar?</a></li>
+      <li><a href="#empezar"><span class="n">13</span> ¿Cómo empezar?, Un paso a paso</a></li>
+      <li><a href="#reflexion"><span class="n">14</span> Una última reflexión</a></li>
     </ul>
   </nav>
 
+  <!-- ================= 00 ESENCIAL ================= -->
   <section id="esencial">
     <div class="lead-callout">
       <span class="kicker">Lo esencial en 30 segundos</span>
@@ -1148,9 +1266,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 01 QUE ES ================= -->
   <section id="que-es">
-    <h2 class="title">Qué es exactamente</h2>
-    <p class="subtitle">Dentro de tu AFP conviven dos bolsillos distintos. Confundirlos es el error más común.</p>
+    <h2 class="title">¿Qué es exactamente?</h2>
+    <p class="subtitle"><strong>Dentro de tu AFP conviven dos bolsillos distintos.</strong> Confundirlos es el error más común.</p>
 
     <div class="cast">
       <article class="cast-card p1">
@@ -1168,11 +1287,11 @@
           </svg>
         </div>
         <h4>Tu cuenta obligatoria</h4>
-        <p>Es el aporte que la ley <strong>te obliga</strong> a hacer cada mes y que financia tu pensión. Solo se puede retirar en los casos excepcionales que la ley autoriza: es la cuenta de los «retiros de AFP» que salen en las noticias.</p>
+        <p>Es el aporte que la ley <strong>te obliga</strong> a hacer cada mes y que financia tu pensión. <strong>Se descuenta de tu sueldo.</strong> Solo se puede retirar en los casos excepcionales que la ley autoriza: <strong>es la cuenta afectada en los «retiros de AFP» que se anuncian en las noticias.</strong></p>
       </article>
 
       <article class="cast-card p2 featured">
-        <span class="ribbon">Esto es la guía</span>
+        <span class="ribbon">Nuestro objetivo</span>
         <span class="badge">Bolsillo 2</span>
         <div class="art">
           <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: una billetera abierta con monedas, que representa el aporte voluntario sin fin previsional">
@@ -1188,7 +1307,7 @@
           </svg>
         </div>
         <h4>Aporte voluntario sin fin previsional</h4>
-        <p>Una cuenta <strong>aparte</strong>, dentro del sistema de AFP, que funciona como un ahorro de libre disponibilidad. Depositas lo que quieras, cuando quieras, y <strong>no</strong> está destinada a tu pensión. Es el producto de esta guía.</p>
+        <p>Una cuenta <strong>aparte</strong>, dentro del sistema de AFP, que funciona como un ahorro de libre disponibilidad. Depositas lo que quieras, cuando quieras, y <strong>no está destinada a tu pensión.</strong> Es el objetivo de esta guía.</p>
       </article>
 
       <article class="cast-card p3">
@@ -1209,7 +1328,7 @@
           </svg>
         </div>
         <h4>Tu decisión: en qué fondo</h4>
-        <p>Eliges entre <strong>cuatro fondos</strong>, del 0 (el más conservador) al 3 (el más agresivo). Esa elección define cuánto puede subir tu saldo y cuánto puede caer. Puedes cambiar de fondo, y puedes elegir una AFP distinta de la de tus aportes obligatorios.</p>
+        <p>Eliges entre <strong>cuatro fondos</strong>, del 0 (el más conservador) al 3 (el más agresivo). Esa elección define cuánto puede subir tu saldo y cuánto puede caer. <strong>Puedes cambiar de fondo,</strong> y puedes elegir una AFP distinta de la de tus aportes obligatorios.</p>
       </article>
     </div>
 
@@ -1218,20 +1337,21 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 02 COMO FUNCIONA ================= -->
   <section id="como-funciona">
     <div class="flow">
-      <h2>Cómo funciona, en 4 pasos</h2>
+      <h2>¿Cómo funciona, en 4 pasos?</h2>
       <p class="sub">Todo el circuito, del requisito al retiro.</p>
       <div class="flow-steps">
         <div class="flow-step">
           <span class="num">1</span>
           <b>Cumples el requisito</b>
-          <span>Tener <strong>más de 5 años</strong> de incorporación al SPP <strong>o</strong> <strong>50 años</strong> de edad. No hacen falta los dos.</span>
+          <span>Tener <strong>más de 5 años</strong> de incorporación al <strong>SPP —estar afiliado a una AFP—</strong> <strong>o</strong> <strong>50 años</strong> de edad. No hacen falta los dos.</span>
         </div>
         <div class="flow-step">
           <span class="num">2</span>
           <b>Eliges AFP y fondo</b>
-          <span>Puede ser una AFP y un fondo <strong>distintos</strong> de los de tus aportes obligatorios.</span>
+          <span>Puede elegir una AFP y un fondo <strong>distintos</strong> al de tu "Bolsillo 1" (aportes obligatorios)</span>
         </div>
         <div class="flow-step">
           <span class="num">3</span>
@@ -1255,9 +1375,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 03 FONDOS ================= -->
   <section id="fondos">
     <h2 class="title">Los cuatro fondos</h2>
-    <p class="subtitle">No hay un «mejor» fondo: hay un fondo que calza con cuándo vas a necesitar el dinero y cuánta caída toleras.</p>
+    <p class="subtitle"><strong>No hay un «mejor» fondo:</strong> hay un fondo que calza con cuándo vas a necesitar el dinero y cuánta caída toleras.</p>
 
     <div class="funds">
       <article class="fund-card f0">
@@ -1268,8 +1389,8 @@
         <div class="meter-label"><span>Riesgo</span><span>Muy bajo</span></div>
         <p>Orientado a mantener el valor de tu dinero, con crecimiento estable y muy baja volatilidad. Está pensado para horizontes cortos o para quien no tolera ver su saldo caer.</p>
         <div class="who">
-          <span class="row"><span class="k ob">Obligatorios</span>Al cumplir <b>65 años</b>, salvo que pidas por escrito el Tipo 1 o el Tipo 2.</span>
-          <span class="row"><span class="k vo">Voluntarios</span><b>Puedes elegirlo a cualquier edad.</b></span>
+          <span class="row"><span class="k ob">Bolsillo 1</span>Al cumplir <b>65 años</b>, salvo que pidas por escrito el Tipo 1 o el Tipo 2.</span>
+          <span class="row"><span class="k vo">Bolsillo 2</span><b>Puedes elegirlo a cualquier edad.</b></span>
         </div>
       </article>
 
@@ -1281,8 +1402,8 @@
         <div class="meter-label"><span>Riesgo</span><span>Bajo</span></div>
         <p>Busca un crecimiento estable con baja volatilidad. Admite una porción pequeña en acciones.</p>
         <div class="who">
-          <span class="row"><span class="k ob">Obligatorios</span>Entre <b>60 y 65 años</b>, salvo que pidas por escrito el Tipo 0 o el Tipo 2.</span>
-          <span class="row"><span class="k vo">Voluntarios</span><b>Puedes elegirlo a cualquier edad.</b></span>
+          <span class="row"><span class="k ob">Bolsillo 1</span>Entre <b>60 y 65 años</b>, salvo que pidas por escrito el Tipo 0 o el Tipo 2.</span>
+          <span class="row"><span class="k vo">Bolsillo 2</span><b>Puedes elegirlo a cualquier edad.</b></span>
         </div>
       </article>
 
@@ -1294,8 +1415,8 @@
         <div class="meter-label"><span>Riesgo</span><span>Medio</span></div>
         <p>Crecimiento moderado con volatilidad media: combina renta fija con una porción relevante de acciones.</p>
         <div class="who">
-          <span class="row"><span class="k ob">Obligatorios</span>No es obligatorio para nadie: a falta de elección, la SBS indica que el saldo de tu CIC se asigna aquí.</span>
-          <span class="row"><span class="k vo">Voluntarios</span><b>Puedes elegirlo a cualquier edad.</b></span>
+          <span class="row"><span class="k ob">Bolsillo 1</span>No es obligatorio para nadie: a falta de elección, la SBS indica que el saldo de tu CIC se asigna aquí.</span>
+          <span class="row"><span class="k vo">Bolsillo 2</span><b>Puedes elegirlo a cualquier edad.</b></span>
         </div>
       </article>
 
@@ -1307,17 +1428,17 @@
         <div class="meter-label"><span>Riesgo</span><span>Alto</span></div>
         <p>Busca un alto crecimiento con alta volatilidad: es el que más puede subir y el que más puede caer en poco tiempo.</p>
         <div class="who">
-          <span class="row"><span class="k ob">Obligatorios</span>No pueden quedarse los pensionistas por retiro programado o renta temporal.</span>
-          <span class="row"><span class="k vo">Voluntarios</span><b>Puedes elegirlo a cualquier edad.</b></span>
+          <span class="row"><span class="k ob">Bolsillo 1</span>No pueden quedarse los pensionistas por retiro programado o renta temporal.</span>
+          <span class="row"><span class="k vo">Bolsillo 2</span><b>Puedes elegirlo a cualquier edad.</b></span>
         </div>
       </article>
     </div>
 
     <div class="transparency ok" style="margin-top:6px">
-      <strong>Dos cuentas, dos juegos de reglas.</strong> Las etiquetas «Obligatorios» de cada tarjeta son reglas de tu cuenta de <strong>aportes obligatorios</strong> (el Bolsillo 1): ahí la ley te reasigna de fondo según tu edad. En tu cuenta de <strong>aportes voluntarios sin fin previsional</strong> —el Bolsillo 2, del que trata esta guía— no aplican: el artículo que crea los cuatro fondos está acotado desde su primera línea a «aportes obligatorios», y la SBS lo resume así en su cartilla: «La ley ha creado cuatro tipos de administración de fondos para los aportes obligatorios». Para la cuenta voluntaria, la misma SBS dice: «Puedes escoger abrir una cuenta de <strong>aportes voluntarios</strong> sin fin previsional en cualquier AFP y tipo de fondo de tu preferencia».
+      <strong>Dos cuentas, dos juegos de reglas.</strong> Las etiquetas «Bolsillo 1» de cada tarjeta son reglas de tu cuenta de <strong>aportes obligatorios</strong> : ahí la ley te reasigna de fondo según tu edad. En tu cuenta de <strong>aportes voluntarios sin fin previsional</strong> —el Bolsillo 2, del que trata esta guía— no aplican: el artículo que crea los cuatro fondos está acotado desde su primera línea a «aportes obligatorios», y la SBS lo resume así en su cartilla: «La ley ha creado cuatro tipos de administración de fondos para los aportes obligatorios». Para la cuenta voluntaria, la misma SBS dice: «Puedes escoger abrir una cuenta de <strong>aportes voluntarios</strong> sin fin previsional en cualquier AFP y tipo de fondo de tu preferencia».
     </div>
 
-    <h3>Hasta cuánto puede invertir cada fondo</h3>
+    <h3>¿Hasta cuánto puede invertir cada fondo?</h3>
     <p>Estos son los <strong>límites máximos</strong> que publica la SBS para cada tipo de fondo. Son topes, no la composición real: un fondo puede estar muy por debajo del límite.</p>
 
     <div class="table-wrap">
@@ -1369,17 +1490,14 @@
       </table>
     </div>
 
+    <p class="src-note"><strong>Fuente:</strong> <a href="https://www.sbs.gob.pe/usuarios/aprende-con-la-sbs/tipos-de-fondos" target="_blank" rel="noopener">SBS — «Tipos de fondos»</a> y <a href="https://www.sbs.gob.pe/sistema-privado-de-pensiones/multifondos" target="_blank" rel="noopener">Cartilla Informativa Multifondos</a>. La base legal de estos límites es el artículo 25-B del TUO de la Ley del SPP. <strong>Acciones</strong> = instrumentos de renta variable (participaciones en empresas). <strong>Deuda</strong> = bonos y otros instrumentos de renta fija. <strong>Derivados</strong> = instrumentos de cobertura que sirven para reducir riesgo, no para apostar. <strong>Efectivo</strong> = instrumentos de corto plazo, para tener liquidez. <strong>Alternativos</strong> = inversiones distintas a acciones y bonos tradicionales.</p>
+
     <div class="transparency ok" style="margin-top:6px;margin-bottom:24px">
-      <strong>Cómo leer esta tabla.</strong> Los números son <strong>límites máximos</strong> que publica la SBS, no la composición real del fondo: un fondo puede estar muy por debajo del tope. El badge gris marca <strong>el tope más alto de cada fila</strong> para facilitar la lectura horizontal; <strong>no</strong> significa que esa asignación sea «mejor» que las demás, ni que un fondo deba invertir hasta ese límite.
+      <strong>Cómo leer esta tabla.</strong> Los números son <strong>límites máximos</strong> que publica la SBS, no la composición real del fondo: un fondo puede estar muy por debajo del tope. La celda gris marca <strong>el tope más alto de cada fila</strong> para facilitar la lectura; <strong>no</strong> significa que esa asignación sea «mejor» que las demás, ni que un fondo deba invertir hasta ese límite.
+      <strong>¿Y el Fondo 3 a cualquier edad?</strong> Sí. No encontramos ninguna norma que fije una edad máxima para elegir el Fondo 3. Lo que sí existe son reglas sobre la cuenta de <em>aportes obligatorios</em>: la reasignación a los 60 años al Tipo 1 y a los 65 al Tipo 0 —salvo que lo pidas por escrito—, y la prohibición de que los pensionistas por retiro programado o renta temporal permanezcan en el Tipo 3.
     </div>
 
-    <p class="src-note"><strong>Fuente:</strong> <a href="https://www.sbs.gob.pe/usuarios/aprende-con-la-sbs/tipos-de-fondos" target="_blank" rel="noopener">SBS — «Tipos de fondos»</a> y <a href="https://www.sbs.gob.pe/sistema-privado-de-pensiones/multifondos" target="_blank" rel="noopener">Cartilla Informativa Multifondos</a>. Base legal: artículo 25-B del TUO de la Ley del SPP. <strong>Acciones</strong> = instrumentos de renta variable (participaciones en empresas). <strong>Deuda</strong> = bonos y otros instrumentos de renta fija. <strong>Derivados</strong> = instrumentos de cobertura que sirven para reducir riesgo, no para apostar. <strong>Efectivo</strong> = instrumentos de corto plazo, para tener liquidez. <strong>Alternativos</strong> = inversiones distintas a acciones y bonos tradicionales.</p>
-
-    <div class="transparency ok" style="margin-top:20px">
-      <strong>¿Y el Fondo 3 a cualquier edad?</strong> Sí. No encontramos ninguna norma que fije una edad máxima para elegir el Fondo 3 en la cuenta de aportes voluntarios (el Bolsillo 2, del que trata esta guía). Lo que sí existe son reglas sobre la cuenta de <em>aportes obligatorios</em>: la reasignación a los 60 años al Tipo 1 y a los 65 al Tipo 0 —salvo que lo pidas por escrito—, y la prohibición de que los pensionistas por retiro programado o renta temporal permanezcan en el Tipo 3.
-    </div>
-
-    <h3>Cambiar de fondo</h3>
+    <h3>¿Cómo cambiar de fondo?</h3>
     <p>Puedes pedir el cambio de fondo, y no hay un número máximo de veces al año escrito en la ley: el reglamento deja esa exigencia en manos de la SBS. El cambio aplica igual a tu cuenta de <strong>aportes voluntarios</strong>: la norma dice expresamente que puedes cambiar «el saldo de su CIC para aportes obligatorios <strong>o voluntarios</strong>, según corresponda».</p>
     <p>En el tiempo: la AFP procesa la solicitud en los <strong>cinco primeros días hábiles</strong> del mes siguiente y transfiere el <strong>sexto día hábil</strong> de ese mes. Medido desde que presentas el pedido, eso equivale a <strong>entre 6 y 27 días hábiles</strong> según el día en que lo hagas. Antes de la Resolución SBS N.º 1979-2019 el trámite tomaba entre 27 y 49 días hábiles.</p>
 
@@ -1388,9 +1506,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 04 EJEMPLO ================= -->
   <section id="ejemplo">
     <h2 class="title">Un ejemplo con números</h2>
-    <p class="subtitle">Sin inventar tasas: usamos la <strong>rentabilidad neta oficial</strong> que la SBS publicó para cada AFP.</p>
+    <p class="subtitle">Usaremos la <strong>rentabilidad neta oficial</strong> que la SBS publicó para cada AFP en <strong>aportes voluntarios</strong> (Bolsillo 2).</p>
 
     <div class="example">
       <div class="example-head">
@@ -1413,30 +1532,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Prima</strong></td>
-              <td class="num">+19,83 %</td>
-              <td class="num">S/ 11.983</td>
-              <td class="num pos">+ S/ 1.983</td>
-            </tr>
-            <tr>
-              <td><strong>Habitat</strong></td>
-              <td class="num">+19,53 %</td>
-              <td class="num">S/ 11.953</td>
-              <td class="num pos">+ S/ 1.953</td>
-            </tr>
-            <tr>
-              <td><strong>Integra</strong></td>
-              <td class="num">+18,22 %</td>
-              <td class="num">S/ 11.822</td>
-              <td class="num pos">+ S/ 1.822</td>
-            </tr>
-            <tr>
-              <td><strong>Profuturo</strong></td>
-              <td class="num">+13,64 %</td>
-              <td class="num">S/ 11.364</td>
-              <td class="num pos">+ S/ 1.364</td>
-            </tr>
+            <tr><td><strong>Prima</strong></td><td class="num">+19,83 %</td><td class="num">S/ 11.983</td><td class="num pos">+ S/ 1.983</td></tr>
+            <tr><td><strong>Habitat</strong></td><td class="num">+19,53 %</td><td class="num">S/ 11.953</td><td class="num pos">+ S/ 1.953</td></tr>
+            <tr><td><strong>Integra</strong></td><td class="num">+18,22 %</td><td class="num">S/ 11.822</td><td class="num pos">+ S/ 1.822</td></tr>
+            <tr><td><strong>Profuturo</strong></td><td class="num">+13,64 %</td><td class="num">S/ 11.364</td><td class="num pos">+ S/ 1.364</td></tr>
           </tbody>
         </table>
       </div>
@@ -1468,30 +1567,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Habitat</strong></td>
-            <td class="num neg">−7,04 %</td>
-            <td class="num">S/ 9.296</td>
-            <td class="num neg">− S/ 704</td>
-          </tr>
-          <tr>
-            <td><strong>Integra</strong></td>
-            <td class="num neg">−7,85 %</td>
-            <td class="num">S/ 9.215</td>
-            <td class="num neg">− S/ 785</td>
-          </tr>
-          <tr>
-            <td><strong>Prima</strong></td>
-            <td class="num neg">−8,48 %</td>
-            <td class="num">S/ 9.152</td>
-            <td class="num neg">− S/ 848</td>
-          </tr>
-          <tr>
-            <td><strong>Profuturo</strong></td>
-            <td class="num neg">−11,25 %</td>
-            <td class="num">S/ 8.875</td>
-            <td class="num neg">− S/ 1.125</td>
-          </tr>
+          <tr><td><strong>Habitat</strong></td><td class="num neg">−7,04 %</td><td class="num">S/ 9.296</td><td class="num neg">− S/ 704</td></tr>
+          <tr><td><strong>Integra</strong></td><td class="num neg">−7,85 %</td><td class="num">S/ 9.215</td><td class="num neg">− S/ 785</td></tr>
+          <tr><td><strong>Prima</strong></td><td class="num neg">−8,48 %</td><td class="num">S/ 9.152</td><td class="num neg">− S/ 848</td></tr>
+          <tr><td><strong>Profuturo</strong></td><td class="num neg">−11,25 %</td><td class="num">S/ 8.875</td><td class="num neg">− S/ 1.125</td></tr>
         </tbody>
       </table>
     </div>
@@ -1509,9 +1588,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 05 MERCADO ================= -->
   <section id="mercado">
     <h2 class="title">El mercado en cifras</h2>
-    <p class="subtitle">Datos oficiales de la SBS al 31 de agosto de 2026. No es un producto de nicho.</p>
+    <p class="subtitle">Datos oficiales de la SBS al 31 de agosto de 2026. Los <strong>aportes voluntarios</strong> no son un producto de nicho.</p>
 
     <div class="table-wrap">
       <table>
@@ -1523,33 +1603,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Saldo administrado</strong></td>
-            <td class="num">S/ 3.409,1 millones</td>
-            <td class="num pos">+48,27 %</td>
-          </tr>
-          <tr>
-            <td><strong>AFP que lo ofrecen</strong></td>
-            <td class="num">4</td>
-            <td class="num">—</td>
-          </tr>
-          <tr>
-            <td><strong>Fondos disponibles</strong></td>
-            <td class="num">4 (tipos 0 a 3)</td>
-            <td class="num">—</td>
-          </tr>
-          <tr>
-            <td><strong>Comparación con los aportes con fin previsional</strong></td>
-            <td class="num">14,46 veces su saldo</td>
-            <td class="num">—</td>
-          </tr>
+          <tr><td><strong>Saldo administrado</strong></td><td class="num">S/ 3.409,1 millones</td><td class="num pos">+48,27 %</td></tr>
+          <tr><td><strong>AFP que lo ofrecen</strong></td><td class="num">4</td><td class="num">—</td></tr>
+          <tr><td><strong>Fondos disponibles</strong></td><td class="num">4 (tipos 0 a 3)</td><td class="num">—</td></tr>
+          <tr><td><strong>Comparación con los aportes con fin previsional</strong></td><td class="num">14,46 veces su saldo</td><td class="num">—</td></tr>
         </tbody>
       </table>
     </div>
 
     <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>Saldo administrado</strong> = cuánto dinero del público hay en este producto, sumando las cuatro AFP, en un momento dado. No es dinero nuevo del año ni la ganancia de nadie. <strong>Aportes con fin previsional</strong> = la variante de estos aportes que sí está destinada a la jubilación y sí da derecho al beneficio tributario por deducción.</p>
 
-    <h3>Cómo creció en el último año</h3>
+    <h3>¿Cómo creció en el último año?</h3>
     <p>El saldo pasó de <strong>S/ 2.299,3 millones</strong> en agosto de 2025 a <strong>S/ 3.409,1 millones</strong> en agosto de 2026: casi la mitad más. Ese crecimiento <strong>no</strong> es todo dinero nuevo: incluye lo que aportó la gente, menos lo que retiró, más lo que subieron las inversiones. El cuadro de la SBS no separa esas tres cosas.</p>
 
     <div class="table-wrap" style="padding:20px">
@@ -1566,7 +1630,7 @@
     </div>
     <p class="src-note">Fuente: SBS, cuadro «<strong>Aportes Voluntarios</strong> Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones» (series mensuales de ago-2025 a ago-2026). El porcentaje es <strong>cálculo propio</strong>: 3.409.113,53 ÷ 2.299.252,78 − 1.</p>
 
-    <h3>Quién administra ese dinero</h3>
+    <h3>¿Quién administra ese dinero?</h3>
     <p>El reparto está muy concentrado: dos AFP juntan más del 75 % del saldo.</p>
 
     <div class="table-wrap">
@@ -1581,41 +1645,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Prima</strong></td>
-            <td class="num">S/ 1.564,4 M</td>
-            <td class="num">45,89 %</td>
-            <td class="num">S/ 1.192,0 M</td>
-            <td class="num pos">+31,24 %</td>
-          </tr>
-          <tr>
-            <td><strong>Integra</strong></td>
-            <td class="num">S/ 1.003,2 M</td>
-            <td class="num">29,43 %</td>
-            <td class="num">S/ 677,1 M</td>
-            <td class="num pos">+48,16 %</td>
-          </tr>
-          <tr>
-            <td><strong>Habitat</strong></td>
-            <td class="num">S/ 457,9 M</td>
-            <td class="num">13,43 %</td>
-            <td class="num">S/ 132,6 M</td>
-            <td class="num pos">+245,38 %</td>
-          </tr>
-          <tr>
-            <td><strong>Profuturo</strong></td>
-            <td class="num">S/ 383,6 M</td>
-            <td class="num">11,25 %</td>
-            <td class="num">S/ 297,6 M</td>
-            <td class="num pos">+28,92 %</td>
-          </tr>
+          <tr><td><strong>Prima</strong></td><td class="num">S/ 1.564,4 M</td><td class="num">45,89 %</td><td class="num">S/ 1.192,0 M</td><td class="num pos">+31,24 %</td></tr>
+          <tr><td><strong>Integra</strong></td><td class="num">S/ 1.003,2 M</td><td class="num">29,43 %</td><td class="num">S/ 677,1 M</td><td class="num pos">+48,16 %</td></tr>
+          <tr><td><strong>Habitat</strong></td><td class="num">S/ 457,9 M</td><td class="num">13,43 %</td><td class="num">S/ 132,6 M</td><td class="num pos">+245,38 %</td></tr>
+          <tr><td><strong>Profuturo</strong></td><td class="num">S/ 383,6 M</td><td class="num">11,25 %</td><td class="num">S/ 297,6 M</td><td class="num pos">+28,92 %</td></tr>
         </tbody>
       </table>
     </div>
     <p class="src-note">Fuente: SBS, mismo cuadro, al 31-08-2026. «Cuota» y «Variación» son <strong>cálculo propio</strong>. <strong>Ojo con el +245 % de Habitat:</strong> su saldo de partida era muy pequeño (S/ 132,6 millones), y sobre una base pequeña cualquier crecimiento se ve enorme. No significa que haya captado tres veces más dinero que las demás.</p>
 
-    <h3>En qué fondo está ese dinero</h3>
-    <p>Casi la mitad del saldo está en el Fondo 2, el balanceado. El Fondo 3, el más agresivo, es el que más creció, aunque sigue siendo el más pequeño.</p>
+    <h3>¿En qué fondo está ese dinero?</h3>
+    <p><strong>Casi la mitad del saldo está en el Fondo 2,</strong> el balanceado. El Fondo 3, el más agresivo, es el que más creció, aunque sigue siendo el más pequeño.</p>
 
     <div class="table-wrap" style="padding:20px">
       <svg viewBox="0 0 440 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico: distribución del saldo por tipo de fondo en agosto de 2026: Tipo 2 con 44,87%, Tipo 1 con 26,19%, Tipo 0 con 19,66% y Tipo 3 con 9,28%" style="width:100%;height:auto">
@@ -1649,6 +1689,7 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 06 RENDIMIENTO ================= -->
   <section id="rendimiento">
     <h2 class="title">¿Cuánto se ha ganado?</h2>
     <p class="subtitle">La SBS publica la rentabilidad <strong>neta de comisiones</strong> de cada AFP y cada fondo. Estos son los cinco períodos disponibles.</p>
@@ -1718,7 +1759,7 @@
       </table>
     </div>
 
-    <p class="src-note"><strong>Fuente:</strong> SBS — <em>Rentabilidad Neta de Comisiones de los <strong>Aportes Voluntarios</strong> Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>, cuadros de diciembre de 2022, 2023, 2024, 2025 y del período móvil agosto de 2026. Todos corresponden al <strong>Caso 1</strong>: afiliados con sus <strong>aportes voluntarios</strong> y obligatorios en la misma AFP. El badge turquesa marca el mejor resultado nominal de cada período y fondo (<strong>cálculo propio</strong>). Rentabilidad neta de comisiones = ya descontadas las comisiones de administración. Nominal = sin descontar la inflación. La SBS advierte expresamente que la rentabilidad «es variable, su nivel en el futuro puede cambiar en relación con la rentabilidad pasada» y que la rentabilidad «actual o histórica no es indicativo» de la futura.</p>
+    <p class="src-note"><strong>Fuente:</strong> SBS — <em>Rentabilidad Neta de Comisiones de los <strong>Aportes Voluntarios</strong> Sin Fin Previsional por AFP y Tipo de Fondo de Pensiones</em>, cuadros de diciembre de 2022, 2023, 2024, 2025 y del período móvil agosto de 2026. Todos corresponden al <strong>Caso 1</strong>: afiliados con sus <strong>aportes voluntarios</strong> y obligatorios en la misma AFP. La <strong>celda turquesa</strong> marca el mejor resultado nominal de cada período y fondo (<strong>cálculo propio</strong>). <strong>Rentabilidad neta de comisiones</strong> = ya descontadas las comisiones de administración. <strong>Nominal</strong> = sin descontar la inflación. La SBS advierte expresamente que la rentabilidad «es variable, su nivel en el futuro puede cambiar en relación con la rentabilidad pasada» y que la rentabilidad «actual o histórica no es indicativo» de la futura.</p>
 
     <div class="transparency">
       <strong>Cuatro advertencias antes de sacar conclusiones.</strong>
@@ -1736,10 +1777,10 @@
         <thead>
           <tr>
             <th>Período</th>
-            <th class="num">Fondo 0<br><span style="font-weight:600;text-transform:none;letter-spacing:0;font-size:.78rem">nominal mejor</span></th>
-            <th class="num">Fondo 0<br><span style="font-weight:600;text-transform:none;letter-spacing:0;font-size:.78rem">real mejor</span></th>
-            <th class="num">Fondo 2<br><span style="font-weight:600;text-transform:none;letter-spacing:0;font-size:.78rem">nominal mejor</span></th>
-            <th class="num">Fondo 2<br><span style="font-weight:600;text-transform:none;letter-spacing:0;font-size:.78rem">real mejor</span></th>
+            <th class="num">Fondo 0<br><span style="font-weight:600;text-transform:none;letter-spacing:0">nominal mejor</span></th>
+            <th class="num">Fondo 0<br><span style="font-weight:600;text-transform:none;letter-spacing:0">real mejor</span></th>
+            <th class="num">Fondo 2<br><span style="font-weight:600;text-transform:none;letter-spacing:0">nominal mejor</span></th>
+            <th class="num">Fondo 2<br><span style="font-weight:600;text-transform:none;letter-spacing:0">real mejor</span></th>
           </tr>
         </thead>
         <tbody>
@@ -1756,9 +1797,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 07 COSTOS ================= -->
   <section id="costos">
     <h2 class="title">¿Cuánto te cuesta?</h2>
-    <p class="subtitle">Aquí sí hay datos públicos y obligatorios. Esta es la comisión de administración que la SBS publica para cada AFP y cada fondo.</p>
+    <p class="subtitle">Aquí sí hay datos públicos y obligatorios. <strong>Esta es la comisión de administración</strong> que la SBS publica para cada AFP y cada fondo.</p>
 
     <div class="table-wrap">
       <table>
@@ -1772,44 +1814,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Habitat</strong></td>
-            <td class="num">0,698 %</td>
-            <td class="num"><span class="best">1,097 %</span></td>
-            <td class="num">1,498 %</td>
-            <td class="num"><span class="best">1,900 %</span></td>
-          </tr>
-          <tr>
-            <td><strong>Integra</strong></td>
-            <td class="num"><span class="best">0,493 %</span></td>
-            <td class="num">1,149 %</td>
-            <td class="num">1,753 %</td>
-            <td class="num">1,998 %</td>
-          </tr>
-          <tr>
-            <td><strong>Prima</strong></td>
-            <td class="num">0,600 %</td>
-            <td class="num">1,206 %</td>
-            <td class="num"><span class="best">1,450 %</span></td>
-            <td class="num">1,936 %</td>
-          </tr>
-          <tr>
-            <td><strong>Profuturo</strong></td>
-            <td class="num">0,806 %</td>
-            <td class="num">1,206 %</td>
-            <td class="num">2,120 %</td>
-            <td class="num">2,303 %</td>
-          </tr>
+          <tr><td><strong>Habitat</strong></td><td class="num">0,698 %</td><td class="num"><span class="best">1,097 %</span></td><td class="num">1,498 %</td><td class="num"><span class="best">1,900 %</span></td></tr>
+          <tr><td><strong>Integra</strong></td><td class="num"><span class="best">0,493 %</span></td><td class="num">1,149 %</td><td class="num">1,753 %</td><td class="num">1,998 %</td></tr>
+          <tr><td><strong>Prima</strong></td><td class="num">0,600 %</td><td class="num">1,206 %</td><td class="num"><span class="best">1,450 %</span></td><td class="num">1,936 %</td></tr>
+          <tr><td><strong>Profuturo</strong></td><td class="num">0,806 %</td><td class="num">1,206 %</td><td class="num">2,120 %</td><td class="num">2,303 %</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p class="src-note" style="margin-bottom:14px"><strong>Escala de referencia (comisión anual sobre el saldo):</strong> hasta 0,70 % · 0,71–1,25 % · 1,26–1,80 % · 1,81–2,10 % · más de 2,10 %. El badge turquesa marca la comisión más barata de cada fondo.</p>
-
-    <p class="src-note"><strong>Fuente:</strong> SBS, cuadro «Comisiones por la Gestión de <strong>Aportes Voluntarios</strong> por AFP y Tipo de Fondo de Pensiones», al <strong>31 de agosto de 2026</strong>. Comisión <strong>anual</strong>, expresada en porcentaje <strong>sobre el saldo administrado</strong>. Los badges turquesas marcan la comisión más barata de cada fondo (<strong>cálculo propio</strong>). La SBS precisa en el propio cuadro que las comisiones anuales se calculan anualizando las mensuales sobre un <strong>año de 360 días</strong> y que las mensuales se establecen sobre un mes de 30 días. <strong>En Prima, estas comisiones aplican para saldos mayores a S/ 250.</strong> La SBS publica estos cuadros con el código de serie <strong>FP-1337</strong> («Comisiones por la Administración de <strong>Aportes Voluntarios</strong> por AFP»).</p>
+    <p class="src-note"><strong>Fuente:</strong> SBS, cuadro «Comisiones por la Gestión de <strong>Aportes Voluntarios</strong> por AFP y Tipo de Fondo de Pensiones», al <strong>31 de agosto de 2026</strong>. Comisión <strong>anual</strong>, expresada en porcentaje <strong>sobre el saldo administrado</strong>. Las <strong>celdas turquesas</strong> marcan la comisión más barata de cada fondo (<strong>cálculo propio</strong>). La SBS precisa en el propio cuadro que las comisiones anuales se calculan anualizando las mensuales sobre un <strong>año de 360 días</strong> y que las mensuales se establecen sobre un mes de 30 días. <strong>En Prima, estas comisiones aplican para saldos mayores a S/ 250.</strong> La SBS publica estos cuadros con el código de serie <strong>FP-1337</strong> («Comisiones por la Administración de <strong>Aportes Voluntarios</strong> por AFP»).</p>
 
     <h3>Lo que significa en soles</h3>
-    <p>Según el cuadro de la SBS, la comisión se aplica <strong>sobre el saldo administrado</strong>, no sobre la ganancia: si tu fondo no rinde nada, igual se descuenta. Esto es lo que costaría tener S/ 10.000 en el Fondo 2 durante un año completo:</p>
+    <p>Según el cuadro de la SBS, la comisión se aplica <strong>sobre el saldo administrado</strong>, no sobre la ganancia: <strong>si tu fondo no rinde nada, igual se descuenta.</strong> Esto es lo que costaría tener S/ 10.000 en el Fondo 2 durante un año completo:</p>
 
     <div class="table-wrap">
       <table>
@@ -1821,26 +1837,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Prima</strong></td>
-            <td class="num"><span class="best">1,450 %</span></td>
-            <td class="num">S/ 145,00</td>
-          </tr>
-          <tr>
-            <td><strong>Habitat</strong></td>
-            <td class="num">1,498 %</td>
-            <td class="num">S/ 149,80</td>
-          </tr>
-          <tr>
-            <td><strong>Integra</strong></td>
-            <td class="num">1,753 %</td>
-            <td class="num">S/ 175,30</td>
-          </tr>
-          <tr>
-            <td><strong>Profuturo</strong></td>
-            <td class="num">2,120 %</td>
-            <td class="num">S/ 212,03</td>
-          </tr>
+          <tr><td><strong>Prima</strong></td><td class="num"><span class="best">1,450 %</span></td><td class="num">S/ 145,00</td></tr>
+          <tr><td><strong>Habitat</strong></td><td class="num">1,498 %</td><td class="num">S/ 149,80</td></tr>
+          <tr><td><strong>Integra</strong></td><td class="num">1,753 %</td><td class="num">S/ 175,30</td></tr>
+          <tr><td><strong>Profuturo</strong></td><td class="num">2,120 %</td><td class="num">S/ 212,03</td></tr>
         </tbody>
       </table>
     </div>
@@ -1848,12 +1848,13 @@
 
     <div class="transparency">
       <strong>Dos cosas que conviene tener claras.</strong> Primero: la diferencia entre la AFP más barata y la más cara es de <strong>0,313 puntos porcentuales</strong> en el Fondo 0, <strong>0,109</strong> en el Fondo 1, <strong>0,670</strong> en el Fondo 2 y <strong>0,403</strong> en el Fondo 3. Sostenida durante años, sobre un saldo que crece, esa diferencia pesa. Segundo: <strong>no existe ninguna comisión de mantenimiento</strong> en la normativa que revisamos. Si tu AFP te cobra algo distinto a la comisión de este cuadro, pídelo por escrito.
-      <p style="margin:12px 0 0"><strong>Y una advertencia honesta sobre la base del cobro.</strong> El cuadro de la SBS publica esta comisión como un <strong>porcentaje anual y mensual sobre el saldo</strong>, y el manual contable de la SBS registra una cuenta llamada «comisión por saldo administrado». Pero la Ley del SPP, en su artículo 24, describe la comisión por <strong>aportes voluntarios</strong> como «una comisión porcentual calculada sobre los referidos <strong>aportes voluntarios</strong>, <strong>en el caso de retiro de los mismos</strong>», y el Título V del Compendio menciona «las comisiones <strong>para el retiro</strong>». Las fuentes no son del todo consistentes sobre si el cobro es periódico sobre el saldo o al momento del retiro: <strong>pregúntale a tu AFP cuál de las dos aplica y cómo aparece en tu estado de cuenta</strong>.</p>
+      <p style="margin:12px 0 0"><strong>Y una advertencia sobre la base del cobro.</strong> El cuadro de la SBS publica esta comisión como un <strong>porcentaje anual y mensual sobre el saldo</strong>, y el manual contable de la SBS registra una cuenta llamada «comisión por saldo administrado». Pero la Ley del SPP, en su artículo 24, describe la comisión por <strong>aportes voluntarios</strong> como «una comisión porcentual calculada sobre los referidos <strong>aportes voluntarios</strong>, <strong>en el caso de retiro de los mismos</strong>», y el Título V del Compendio menciona «las comisiones <strong>para el retiro</strong>». Las fuentes no son del todo consistentes sobre si el cobro es periódico sobre el saldo o al momento del retiro: <strong>pregúntale a tu AFP cuál de las dos aplica y cómo aparece en tu estado de cuenta</strong>.</p>
     </div>
   </section>
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 08 LETRA CHICA ================= -->
   <section id="letra-chica">
     <h2 class="title">La letra chica: requisitos, retiro y embargos</h2>
     <p class="subtitle">Lo que decide si este producto te sirve o no, y que casi ninguna publicidad menciona.</p>
@@ -1861,7 +1862,7 @@
     <div class="consider">
       <div class="cns">
         <h4>1. El requisito de entrada</h4>
-        <p>Para abrir la cuenta necesitas <strong>más de 5 años de incorporación al SPP</strong> <strong>o</strong> tener <strong>50 años de edad</strong>. No se exigen las dos cosas: basta una. Lo exige el Título V del Compendio de la SBS.</p>
+        <p>Para abrir la cuenta necesitas <strong>más de 5 años de incorporación al SPP —estar afiliado a una AFP—</strong> <strong>o</strong> tener <strong>50 años de edad</strong>. No se exigen las dos cosas: basta una. Lo exige el Título V del Compendio de la SBS.</p>
       </div>
       <div class="cns">
         <h4>2. Puede estar en otra AFP y en otro fondo</h4>
@@ -1876,7 +1877,7 @@
         <p>Puedes retirar <strong>en los montos que quieras y cuantas veces quieras</strong>: la norma habla de «libre disponibilidad de retiros… tanto en montos como en número de operaciones». Hasta 2017 había un tope de tres retiros por año; ya no existe. Lo que sí tiene plazo es el pago: la AFP tiene <strong>hasta el sexto día del mes siguiente</strong> al pedido, y paga al <strong>valor cuota del día del pago</strong>.</p>
       </div>
       <div class="cns">
-        <h4>5. Es embargable: la ley protege los aportes «con» fin previsional, no estos</h4>
+        <h4>5. Es embargable: la ley protege los aportes «con» fin previsional (Bolsillo 1), no estos</h4>
         <p>El Título V del Compendio define el aporte voluntario sin fin previsional con una primera característica muy concreta: «<strong>tiene la condición de embargable</strong>». En cambio, el TUO de la Ley del SPP declara inembargables «los <strong>aportes voluntarios</strong> <em>con</em> fin previsional». Es la contrapartida de la flexibilidad: esta cuenta no tiene la protección legal reforzada que sí tiene su pariente previsional.</p>
       </div>
       <div class="cns">
@@ -1890,7 +1891,7 @@
     </div>
 
     <div class="transparency" style="margin-top:24px">
-      <strong>Dos cosas que no encontramos y por eso no respondemos.</strong> La guía anterior de este producto afirmaba que el retiro se paga «hasta el quinto día hábil siguiente»: <strong>esa fórmula no existe en la norma</strong>. La regla vigente es la del punto 4 (hasta el sexto día del mes siguiente). Y sobre <strong>qué pasa con el saldo si el titular fallece</strong>, no encontramos una norma que se refiera específicamente a esta subcuenta: la única regla cercana habla de la cuenta de aportes obligatorios. Son dos preguntas para hacerle a tu AFP <em>antes</em> de depositar.
+      Y sobre <strong>qué pasa con el saldo si el titular fallece</strong>, no encontramos una norma que se refiera específicamente a esta subcuenta: la única regla cercana habla de la cuenta de aportes obligatorios (Bolsillo 1). Es una pregunta para hacerle a tu AFP <em>antes</em> de depositar.
     </div>
 
     <p class="src-note"><strong>Fuentes de esta sección:</strong> <a href="https://www2.congreso.gob.pe/sicr/cendocbib/con5_uibd.nsf/BEFE698BF6845360052582C5005EC36D/$FILE/Resol_080-98-EF-SAFP.pdf" target="_blank" rel="noopener">Resolución SBS N.º 080-98-EF-SAFP, Título V del Compendio, arts. 120, 125 y 127</a> (requisito; embargabilidad; libre disponibilidad de retiros; plazo y valor cuota) · <a href="https://busquedas.elperuano.pe/api/visor_html/2435408-1" target="_blank" rel="noopener">D.S. N.º 189-2025-EF, art. 33</a> (reglamento vigente de la Ley 32123: solo afiliados al SPP) · <a href="https://www2.congreso.gob.pe/sicr/cendocbib/con4_uibd.nsf/64CD95183B9531F305257EF400588A5C/$FILE/DS_054_97_EF.pdf" target="_blank" rel="noopener">D.S. 054-97-EF, arts. 18-C y 20</a> (patrimonio independiente de la AFP; inembargabilidad solo de los aportes con fin previsional) · <a href="https://www2.congreso.gob.pe/sicr/cendocbib/con5_uibd.nsf/944F8C5E554E0A50052582BF00753AF7/$FILE/DS_004-98-EF.pdf" target="_blank" rel="noopener">D.S. 004-98-EF, arts. 42, 43 y 60</a> · <a href="https://www.sbs.gob.pe/sistema-privado-de-pensiones/multifondos" target="_blank" rel="noopener">SBS — Cartilla Informativa Multifondos</a> · <a href="https://fsd.org.pe/cobertura/" target="_blank" rel="noopener">FSD</a> y <a href="https://busquedas.elperuano.pe/dispositivo/NL/2550558-1" target="_blank" rel="noopener">Circular N.º F-618-2026</a>.</p>
@@ -1898,9 +1899,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 09 IMPUESTOS ================= -->
   <section id="impuestos">
     <h2 class="title">Impuestos</h2>
-    <p class="subtitle">Hay una buena noticia reciente y un malentendido frecuente. Vamos por partes.</p>
+    <p class="subtitle">Hay una buena noticia reciente y un malentendido frecuente.</p>
 
     <div class="lead-callout">
       <span class="kicker">Lo esencial</span>
@@ -1922,42 +1924,10 @@
         <ul>
           <li><b>El aporte no es deducible.</b> Depositar en esta cuenta <strong>no</strong> reduce tu renta de cuarta o quinta categoría. No aparece en ninguna de las deducciones que la SUNAT reconoce en la declaración anual. La ventaja de este producto es la <strong>libre disponibilidad</strong>, no un ahorro tributario al aportar.</li>
           <li><b>No tienes el aporte complementario del Estado.</b> Ese incentivo existe, pero la propia Ley 32123 lo dirige expresamente a los <strong>aportes voluntarios</strong> <strong>con</strong> fin previsional, no a estos.</li>
-          <li><b>No confundas las dos variantes.</b> Los aportes <strong>con</strong> fin previsional son, por ley, intangibles e inembargables, y tienen su propio régimen. Estos no: son de libre disponibilidad, que es justamente lo que los hace flexibles.</li>
+          <li><b>No confundas los dos "Bolsillos".</b> Los aportes <strong>con</strong> fin previsional son, por ley, intangibles e inembargables, y tienen su propio régimen. Estos no: son de libre disponibilidad, que es justamente lo que los hace flexibles.</li>
         </ul>
       </div>
     </div>
-
-    <h3>El detalle que casi nadie explica: qué pasó antes</h3>
-    <p>La inafectación es reciente. Antes de la Ley N.º 32123, el retiro de estos aportes tributaba como <strong>ganancia de capital de segunda categoría</strong>: la AFP retenía el <strong>6,25 %</strong> de la renta neta —equivalente al 5 % de la renta bruta— y esa retención era <strong>pago a cuenta</strong>, no definitiva. Es decir, el rescate se declaraba en la renta anual. Esto importa si retiraste antes del cambio de régimen.</p>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Momento</th>
-            <th>¿Pagas Impuesto a la Renta por la ganancia?</th>
-            <th>¿Quién retiene?</th>
-            <th>¿Declaras?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Régimen vigente</strong><br><span style="color:var(--muted);font-size:.85em">Ley 32123 + Informe SUNAT 000054-2025</span></td>
-            <td><strong style="color:var(--teal-soft)">No. Los rendimientos están inafectos</strong></td>
-            <td>No debería haber retención: no hay renta gravada</td>
-            <td>No por este concepto</td>
-          </tr>
-          <tr>
-            <td><strong>Régimen anterior</strong><br><span style="color:var(--muted);font-size:.85em">antes de la Ley 32123</span></td>
-            <td>Sí: ganancia de capital de <strong>segunda categoría</strong>. 6,25 % de la renta neta (≈ 5 % de la renta bruta)</td>
-            <td>La <strong>AFP</strong>, como <strong>pago a cuenta</strong></td>
-            <td>Sí, en la declaración anual; lo retenido se usaba como crédito</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="src-note"><strong>Fuentes:</strong> <a href="https://busquedas.elperuano.pe/api/visor_html/2328060-1" target="_blank" rel="noopener">Ley N.º 32123, Ley de Modernización del Sistema Previsional Peruano</a> (publicada el 24-09-2024), Décimo Novena Disposición Complementaria Final («Inafectación del impuesto a la renta»); <a href="https://www.sunat.gob.pe/legislacion/oficios/2025/informe-oficios/i000054-2025-7T0000.pdf" target="_blank" rel="noopener">SUNAT, Informe N.º 000054-2025-SUNAT/7T0000</a> (21-05-2025). Para el régimen anterior: Reglamento de la Ley del Impuesto a la Renta, art. 1 inciso j) y art. 11 inciso g); <a href="https://iat.sunat.gob.pe/sites/default/files/documentos/2023/09/archivos/fundimprentapn.pdf" target="_blank" rel="noopener">SUNAT/IAT, <em>Fundamentos de imposición a la renta de personas naturales</em></a>. <strong>Ganancia de capital</strong> = la diferencia entre lo que vale tu inversión cuando la rescatas y lo que te costó. <strong>Renta neta</strong> = la renta bruta menos el 20 % que la ley permite deducir. <strong>Pago a cuenta</strong> = un adelanto de impuesto: no es el impuesto final, se regulariza en la declaración anual.</p>
 
     <h3>El otro impuesto: el ITF</h3>
     <p>Cada vez que entra o sale dinero de una cuenta del sistema financiero se aplica el <strong>Impuesto a las Transacciones Financieras (ITF)</strong>, con una tasa de <strong>0,005 %</strong>. El TUO de la Ley del ITF exonera «la acreditación o débito en las cuentas utilizadas por las Administradoras de Fondos de Pensiones — AFP exclusivamente para la constitución e inversión del fondo de pensiones y para el pago de las prestaciones». Es un costo marginal: sobre S/ 10.000, el ITF son S/ 0,50.</p>
@@ -1968,16 +1938,19 @@
       <strong>Lo que la SUNAT todavía no ha precisado, y por eso no lo afirmamos.</strong>
       <p style="margin:10px 0 0"><strong>1. Desde qué día exacto rige la inafectación.</strong> La Ley 32123 entró en vigencia «al día siguiente de la publicación de su reglamento», que es el D.S. N.º 189-2025-EF, publicado el 05-09-2025. La lectura razonable es que la inafectación corre desde el <strong>06-09-2025</strong>. Pero la SUNAT <em>no</em> lo ha declarado con esas palabras, y su Informe es de mayo de 2025, anterior a esa fecha. Queda como interpretación, no como dato.</p>
       <p style="margin:10px 0 0"><strong>2. Si la inafectación cubre también la ganancia de capital del rescate.</strong> El Informe habla de «dividendos, intereses, comisiones y cualquier otro rendimiento». La lectura más razonable es que sí incluye la ganancia del rescate, pero la SUNAT no ha usado esas palabras. Si vas a hacer un retiro importante, <strong>confírmalo con tu AFP o con un contador</strong>.</p>
-      <p style="margin:10px 0 0"><strong>3. Qué pasó en el medio.</strong> No encontramos una regla oficial que explique cómo se tratan los rendimientos generados <em>antes</em> del cambio de régimen y retirados <em>después</em>. Es un caso que puede afectarte si tienes saldo antiguo.</p>
+      <p style="margin:10px 0 0"><strong>3. Qué pasa con los rendimientos anteriores al cambio de régimen.</strong> No encontramos una regla oficial que explique cómo se tratan los rendimientos generados <em>antes</em> de la inafectación y retirados <em>después</em>. Es un caso que puede afectarte si tienes saldo antiguo. Si vas a retirar saldo de antes de esa fecha, <strong>confírmalo con tu AFP o con un contador</strong>.</p>
       <p style="margin:10px 0 0"><strong>Y una advertencia general:</strong> esta sección explica el marco tributario, no tu caso. No es asesoría tributaria personalizada.</p>
     </div>
+
+    <p class="src-note"><strong>Fuentes:</strong> <a href="https://busquedas.elperuano.pe/api/visor_html/2328060-1" target="_blank" rel="noopener">Ley N.º 32123, Ley de Modernización del Sistema Previsional Peruano</a> (publicada el 24-09-2024), Décimo Novena Disposición Complementaria Final («Inafectación del impuesto a la renta»); <a href="https://www.sunat.gob.pe/legislacion/oficios/2025/informe-oficios/i000054-2025-7T0000.pdf" target="_blank" rel="noopener">SUNAT, Informe N.º 000054-2025-SUNAT/7T0000</a> (21-05-2025).</p>
   </section>
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 10 VENTAJAS ================= -->
   <section id="ventajas">
     <h2 class="title">Ventajas y riesgos</h2>
-    <p class="subtitle">Las dos caras, sin adornos.</p>
+    <p class="subtitle">Atención a lo siguiente.</p>
 
     <div class="two-col">
       <div class="panel pro">
@@ -2013,9 +1986,10 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 11 COMPARATIVA ================= -->
   <section id="comparativa">
     <h2 class="title">Comparado con otras opciones</h2>
-    <p class="subtitle">Frente a las dos alternativas más comunes de quien no quiere arriesgar: el depósito a plazo y el fondo mutuo.</p>
+    <p class="subtitle">Comparado con las dos alternativas más comunes de quien no quiere arriesgar: el depósito a plazo y el fondo mutuo.</p>
 
     <div class="table-wrap">
       <table>
@@ -2028,54 +2002,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Quién lo regula</strong></td>
-            <td>SBS</td>
-            <td>SBS</td>
-            <td>SMV</td>
-          </tr>
-          <tr>
-            <td><strong>Cuánto puede rendir</strong></td>
-            <td>Variable, según el fondo que elijas</td>
-            <td>Tasa fija pactada al inicio</td>
-            <td>Variable, según el fondo</td>
-          </tr>
-          <tr>
-            <td><strong>Referencia de cuánto rinde hoy</strong></td>
-            <td>Depende del fondo: en los cinco períodos publicados por la SBS, entre <span class="neg">−11,75 %</span> y <span class="pos">+37,37 %</span> anual según AFP y fondo</td>
-            <td>Entre <strong>3,33 %</strong> y <strong>3,93 %</strong> anual según el plazo, para personas naturales en banca múltiple (al 16-10-2026)</td>
-            <td>Variable. Los fondos de deuda de corto plazo en soles rindieron entre <strong>3,56 %</strong> y <strong>4,52 %</strong> a 12 meses (dato gremial, a set-2026)</td>
-          </tr>
-          <tr>
-            <td><strong>Tu capital, ¿está garantizado?</strong></td>
-            <td><strong>No</strong>: el valor sube y baja</td>
-            <td>No garantizado, pero el monto al vencimiento es previsible si lo mantienes</td>
-            <td><strong>No</strong>: el valor cuota sube y baja</td>
-          </tr>
-          <tr>
-            <td><strong>¿Hay Fondo de Seguro de Depósitos?</strong></td>
-            <td><strong>No</strong></td>
-            <td><strong>Sí</strong>: el FSD cubre hasta S/ 123.000 por depositante y entidad</td>
-            <td><strong>No</strong></td>
-          </tr>
-          <tr>
-            <td><strong>Comisión de gestión</strong></td>
-            <td>Sí: comisión de administración, entre 0,493 % y 2,303 % anual según AFP y fondo (el cuadro de la SBS la presenta sobre el saldo)</td>
-            <td>Normalmente no se cobra una comisión de gestión explícita: la tasa que pactas es la que recibes</td>
-            <td>Sí: comisión de la sociedad administradora</td>
-          </tr>
-          <tr>
-            <td><strong>Disponibilidad del dinero</strong></td>
-            <td>Libre disponibilidad de retiro, con proceso y pago al valor cuota del día</td>
-            <td>Al vencimiento. Retirarlo antes suele implicar perder el interés pactado: verifica las condiciones de tu banco</td>
-            <td>Rescate según el reglamento del fondo</td>
-          </tr>
-          <tr>
-            <td><strong>Requisito para entrar</strong></td>
-            <td>Más de 5 años en el SPP o 50 años de edad</td>
-            <td>Ninguno</td>
-            <td>Ninguno, salvo la inversión mínima que fije cada fondo</td>
-          </tr>
+          <tr><td><strong>Quién lo regula</strong></td><td>SBS</td><td>SBS</td><td>SMV</td></tr>
+          <tr><td><strong>Cuánto puede rendir</strong></td><td>Variable, según el fondo que elijas</td><td>Tasa fija pactada al inicio</td><td>Variable, según el fondo</td></tr>
+          <tr><td><strong>Referencia de cuánto rinde hoy</strong></td><td>Depende del fondo: en los cinco períodos publicados por la SBS, entre <span class="neg">−11,75 %</span> y <span class="pos">+37,37 %</span> anual según AFP y fondo</td><td>Entre <strong>3,33 %</strong> y <strong>3,93 %</strong> anual según el plazo, para personas naturales en banca múltiple (al 16-10-2026)</td><td>Variable. Los fondos de deuda de corto plazo en soles rindieron entre <strong>3,56 %</strong> y <strong>4,52 %</strong> a 12 meses (dato gremial, a set-2026)</td></tr>
+          <tr><td><strong>Tu capital, ¿está garantizado?</strong></td><td><strong>No</strong>: el valor sube y baja</td><td>No garantizado, pero el monto al vencimiento es previsible si lo mantienes</td><td><strong>No</strong>: el valor cuota sube y baja</td></tr>
+          <tr><td><strong>¿Hay Fondo de Seguro de Depósitos?</strong></td><td><strong>No</strong></td><td><strong>Sí</strong>: el FSD cubre hasta S/ 123.000 por depositante y entidad</td><td><strong>No</strong></td></tr>
+          <tr><td><strong>Comisión de gestión</strong></td><td>Sí: comisión de administración, entre 0,493 % y 2,303 % anual según AFP y fondo (el cuadro de la SBS la presenta sobre el saldo)</td><td>Normalmente no se cobra una comisión de gestión explícita: la tasa que pactas es la que recibes</td><td>Sí: comisión de la sociedad administradora</td></tr>
+          <tr><td><strong>Disponibilidad del dinero</strong></td><td>Libre disponibilidad de retiro, con proceso y pago al valor cuota del día</td><td>Al vencimiento. Retirarlo antes suele implicar perder el interés pactado: verifica las condiciones de tu banco</td><td>Rescate según el reglamento del fondo</td></tr>
+          <tr><td><strong>Requisito para entrar</strong></td><td>Más de 5 años en el SPP o 50 años de edad</td><td>Ninguno</td><td>Ninguno, salvo la inversión mínima que fije cada fondo</td></tr>
         </tbody>
       </table>
     </div>
@@ -2090,14 +2024,15 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 12 NO ESPERAR ================= -->
   <section id="no-esperar">
-    <h2 class="title">Qué NO deberías esperar</h2>
+    <h2 class="title">¿Qué NO deberías esperar?</h2>
     <p class="subtitle">Seis creencias que arruinan la experiencia de quien recién empieza. Léelas dos veces.</p>
 
     <ul class="avoid">
       <li><b>Una rentabilidad garantizada o fija.</b> No existe. El valor de tu cuenta se mueve con el mercado y la propia SBS advierte en cada cuadro que la rentabilidad pasada no anticipa la futura.</li>
       <li><b>Que sea como un depósito a plazo.</b> Un depósito tiene tasa pactada y cobertura del <strong>Fondo de Seguro de Depósitos</strong> hasta S/ 123.000. Aquí no hay ni lo uno ni lo otro: hay potencial de más rendimiento y también posibilidad de perder.</li>
-      <li><b>Que tu dinero esté disponible al instante.</b> «Libre disponibilidad» significa que no está atado a la jubilación, no que salga el mismo día. Se pide, se procesa y se paga al valor cuota del día del pago.</li>
+      <li><b>Que tu dinero esté disponible al instante.</b> «Libre disponibilidad» significa que no está atado a la jubilación, no que salga el mismo día. Se pide, se procesa y se paga al valor cuota del día del pago (hasta el sexto día del mes siguiente al pedido).</li>
       <li><b>Que sea tu fondo de emergencia.</b> Para un imprevisto de esta semana, este no es el instrumento: el saldo puede estar abajo justo cuando lo necesitas. El fondo de emergencia va en algo líquido.</li>
       <li><b>Que la comisión solo se cobra si ganas.</b> No es así: es un porcentaje anual que va entre 0,493 % y 2,303 % según AFP y fondo, calculado sobre el monto administrado. El costo no depende de que el rendimiento sea positivo.</li>
       <li><b>Que puedas abrirla hoy mismo.</b> Hay requisito de entrada: más de 5 años en el SPP o 50 años de edad.</li>
@@ -2106,8 +2041,9 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 13 EMPEZAR ================= -->
   <section id="empezar">
-    <h2 class="title">Cómo empezar, paso a paso</h2>
+    <h2 class="title">¿Cómo empezar?, Un paso a paso</h2>
     <p class="subtitle">Seis pasos, del interés a la primera decisión.</p>
 
     <ol class="steps">
@@ -2115,14 +2051,14 @@
         <span class="n">1</span>
         <div>
           <b>Confirma que cumples el requisito</b>
-          <p>Más de 5 años de incorporación al SPP <strong>o</strong> 50 años de edad. Verifícalo con tu AFP antes de hacer cualquier otra cosa.</p>
+          <p>Más de 5 años de incorporación al <strong>SPP —estar afiliado a una AFP—</strong> <strong>o</strong> 50 años de edad. Verifícalo con tu AFP antes de hacer cualquier otra cosa.</p>
         </div>
       </li>
       <li>
         <span class="n">2</span>
         <div>
           <b>Pregunta por escrito lo que no está publicado</b>
-          <p>Tres cosas, ninguna resuelta en las fuentes oficiales que revisamos: <strong>(1)</strong> si la comisión de administración se descuenta mes a mes del saldo o al momento del retiro (las fuentes no coinciden, ver sección 07); <strong>(2)</strong> qué pasa con tu saldo si falleces, porque no hallamos norma que se refiera a esta subcuenta; y <strong>(3)</strong> los plazos operativos concretos de tu AFP para procesar el retiro. Solo tu AFP te las puede responder por escrito.</p>
+          <p>Tres cosas, ninguna resuelta en las fuentes oficiales que revisamos: <strong>(1)</strong> si la comisión de administración se descuenta mes a mes del saldo o al momento del retiro; <strong>(2)</strong> qué pasa con tu saldo si falleces, porque no hallamos norma que se refiera a esta subcuenta; y <strong>(3)</strong> los plazos operativos concretos de tu AFP para procesar el retiro. Solo tu AFP te las puede responder por escrito.</p>
         </div>
       </li>
       <li>
@@ -2158,6 +2094,7 @@
 
   <div class="divider"><span>· · ·</span></div>
 
+  <!-- ================= 14 REFLEXION ================= -->
   <section id="reflexion">
     <div class="callout">
       <h2>Una última reflexión</h2>
@@ -2167,6 +2104,7 @@
     </div>
   </section>
 
+  <!-- ================= APP ================= -->
   <section id="app-apalancate">
     <div class="app-invite">
       <div class="app-icon">

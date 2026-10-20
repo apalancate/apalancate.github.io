@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Invertir en Factoring en Perú — Guía honesta para principiantes</title>
+<title>Invertir en Factoring en Perú — Guía para empezar de cero</title>
 <meta name="description" content="Qué es el factoring, cómo se gana, cuánto cuesta, qué riesgos tiene y cómo verificar una plataforma. Con datos oficiales citados y lo que NO se sabe.">
 <meta name="author" content="Apalancate · Perú">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://apalancate.github.io/factoring.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_PE">
-<meta property="og:title" content="Invertir en Factoring en Perú — Guía honesta para principiantes">
+<meta property="og:title" content="Invertir en Factoring en Perú — Guía para empezar de cero">
 <meta property="og:description" content="Qué es el factoring, cómo se gana, cuánto cuesta, qué riesgos tiene y cómo verificar una plataforma. Con datos oficiales citados y lo que NO se sabe.">
 <meta property="og:url" content="https://apalancate.github.io/factoring.html">
 <meta name="twitter:card" content="summary">
@@ -269,6 +269,45 @@
   .cast-card.p1 .badge{background:rgba(251,146,60,.15);color:#fdba74;border:1px solid rgba(251,146,60,.3);}
   .cast-card.p2 .badge{background:rgba(45,212,191,.14);color:var(--teal-soft);border:1px solid rgba(45,212,191,.3);}
   .cast-card.p3 .badge{background:rgba(167,139,250,.15);color:#c4b5fd;border:1px solid rgba(167,139,250,.3);}
+  /* Tarjeta destacada: el inversionista (protagonista de esta guía) */
+  .cast-card.featured{
+    border:2px solid var(--teal);
+    background:
+      radial-gradient(320px 190px at 50% 0%, rgba(45,212,191,.20), transparent 70%),
+      linear-gradient(180deg, rgba(19,56,66,.98), rgba(16,38,54,.98));
+    box-shadow:0 0 0 1px rgba(45,212,191,.22), 0 18px 44px -22px rgba(0,0,0,.85);
+  }
+  .cast-card.featured:hover{
+    transform:translateY(-8px);
+    border-color:var(--teal-soft);
+    box-shadow:0 0 0 1px rgba(94,234,212,.45), 0 0 46px -4px rgba(45,212,191,.55), 0 26px 54px -22px rgba(0,0,0,.9);
+  }
+  .cast-card.featured .art::before{
+    background:radial-gradient(closest-side, rgba(45,212,191,.42), transparent 72%);
+    inset:8% 12%;
+  }
+  .cast-card.featured h4{color:#eafff9;}
+  .cast-card.featured p{color:#c9e9e3;}
+  .cast-card.featured .badge{background:rgba(45,212,191,.16);color:var(--teal-soft);border:1px solid rgba(45,212,191,.35);}
+  .cast-card .ribbon{
+    position:absolute;top:0;right:0;
+    font-size:.62rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase;
+    padding:7px 13px;
+    border-radius:0 var(--radius) 0 14px;
+    background:linear-gradient(135deg, var(--teal), var(--teal-deep));
+    color:#04211c;
+    z-index:2;
+  }
+  .cast-card .ribbon::before{content:"★ ";}
+
+  /* Escala de color por concentración en cuadros con cifras */
+  .conc{ display:inline-block; padding:3px 11px; border-radius:999px; font-weight:850; font-variant-numeric:tabular-nums; border:1px solid transparent; }
+  .conc-c0{ background:rgba(148,180,224,.10); color:var(--ink-soft); border-color:var(--line-strong); }
+  .conc-c1{ background:rgba(74,222,128,.14);  color:var(--green);  border-color:rgba(74,222,128,.32); }
+  .conc-c2{ background:rgba(45,212,191,.14);  color:var(--teal-soft); border-color:rgba(45,212,191,.32); }
+  .conc-c3{ background:rgba(251,191,36,.15);  color:var(--amber);  border-color:rgba(251,191,36,.34); }
+  .conc-c4{ background:rgba(251,146,60,.15);  color:var(--orange); border-color:rgba(251,146,60,.34); }
+  .conc-c5{ background:rgba(248,113,113,.15); color:var(--red);   border-color:rgba(248,113,113,.34); }
 
   .cast-card .art{
     display:grid;place-items:center;
@@ -997,8 +1036,8 @@
 <header class="hero">
   <div class="wrap">
     <span class="eyebrow">Apalancate · Perú</span>
-    <h1>Invertir en <em>Factoring</em>: la guía honesta para empezar de cero</h1>
-    <p class="lede">Qué es, cómo se gana, cuánto cuesta y qué riesgos tiene. Con los datos oficiales citados y, sobre todo, diciéndote con claridad qué <strong>no</strong> se sabe todavía.</p>
+    <h1>Invertir en <em>Factoring</em>: la guía para empezar de cero</h1>
+    <p class="lede">¿Qué es?, ¿cómo se gana?, ¿cuánto cuesta? y ¿qué riesgos tiene?. Con los datos oficiales citados y, sobre todo, diciéndote con claridad qué <strong>no</strong> se sabe todavía.</p>
 
     <div class="hero-flow">
       <span class="step"><span class="dot">1</span> Proveedor</span>
@@ -1053,7 +1092,7 @@
       </div>
       <div class="def">
         <h4>Riesgo real</h4>
-        <p>No hay fondo de seguro que cubra tu capital: si el pagador no paga, pierdes. Y no existe una tasa oficial de retorno publicada.</p>
+        <p>No hay <strong>Fondo de Seguro de Depósitos (FSD)</strong> que cubra tu capital: si el pagador no paga, pierdes. Y no existe una tasa oficial de retorno publicada.</p>
       </div>
     </div>
 
@@ -1064,7 +1103,7 @@
 
   <!-- ================= 01 QUE ES ================= -->
   <section id="que-es">
-    <h2 class="title">Qué es el factoring</h2>
+    <h2 class="title">¿Qué es el factoring?</h2>
     <p class="subtitle">Tres personajes y una factura. Si entiendes esto, entiendes casi todo.</p>
 
     <div class="cast">
@@ -1109,7 +1148,8 @@
         <p>No es un papel cualquiera: es un <strong>título valor</strong>, es decir, un documento con fuerza legal para cobrar (Ley 29623). Pero esa fuerza no es automática: hace falta que el pagador confirme que la factura es válida. A eso se le llama dar su <strong>conformidad</strong>.</p>
       </article>
 
-      <article class="cast-card p3">
+      <article class="cast-card p3 featured">
+        <span class="ribbon">Tú eres el inversionista</span>
         <span class="badge">Protagonista 3</span>
         <div class="art">
           <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: el inversionista que adelanta el dinero">
@@ -1138,7 +1178,7 @@
   <!-- ================= 02 COMO FUNCIONA ================= -->
   <section id="como-funciona">
     <div class="flow">
-      <h2>Cómo ganas dinero, en 4 pasos</h2>
+      <h2>¿Cómo ganas dinero?, en 4 pasos</h2>
       <p class="sub">El circuito completo. Fíjate en el paso 3: ahí está tu ganancia.</p>
       <div class="flow-steps">
         <div class="flow-step">
@@ -1224,7 +1264,7 @@
   <!-- ================= 04 MERCADO ================= -->
   <section id="mercado">
     <h2 class="title">El mercado en cifras</h2>
-    <p class="subtitle">Datos oficiales de PRODUCE y CAVALI. No es un experimento: es una industria con miles de usuarios.</p>
+    <p class="subtitle">Datos oficiales de PRODUCE y CAVALI. El Factoring no es un experimento: es una industria con miles de usuarios.</p>
 
     <div class="table-wrap">
       <table>
@@ -1236,15 +1276,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Monto negociado</strong></td><td>S/ 52,057 millones</td><td>+20.6%</td></tr>
-          <tr><td><strong>Facturas negociadas</strong></td><td>2,070,879</td><td>+17.1%</td></tr>
-          <tr><td><strong>Empresas usuarias</strong></td><td>30,038</td><td>84.9% son MYPE</td></tr>
+          <tr><td><strong>Monto negociado</strong></td><td>S/ 52,057 millones</td><td><span class="conc conc-c4">+20.6%</span></td></tr>
+          <tr><td><strong>Facturas negociadas</strong></td><td>2,070,879</td><td><span class="conc conc-c3">+17.1%</span></td></tr>
+          <tr><td><strong>Empresas usuarias</strong></td><td>30,038</td><td><span class="conc conc-c4">84.9% son MYPE</span></td></tr>
           <tr><td><strong>Ticket promedio por factura</strong></td><td>S/ 23,193</td><td>Fuente: CAVALI</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>MYPE</strong> = micro y pequeña empresa. <strong>Monto negociado</strong> = la suma del valor de todas las facturas que cambiaron de manos en el año; no es dinero nuevo ni la ganancia de nadie. <strong>Ticket promedio</strong> = el valor medio de cada factura.</p>
+    <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>MYPE</strong> = micro y pequeña empresa. <strong>Monto negociado</strong> = la suma del valor de todas las facturas que cambiaron de manos en el año; no es dinero nuevo ni la ganancia de nadie. <strong>Ticket promedio</strong> = el valor medio de cada factura. <strong>El color de cada cifra</strong> indica qué tan alto es el número: verde y teal para los bajos, ámbar y naranja para los medios-altos y rojo para los más altos.</p>
 
     <h3>El crecimiento se está desacelerando</h3>
     <p>En 2025 el monto negociado creció con fuerza. En 2026 el ritmo bajó: entre enero y agosto se negociaron <strong>S/ 37,447 millones</strong> (14.8% más que en el mismo periodo de 2025) y el número de facturas subió <strong>9.4%</strong>. El mercado crece, pero más despacio.</p>
@@ -1262,7 +1302,7 @@
     </div>
     <p class="src-note">Ambos son crecimientos interanuales comparables (año completo vs. mismo periodo del año anterior). Fuente: PRODUCE, <a href="https://www.producempresarial.pe/wp-content/uploads/2026/09/Reporte-Factoring-Agosto-2026.pdf" target="_blank" rel="noopener">reporte de agosto 2026</a>.</p>
 
-    <h3>Quién mueve el mercado</h3>
+    <h3>¿Quién mueve el mercado?</h3>
     <p>Ojo con esta diferencia: las MYPE son la enorme mayoría de las <strong>empresas</strong>, pero mueven una parte minoritaria del <strong>dinero</strong>.</p>
 
     <div class="table-wrap" style="padding:20px">
@@ -1310,9 +1350,8 @@
     <h2 class="title">¿Cuánto se puede ganar?</h2>
     <p class="subtitle">Aquí viene la parte incómoda pero necesaria: <strong>no existe una tasa oficial de retorno para el inversionista</strong>. Te explico qué hay y qué no.</p>
 
-    <div class="lead-callout" style="margin-bottom:24px">
-      <span class="kicker">La referencia que verás</span>
-      <p>Las plataformas de inversión en facturas suelen anunciar retornos de <strong>hasta 20% anual</strong>. Es una <strong>referencia comercial</strong> de empresas privadas —no un dato oficial ni una promesa—, y es el número con el que están hechos los ejemplos de esta guía.</p>
+    <div class="transparency" style="margin:0 0 24px">
+      <strong>La referencia que verás en el mercado:</strong> las plataformas de inversión en facturas anuncian retornos de <strong>hasta 20% anual</strong>. Es una referencia comercial de empresas privadas: no es un dato oficial ni una garantía. Los ejemplos de esta guía están hechos con ese 20%.
     </div>
 
     <div class="two-col">
@@ -1321,10 +1360,8 @@
         <ul>
           <li><b>El costo del financiamiento para las MYPE:</b> 61.7% anual para microempresa y 12.6% para pequeña empresa (cierre 2025, PRODUCE). Son <b>tasas activas de crédito</b> —lo que cobra un banco cuando presta dinero—, usadas como referencia: <b>no</b> son lo que gana un inversionista.</li>
           <li><b>El promedio MYPE:</b> 37.2% anual. Es el promedio simple de las dos anteriores, no ponderado por monto.</li>
-          <li><b>La referencia que verás en el mercado:</b> las plataformas de inversión en facturas anuncian retornos de <b>hasta 20% anual</b>. Es una referencia comercial de empresas privadas: no es un dato oficial ni una garantía. Los ejemplos de esta guía están hechos con ese 20%.</li>
         </ul>
       </div>
-
       <div class="panel con">
         <h3><span class="chip">!</span> Lo que NO existe</h3>
         <ul>
@@ -1357,18 +1394,18 @@
         <tbody>
           <tr>
             <td><strong>Depósito a plazo 31–180 días</strong></td>
-            <td>3.89% anual</td>
-            <td>Sí: FSD hasta S/ 123,000 por depositante y entidad</td>
+            <td><span class="conc conc-c1">3.89% anual</span></td>
+            <td>Sí: el <strong>Fondo de Seguro de Depósitos (FSD)</strong> cubre hasta S/ 123,000 por depositante y entidad</td>
           </tr>
           <tr>
             <td><strong>Depósito a plazo 360 días o más</strong></td>
-            <td>4.63% anual</td>
-            <td>Sí: mismo FSD</td>
+            <td><span class="conc conc-c2">4.63% anual</span></td>
+            <td>Sí: el mismo Fondo de Seguro de Depósitos (FSD)</td>
           </tr>
           <tr>
             <td><strong>Factoring</strong></td>
-            <td>Sin tasa oficial publicada</td>
-            <td><strong>No</strong>: no hay fondo de seguro para tu capital</td>
+            <td><span class="conc conc-c0">Sin tasa oficial publicada</span></td>
+            <td><strong>No</strong>: no hay <strong>Fondo de Seguro de Depósitos (FSD)</strong> para tu capital</td>
           </tr>
         </tbody>
       </table>
@@ -1400,7 +1437,7 @@
         <tbody>
           <tr>
             <td><strong>Impuesto a la Renta</strong></td>
-            <td>5% de retención a cuenta</td>
+            <td><span class="conc conc-c3">5% de retención a cuenta</span></td>
             <td>Sí: SUNAT. La plataforma retiene el 5% cada vez que cobras tu ganancia.</td>
           </tr>
           <tr>
@@ -1410,7 +1447,7 @@
           </tr>
           <tr>
             <td><strong>IGV</strong></td>
-            <td>18% sobre las comisiones</td>
+            <td><span class="conc conc-c4">18% sobre las comisiones</span></td>
             <td>Sí. El propio tarifario de CAVALI advierte que no lo incluye</td>
           </tr>
           <tr>
@@ -1434,7 +1471,7 @@
 
     <p class="src-note"><strong>Palabras de esta tabla:</strong> <strong>Retención</strong> = el impuesto que la plataforma te descuenta en el momento en que cobras tu ganancia. <strong>IGV</strong> = impuesto de 18% que se suma a las comisiones. <strong>CAVALI</strong> = la entidad que registra las facturas y cobra una tarifa por anotarlas. <strong>Comisión de plataforma</strong> = lo que te cobra la plataforma por conectarte con el proveedor y gestionar el cobro.</p>
 
-    <h3>Un ejemplo de cómo se come la ganancia</h3>
+    <h3>Un ejemplo práctico</h3>
     <p>Con la referencia del <strong>20% anual</strong> que anuncian las plataformas, una comisión supuesta de 0.15% mensual y 60 días de plazo. La comisión es un supuesto: no hay tarifas públicas, así que pregúntala tú.</p>
 
     <div class="case">
@@ -1493,11 +1530,11 @@
       <div class="panel con">
         <h3><span class="chip">!</span> Lo que juega en contra</h3>
         <ul>
-          <li><b>Riesgo de crédito puro.</b> Si el pagador no paga, pierdes. No hay FSD ni fondo de seguro para tu capital.</li>
+          <li><b>Riesgo de crédito puro.</b> Si el pagador no paga, pierdes. No hay <strong>Fondo de Seguro de Depósitos (FSD)</strong> ni fondo de seguro para tu capital.</li>
           <li><b>Sin transparencia de retorno.</b> No existe tasa oficial publicada ni serie de morosidad del mercado. Comparar dos ofertas es difícil.</li>
           <li><b>Comisiones de libre negociación.</b> Se pueden comer buena parte de la ganancia, sobre todo en montos pequeños.</li>
-          <li><b>Iliquidez.</b> Una vez comprada la factura, no hay botón de cancelar: esperas al vencimiento.</li>
-          <li><b>Concentración.</b> Una sola factura mala puede borrar la ganancia de muchas buenas.</li>
+          <li><b>Pierdes liquidez.</b> Una vez comprada la factura, no hay botón de cancelar: tienes que esperar al vencimiento.</li>
+          <li><b>Concentración.</b> Una sola factura sin cobrar puede borrar la ganancia de muchas cobradas.</li>
         </ul>
       </div>
     </div>
@@ -1542,8 +1579,8 @@
 
   <!-- ================= 09 CUANDO ALGO SALE MAL ================= -->
   <section id="sale-mal">
-    <h2 class="title">Qué pasa cuando algo sale mal</h2>
-    <p class="subtitle">Las cuentas del lado incómodo, que casi ninguna guía te muestra. Aquí no hay datos de mercado: es aritmética simple sobre el ejemplo anterior.</p>
+    <h2 class="title">¿Qué pasa cuando algo sale mal?</h2>
+    <p class="subtitle">Hagamos cuenta si NO sale como esperas. Aquí no hay datos de mercado: es aritmética simple sobre el ejemplo anterior.</p>
 
     <h3>1. Si una factura no se paga</h3>
     <p>Suponiendo que no logras recuperar nada (el peor caso). Fíjate en la diferencia que hace repartir tu dinero:</p>
@@ -1593,9 +1630,9 @@
     <ul class="avoid">
       <li><b>Una rentabilidad garantizada o «oficial».</b> No existe una tasa pública de retorno del factoring. Incluso la referencia de «hasta 20% anual» que verás en las plataformas es una oferta comercial: no es un dato del mercado ni una promesa de resultado.</li>
       <li><b>Que la tasa que ves sea tu ganancia.</b> De ahí se descuentan la comisión, la provisión (si no está incluida) y el impuesto. El caso práctico de arriba muestra cómo se encoge.</li>
-      <li><b>Que sea como un depósito a plazo.</b> Un depósito a plazo rinde 3.89%–4.63% y está cubierto por el FSD hasta S/ 123,000. En factoring no existe esa red: si el pagador no paga, no hay quien te devuelva el capital.</li>
+      <li><b>Que sea como un depósito a plazo.</b> Un depósito a plazo rinde 3.89%–4.63% y está cubierto por el <strong>Fondo de Seguro de Depósitos (FSD)</strong> hasta S/ 123,000. En factoring no existe esa red: si el pagador no paga, no hay quien te devuelva el capital.</li>
       <li><b>Liquidez inmediata.</b> Tu dinero queda comprometido hasta el vencimiento. No hay salida anticipada fácil.</li>
-      <li><b>Que el regulador esté mirando a tu plataforma.</b> Puede estar inscrita en un registro de la SBS y aun así no tener supervisión prudencial. Verifica, no asumas.</li>
+      <li><b>Que el regulador esté mirando a tu plataforma.</b> Puede estar inscrita en un registro de la SBS y aun así no tener supervisión prudencial. Verifica, no asumas. Y recuerda: el <strong>Fondo de Seguro de Depósitos (FSD)</strong> no cubre esto, porque si el pagador no paga no hay nadie detrás de tu capital.</li>
     </ul>
   </section>
 
@@ -1635,7 +1672,7 @@
 
   <!-- ================= 11 EMPEZAR ================= -->
   <section id="empezar">
-    <h2 class="title">Cómo empezar, paso a paso</h2>
+    <h2 class="title">¿Cómo empezar?, paso a paso</h2>
     <p class="subtitle">Seis pasos, del interés a la primera operación.</p>
 
     <ol class="steps">
